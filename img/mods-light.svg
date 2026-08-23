@@ -1,0 +1,182 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1099" height="648" viewBox="0 0 1099 648" role="img" aria-label="Hold gate + home-row mods layer of the godlike-keymap">
+<rect width="1099" height="648" fill="#f4f4f2"/>
+<text x="44.0" y="46.0" fill="#17171a" font-size="30" font-weight="700" text-anchor="start" opacity="1.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">Hold gate + home-row mods</text>
+<text x="44.0" y="72.0" fill="#5f5f6a" font-size="15" font-weight="400" text-anchor="start" opacity="1.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">Hold caps or return to arm. Then hold a home-row key for its modifier or layer.</text>
+<rect x="20.0" y="112.0" width="1059.0" height="515.5" rx="22" fill="#d8d8d5" stroke="#bdbdb9" stroke-width="1.5"/>
+<rect x="40.0" y="132.0" width="1019.0" height="475.5" rx="12" fill="#1b1b1f"/>
+<rect x="74.0" y="166.0" width="93.0" height="47.5" rx="8" fill="#232327" stroke="#3d3d44" stroke-width="1"/>
+<text x="161.0" y="180.0" fill="#55555e" font-size="10" font-weight="500" text-anchor="end" opacity="0.85" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">esc</text>
+<rect x="173.0" y="166.0" width="60.0" height="47.5" rx="8" fill="#232327" stroke="#3d3d44" stroke-width="1"/>
+<text x="227.0" y="180.0" fill="#55555e" font-size="10" font-weight="500" text-anchor="end" opacity="0.85" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">F1</text>
+<rect x="239.0" y="166.0" width="60.0" height="47.5" rx="8" fill="#232327" stroke="#3d3d44" stroke-width="1"/>
+<text x="293.0" y="180.0" fill="#55555e" font-size="10" font-weight="500" text-anchor="end" opacity="0.85" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">F2</text>
+<rect x="305.0" y="166.0" width="60.0" height="47.5" rx="8" fill="#232327" stroke="#3d3d44" stroke-width="1"/>
+<text x="359.0" y="180.0" fill="#55555e" font-size="10" font-weight="500" text-anchor="end" opacity="0.85" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">F3</text>
+<rect x="371.0" y="166.0" width="60.0" height="47.5" rx="8" fill="#232327" stroke="#3d3d44" stroke-width="1"/>
+<text x="425.0" y="180.0" fill="#55555e" font-size="10" font-weight="500" text-anchor="end" opacity="0.85" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">F4</text>
+<rect x="437.0" y="166.0" width="60.0" height="47.5" rx="8" fill="#232327" stroke="#3d3d44" stroke-width="1"/>
+<text x="491.0" y="180.0" fill="#55555e" font-size="10" font-weight="500" text-anchor="end" opacity="0.85" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">F5</text>
+<rect x="503.0" y="166.0" width="60.0" height="47.5" rx="8" fill="#232327" stroke="#3d3d44" stroke-width="1"/>
+<text x="557.0" y="180.0" fill="#55555e" font-size="10" font-weight="500" text-anchor="end" opacity="0.85" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">F6</text>
+<rect x="569.0" y="166.0" width="60.0" height="47.5" rx="8" fill="#232327" stroke="#3d3d44" stroke-width="1"/>
+<text x="623.0" y="180.0" fill="#55555e" font-size="10" font-weight="500" text-anchor="end" opacity="0.85" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">F7</text>
+<rect x="635.0" y="166.0" width="60.0" height="47.5" rx="8" fill="#232327" stroke="#3d3d44" stroke-width="1"/>
+<text x="689.0" y="180.0" fill="#55555e" font-size="10" font-weight="500" text-anchor="end" opacity="0.85" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">F8</text>
+<rect x="701.0" y="166.0" width="60.0" height="47.5" rx="8" fill="#232327" stroke="#3d3d44" stroke-width="1"/>
+<text x="755.0" y="180.0" fill="#55555e" font-size="10" font-weight="500" text-anchor="end" opacity="0.85" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">F9</text>
+<rect x="767.0" y="166.0" width="60.0" height="47.5" rx="8" fill="#232327" stroke="#3d3d44" stroke-width="1"/>
+<text x="821.0" y="180.0" fill="#55555e" font-size="10" font-weight="500" text-anchor="end" opacity="0.85" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">F10</text>
+<rect x="833.0" y="166.0" width="60.0" height="47.5" rx="8" fill="#232327" stroke="#3d3d44" stroke-width="1"/>
+<text x="887.0" y="180.0" fill="#55555e" font-size="10" font-weight="500" text-anchor="end" opacity="0.85" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">F11</text>
+<rect x="899.0" y="166.0" width="60.0" height="47.5" rx="8" fill="#232327" stroke="#3d3d44" stroke-width="1"/>
+<text x="953.0" y="180.0" fill="#55555e" font-size="10" font-weight="500" text-anchor="end" opacity="0.85" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">F12</text>
+<rect x="965.0" y="166.0" width="60.0" height="47.5" rx="8" fill="#232327" stroke="#3d3d44" stroke-width="1"/>
+<text x="1019.0" y="180.0" fill="#55555e" font-size="10" font-weight="500" text-anchor="end" opacity="0.85" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">⏻</text>
+<rect x="74.0" y="219.5" width="60.0" height="66.0" rx="8" fill="#232327" stroke="#3d3d44" stroke-width="1"/>
+<text x="128.0" y="233.5" fill="#55555e" font-size="10" font-weight="500" text-anchor="end" opacity="0.85" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">`</text>
+<rect x="140.0" y="219.5" width="60.0" height="66.0" rx="8" fill="#232327" stroke="#3d3d44" stroke-width="1"/>
+<text x="194.0" y="233.5" fill="#55555e" font-size="10" font-weight="500" text-anchor="end" opacity="0.85" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">1</text>
+<rect x="206.0" y="219.5" width="60.0" height="66.0" rx="8" fill="#232327" stroke="#3d3d44" stroke-width="1"/>
+<text x="260.0" y="233.5" fill="#55555e" font-size="10" font-weight="500" text-anchor="end" opacity="0.85" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">2</text>
+<rect x="272.0" y="219.5" width="60.0" height="66.0" rx="8" fill="#232327" stroke="#3d3d44" stroke-width="1"/>
+<text x="326.0" y="233.5" fill="#55555e" font-size="10" font-weight="500" text-anchor="end" opacity="0.85" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">3</text>
+<rect x="338.0" y="219.5" width="60.0" height="66.0" rx="8" fill="#232327" stroke="#3d3d44" stroke-width="1"/>
+<text x="392.0" y="233.5" fill="#55555e" font-size="10" font-weight="500" text-anchor="end" opacity="0.85" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">4</text>
+<rect x="404.0" y="219.5" width="60.0" height="66.0" rx="8" fill="#232327" stroke="#3d3d44" stroke-width="1"/>
+<text x="458.0" y="233.5" fill="#55555e" font-size="10" font-weight="500" text-anchor="end" opacity="0.85" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">5</text>
+<rect x="470.0" y="219.5" width="60.0" height="66.0" rx="8" fill="#232327" stroke="#3d3d44" stroke-width="1"/>
+<text x="524.0" y="233.5" fill="#55555e" font-size="10" font-weight="500" text-anchor="end" opacity="0.85" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">6</text>
+<rect x="536.0" y="219.5" width="60.0" height="66.0" rx="8" fill="#232327" stroke="#3d3d44" stroke-width="1"/>
+<text x="590.0" y="233.5" fill="#55555e" font-size="10" font-weight="500" text-anchor="end" opacity="0.85" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">7</text>
+<rect x="602.0" y="219.5" width="60.0" height="66.0" rx="8" fill="#232327" stroke="#3d3d44" stroke-width="1"/>
+<text x="656.0" y="233.5" fill="#55555e" font-size="10" font-weight="500" text-anchor="end" opacity="0.85" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">8</text>
+<rect x="668.0" y="219.5" width="60.0" height="66.0" rx="8" fill="#232327" stroke="#3d3d44" stroke-width="1"/>
+<text x="722.0" y="233.5" fill="#55555e" font-size="10" font-weight="500" text-anchor="end" opacity="0.85" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">9</text>
+<rect x="734.0" y="219.5" width="60.0" height="66.0" rx="8" fill="#232327" stroke="#3d3d44" stroke-width="1"/>
+<text x="788.0" y="233.5" fill="#55555e" font-size="10" font-weight="500" text-anchor="end" opacity="0.85" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">0</text>
+<rect x="800.0" y="219.5" width="60.0" height="66.0" rx="8" fill="#232327" stroke="#3d3d44" stroke-width="1"/>
+<text x="854.0" y="233.5" fill="#55555e" font-size="10" font-weight="500" text-anchor="end" opacity="0.85" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">-</text>
+<rect x="866.0" y="219.5" width="60.0" height="66.0" rx="8" fill="#232327" stroke="#3d3d44" stroke-width="1"/>
+<text x="920.0" y="233.5" fill="#55555e" font-size="10" font-weight="500" text-anchor="end" opacity="0.85" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">=</text>
+<rect x="932.0" y="219.5" width="93.0" height="66.0" rx="8" fill="#232327" stroke="#3d3d44" stroke-width="1"/>
+<text x="1019.0" y="233.5" fill="#55555e" font-size="10" font-weight="500" text-anchor="end" opacity="0.85" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">delete</text>
+<rect x="74.0" y="291.5" width="93.0" height="66.0" rx="8" fill="#232327" stroke="#3d3d44" stroke-width="1"/>
+<text x="161.0" y="305.5" fill="#55555e" font-size="10" font-weight="500" text-anchor="end" opacity="0.85" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">tab</text>
+<rect x="173.0" y="291.5" width="60.0" height="66.0" rx="8" fill="#232327" stroke="#3d3d44" stroke-width="1"/>
+<text x="227.0" y="305.5" fill="#55555e" font-size="10" font-weight="500" text-anchor="end" opacity="0.85" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">Q</text>
+<rect x="239.0" y="291.5" width="60.0" height="66.0" rx="8" fill="#232327" stroke="#3d3d44" stroke-width="1"/>
+<text x="293.0" y="305.5" fill="#55555e" font-size="10" font-weight="500" text-anchor="end" opacity="0.85" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">W</text>
+<rect x="305.0" y="291.5" width="60.0" height="66.0" rx="8" fill="#232327" stroke="#3d3d44" stroke-width="1"/>
+<text x="359.0" y="305.5" fill="#55555e" font-size="10" font-weight="500" text-anchor="end" opacity="0.85" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">E</text>
+<rect x="371.0" y="291.5" width="60.0" height="66.0" rx="8" fill="#232327" stroke="#3d3d44" stroke-width="1"/>
+<text x="425.0" y="305.5" fill="#55555e" font-size="10" font-weight="500" text-anchor="end" opacity="0.85" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">R</text>
+<rect x="437.0" y="291.5" width="60.0" height="66.0" rx="8" fill="#232327" stroke="#3d3d44" stroke-width="1"/>
+<text x="491.0" y="305.5" fill="#55555e" font-size="10" font-weight="500" text-anchor="end" opacity="0.85" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">T</text>
+<rect x="503.0" y="291.5" width="60.0" height="66.0" rx="8" fill="#232327" stroke="#3d3d44" stroke-width="1"/>
+<text x="557.0" y="305.5" fill="#55555e" font-size="10" font-weight="500" text-anchor="end" opacity="0.85" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">Y</text>
+<rect x="569.0" y="291.5" width="60.0" height="66.0" rx="8" fill="#232327" stroke="#3d3d44" stroke-width="1"/>
+<text x="623.0" y="305.5" fill="#55555e" font-size="10" font-weight="500" text-anchor="end" opacity="0.85" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">U</text>
+<rect x="635.0" y="291.5" width="60.0" height="66.0" rx="8" fill="#232327" stroke="#3d3d44" stroke-width="1"/>
+<text x="689.0" y="305.5" fill="#55555e" font-size="10" font-weight="500" text-anchor="end" opacity="0.85" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">I</text>
+<rect x="701.0" y="291.5" width="60.0" height="66.0" rx="8" fill="#232327" stroke="#3d3d44" stroke-width="1"/>
+<text x="755.0" y="305.5" fill="#55555e" font-size="10" font-weight="500" text-anchor="end" opacity="0.85" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">O</text>
+<rect x="767.0" y="291.5" width="60.0" height="66.0" rx="8" fill="#232327" stroke="#3d3d44" stroke-width="1"/>
+<text x="821.0" y="305.5" fill="#55555e" font-size="10" font-weight="500" text-anchor="end" opacity="0.85" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">P</text>
+<rect x="833.0" y="291.5" width="60.0" height="66.0" rx="8" fill="#232327" stroke="#3d3d44" stroke-width="1"/>
+<text x="887.0" y="305.5" fill="#55555e" font-size="10" font-weight="500" text-anchor="end" opacity="0.85" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">[</text>
+<rect x="899.0" y="291.5" width="60.0" height="66.0" rx="8" fill="#232327" stroke="#3d3d44" stroke-width="1"/>
+<text x="953.0" y="305.5" fill="#55555e" font-size="10" font-weight="500" text-anchor="end" opacity="0.85" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">]</text>
+<rect x="965.0" y="291.5" width="60.0" height="66.0" rx="8" fill="#232327" stroke="#3d3d44" stroke-width="1"/>
+<text x="1019.0" y="305.5" fill="#55555e" font-size="10" font-weight="500" text-anchor="end" opacity="0.85" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">\</text>
+<rect x="74.0" y="363.5" width="109.5" height="66.0" rx="8" fill="#1f3d33" stroke="#3d3d44" stroke-width="1"/>
+<text x="177.5" y="377.5" fill="#55555e" font-size="10" font-weight="500" text-anchor="end" opacity="0.85" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">caps</text>
+<text x="128.8" y="395.5" fill="#8ff0cd" font-size="13" font-weight="600" text-anchor="middle" opacity="1.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">hold</text>
+<text x="128.8" y="420.5" fill="#8f8f9b" font-size="9.5" font-weight="500" text-anchor="middle" opacity="1.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">arms all of it</text>
+<rect x="189.5" y="363.5" width="60.0" height="66.0" rx="8" fill="#232327" stroke="#3d3d44" stroke-width="1"/>
+<text x="243.5" y="377.5" fill="#55555e" font-size="10" font-weight="500" text-anchor="end" opacity="0.85" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">A</text>
+<rect x="255.5" y="363.5" width="60.0" height="66.0" rx="8" fill="#4a3410" stroke="#3d3d44" stroke-width="1"/>
+<text x="309.5" y="377.5" fill="#55555e" font-size="10" font-weight="500" text-anchor="end" opacity="0.85" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">S</text>
+<text x="285.5" y="395.5" fill="#ffcf7a" font-size="20" font-weight="700" text-anchor="middle" opacity="1.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">⌥</text>
+<text x="285.5" y="420.5" fill="#8f8f9b" font-size="9.5" font-weight="500" text-anchor="middle" opacity="1.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">left</text>
+<rect x="321.5" y="363.5" width="60.0" height="66.0" rx="8" fill="#4a3410" stroke="#3d3d44" stroke-width="1"/>
+<text x="375.5" y="377.5" fill="#55555e" font-size="10" font-weight="500" text-anchor="end" opacity="0.85" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">D</text>
+<text x="351.5" y="395.5" fill="#ffcf7a" font-size="20" font-weight="700" text-anchor="middle" opacity="1.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">⌘</text>
+<text x="351.5" y="420.5" fill="#8f8f9b" font-size="9.5" font-weight="500" text-anchor="middle" opacity="1.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">left</text>
+<rect x="387.5" y="363.5" width="60.0" height="66.0" rx="8" fill="#3d2a52" stroke="#3d3d44" stroke-width="1"/>
+<text x="441.5" y="377.5" fill="#55555e" font-size="10" font-weight="500" text-anchor="end" opacity="0.85" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">F</text>
+<text x="417.5" y="395.5" fill="#d3aaff" font-size="20" font-weight="700" text-anchor="middle" opacity="1.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">№</text>
+<text x="417.5" y="420.5" fill="#8f8f9b" font-size="9.5" font-weight="500" text-anchor="middle" opacity="1.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">numbers</text>
+<rect x="453.5" y="363.5" width="60.0" height="66.0" rx="8" fill="#232327" stroke="#3d3d44" stroke-width="1"/>
+<text x="507.5" y="377.5" fill="#55555e" font-size="10" font-weight="500" text-anchor="end" opacity="0.85" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">G</text>
+<rect x="519.5" y="363.5" width="60.0" height="66.0" rx="8" fill="#232327" stroke="#3d3d44" stroke-width="1"/>
+<text x="573.5" y="377.5" fill="#55555e" font-size="10" font-weight="500" text-anchor="end" opacity="0.85" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">H</text>
+<rect x="585.5" y="363.5" width="60.0" height="66.0" rx="8" fill="#232327" stroke="#3d3d44" stroke-width="1"/>
+<text x="639.5" y="377.5" fill="#55555e" font-size="10" font-weight="500" text-anchor="end" opacity="0.85" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">J</text>
+<rect x="651.5" y="363.5" width="60.0" height="66.0" rx="8" fill="#3d2a52" stroke="#3d3d44" stroke-width="1"/>
+<text x="705.5" y="377.5" fill="#55555e" font-size="10" font-weight="500" text-anchor="end" opacity="0.85" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">K</text>
+<text x="681.5" y="395.5" fill="#d3aaff" font-size="20" font-weight="700" text-anchor="middle" opacity="1.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">→</text>
+<text x="681.5" y="420.5" fill="#8f8f9b" font-size="9.5" font-weight="500" text-anchor="middle" opacity="1.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">nav</text>
+<rect x="717.5" y="363.5" width="60.0" height="66.0" rx="8" fill="#4a3410" stroke="#3d3d44" stroke-width="1"/>
+<text x="771.5" y="377.5" fill="#55555e" font-size="10" font-weight="500" text-anchor="end" opacity="0.85" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">L</text>
+<text x="747.5" y="395.5" fill="#ffcf7a" font-size="20" font-weight="700" text-anchor="middle" opacity="1.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">⌘</text>
+<text x="747.5" y="420.5" fill="#8f8f9b" font-size="9.5" font-weight="500" text-anchor="middle" opacity="1.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">right</text>
+<rect x="783.5" y="363.5" width="60.0" height="66.0" rx="8" fill="#4a3410" stroke="#3d3d44" stroke-width="1"/>
+<text x="837.5" y="377.5" fill="#55555e" font-size="10" font-weight="500" text-anchor="end" opacity="0.85" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">;</text>
+<text x="813.5" y="395.5" fill="#ffcf7a" font-size="20" font-weight="700" text-anchor="middle" opacity="1.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">⌥</text>
+<text x="813.5" y="420.5" fill="#8f8f9b" font-size="9.5" font-weight="500" text-anchor="middle" opacity="1.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">right</text>
+<rect x="849.5" y="363.5" width="60.0" height="66.0" rx="8" fill="#232327" stroke="#3d3d44" stroke-width="1"/>
+<text x="903.5" y="377.5" fill="#55555e" font-size="10" font-weight="500" text-anchor="end" opacity="0.85" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">'</text>
+<rect x="915.5" y="363.5" width="109.5" height="66.0" rx="8" fill="#1f3d33" stroke="#3d3d44" stroke-width="1"/>
+<text x="1019.0" y="377.5" fill="#55555e" font-size="10" font-weight="500" text-anchor="end" opacity="0.85" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">return</text>
+<text x="970.2" y="395.5" fill="#8ff0cd" font-size="13" font-weight="600" text-anchor="middle" opacity="1.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">hold</text>
+<text x="970.2" y="420.5" fill="#8f8f9b" font-size="9.5" font-weight="500" text-anchor="middle" opacity="1.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">arms all of it</text>
+<rect x="74.0" y="435.5" width="142.5" height="66.0" rx="8" fill="#232327" stroke="#3d3d44" stroke-width="1"/>
+<text x="210.5" y="449.5" fill="#55555e" font-size="10" font-weight="500" text-anchor="end" opacity="0.85" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">shift</text>
+<rect x="222.5" y="435.5" width="60.0" height="66.0" rx="8" fill="#232327" stroke="#3d3d44" stroke-width="1"/>
+<text x="276.5" y="449.5" fill="#55555e" font-size="10" font-weight="500" text-anchor="end" opacity="0.85" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">Z</text>
+<rect x="288.5" y="435.5" width="60.0" height="66.0" rx="8" fill="#232327" stroke="#3d3d44" stroke-width="1"/>
+<text x="342.5" y="449.5" fill="#55555e" font-size="10" font-weight="500" text-anchor="end" opacity="0.85" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">X</text>
+<rect x="354.5" y="435.5" width="60.0" height="66.0" rx="8" fill="#3d2a52" stroke="#3d3d44" stroke-width="1"/>
+<text x="408.5" y="449.5" fill="#55555e" font-size="10" font-weight="500" text-anchor="end" opacity="0.85" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">C</text>
+<text x="384.5" y="467.5" fill="#d3aaff" font-size="20" font-weight="700" text-anchor="middle" opacity="1.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">&amp;</text>
+<text x="384.5" y="492.5" fill="#8f8f9b" font-size="9.5" font-weight="500" text-anchor="middle" opacity="1.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">sym R</text>
+<rect x="420.5" y="435.5" width="60.0" height="66.0" rx="8" fill="#232327" stroke="#3d3d44" stroke-width="1"/>
+<text x="474.5" y="449.5" fill="#55555e" font-size="10" font-weight="500" text-anchor="end" opacity="0.85" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">V</text>
+<rect x="486.5" y="435.5" width="60.0" height="66.0" rx="8" fill="#232327" stroke="#3d3d44" stroke-width="1"/>
+<text x="540.5" y="449.5" fill="#55555e" font-size="10" font-weight="500" text-anchor="end" opacity="0.85" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">B</text>
+<rect x="552.5" y="435.5" width="60.0" height="66.0" rx="8" fill="#232327" stroke="#3d3d44" stroke-width="1"/>
+<text x="606.5" y="449.5" fill="#55555e" font-size="10" font-weight="500" text-anchor="end" opacity="0.85" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">N</text>
+<rect x="618.5" y="435.5" width="60.0" height="66.0" rx="8" fill="#232327" stroke="#3d3d44" stroke-width="1"/>
+<text x="672.5" y="449.5" fill="#55555e" font-size="10" font-weight="500" text-anchor="end" opacity="0.85" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">M</text>
+<rect x="684.5" y="435.5" width="60.0" height="66.0" rx="8" fill="#3d2a52" stroke="#3d3d44" stroke-width="1"/>
+<text x="738.5" y="449.5" fill="#55555e" font-size="10" font-weight="500" text-anchor="end" opacity="0.85" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">,</text>
+<text x="714.5" y="467.5" fill="#d3aaff" font-size="20" font-weight="700" text-anchor="middle" opacity="1.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">#</text>
+<text x="714.5" y="492.5" fill="#8f8f9b" font-size="9.5" font-weight="500" text-anchor="middle" opacity="1.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">sym L</text>
+<rect x="750.5" y="435.5" width="60.0" height="66.0" rx="8" fill="#232327" stroke="#3d3d44" stroke-width="1"/>
+<text x="804.5" y="449.5" fill="#55555e" font-size="10" font-weight="500" text-anchor="end" opacity="0.85" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">.</text>
+<rect x="816.5" y="435.5" width="60.0" height="66.0" rx="8" fill="#232327" stroke="#3d3d44" stroke-width="1"/>
+<text x="870.5" y="449.5" fill="#55555e" font-size="10" font-weight="500" text-anchor="end" opacity="0.85" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">/</text>
+<rect x="882.5" y="435.5" width="142.5" height="66.0" rx="8" fill="#232327" stroke="#3d3d44" stroke-width="1"/>
+<text x="1019.0" y="449.5" fill="#55555e" font-size="10" font-weight="500" text-anchor="end" opacity="0.85" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">shift</text>
+<rect x="74.0" y="507.5" width="60.0" height="66.0" rx="8" fill="#232327" stroke="#3d3d44" stroke-width="1"/>
+<text x="128.0" y="521.5" fill="#55555e" font-size="10" font-weight="500" text-anchor="end" opacity="0.85" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">fn</text>
+<rect x="140.0" y="507.5" width="60.0" height="66.0" rx="8" fill="#232327" stroke="#3d3d44" stroke-width="1"/>
+<text x="194.0" y="521.5" fill="#55555e" font-size="10" font-weight="500" text-anchor="end" opacity="0.85" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">control</text>
+<rect x="206.0" y="507.5" width="76.5" height="66.0" rx="8" fill="#232327" stroke="#3d3d44" stroke-width="1"/>
+<text x="276.5" y="521.5" fill="#55555e" font-size="10" font-weight="500" text-anchor="end" opacity="0.85" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">option</text>
+<rect x="288.5" y="507.5" width="76.5" height="66.0" rx="8" fill="#232327" stroke="#3d3d44" stroke-width="1"/>
+<text x="359.0" y="521.5" fill="#55555e" font-size="10" font-weight="500" text-anchor="end" opacity="0.85" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">command</text>
+<rect x="371.0" y="507.5" width="307.5" height="66.0" rx="8" fill="#232327" stroke="#3d3d44" stroke-width="1"/>
+<rect x="684.5" y="507.5" width="76.5" height="66.0" rx="8" fill="#232327" stroke="#3d3d44" stroke-width="1"/>
+<text x="755.0" y="521.5" fill="#55555e" font-size="10" font-weight="500" text-anchor="end" opacity="0.85" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">command</text>
+<rect x="767.0" y="507.5" width="60.0" height="66.0" rx="8" fill="#232327" stroke="#3d3d44" stroke-width="1"/>
+<text x="821.0" y="521.5" fill="#55555e" font-size="10" font-weight="500" text-anchor="end" opacity="0.85" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">option</text>
+<rect x="833.0" y="507.5" width="60.0" height="66.0" rx="8" fill="#232327" stroke="#3d3d44" stroke-width="1"/>
+<text x="887.0" y="521.5" fill="#55555e" font-size="10" font-weight="500" text-anchor="end" opacity="0.85" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">←</text>
+<rect x="899.0" y="507.5" width="60.0" height="32.0" rx="5" fill="#232327" stroke="#3d3d44" stroke-width="1"/>
+<text x="929.0" y="528.5" fill="#5a5a63" font-size="13" font-weight="600" text-anchor="middle" opacity="1.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">↑</text>
+<rect x="899.0" y="541.5" width="60.0" height="32.0" rx="5" fill="#232327" stroke="#3d3d44" stroke-width="1"/>
+<text x="929.0" y="562.5" fill="#5a5a63" font-size="13" font-weight="600" text-anchor="middle" opacity="1.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">↓</text>
+<rect x="965.0" y="507.5" width="60.0" height="66.0" rx="8" fill="#232327" stroke="#3d3d44" stroke-width="1"/>
+<text x="1019.0" y="521.5" fill="#55555e" font-size="10" font-weight="500" text-anchor="end" opacity="0.85" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">→</text>
+</svg>
