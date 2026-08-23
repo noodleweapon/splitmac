@@ -145,8 +145,10 @@ _MEDIA = {
 for _k, _legend in _MEDIA.items():
     BASE[_k] = (_legend, "", "dead")
 
+# The keycap legend says "Disabled"; what the key actually emits is the word
+# HERROPERS, which is the point of the rule.
 for _k in TRAINER_KEYS:
-    BASE[_k] = ("HERRO\nPERS", "", "trainer")
+    BASE[_k] = ("Disabled", "", "trainer")
 
 # --- hold layers ------------------------------------------------------------
 

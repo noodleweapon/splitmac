@@ -6,8 +6,7 @@
 <rect x="40.0" y="132.0" width="1019.0" height="475.5" rx="12" fill="#0a0a0c"/>
 <rect x="74.0" y="166.0" width="93.0" height="47.5" rx="8" fill="#3a1719" stroke="#33333b" stroke-width="1"/>
 <text x="161.0" y="180.0" fill="#4a4a53" font-size="10" font-weight="500" text-anchor="end" opacity="0.85" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">esc</text>
-<text x="120.5" y="188.8" fill="#f08b8b" font-size="11" font-weight="600" text-anchor="middle" opacity="1.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">HERRO</text>
-<text x="120.5" y="200.8" fill="#f08b8b" font-size="11" font-weight="600" text-anchor="middle" opacity="1.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">PERS</text>
+<text x="120.5" y="194.8" fill="#f08b8b" font-size="11" font-weight="600" text-anchor="middle" opacity="1.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">Disabled</text>
 <rect x="173.0" y="166.0" width="60.0" height="47.5" rx="8" fill="#161619" stroke="#33333b" stroke-width="1"/>
 <text x="227.0" y="180.0" fill="#4a4a53" font-size="10" font-weight="500" text-anchor="end" opacity="0.85" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">F1</text>
 <text x="203.0" y="194.8" fill="#4c4c55" font-size="20" font-weight="700" text-anchor="middle" opacity="1.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">☀−</text>
@@ -53,64 +52,49 @@
 <text x="995.0" y="194.8" fill="#4c4c55" font-size="20" font-weight="700" text-anchor="middle" opacity="1.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">⏻</text>
 <rect x="74.0" y="219.5" width="60.0" height="66.0" rx="8" fill="#3a1719" stroke="#33333b" stroke-width="1"/>
 <text x="128.0" y="233.5" fill="#4a4a53" font-size="10" font-weight="500" text-anchor="end" opacity="0.85" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">`</text>
-<text x="104.0" y="251.5" fill="#f08b8b" font-size="11" font-weight="600" text-anchor="middle" opacity="1.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">HERRO</text>
-<text x="104.0" y="263.5" fill="#f08b8b" font-size="11" font-weight="600" text-anchor="middle" opacity="1.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">PERS</text>
+<text x="104.0" y="257.5" fill="#f08b8b" font-size="11" font-weight="600" text-anchor="middle" opacity="1.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">Disabled</text>
 <rect x="140.0" y="219.5" width="60.0" height="66.0" rx="8" fill="#3a1719" stroke="#33333b" stroke-width="1"/>
 <text x="194.0" y="233.5" fill="#4a4a53" font-size="10" font-weight="500" text-anchor="end" opacity="0.85" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">1</text>
-<text x="170.0" y="251.5" fill="#f08b8b" font-size="11" font-weight="600" text-anchor="middle" opacity="1.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">HERRO</text>
-<text x="170.0" y="263.5" fill="#f08b8b" font-size="11" font-weight="600" text-anchor="middle" opacity="1.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">PERS</text>
+<text x="170.0" y="257.5" fill="#f08b8b" font-size="11" font-weight="600" text-anchor="middle" opacity="1.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">Disabled</text>
 <rect x="206.0" y="219.5" width="60.0" height="66.0" rx="8" fill="#3a1719" stroke="#33333b" stroke-width="1"/>
 <text x="260.0" y="233.5" fill="#4a4a53" font-size="10" font-weight="500" text-anchor="end" opacity="0.85" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">2</text>
-<text x="236.0" y="251.5" fill="#f08b8b" font-size="11" font-weight="600" text-anchor="middle" opacity="1.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">HERRO</text>
-<text x="236.0" y="263.5" fill="#f08b8b" font-size="11" font-weight="600" text-anchor="middle" opacity="1.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">PERS</text>
+<text x="236.0" y="257.5" fill="#f08b8b" font-size="11" font-weight="600" text-anchor="middle" opacity="1.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">Disabled</text>
 <rect x="272.0" y="219.5" width="60.0" height="66.0" rx="8" fill="#3a1719" stroke="#33333b" stroke-width="1"/>
 <text x="326.0" y="233.5" fill="#4a4a53" font-size="10" font-weight="500" text-anchor="end" opacity="0.85" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">3</text>
-<text x="302.0" y="251.5" fill="#f08b8b" font-size="11" font-weight="600" text-anchor="middle" opacity="1.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">HERRO</text>
-<text x="302.0" y="263.5" fill="#f08b8b" font-size="11" font-weight="600" text-anchor="middle" opacity="1.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">PERS</text>
+<text x="302.0" y="257.5" fill="#f08b8b" font-size="11" font-weight="600" text-anchor="middle" opacity="1.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">Disabled</text>
 <rect x="338.0" y="219.5" width="60.0" height="66.0" rx="8" fill="#3a1719" stroke="#33333b" stroke-width="1"/>
 <text x="392.0" y="233.5" fill="#4a4a53" font-size="10" font-weight="500" text-anchor="end" opacity="0.85" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">4</text>
-<text x="368.0" y="251.5" fill="#f08b8b" font-size="11" font-weight="600" text-anchor="middle" opacity="1.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">HERRO</text>
-<text x="368.0" y="263.5" fill="#f08b8b" font-size="11" font-weight="600" text-anchor="middle" opacity="1.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">PERS</text>
+<text x="368.0" y="257.5" fill="#f08b8b" font-size="11" font-weight="600" text-anchor="middle" opacity="1.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">Disabled</text>
 <rect x="404.0" y="219.5" width="60.0" height="66.0" rx="8" fill="#3a1719" stroke="#33333b" stroke-width="1"/>
 <text x="458.0" y="233.5" fill="#4a4a53" font-size="10" font-weight="500" text-anchor="end" opacity="0.85" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">5</text>
-<text x="434.0" y="251.5" fill="#f08b8b" font-size="11" font-weight="600" text-anchor="middle" opacity="1.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">HERRO</text>
-<text x="434.0" y="263.5" fill="#f08b8b" font-size="11" font-weight="600" text-anchor="middle" opacity="1.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">PERS</text>
+<text x="434.0" y="257.5" fill="#f08b8b" font-size="11" font-weight="600" text-anchor="middle" opacity="1.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">Disabled</text>
 <rect x="470.0" y="219.5" width="60.0" height="66.0" rx="8" fill="#3a1719" stroke="#33333b" stroke-width="1"/>
 <text x="524.0" y="233.5" fill="#4a4a53" font-size="10" font-weight="500" text-anchor="end" opacity="0.85" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">6</text>
-<text x="500.0" y="251.5" fill="#f08b8b" font-size="11" font-weight="600" text-anchor="middle" opacity="1.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">HERRO</text>
-<text x="500.0" y="263.5" fill="#f08b8b" font-size="11" font-weight="600" text-anchor="middle" opacity="1.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">PERS</text>
+<text x="500.0" y="257.5" fill="#f08b8b" font-size="11" font-weight="600" text-anchor="middle" opacity="1.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">Disabled</text>
 <rect x="536.0" y="219.5" width="60.0" height="66.0" rx="8" fill="#3a1719" stroke="#33333b" stroke-width="1"/>
 <text x="590.0" y="233.5" fill="#4a4a53" font-size="10" font-weight="500" text-anchor="end" opacity="0.85" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">7</text>
-<text x="566.0" y="251.5" fill="#f08b8b" font-size="11" font-weight="600" text-anchor="middle" opacity="1.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">HERRO</text>
-<text x="566.0" y="263.5" fill="#f08b8b" font-size="11" font-weight="600" text-anchor="middle" opacity="1.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">PERS</text>
+<text x="566.0" y="257.5" fill="#f08b8b" font-size="11" font-weight="600" text-anchor="middle" opacity="1.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">Disabled</text>
 <rect x="602.0" y="219.5" width="60.0" height="66.0" rx="8" fill="#3a1719" stroke="#33333b" stroke-width="1"/>
 <text x="656.0" y="233.5" fill="#4a4a53" font-size="10" font-weight="500" text-anchor="end" opacity="0.85" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">8</text>
-<text x="632.0" y="251.5" fill="#f08b8b" font-size="11" font-weight="600" text-anchor="middle" opacity="1.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">HERRO</text>
-<text x="632.0" y="263.5" fill="#f08b8b" font-size="11" font-weight="600" text-anchor="middle" opacity="1.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">PERS</text>
+<text x="632.0" y="257.5" fill="#f08b8b" font-size="11" font-weight="600" text-anchor="middle" opacity="1.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">Disabled</text>
 <rect x="668.0" y="219.5" width="60.0" height="66.0" rx="8" fill="#3a1719" stroke="#33333b" stroke-width="1"/>
 <text x="722.0" y="233.5" fill="#4a4a53" font-size="10" font-weight="500" text-anchor="end" opacity="0.85" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">9</text>
-<text x="698.0" y="251.5" fill="#f08b8b" font-size="11" font-weight="600" text-anchor="middle" opacity="1.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">HERRO</text>
-<text x="698.0" y="263.5" fill="#f08b8b" font-size="11" font-weight="600" text-anchor="middle" opacity="1.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">PERS</text>
+<text x="698.0" y="257.5" fill="#f08b8b" font-size="11" font-weight="600" text-anchor="middle" opacity="1.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">Disabled</text>
 <rect x="734.0" y="219.5" width="60.0" height="66.0" rx="8" fill="#3a1719" stroke="#33333b" stroke-width="1"/>
 <text x="788.0" y="233.5" fill="#4a4a53" font-size="10" font-weight="500" text-anchor="end" opacity="0.85" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">0</text>
-<text x="764.0" y="251.5" fill="#f08b8b" font-size="11" font-weight="600" text-anchor="middle" opacity="1.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">HERRO</text>
-<text x="764.0" y="263.5" fill="#f08b8b" font-size="11" font-weight="600" text-anchor="middle" opacity="1.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">PERS</text>
+<text x="764.0" y="257.5" fill="#f08b8b" font-size="11" font-weight="600" text-anchor="middle" opacity="1.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">Disabled</text>
 <rect x="800.0" y="219.5" width="60.0" height="66.0" rx="8" fill="#3a1719" stroke="#33333b" stroke-width="1"/>
 <text x="854.0" y="233.5" fill="#4a4a53" font-size="10" font-weight="500" text-anchor="end" opacity="0.85" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">-</text>
-<text x="830.0" y="251.5" fill="#f08b8b" font-size="11" font-weight="600" text-anchor="middle" opacity="1.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">HERRO</text>
-<text x="830.0" y="263.5" fill="#f08b8b" font-size="11" font-weight="600" text-anchor="middle" opacity="1.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">PERS</text>
+<text x="830.0" y="257.5" fill="#f08b8b" font-size="11" font-weight="600" text-anchor="middle" opacity="1.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">Disabled</text>
 <rect x="866.0" y="219.5" width="60.0" height="66.0" rx="8" fill="#3a1719" stroke="#33333b" stroke-width="1"/>
 <text x="920.0" y="233.5" fill="#4a4a53" font-size="10" font-weight="500" text-anchor="end" opacity="0.85" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">=</text>
-<text x="896.0" y="251.5" fill="#f08b8b" font-size="11" font-weight="600" text-anchor="middle" opacity="1.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">HERRO</text>
-<text x="896.0" y="263.5" fill="#f08b8b" font-size="11" font-weight="600" text-anchor="middle" opacity="1.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">PERS</text>
+<text x="896.0" y="257.5" fill="#f08b8b" font-size="11" font-weight="600" text-anchor="middle" opacity="1.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">Disabled</text>
 <rect x="932.0" y="219.5" width="93.0" height="66.0" rx="8" fill="#3a1719" stroke="#33333b" stroke-width="1"/>
 <text x="1019.0" y="233.5" fill="#4a4a53" font-size="10" font-weight="500" text-anchor="end" opacity="0.85" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">delete</text>
-<text x="978.5" y="251.5" fill="#f08b8b" font-size="11" font-weight="600" text-anchor="middle" opacity="1.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">HERRO</text>
-<text x="978.5" y="263.5" fill="#f08b8b" font-size="11" font-weight="600" text-anchor="middle" opacity="1.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">PERS</text>
+<text x="978.5" y="257.5" fill="#f08b8b" font-size="11" font-weight="600" text-anchor="middle" opacity="1.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">Disabled</text>
 <rect x="74.0" y="291.5" width="93.0" height="66.0" rx="8" fill="#3a1719" stroke="#33333b" stroke-width="1"/>
 <text x="161.0" y="305.5" fill="#4a4a53" font-size="10" font-weight="500" text-anchor="end" opacity="0.85" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">tab</text>
-<text x="120.5" y="323.5" fill="#f08b8b" font-size="11" font-weight="600" text-anchor="middle" opacity="1.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">HERRO</text>
-<text x="120.5" y="335.5" fill="#f08b8b" font-size="11" font-weight="600" text-anchor="middle" opacity="1.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">PERS</text>
+<text x="120.5" y="329.5" fill="#f08b8b" font-size="11" font-weight="600" text-anchor="middle" opacity="1.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">Disabled</text>
 <rect x="173.0" y="291.5" width="60.0" height="66.0" rx="8" fill="#1f1f24" stroke="#33333b" stroke-width="1"/>
 <text x="227.0" y="305.5" fill="#4a4a53" font-size="10" font-weight="500" text-anchor="end" opacity="0.85" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">Q</text>
 <text x="203.0" y="329.5" fill="#ececf0" font-size="20" font-weight="700" text-anchor="middle" opacity="1.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">B</text>
@@ -128,8 +112,7 @@
 <text x="467.0" y="329.5" fill="#ececf0" font-size="20" font-weight="700" text-anchor="middle" opacity="1.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">V</text>
 <rect x="503.0" y="291.5" width="60.0" height="66.0" rx="8" fill="#3a1719" stroke="#33333b" stroke-width="1"/>
 <text x="557.0" y="305.5" fill="#4a4a53" font-size="10" font-weight="500" text-anchor="end" opacity="0.85" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">Y</text>
-<text x="533.0" y="323.5" fill="#f08b8b" font-size="11" font-weight="600" text-anchor="middle" opacity="1.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">HERRO</text>
-<text x="533.0" y="335.5" fill="#f08b8b" font-size="11" font-weight="600" text-anchor="middle" opacity="1.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">PERS</text>
+<text x="533.0" y="329.5" fill="#f08b8b" font-size="11" font-weight="600" text-anchor="middle" opacity="1.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">Disabled</text>
 <rect x="569.0" y="291.5" width="60.0" height="66.0" rx="8" fill="#1f1f24" stroke="#33333b" stroke-width="1"/>
 <text x="623.0" y="305.5" fill="#4a4a53" font-size="10" font-weight="500" text-anchor="end" opacity="0.85" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">U</text>
 <text x="599.0" y="329.5" fill="#ececf0" font-size="20" font-weight="700" text-anchor="middle" opacity="1.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">J</text>
@@ -147,12 +130,10 @@
 <text x="863.0" y="329.5" fill="#7cc0f8" font-size="20" font-weight="700" text-anchor="middle" opacity="1.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">-</text>
 <rect x="899.0" y="291.5" width="60.0" height="66.0" rx="8" fill="#3a1719" stroke="#33333b" stroke-width="1"/>
 <text x="953.0" y="305.5" fill="#4a4a53" font-size="10" font-weight="500" text-anchor="end" opacity="0.85" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">]</text>
-<text x="929.0" y="323.5" fill="#f08b8b" font-size="11" font-weight="600" text-anchor="middle" opacity="1.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">HERRO</text>
-<text x="929.0" y="335.5" fill="#f08b8b" font-size="11" font-weight="600" text-anchor="middle" opacity="1.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">PERS</text>
+<text x="929.0" y="329.5" fill="#f08b8b" font-size="11" font-weight="600" text-anchor="middle" opacity="1.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">Disabled</text>
 <rect x="965.0" y="291.5" width="60.0" height="66.0" rx="8" fill="#3a1719" stroke="#33333b" stroke-width="1"/>
 <text x="1019.0" y="305.5" fill="#4a4a53" font-size="10" font-weight="500" text-anchor="end" opacity="0.85" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">\</text>
-<text x="995.0" y="323.5" fill="#f08b8b" font-size="11" font-weight="600" text-anchor="middle" opacity="1.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">HERRO</text>
-<text x="995.0" y="335.5" fill="#f08b8b" font-size="11" font-weight="600" text-anchor="middle" opacity="1.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">PERS</text>
+<text x="995.0" y="329.5" fill="#f08b8b" font-size="11" font-weight="600" text-anchor="middle" opacity="1.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">Disabled</text>
 <rect x="74.0" y="363.5" width="109.5" height="66.0" rx="8" fill="#152e26" stroke="#33333b" stroke-width="1"/>
 <text x="177.5" y="377.5" fill="#4a4a53" font-size="10" font-weight="500" text-anchor="end" opacity="0.85" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">caps</text>
 <text x="128.8" y="389.5" fill="#79dfbc" font-size="11" font-weight="600" text-anchor="middle" opacity="1.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">hold =</text>
@@ -178,8 +159,7 @@
 <text x="483.5" y="401.5" fill="#ececf0" font-size="20" font-weight="700" text-anchor="middle" opacity="1.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">G</text>
 <rect x="519.5" y="363.5" width="60.0" height="66.0" rx="8" fill="#3a1719" stroke="#33333b" stroke-width="1"/>
 <text x="573.5" y="377.5" fill="#4a4a53" font-size="10" font-weight="500" text-anchor="end" opacity="0.85" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">H</text>
-<text x="549.5" y="395.5" fill="#f08b8b" font-size="11" font-weight="600" text-anchor="middle" opacity="1.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">HERRO</text>
-<text x="549.5" y="407.5" fill="#f08b8b" font-size="11" font-weight="600" text-anchor="middle" opacity="1.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">PERS</text>
+<text x="549.5" y="401.5" fill="#f08b8b" font-size="11" font-weight="600" text-anchor="middle" opacity="1.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">Disabled</text>
 <rect x="585.5" y="363.5" width="60.0" height="66.0" rx="8" fill="#1f1f24" stroke="#33333b" stroke-width="1"/>
 <text x="639.5" y="377.5" fill="#4a4a53" font-size="10" font-weight="500" text-anchor="end" opacity="0.85" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">J</text>
 <text x="615.5" y="401.5" fill="#ececf0" font-size="20" font-weight="700" text-anchor="middle" opacity="1.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">Y</text>
@@ -221,8 +201,7 @@
 <text x="450.5" y="473.5" fill="#ececf0" font-size="20" font-weight="700" text-anchor="middle" opacity="1.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">W</text>
 <rect x="486.5" y="435.5" width="60.0" height="66.0" rx="8" fill="#3a1719" stroke="#33333b" stroke-width="1"/>
 <text x="540.5" y="449.5" fill="#4a4a53" font-size="10" font-weight="500" text-anchor="end" opacity="0.85" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">B</text>
-<text x="516.5" y="467.5" fill="#f08b8b" font-size="11" font-weight="600" text-anchor="middle" opacity="1.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">HERRO</text>
-<text x="516.5" y="479.5" fill="#f08b8b" font-size="11" font-weight="600" text-anchor="middle" opacity="1.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">PERS</text>
+<text x="516.5" y="473.5" fill="#f08b8b" font-size="11" font-weight="600" text-anchor="middle" opacity="1.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">Disabled</text>
 <rect x="552.5" y="435.5" width="60.0" height="66.0" rx="8" fill="#1f1f24" stroke="#33333b" stroke-width="1"/>
 <text x="606.5" y="449.5" fill="#4a4a53" font-size="10" font-weight="500" text-anchor="end" opacity="0.85" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">N</text>
 <text x="582.5" y="473.5" fill="#ececf0" font-size="20" font-weight="700" text-anchor="middle" opacity="1.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">Z</text>
@@ -249,8 +228,7 @@
 <text x="104.0" y="545.5" fill="#4c4c55" font-size="20" font-weight="700" text-anchor="middle" opacity="1.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">fn</text>
 <rect x="140.0" y="507.5" width="60.0" height="66.0" rx="8" fill="#3a1719" stroke="#33333b" stroke-width="1"/>
 <text x="194.0" y="521.5" fill="#4a4a53" font-size="10" font-weight="500" text-anchor="end" opacity="0.85" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">control</text>
-<text x="170.0" y="539.5" fill="#f08b8b" font-size="11" font-weight="600" text-anchor="middle" opacity="1.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">HERRO</text>
-<text x="170.0" y="551.5" fill="#f08b8b" font-size="11" font-weight="600" text-anchor="middle" opacity="1.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">PERS</text>
+<text x="170.0" y="545.5" fill="#f08b8b" font-size="11" font-weight="600" text-anchor="middle" opacity="1.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">Disabled</text>
 <rect x="206.0" y="507.5" width="76.5" height="66.0" rx="8" fill="#372709" stroke="#33333b" stroke-width="1"/>
 <text x="276.5" y="521.5" fill="#4a4a53" font-size="10" font-weight="500" text-anchor="end" opacity="0.85" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">option</text>
 <text x="244.2" y="545.5" fill="#f0be6b" font-size="13" font-weight="600" text-anchor="middle" opacity="1.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">control</text>
@@ -269,14 +247,12 @@
 <text x="797.0" y="564.5" fill="#7e7e8a" font-size="9.5" font-weight="500" text-anchor="middle" opacity="1.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">tap: tab</text>
 <rect x="833.0" y="507.5" width="60.0" height="66.0" rx="8" fill="#3a1719" stroke="#33333b" stroke-width="1"/>
 <text x="887.0" y="521.5" fill="#4a4a53" font-size="10" font-weight="500" text-anchor="end" opacity="0.85" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">←</text>
-<text x="863.0" y="539.5" fill="#f08b8b" font-size="11" font-weight="600" text-anchor="middle" opacity="1.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">HERRO</text>
-<text x="863.0" y="551.5" fill="#f08b8b" font-size="11" font-weight="600" text-anchor="middle" opacity="1.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">PERS</text>
+<text x="863.0" y="545.5" fill="#f08b8b" font-size="11" font-weight="600" text-anchor="middle" opacity="1.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">Disabled</text>
 <rect x="899.0" y="507.5" width="60.0" height="32.0" rx="5" fill="#3a1719" stroke="#33333b" stroke-width="1"/>
 <text x="929.0" y="528.5" fill="#f08b8b" font-size="13" font-weight="600" text-anchor="middle" opacity="1.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">↑</text>
 <rect x="899.0" y="541.5" width="60.0" height="32.0" rx="5" fill="#3a1719" stroke="#33333b" stroke-width="1"/>
 <text x="929.0" y="562.5" fill="#f08b8b" font-size="13" font-weight="600" text-anchor="middle" opacity="1.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">↓</text>
 <rect x="965.0" y="507.5" width="60.0" height="66.0" rx="8" fill="#3a1719" stroke="#33333b" stroke-width="1"/>
 <text x="1019.0" y="521.5" fill="#4a4a53" font-size="10" font-weight="500" text-anchor="end" opacity="0.85" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">→</text>
-<text x="995.0" y="539.5" fill="#f08b8b" font-size="11" font-weight="600" text-anchor="middle" opacity="1.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">HERRO</text>
-<text x="995.0" y="551.5" fill="#f08b8b" font-size="11" font-weight="600" text-anchor="middle" opacity="1.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">PERS</text>
+<text x="995.0" y="545.5" fill="#f08b8b" font-size="11" font-weight="600" text-anchor="middle" opacity="1.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">Disabled</text>
 </svg>

@@ -2,9 +2,60 @@
 
 A Karabiner-Elements config that turns a stock MacBook Air keyboard into an
 ergonomic layered keyboard — alt alpha layout, home-row mods, four hold layers,
-and a bad-habit trainer that punishes you for reaching.
+and 25 disabled keys that fight back when you reach for them.
 
 No firmware. No external keyboard. One `karabiner.json`.
+
+The small grey legend in the corner of each cap is what is physically printed on
+it. The big legend is what the key actually does.
+
+---
+
+### Base
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="img/base-dark.svg">
+  <img alt="Base layer" src="img/base-light.svg">
+</picture>
+
+### Hold gate and home-row mods
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="img/mods-dark.svg">
+  <img alt="Hold gate and home-row mods" src="img/mods-light.svg">
+</picture>
+
+### Number layer
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="img/number-dark.svg">
+  <img alt="Number layer" src="img/number-light.svg">
+</picture>
+
+### Symbol layer — left
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="img/sym-left-dark.svg">
+  <img alt="Left symbol layer" src="img/sym-left-light.svg">
+</picture>
+
+### Symbol layer — right
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="img/sym-right-dark.svg">
+  <img alt="Right symbol layer" src="img/sym-right-light.svg">
+</picture>
+
+### Navigation layer
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="img/nav-dark.svg">
+  <img alt="Navigation layer" src="img/nav-light.svg">
+</picture>
+
+There is also an [interactive version](keymap.html) — open it and press keys on
+your own keyboard to light up the matching cap, or hold Caps Lock and a layer
+key to preview a layer live.
 
 Inspired by [@getreuer's QMK keymap](https://github.com/getreuer/qmk-keymap),
 which is the reference for what a well-documented personal keymap looks like.
@@ -22,31 +73,15 @@ moves:
 2. **Caps Lock and Return become a gate.** Hold either one and the home row
    turns into modifiers and layer keys. Let go and it is plain letters again —
    so there are no accidental mod-taps while typing at speed.
-3. **The keys you should stop using fight back.** The number row, `esc`, `tab`,
-   `delete`, the arrow cluster and the three worst reaches on the alpha block
-   all type `HERROPERS` instead of doing their job.
-
-Every diagram below shows a **US MacBook Air keyboard**. The small grey legend
-in the corner of each cap is what is physically printed on it; the big legend is
-what the key actually does.
-
-There is also an [interactive version](keymap.html) — open it and press keys on
-your own keyboard to light up the matching cap, or hold Caps Lock and a layer
-key to preview a layer live.
-
----
+3. **The keys you should stop using are disabled.** The number row, `esc`,
+   `tab`, `delete`, the arrow cluster and the three worst reaches on the alpha
+   block do not do their job any more.
 
 ## Base layer
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="img/base-dark.svg">
-  <img alt="Base layer" src="img/base-light.svg">
-</picture>
-
 The alphas are a Hands-Down-family arrangement — the `H A E I` right home row is
 the family's signature. The right hand sits **one column to the right** of where
-QWERTY puts it, which is what frees up the `Y` / `H` / `B` column for the
-trainer:
+QWERTY puts it, which is what frees up the `Y` / `H` / `B` column:
 
 ```
    B  L  D  C  V        J  F  O  U  -
@@ -68,14 +103,7 @@ Punctuation that is normally shifted moves down to the shift keys themselves:
 | Shift + `/` | `esc` |
 | Shift + `.` | `⌥C` |
 
----
-
 ## Hold gate and home-row mods
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="img/mods-dark.svg">
-  <img alt="Hold gate and home-row mods" src="img/mods-light.svg">
-</picture>
 
 Hold **Caps Lock** or **Return** to arm the gate (`hold_mods_enabled`). While it
 is held, four home-row keys become modifiers and four become layer keys:
@@ -98,16 +126,9 @@ active at a time — each layer key is conditioned on the other three being off.
 Layer keys use a 100 ms hold threshold with a 100 ms delayed action, so a tap
 still emits the letter.
 
----
+## The layers
 
-## Number layer
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="img/number-dark.svg">
-  <img alt="Number layer" src="img/number-light.svg">
-</picture>
-
-Gate + hold `S`. Digits sit under the right hand in a phone-pad-ish block:
+**Number** — gate + hold `S`. Digits sit under the right hand:
 
 ```
    7  8  9        F O U
@@ -115,16 +136,7 @@ Gate + hold `S`. Digits sit under the right hand in a phone-pad-ish block:
    4  5  6        K P ,
 ```
 
----
-
-## Symbol layer — left
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="img/sym-left-dark.svg">
-  <img alt="Left symbol layer" src="img/sym-left-light.svg">
-</picture>
-
-Gate + hold `P`. Held by the right hand, typed with the left:
+**Symbol, left** — gate + hold `P`. Held by the right hand, typed with the left:
 
 ```
    ^  <  >  |     B L D C
@@ -132,16 +144,7 @@ Gate + hold `P`. Held by the right hand, typed with the left:
    `  ~  *  @     X Q M W
 ```
 
----
-
-## Symbol layer — right
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="img/sym-right-dark.svg">
-  <img alt="Right symbol layer" src="img/sym-right-light.svg">
-</picture>
-
-Gate + hold `M`. Held by the left hand, typed with the right:
+**Symbol, right** — gate + hold `M`. Held by the left hand, typed with the right:
 
 ```
    ;  &  $  #     F O U -
@@ -149,29 +152,18 @@ Gate + hold `M`. Held by the left hand, typed with the right:
    :  \  %  ?     K P , .
 ```
 
----
-
-## Navigation layer
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="img/nav-dark.svg">
-  <img alt="Navigation layer" src="img/nav-light.svg">
-</picture>
-
-Gate + hold `H`. Home row moves the caret one step, the row below moves it five
-at a time (five key events at 30 ms each):
+**Navigation** — gate + hold `H`. Home row moves the caret one step, the row
+below moves it five at a time (five key events at 30 ms each):
 
 ```
    ←  ↑  ↓  →       N R T S
    ←5 ↑5 ↓5 →5      X Q M W
 ```
 
----
+## The disabled keys
 
-## The bad-habit trainer
-
-Twenty-five keys are booby-trapped. Press one and it types `HERROPERS` — loudly,
-in the middle of whatever you were writing:
+Twenty-five keys are booby-trapped. They do not just do nothing — press one and
+it types `HERROPERS`, loudly, in the middle of whatever you were writing:
 
 `` ` `` `1` `2` `3` `4` `5` `6` `7` `8` `9` `0` `-` `=` `delete` `tab` `]` `\`
 `esc` `control` `←` `→` `↑` `↓` and the `Y` / `H` / `B` positions.
@@ -192,8 +184,6 @@ It is a blunt instrument and it works. Delete the rule named
 `Bad-habit trainer` once the habit is gone — or keep it forever, nobody is
 judging.
 
----
-
 ## Function row and system keys
 
 | Key | Action |
@@ -213,8 +203,6 @@ judging.
 Karabiner between the `Default profile` and a `Disabled` profile that contains
 nothing but the toggle itself. Handy when someone else needs to use your laptop,
 or when you need to type a password into a field that fights you.
-
----
 
 ## Install
 
@@ -243,16 +231,14 @@ script — so edit or drop those rules if you do not want them.
 > and remember that `F6` turns everything off.
 
 Rule order in `karabiner.json` matters. Karabiner chains manipulators, so each
-rule sees the output of the ones above it — the trainer runs first so it wins on
-`Y`/`H`/`B`, and `Left Option => Left Control` runs last so the `⌥`+letter
-shortcuts above it still match.
-
----
+rule sees the output of the ones above it — the disabled-key rule runs first so
+it wins on `Y`/`H`/`B`, and `Left Option => Left Control` runs last so the
+`⌥`+letter shortcuts above it still match.
 
 ## Regenerating the diagrams
 
-The layout data lives in [`tools/keymap.py`](tools/keymap.py) and the SVGs are
-generated from it:
+The layout data lives in [`tools/keymap.py`](tools/keymap.py) and everything
+else is generated from it:
 
 ```sh
 python3 tools/render_svg.py     # writes img/*.svg
@@ -260,8 +246,6 @@ python3 tools/build_html.py     # writes keymap.html
 ```
 
 No dependencies beyond the standard library.
-
----
 
 ## Credits
 

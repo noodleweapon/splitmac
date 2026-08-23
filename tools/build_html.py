@@ -307,7 +307,8 @@ h1 {
 .split { display: flex; flex-direction: column; gap: 2px; }
 .split .key { height: 30px; border-radius: 5px; }
 .krow .split .key .legend { font-size: 11px; }
-.krow .split .key .legend.tiny { font-size: 7px; line-height: 1.05; }
+.krow .split .key .legend.tiny,
+.krow .split .key .legend.small { font-size: 8px; line-height: 1.05; }
 .krow .split .key .cap-ghost { top: 2px; right: 3px; }
 
 /* ---------- readout ---------- */
@@ -504,7 +505,7 @@ const CLASSES = [
   ["alpha", "base letters"], ["punct", "punctuation & digits"],
   ["layer", "layer key"], ["mod", "modifier"],
   ["gate", "hold gate"], ["system", "app / system"],
-  ["trainer", "HERROPERS"],
+  ["trainer", "disabled — types HERROPERS"],
 ];
 
 const deck = document.getElementById("deck");
