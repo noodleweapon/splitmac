@@ -217,7 +217,6 @@ judging.
 | --- | --- |
 | `F3` | `⌘⇧⌃4` — screenshot a region to the clipboard |
 | `F4` | Raycast (`⌥⌃⌘⇧` + `a`) |
-| `F5` | Launch Screenprompt |
 | `F6` | Toggle the whole keymap on and off |
 | `⌥` + `A` | Raycast |
 | `⌥` + `S` | Mouseless |
@@ -249,9 +248,9 @@ cp karabiner/toggle_profile.sh   ~/.config/karabiner/toggle_profile.sh
 chmod +x ~/.config/karabiner/toggle_profile.sh
 ```
 
-Karabiner picks the file up as soon as it is written. Two paths in the config
-point at this machine — the `F5` Screenprompt launcher and the `F6` toggle
-script — so edit or drop those rules if you do not want them.
+Karabiner picks the file up as soon as it is written. One path in the config
+points at this machine — the `F6` toggle script — so edit or drop that rule if
+you do not want it.
 
 > **Warning:** this replaces your entire Karabiner config, and the alpha layout
 > means you cannot touch-type on the machine until you learn it. Keep the backup

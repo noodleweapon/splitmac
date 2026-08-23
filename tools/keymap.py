@@ -134,12 +134,11 @@ BASE = {
     # function row
     "f3": ("⌘⇧⌃ 4", "clip shot", "system"),
     "f4": ("Raycast", "", "system"),
-    "f5": ("Screen\nprompt", "", "system"),
     "f6": ("toggle\nkeymap", "on / off", "system"),
 }
 
 _MEDIA = {
-    "f1": "☀−", "f2": "☀+", "f7": "⏮", "f8": "⏯",
+    "f1": "☀−", "f2": "☀+", "f5": "mic", "f7": "⏮", "f8": "⏯",
     "f9": "⏭", "f10": "mute", "f11": "vol −", "f12": "vol +",
 }
 for _k, _legend in _MEDIA.items():
