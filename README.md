@@ -1,8 +1,8 @@
-# godlike-keymap
+# splitmac
 
-A Karabiner-Elements config that turns a stock MacBook Air keyboard into an
-ergonomic layered keyboard — alt alpha layout, home-row mods, four hold layers,
-and 25 disabled keys that fight back when you reach for them.
+Split-keyboard ergonomics on a stock MacBook, in one Karabiner-Elements config.
+The right hand moves a column over, the home row becomes modifiers and four hold
+layers, and 25 keys you should stop reaching for are switched off.
 
 No firmware. No external keyboard. One `karabiner.json`.
 
@@ -209,8 +209,8 @@ or when you need to type a password into a field that fights you.
 Requires [Karabiner-Elements](https://karabiner-elements.pqrs.org/).
 
 ```sh
-git clone git@github.com:noodleweapon/godlike-keymap.git
-cd godlike-keymap
+git clone git@github.com:noodleweapon/splitmac.git
+cd splitmac
 
 mkdir -p ~/.config/karabiner
 

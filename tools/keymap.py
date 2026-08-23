@@ -1,4 +1,4 @@
-"""Single source of truth for the godlike-keymap layout.
+"""Single source of truth for the splitmac layout.
 
 Everything downstream (the SVG renderer, the interactive page) reads its data
 from here so the diagrams can never drift away from karabiner.json.
@@ -201,6 +201,13 @@ MODS = {
     "return_or_enter": ("hold", "arms all of it", "gate"),
 }
 
+def _with_disabled(keys):
+    """Every layer shows the disabled keys — they are dead on all of them."""
+    merged = {k: ("Disabled", "", "trainer") for k in TRAINER_KEYS}
+    merged.update(keys)
+    return merged
+
+
 LAYERS = [
     {
         "id": "base",
@@ -213,35 +220,35 @@ LAYERS = [
         "id": "mods",
         "name": "Hold gate + home-row mods",
         "sub": "Hold caps or return to arm. Then hold a home-row key for its modifier or layer.",
-        "keys": MODS,
+        "keys": _with_disabled(MODS),
         "full": False,
     },
     {
         "id": "number",
         "name": "Number layer",
         "sub": "caps/return + hold S (physical F). Digits land on the right hand.",
-        "keys": NUM,
+        "keys": _with_disabled(NUM),
         "full": False,
     },
     {
         "id": "sym-left",
         "name": "Symbol layer — left",
         "sub": "caps/return + hold P (physical comma). Math, brackets and shell glyphs.",
-        "keys": SYM_LEFT,
+        "keys": _with_disabled(SYM_LEFT),
         "full": False,
     },
     {
         "id": "sym-right",
         "name": "Symbol layer — right",
         "sub": "caps/return + hold M (physical C). Pairs, punctuation and money.",
-        "keys": SYM_RIGHT,
+        "keys": _with_disabled(SYM_RIGHT),
         "full": False,
     },
     {
         "id": "nav",
         "name": "Navigation layer",
         "sub": "caps/return + hold H (physical K). Bottom row jumps five at a time.",
-        "keys": NAV,
+        "keys": _with_disabled(NAV),
         "full": False,
     },
 ]

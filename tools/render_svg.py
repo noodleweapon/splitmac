@@ -25,9 +25,9 @@ THEMES = {
         page="#f4f4f2", chassis="#d8d8d5", chassis_edge="#bdbdb9", deck="#1b1b1f",
         cap="#2c2c31", cap_edge="#3d3d44", text="#f2f2f4", sub="#8f8f9b",
         title="#17171a", subtitle="#5f5f6a",
-        alpha="#2c2c31", punct="#1e3a5f", trainer="#4a1f22", gate="#1f3d33",
+        alpha="#2c2c31", punct="#1e3a5f", trainer="#000000", gate="#1f3d33",
         layer="#3d2a52", mod="#4a3410", system="#123a3c", dead="#232327",
-        alpha_t="#f2f2f4", punct_t="#8ecbff", trainer_t="#ff9d9d", gate_t="#8ff0cd",
+        alpha_t="#f2f2f4", punct_t="#8ecbff", trainer_t="#63636b", gate_t="#8ff0cd",
         layer_t="#d3aaff", mod_t="#ffcf7a", system_t="#7fe6e0", dead_t="#5a5a63",
         ghost="#55555e",
     ),
@@ -35,9 +35,9 @@ THEMES = {
         page="#0d0d10", chassis="#1e1e22", chassis_edge="#2c2c32", deck="#0a0a0c",
         cap="#1f1f24", cap_edge="#33333b", text="#ececf0", sub="#7e7e8a",
         title="#f2f2f5", subtitle="#9a9aa6",
-        alpha="#1f1f24", punct="#15293f", trainer="#3a1719", gate="#152e26",
+        alpha="#1f1f24", punct="#15293f", trainer="#000000", gate="#152e26",
         layer="#2c1f3c", mod="#372709", system="#0d2b2d", dead="#161619",
-        alpha_t="#ececf0", punct_t="#7cc0f8", trainer_t="#f08b8b", gate_t="#79dfbc",
+        alpha_t="#ececf0", punct_t="#7cc0f8", trainer_t="#5c5c64", gate_t="#79dfbc",
         layer_t="#c39cf5", mod_t="#f0be6b", system_t="#6fd8d2", dead_t="#4c4c55",
         ghost="#4a4a53",
     ),
@@ -93,7 +93,7 @@ def render(layer, theme_name):
 
     out = [f'<svg xmlns="http://www.w3.org/2000/svg" width="{W:.0f}" height="{H:.0f}" '
            f'viewBox="0 0 {W:.0f} {H:.0f}" role="img" '
-           f'aria-label="{escape(layer["name"])} layer of the godlike-keymap">']
+           f'aria-label="{escape(layer["name"])} layer of the splitmac">']
     out.append(f'<rect width="{W:.0f}" height="{H:.0f}" fill="{t["page"]}"/>')
 
     # title block

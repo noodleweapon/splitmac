@@ -51,7 +51,7 @@ DATA = {
                for l in LAYERS],
 }
 
-TEMPLATE = r"""<title>godlike-keymap</title>
+TEMPLATE = r"""<title>splitmac</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chivo:wght@700;900&family=JetBrains+Mono:wght@400;500;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap">
@@ -77,7 +77,7 @@ TEMPLATE = r"""<title>godlike-keymap</title>
 
   --c-alpha-bg: #232429;   --c-alpha-fg: #f3f3f6;
   --c-punct-bg: #16304c;   --c-punct-fg: #8ecbff;
-  --c-trainer-bg: #481d20; --c-trainer-fg: #ff9d9d;
+  --c-trainer-bg: #000000; --c-trainer-fg: #63636b;
   --c-gate-bg: #17392f;    --c-gate-fg: #8ff0cd;
   --c-layer-bg: #372450;   --c-layer-fg: #d3aaff;
   --c-mod-bg: #48320f;     --c-mod-fg: #ffcf7a;
@@ -414,16 +414,15 @@ footer a { color: var(--fg-dim); }
 
 <header>
   <div class="eyebrow">Karabiner-Elements · MacBook Air · US layout</div>
-  <h1>godlike-keymap</h1>
-  <p class="standfirst">A stock laptop keyboard, rewired: a Hands-Down-family alpha
-  layout, a hold gate on Caps Lock, four layers under the home row, and
-  twenty-five keys that type <strong>HERROPERS</strong> to stop you reaching for
-  them.</p>
+  <h1>splitmac</h1>
+  <p class="standfirst">Split-keyboard ergonomics on a stock MacBook: the right
+  hand moves a column over, the home row becomes modifiers and four layers, and
+  twenty-five keys you should stop reaching for are switched off.</p>
   <div class="meta">
     <span>No firmware</span>
     <span>No external board</span>
     <span>One karabiner.json</span>
-    <a href="https://github.com/noodleweapon/godlike-keymap">github.com/noodleweapon/godlike-keymap</a>
+    <a href="https://github.com/noodleweapon/splitmac">github.com/noodleweapon/splitmac</a>
   </div>
 </header>
 
