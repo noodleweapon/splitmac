@@ -491,7 +491,7 @@ footer a { color: var(--fg-dim); }
   <span>Layout data generated from karabiner.json</span>
   <a href="https://github.com/getreuer/qmk-keymap">Reference: @getreuer's QMK keymap</a>
   <a href="https://karabiner-elements.pqrs.org/">Karabiner-Elements</a>
-  <a href="https://sites.google.com/alanreiser.com/handsdown">Hands Down</a>
+  <a href="https://github.com/GalileoBlues/Gallium">Gallium v2 by GalileoBlues</a>
 </footer>
 
 </div>

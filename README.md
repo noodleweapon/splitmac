@@ -79,9 +79,15 @@ moves:
 
 ## Base layer
 
-The alphas are a Hands-Down-family arrangement — the `H A E I` right home row is
-the family's signature. The right hand sits **one column to the right** of where
-QWERTY puts it, which is what frees up the `Y` / `H` / `B` column:
+The alphas are [Gallium v2](https://github.com/GalileoBlues/Gallium), the
+row-staggered variant of Gallium — which is the right choice here, because a
+laptop keyboard is a row-staggered keyboard. Gallium v2 exists precisely for
+boards like this one, rather than the column-staggered splits most alt layouts
+are tuned for.
+
+Fitting a 3×10 layout onto a MacBook means the top two rows of the right hand
+sit **one column to the right** of where QWERTY puts them, which is what leaves
+`Y`, `H` and `B` with nothing to do:
 
 ```
    B  L  D  C  V        J  F  O  U  -
@@ -278,8 +284,8 @@ No dependencies beyond the standard library.
 - [Karabiner-Elements](https://karabiner-elements.pqrs.org/) by Takayama Fumihiko
 - [@getreuer's QMK keymap](https://github.com/getreuer/qmk-keymap) for the
   documentation format
-- [Hands Down](https://sites.google.com/alanreiser.com/handsdown) by R. Alan
-  Reiser, whose layout family the alphas descend from
+- [Gallium](https://github.com/GalileoBlues/Gallium) by GalileoBlues — the
+  alpha layout. This config uses v2, the row-staggered version
 
 ## License
 

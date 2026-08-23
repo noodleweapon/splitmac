@@ -211,7 +211,7 @@ LAYERS = [
     {
         "id": "base",
         "name": "Base",
-        "sub": "Hands‑Down‑family alphas. Right hand sits one column right of QWERTY home.",
+        "sub": "Gallium v2, the row-staggered variant. Right hand sits one column right of QWERTY home.",
         "keys": BASE,
         "full": True,
     },
