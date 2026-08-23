@@ -123,8 +123,35 @@ The gate is the whole trick. Home-row mods normally misfire during fast typing;
 here they simply do not exist until you ask for them, and only one layer can be
 active at a time — each layer key is conditioned on the other three being off.
 
-Layer keys use a 100 ms hold threshold with a 100 ms delayed action, so a tap
-still emits the letter.
+**Every hold latches on key-down, so order never matters.** All eight of them —
+four layers, two Commands, two Options — are written the same way: `to` sets the
+modifier or the layer variable the instant the key goes down, `to_if_alone`
+emits the letter if you tap it and press nothing else, `to_after_key_up` clears
+it on release. Hold the layer first or the modifier first; the result is
+identical.
+
+This is worth stating because the obvious way to write a layer key — a
+`to_if_held_down` timer, optionally with a `to_delayed_action` — does not
+compose. Both are cancelable by later key events, so whichever hold you started
+first wins and the second one silently does nothing. Nothing here uses a timer.
+
+One thing the gate cannot make order-free: it has to be held *first*. Conditions
+are evaluated when a key goes down, so a layer or modifier key pressed before
+Caps Lock sees `hold_mods_enabled` as 0 and just types its letter.
+
+Each layer also borrows some home-row keys for its own glyphs, which shadows the
+modifier on those keys. One pair always survives:
+
+| Layer (held with) | Modifiers still reachable |
+| --- | --- |
+| Number — physical `F` | Left Command `D`, Left Option `S` |
+| Symbol right — physical `C` | Left Command `D`, Left Option `S` |
+| Symbol left — physical `,` | Right Command `L`, Right Option `;` |
+| Navigation — physical `K` | Right Command `L`, Right Option `;` |
+
+In every case the surviving pair is on the same hand that holds the layer, which
+takes some getting used to. The other hand's Command and Option are typing layer
+glyphs and cannot also be modifiers.
 
 ## The layers
 
