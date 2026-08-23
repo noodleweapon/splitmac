@@ -30,6 +30,10 @@ Every diagram below shows a **US MacBook Air keyboard**. The small grey legend
 in the corner of each cap is what is physically printed on it; the big legend is
 what the key actually does.
 
+There is also an [interactive version](keymap.html) — open it and press keys on
+your own keyboard to light up the matching cap, or hold Caps Lock and a layer
+key to preview a layer live.
+
 ---
 
 ## Base layer
@@ -252,6 +256,7 @@ generated from it:
 
 ```sh
 python3 tools/render_svg.py     # writes img/*.svg
+python3 tools/build_html.py     # writes keymap.html
 ```
 
 No dependencies beyond the standard library.

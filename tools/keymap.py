@@ -82,7 +82,7 @@ TRAINER_KEYS = [
     "grave_accent_and_tilde", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0",
     "hyphen", "equal_sign", "delete_or_backspace", "tab", "close_bracket",
     "backslash", "escape", "left_control", "y", "h", "b",
-    "left_arrow", "right_arrow", "__updown",
+    "left_arrow", "right_arrow", "up_arrow", "down_arrow", "__updown",
 ]
 
 # --- base layer -------------------------------------------------------------
