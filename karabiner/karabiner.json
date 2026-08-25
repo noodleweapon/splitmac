@@ -7,7 +7,7 @@
                 },
                 "rules": [
                     {
-                        "description": "Bad-habit trainer: numbers ` ⌫ - = ⇥ ] \\ arrows ⌃ ⎋ Y H B => type HERROPERS",
+                        "description": "Bad-habit trainer: numbers ` ⌫ - = ⇥ ] \\ arrows ⌃ ⎋ Y H B N => type HERROPERS",
                         "manipulators": [
                             {
                                 "from": {
@@ -1750,6 +1750,73 @@
                                     }
                                 ],
                                 "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "n",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "h",
+                                        "modifiers": [
+                                            "left_shift"
+                                        ]
+                                    },
+                                    {
+                                        "key_code": "e",
+                                        "modifiers": [
+                                            "left_shift"
+                                        ]
+                                    },
+                                    {
+                                        "key_code": "r",
+                                        "modifiers": [
+                                            "left_shift"
+                                        ]
+                                    },
+                                    {
+                                        "key_code": "r",
+                                        "modifiers": [
+                                            "left_shift"
+                                        ]
+                                    },
+                                    {
+                                        "key_code": "o",
+                                        "modifiers": [
+                                            "left_shift"
+                                        ]
+                                    },
+                                    {
+                                        "key_code": "p",
+                                        "modifiers": [
+                                            "left_shift"
+                                        ]
+                                    },
+                                    {
+                                        "key_code": "e",
+                                        "modifiers": [
+                                            "left_shift"
+                                        ]
+                                    },
+                                    {
+                                        "key_code": "r",
+                                        "modifiers": [
+                                            "left_shift"
+                                        ]
+                                    },
+                                    {
+                                        "key_code": "s",
+                                        "modifiers": [
+                                            "left_shift"
+                                        ]
+                                    }
+                                ],
+                                "type": "basic"
                             }
                         ]
                     },
@@ -1799,7 +1866,7 @@
                         ]
                     },
                     {
-                        "description": "Hold M => symbol layer: FOU;=;&$# HAEI=[]() KP,.=:\\%?",
+                        "description": "Hold M => symbol layer: FOU;=;&$# HAEI=[]() P,.'=:\\%?",
                         "manipulators": [
                             {
                                 "conditions": [
@@ -2009,7 +2076,7 @@
                                     }
                                 ],
                                 "from": {
-                                    "key_code": "m",
+                                    "key_code": "comma",
                                     "modifiers": {
                                         "optional": [
                                             "any"
@@ -2035,7 +2102,7 @@
                                     }
                                 ],
                                 "from": {
-                                    "key_code": "comma",
+                                    "key_code": "period",
                                     "modifiers": {
                                         "optional": [
                                             "any"
@@ -2058,7 +2125,7 @@
                                     }
                                 ],
                                 "from": {
-                                    "key_code": "period",
+                                    "key_code": "slash",
                                     "modifiers": {
                                         "optional": [
                                             "any"
@@ -2084,7 +2151,7 @@
                                     }
                                 ],
                                 "from": {
-                                    "key_code": "slash",
+                                    "key_code": "right_shift",
                                     "modifiers": {
                                         "optional": [
                                             "any"
@@ -2158,7 +2225,7 @@
                         ]
                     },
                     {
-                        "description": "Hold P => symbol layer: BLDC=^<>| NRTS=+!/= XQMW=`~*@",
+                        "description": "Hold P => symbol layer: BLDC=^<>| NRTS=+!/= ZXQM=`~*@",
                         "manipulators": [
                             {
                                 "conditions": [
@@ -2371,7 +2438,7 @@
                                     }
                                 ],
                                 "from": {
-                                    "key_code": "z",
+                                    "key_code": "left_shift",
                                     "modifiers": {
                                         "optional": [
                                             "any"
@@ -2394,7 +2461,7 @@
                                     }
                                 ],
                                 "from": {
-                                    "key_code": "x",
+                                    "key_code": "z",
                                     "modifiers": {
                                         "optional": [
                                             "any"
@@ -2420,7 +2487,7 @@
                                     }
                                 ],
                                 "from": {
-                                    "key_code": "c",
+                                    "key_code": "x",
                                     "modifiers": {
                                         "optional": [
                                             "any"
@@ -2446,7 +2513,7 @@
                                     }
                                 ],
                                 "from": {
-                                    "key_code": "v",
+                                    "key_code": "c",
                                     "modifiers": {
                                         "optional": [
                                             "any"
@@ -2520,7 +2587,7 @@
                         ]
                     },
                     {
-                        "description": "Hold S => number layer: FOU=789, HAEI=0123, KP,=456",
+                        "description": "Hold S => number layer: FOU=789, HAEI=0123, P,.=456",
                         "manipulators": [
                             {
                                 "conditions": [
@@ -2692,7 +2759,7 @@
                                     }
                                 ],
                                 "from": {
-                                    "key_code": "m",
+                                    "key_code": "comma",
                                     "modifiers": {
                                         "optional": [
                                             "any"
@@ -2715,7 +2782,7 @@
                                     }
                                 ],
                                 "from": {
-                                    "key_code": "comma",
+                                    "key_code": "period",
                                     "modifiers": {
                                         "optional": [
                                             "any"
@@ -2738,7 +2805,7 @@
                                     }
                                 ],
                                 "from": {
-                                    "key_code": "period",
+                                    "key_code": "slash",
                                     "modifiers": {
                                         "optional": [
                                             "any"
@@ -2809,7 +2876,7 @@
                         ]
                     },
                     {
-                        "description": "Hold H => arrow layer: N/R/T/S = arrows; X/Q/M/W = 5x arrows",
+                        "description": "Hold H => arrow layer: N/R/T/S = arrows; Z/X/Q/M = 5x arrows",
                         "manipulators": [
                             {
                                 "conditions": [
@@ -2912,7 +2979,7 @@
                                     }
                                 ],
                                 "from": {
-                                    "key_code": "z",
+                                    "key_code": "left_shift",
                                     "modifiers": {
                                         "optional": [
                                             "any"
@@ -2938,6 +3005,45 @@
                                     },
                                     {
                                         "key_code": "left_arrow"
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "arrow_layer",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "z",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "hold_down_milliseconds": 30,
+                                        "key_code": "up_arrow"
+                                    },
+                                    {
+                                        "hold_down_milliseconds": 30,
+                                        "key_code": "up_arrow"
+                                    },
+                                    {
+                                        "hold_down_milliseconds": 30,
+                                        "key_code": "up_arrow"
+                                    },
+                                    {
+                                        "hold_down_milliseconds": 30,
+                                        "key_code": "up_arrow"
+                                    },
+                                    {
+                                        "key_code": "up_arrow"
                                     }
                                 ],
                                 "type": "basic"
@@ -2961,22 +3067,22 @@
                                 "to": [
                                     {
                                         "hold_down_milliseconds": 30,
-                                        "key_code": "up_arrow"
+                                        "key_code": "down_arrow"
                                     },
                                     {
                                         "hold_down_milliseconds": 30,
-                                        "key_code": "up_arrow"
+                                        "key_code": "down_arrow"
                                     },
                                     {
                                         "hold_down_milliseconds": 30,
-                                        "key_code": "up_arrow"
+                                        "key_code": "down_arrow"
                                     },
                                     {
                                         "hold_down_milliseconds": 30,
-                                        "key_code": "up_arrow"
+                                        "key_code": "down_arrow"
                                     },
                                     {
-                                        "key_code": "up_arrow"
+                                        "key_code": "down_arrow"
                                     }
                                 ],
                                 "type": "basic"
@@ -2991,45 +3097,6 @@
                                 ],
                                 "from": {
                                     "key_code": "c",
-                                    "modifiers": {
-                                        "optional": [
-                                            "any"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "hold_down_milliseconds": 30,
-                                        "key_code": "down_arrow"
-                                    },
-                                    {
-                                        "hold_down_milliseconds": 30,
-                                        "key_code": "down_arrow"
-                                    },
-                                    {
-                                        "hold_down_milliseconds": 30,
-                                        "key_code": "down_arrow"
-                                    },
-                                    {
-                                        "hold_down_milliseconds": 30,
-                                        "key_code": "down_arrow"
-                                    },
-                                    {
-                                        "key_code": "down_arrow"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "arrow_layer",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "v",
                                     "modifiers": {
                                         "optional": [
                                             "any"
@@ -3292,7 +3359,7 @@
                         ]
                     },
                     {
-                        "description": "AeroSpace navigation: right_cmd+J/K/L/; -> alt+h/a/e/i (focus)",
+                        "description": "AeroSpace: alt+J/K/L/; -> alt+h/a/e/i (focus), alt+F -> alt+s (resize -50)",
                         "manipulators": [
                             {
                                 "from": {
@@ -3369,11 +3436,30 @@
                                     }
                                 ],
                                 "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "f",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "left_option"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "s",
+                                        "modifiers": [
+                                            "left_option"
+                                        ]
+                                    }
+                                ],
+                                "type": "basic"
                             }
                         ]
                     },
                     {
-                        "description": "Keyboard layout remap: BLDCV (J)JFOU-[] / NRTSG (Y)YHAEI / XQMWZ ZKP,. (right hand shifted right)",
+                        "description": "Keyboard layout remap: BLDCV (J)JFOU-[] / NRTSG (Y)YHAEI / XQMWZ (Z)KP,. (right hand shifted right)",
                         "manipulators": [
                             {
                                 "from": {
@@ -3754,22 +3840,6 @@
                             },
                             {
                                 "from": {
-                                    "key_code": "n",
-                                    "modifiers": {
-                                        "optional": [
-                                            "any"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "z"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
                                     "key_code": "m",
                                     "modifiers": {
                                         "optional": [
@@ -4144,7 +4214,7 @@
                         ]
                     },
                     {
-                        "description": "Left Shift => single quote, Right Shift => semicolon (no hold behavior)",
+                        "description": "Left Shift => Z, Right Shift => single quote (no hold behavior)",
                         "manipulators": [
                             {
                                 "from": {
@@ -4157,7 +4227,7 @@
                                 },
                                 "to": [
                                     {
-                                        "key_code": "quote"
+                                        "key_code": "z"
                                     }
                                 ],
                                 "type": "basic"
@@ -4173,7 +4243,7 @@
                                 },
                                 "to": [
                                     {
-                                        "key_code": "semicolon"
+                                        "key_code": "quote"
                                     }
                                 ],
                                 "type": "basic"

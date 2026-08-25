@@ -81,7 +81,7 @@ ROW_WIDTH = 14.5
 TRAINER_KEYS = [
     "grave_accent_and_tilde", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0",
     "hyphen", "equal_sign", "delete_or_backspace", "tab", "close_bracket",
-    "backslash", "escape", "left_control", "y", "h", "b",
+    "backslash", "escape", "left_control", "y", "h", "b", "n",
     "left_arrow", "right_arrow", "up_arrow", "down_arrow", "__updown",
 ]
 
@@ -111,7 +111,7 @@ BASE = {
     "z": ("X", "", "alpha"),   "x": ("Q", "", "alpha"),
     "c": ("M", "& sym", "layer"),
     "v": ("W", "", "alpha"),
-    "n": ("Z", "", "alpha"),   "m": ("K", "", "alpha"),
+    "m": ("K", "", "alpha"),
     "comma": ("P", "# sym", "layer"),
     "period": (",", "⇧ ⌥C", "alpha"),
     "slash": (".", "⇧ esc", "alpha"),
@@ -121,8 +121,8 @@ BASE = {
     "return_or_enter": ("hold =\nlayers", "tap: nothing", "gate"),
 
     # modifiers & thumbs
-    "left_shift": ("'", "", "punct"),
-    "right_shift": (";", "", "punct"),
+    "left_shift": ("Z", "", "alpha"),
+    "right_shift": ("'", "", "punct"),
     "left_option": ("control", "", "mod"),
     "left_command": ("⇧ shift", "tap: return", "mod"),
     "right_command": ("⌫ delete", "", "mod"),
@@ -155,7 +155,8 @@ NUM = {
     "i": ("7", "", "punct"), "o": ("8", "", "punct"), "p": ("9", "", "punct"),
     "k": ("0", "", "punct"), "l": ("1", "", "punct"),
     "semicolon": ("2", "", "punct"), "quote": ("3", "", "punct"),
-    "m": ("4", "", "punct"), "comma": ("5", "", "punct"), "period": ("6", "", "punct"),
+    "comma": ("4", "", "punct"), "period": ("5", "", "punct"),
+    "slash": ("6", "", "punct"),
     "f": ("hold", "S", "layer"),
 }
 
@@ -164,8 +165,8 @@ SYM_RIGHT = {
     "p": ("$", "", "punct"), "open_bracket": ("#", "", "punct"),
     "k": ("[", "", "punct"), "l": ("]", "", "punct"),
     "semicolon": ("(", "", "punct"), "quote": (")", "", "punct"),
-    "m": (":", "", "punct"), "comma": ("\\", "", "punct"),
-    "period": ("%", "", "punct"), "slash": ("?", "", "punct"),
+    "comma": (":", "", "punct"), "period": ("\\", "", "punct"),
+    "slash": ("%", "", "punct"), "right_shift": ("?", "", "punct"),
     "c": ("hold", "M", "layer"),
 }
 
@@ -174,16 +175,16 @@ SYM_LEFT = {
     "e": (">", "", "punct"), "r": ("|", "", "punct"),
     "a": ("+", "", "punct"), "s": ("!", "", "punct"),
     "d": ("/", "", "punct"), "f": ("=", "", "punct"),
-    "z": ("`", "", "punct"), "x": ("~", "", "punct"),
-    "c": ("*", "", "punct"), "v": ("@", "", "punct"),
+    "left_shift": ("`", "", "punct"), "z": ("~", "", "punct"),
+    "x": ("*", "", "punct"), "c": ("@", "", "punct"),
     "comma": ("hold", "P", "layer"),
 }
 
 NAV = {
     "a": ("←", "", "punct"), "s": ("↑", "", "punct"),
     "d": ("↓", "", "punct"), "f": ("→", "", "punct"),
-    "z": ("←×5", "", "punct"), "x": ("↑×5", "", "punct"),
-    "c": ("↓×5", "", "punct"), "v": ("→×5", "", "punct"),
+    "left_shift": ("←×5", "", "punct"), "z": ("↑×5", "", "punct"),
+    "x": ("↓×5", "", "punct"), "c": ("→×5", "", "punct"),
     "k": ("hold", "H", "layer"),
 }
 

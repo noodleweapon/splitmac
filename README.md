@@ -2,7 +2,7 @@
 
 Split-keyboard ergonomics on a stock MacBook, in one Karabiner-Elements config.
 The right hand moves a column over, the home row becomes modifiers and four hold
-layers, and 25 keys you should stop reaching for are switched off.
+layers, and 26 keys you should stop reaching for are switched off.
 
 No firmware. No external keyboard. One `karabiner.json`.
 
@@ -90,17 +90,21 @@ sit **one column to the right** of where QWERTY puts them, which is what leaves
 `Y`, `H` and `B` with nothing to do:
 
 ```
-   B  L  D  C  V        J  F  O  U  -
-   N  R  T  S  G        Y  H  A  E  I
-   X  Q  M  W           Z  K  P  ,  .
+      B  L  D  C  V        J  F  O  U  -
+      N  R  T  S  G        Y  H  A  E  I
+   Z  X  Q  M  W              K  P  ,  .
 ```
+
+That leading `Z` is **Left Shift** — the bottom row is one key short of a home
+for it, so it moves onto the shift key and the old `Z` position (physical `N`)
+is disabled too.
 
 Punctuation that is normally shifted moves down to the shift keys themselves:
 
 | Physical key | Types |
 | --- | --- |
-| Left Shift | `'` |
-| Right Shift | `;` |
+| Left Shift | `Z` |
+| Right Shift | `'` |
 | Left Command | tap `return`, hold `shift` |
 | Right Option | tap `tab`, hold `shift` |
 | Right Command | `delete` |
@@ -166,7 +170,7 @@ glyphs and cannot also be modifiers.
 ```
    7  8  9        F O U
    0  1  2  3     H A E I
-   4  5  6        K P ,
+      4  5  6     K P , .
 ```
 
 **Symbol, left** — gate + hold `P`. Held by the right hand, typed with the left:
@@ -174,7 +178,7 @@ glyphs and cannot also be modifiers.
 ```
    ^  <  >  |     B L D C
    +  !  /  =     N R T S
-   `  ~  *  @     X Q M W
+`  ~  *  @        Z X Q M
 ```
 
 **Symbol, right** — gate + hold `M`. Held by the left hand, typed with the right:
@@ -182,7 +186,7 @@ glyphs and cannot also be modifiers.
 ```
    ;  &  $  #     F O U -
    [  ]  (  )     H A E I
-   :  \  %  ?     K P , .
+      :  \  %  ?     P , . '
 ```
 
 **Navigation** — gate + hold `H`. Home row moves the caret one step, the row
@@ -190,16 +194,16 @@ below moves it five at a time (five key events at 30 ms each):
 
 ```
    ←  ↑  ↓  →       N R T S
-   ←5 ↑5 ↓5 →5      X Q M W
+←5 ↑5 ↓5 →5         Z X Q M
 ```
 
 ## The disabled keys
 
-Twenty-five keys are booby-trapped. They do not just do nothing — press one and
+Twenty-six keys are booby-trapped. They do not just do nothing — press one and
 it types `HERROPERS`, loudly, in the middle of whatever you were writing:
 
 `` ` `` `1` `2` `3` `4` `5` `6` `7` `8` `9` `0` `-` `=` `delete` `tab` `]` `\`
-`esc` `control` `←` `→` `↑` `↓` and the `Y` / `H` / `B` positions.
+`esc` `control` `←` `→` `↑` `↓` and the `Y` / `H` / `B` / `N` positions.
 
 Every one of them has a home-row replacement:
 
@@ -229,6 +233,7 @@ judging.
 | `⌥` + `E` | Homerow |
 | `⌥` + `T` | `esc` |
 | `⌥` + `J/K/L/;` | AeroSpace window focus (`⌥` + `h/a/e/i`) |
+| `⌥` + `F` | AeroSpace shrink window (`⌥` + `s` — `resize smart -50`) |
 | `⌘⌃⌥⇧` + `D` | Mouseless free-click (`⌘⌃⌥⇧` + `tab`) |
 
 `F6` runs [`toggle_profile.sh`](karabiner/toggle_profile.sh), which flips
@@ -264,7 +269,7 @@ you do not want it.
 
 Rule order in `karabiner.json` matters. Karabiner chains manipulators, so each
 rule sees the output of the ones above it — the disabled-key rule runs first so
-it wins on `Y`/`H`/`B`, and `Left Option => Left Control` runs last so the
+it wins on `Y`/`H`/`B`/`N`, and `Left Option => Left Control` runs last so the
 `⌥`+letter shortcuts above it still match.
 
 ## Regenerating the diagrams
