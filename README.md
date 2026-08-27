@@ -1,3 +1,14 @@
+<a href="https://www.pcbway.com/">
+  <img alt="Sponsored by PCBWay" src="img/pcbway.png" width="240">
+</a>
+
+This project is sponsored by [PCBWay](https://www.pcbway.com/), a one-stop shop
+for PCB prototyping, assembly, CNC machining and 3D printing. If you want to
+turn a keymap like this one into a real split board, they are a good place to
+have it made — see [Sponsor](#sponsor) below for what they offer.
+
+---
+
 # splitmac
 
 Split-keyboard ergonomics on a stock MacBook, in one Karabiner-Elements config.
@@ -5,13 +16,6 @@ The right hand moves a column over, the home row becomes modifiers and four hold
 layers, and 26 keys you should stop reaching for are switched off.
 
 No firmware. No external keyboard. One `karabiner.json`.
-
-<a href="https://www.pcbway.com/">
-  <img alt="Sponsored by PCBWay" src="img/pcbway.png" width="240">
-</a>
-
-This project is sponsored by [PCBWay](https://www.pcbway.com/) — see
-[Sponsor](#sponsor) below.
 
 The small grey legend in the corner of each cap is what is physically printed on
 it. The big legend is what the key actually does.
