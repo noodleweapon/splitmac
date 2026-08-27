@@ -6,6 +6,13 @@ layers, and 26 keys you should stop reaching for are switched off.
 
 No firmware. No external keyboard. One `karabiner.json`.
 
+<a href="https://www.pcbway.com/">
+  <img alt="Sponsored by PCBWay" src="img/pcbway.png" width="240">
+</a>
+
+This project is sponsored by [PCBWay](https://www.pcbway.com/) — see
+[Sponsor](#sponsor) below.
+
 The small grey legend in the corner of each cap is what is physically printed on
 it. The big legend is what the key actually does.
 
@@ -284,8 +291,35 @@ python3 tools/build_html.py     # writes keymap.html
 
 No dependencies beyond the standard library.
 
+## Sponsor
+
+<a href="https://www.pcbway.com/">
+  <img alt="PCBWay" src="img/pcbway.png" width="320">
+</a>
+
+[PCBWay](https://www.pcbway.com/) sponsors this project. They are a one-stop
+shop for turning a hardware idea into a physical thing: PCB prototyping and
+small-batch fabrication, PCB assembly, CNC machining, sheet metal, injection
+moulding and 3D printing (resin, nylon, and metal), all ordered from one
+account with an instant online quote.
+
+Why they are a good fit for a keyboard project:
+
+- **Cheap, fast prototypes.** A handful of 2-layer boards costs a few dollars
+  and ships in days, so a keymap idea can become a real split board without a
+  big commitment.
+- **One order, every part.** Plates, cases and the PCB itself can all come from
+  the same order — CNC-cut aluminium or 3D-printed cases alongside the boards.
+- **Assembly included.** Hand-soldering a hundred hot-swap sockets is optional;
+  PCBWay can populate the boards for you.
+- **Real humans in support.** Every order is checked by an engineer before it
+  goes to fabrication, and the DFM feedback comes back quickly.
+
+If you use them, say hello from `splitmac`.
+
 ## Credits
 
+- [PCBWay](https://www.pcbway.com/) for sponsoring the project
 - [Karabiner-Elements](https://karabiner-elements.pqrs.org/) by Takayama Fumihiko
 - [@getreuer's QMK keymap](https://github.com/getreuer/qmk-keymap) for the
   documentation format
