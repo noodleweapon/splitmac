@@ -10,7 +10,7 @@ No firmware. No external keyboard. One `karabiner.json`.
   <tr>
     <td>
       <a href="https://www.pcbway.com/">
-        <img alt="Sponsored by PCBWay" src="img/pcbway.png" width="200">
+        <img alt="Sponsored by PCBWay" src="img/pcbway.png" width="400">
       </a>
     </td>
     <td>
