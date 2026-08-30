@@ -107,7 +107,7 @@ sit **one column to the right** of where QWERTY puts them, which is what leaves
 `Y`, `H` and `B` with nothing to do:
 
 ```
-      B  L  D  C  V        J  F  O  U  -
+      B  L  D  C  V        J  F  O  U  ✦
       N  R  T  S  G        Y  H  A  E  I
    Z  X  Q  M  W              K  P  ,  .
 ```
@@ -123,12 +123,53 @@ Punctuation that is normally shifted moves down to the shift keys themselves:
 | Left Shift | `Z` |
 | Right Shift | `'` |
 | Left Command | tap `return`, hold `shift` |
-| Right Option | tap `tab`, hold `shift` |
+| Right Option | tap `tab`, hold `shift` (left) |
 | Right Command | `delete` |
 | Left Option | `control` |
 | Caps Lock / Return | hold to arm the layers, tap does nothing |
 | Shift + `/` | `esc` |
 | Shift + `.` | `⌥C` |
+
+## The magic key
+
+The `[` key has no letter of its own. It is a **magic key**: it emits whatever
+should come after the letter you just typed. Thirteen of the layout's most
+awkward bigrams are folded into one key that is always in the same place.
+
+| You typed | `[` gives you | Bigram |
+| --- | --- | --- |
+| `p` | `y` | `py` — copy, type, happy |
+| `s` | `c` | `sc` — scale, discuss |
+| `u` | `e` | `ue` — value, queue |
+| `r` | `l` | `rl` — world, early |
+| `o` | `a` | `oa` — road, broad |
+| `g` | `s` | `gs` — things, logs |
+| `w` | `s` | `ws` — news, shows |
+| `h` | `y` | `hy` — why, hyper |
+| `t` | `m` | `tm` — batman, postman |
+| `l` | `m` | `lm` — film, calm |
+| `c` | `s` | `cs` — physics, basics |
+| `m` | `c` | `mc` |
+| `y` | `p` | `yp` — type, crypt |
+
+After anything else — a digit, a symbol, a space, a fresh document — `[` does
+nothing at all. Holding shift while you press it capitalises the letter, the
+same way shift works on every other key here.
+
+Each press feeds its own output back in, so the key chains: `r` `[` `[` `[` `[`
+types `rlmcs`. Two of the pairs point at each other — `p`/`y` and `s`/`c` — so
+repeated presses there simply alternate.
+
+It reads the letter that *came out*, not the key you hit: the memory lives in a
+Karabiner variable named `magic_prev`, and every manipulator in the config that
+types a letter sets it while everything else clears it. That is why the space
+bar and physical `G` — which otherwise pass straight through — now have
+manipulators of their own, and why the magic key still works after a tapped
+home-row mod or layer key.
+
+The hyphen and underscore that used to sit on this key are gone with it. `-`
+moved to the left symbol layer, in the slot the tilde had; `_` has no home any
+more, so put it somewhere if you want it back.
 
 ## Hold gate and home-row mods
 
@@ -138,13 +179,18 @@ is held, four home-row keys become modifiers and four become layer keys:
 | Home-row key | Physical | Hold |
 | --- | --- | --- |
 | `T` | `D` | Left Command |
-| `A` | `L` | Right Command |
+| `A` | `L` | Left Command |
 | `R` | `S` | Left Option |
-| `E` | `;` | Right Option |
+| `E` | `;` | Left Option |
 | `S` | `F` | Number layer |
 | `H` | `K` | Navigation layer |
 | `M` | `C` | Symbol layer, right |
 | `P` | `,` | Symbol layer, left |
+
+Every one of them sends the **left-hand** modifier — Left Command, Left Option,
+Left Shift — whichever side of the board you hold it on. Nothing on this board
+emits a right-hand modifier any more, so apps that tell the two sides apart
+only ever see the left one.
 
 The gate is the whole trick. Home-row mods normally misfire during fast typing;
 here they simply do not exist until you ask for them, and only one layer can be
@@ -173,8 +219,8 @@ modifier on those keys. One pair always survives:
 | --- | --- |
 | Number — physical `F` | Left Command `D`, Left Option `S` |
 | Symbol right — physical `C` | Left Command `D`, Left Option `S` |
-| Symbol left — physical `,` | Right Command `L`, Right Option `;` |
-| Navigation — physical `K` | Right Command `L`, Right Option `;` |
+| Symbol left — physical `,` | Left Command `L`, Left Option `;` |
+| Navigation — physical `K` | Left Command `L`, Left Option `;` |
 
 In every case the surviving pair is on the same hand that holds the layer, which
 takes some getting used to. The other hand's Command and Option are typing layer
@@ -195,13 +241,13 @@ glyphs and cannot also be modifiers.
 ```
    ^  <  >  |     B L D C
    +  !  /  =     N R T S
-`  ~  *  @        Z X Q M
+`  -  *  @        Z X Q M
 ```
 
 **Symbol, right** — gate + hold `M`. Held by the left hand, typed with the right:
 
 ```
-   ;  &  $  #     F O U -
+   ;  &  $  #     F O U ✦
    [  ]  (  )     H A E I
       :  \  %  ?     P , . '
 ```

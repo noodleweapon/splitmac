@@ -75,6 +75,7 @@ ROW_WIDTH = 14.5
 # gate     Caps Lock / Return, which arm the hold layers
 # layer    a key that holds down into a layer
 # mod      modifier behaviour (tap/hold, remapped modifiers)
+# magic    the magic key: emits the letter that follows the last one typed
 # system   app launchers, screenshots, profile toggle
 # dead     untouched pass-through key
 
@@ -95,7 +96,7 @@ BASE = {
     "t": ("V", "", "alpha"),
     "u": ("J", "", "alpha"),   "i": ("F", "", "alpha"),
     "o": ("O", "", "alpha"),   "p": ("U", "", "alpha"),
-    "open_bracket": ("-", "", "punct"),
+    "open_bracket": ("✦", "magic", "magic"),
 
     "a": ("N", "", "alpha"),
     "s": ("R", "⌥ opt", "mod"),
@@ -175,7 +176,7 @@ SYM_LEFT = {
     "e": (">", "", "punct"), "r": ("|", "", "punct"),
     "a": ("+", "", "punct"), "s": ("!", "", "punct"),
     "d": ("/", "", "punct"), "f": ("=", "", "punct"),
-    "left_shift": ("`", "", "punct"), "z": ("~", "", "punct"),
+    "left_shift": ("`", "", "punct"), "z": ("-", "", "punct"),
     "x": ("*", "", "punct"), "c": ("@", "", "punct"),
     "comma": ("hold", "P", "layer"),
 }
@@ -191,8 +192,8 @@ NAV = {
 MODS = {
     "s": ("⌥", "left", "mod"),
     "d": ("⌘", "left", "mod"),
-    "l": ("⌘", "right", "mod"),
-    "semicolon": ("⌥", "right", "mod"),
+    "l": ("⌘", "left", "mod"),
+    "semicolon": ("⌥", "left", "mod"),
     "f": ("№", "numbers", "layer"),
     "k": ("→", "nav", "layer"),
     "c": ("&", "sym R", "layer"),

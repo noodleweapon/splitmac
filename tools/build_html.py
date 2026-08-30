@@ -81,6 +81,7 @@ TEMPLATE = r"""<title>splitmac</title>
   --c-gate-bg: #17392f;    --c-gate-fg: #8ff0cd;
   --c-layer-bg: #372450;   --c-layer-fg: #d3aaff;
   --c-mod-bg: #48320f;     --c-mod-fg: #ffcf7a;
+  --c-magic-bg: #431f38;   --c-magic-fg: #ffa1d5;
   --c-system-bg: #10383a;  --c-system-fg: #7fe6e0;
   --c-dead-bg: #1b1c20;    --c-dead-fg: #55565f;
 
@@ -503,7 +504,7 @@ const U = 66, GAP = 6;
 const CLASSES = [
   ["alpha", "base letters"], ["punct", "punctuation & digits"],
   ["layer", "layer key"], ["mod", "modifier"],
-  ["gate", "hold gate"], ["system", "app / system"],
+  ["gate", "hold gate"], ["magic", "magic key"], ["system", "app / system"],
   ["trainer", "disabled — types HERROPERS"],
 ];
 

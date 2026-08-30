@@ -139,11 +139,11 @@
 <rect x="717.5" y="363.5" width="60.0" height="66.0" rx="8" fill="#4a3410" stroke="#3d3d44" stroke-width="1"/>
 <text x="771.5" y="377.5" fill="#55555e" font-size="10" font-weight="500" text-anchor="end" opacity="0.85" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">L</text>
 <text x="747.5" y="395.5" fill="#ffcf7a" font-size="20" font-weight="700" text-anchor="middle" opacity="1.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">⌘</text>
-<text x="747.5" y="420.5" fill="#8f8f9b" font-size="9.5" font-weight="500" text-anchor="middle" opacity="1.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">right</text>
+<text x="747.5" y="420.5" fill="#8f8f9b" font-size="9.5" font-weight="500" text-anchor="middle" opacity="1.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">left</text>
 <rect x="783.5" y="363.5" width="60.0" height="66.0" rx="8" fill="#4a3410" stroke="#3d3d44" stroke-width="1"/>
 <text x="837.5" y="377.5" fill="#55555e" font-size="10" font-weight="500" text-anchor="end" opacity="0.85" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">;</text>
 <text x="813.5" y="395.5" fill="#ffcf7a" font-size="20" font-weight="700" text-anchor="middle" opacity="1.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">⌥</text>
-<text x="813.5" y="420.5" fill="#8f8f9b" font-size="9.5" font-weight="500" text-anchor="middle" opacity="1.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">right</text>
+<text x="813.5" y="420.5" fill="#8f8f9b" font-size="9.5" font-weight="500" text-anchor="middle" opacity="1.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">left</text>
 <rect x="849.5" y="363.5" width="60.0" height="66.0" rx="8" fill="#232327" stroke="#3d3d44" stroke-width="1"/>
 <text x="903.5" y="377.5" fill="#55555e" font-size="10" font-weight="500" text-anchor="end" opacity="0.85" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">'</text>
 <rect x="915.5" y="363.5" width="109.5" height="66.0" rx="8" fill="#1f3d33" stroke="#3d3d44" stroke-width="1"/>
