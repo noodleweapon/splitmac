@@ -2908,7 +2908,7 @@
                         ]
                     },
                     {
-                        "description": "Hold S => number layer: FOU=789, HAEI=0123, P,.=456",
+                        "description": "Hold S => number layer: FOU=789, HAEI=0123, P,.=456, magic=~, '=_",
                         "manipulators": [
                             {
                                 "conditions": [
@@ -2993,6 +2993,38 @@
                                     },
                                     {
                                         "key_code": "9"
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "number_layer",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "open_bracket",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "set_variable": {
+                                            "name": "magic_prev",
+                                            "value": ""
+                                        }
+                                    },
+                                    {
+                                        "key_code": "grave_accent_and_tilde",
+                                        "modifiers": [
+                                            "left_shift"
+                                        ]
                                     }
                                 ],
                                 "type": "basic"
@@ -3196,6 +3228,38 @@
                                     },
                                     {
                                         "key_code": "6"
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "number_layer",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "right_shift",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "set_variable": {
+                                            "name": "magic_prev",
+                                            "value": ""
+                                        }
+                                    },
+                                    {
+                                        "key_code": "hyphen",
+                                        "modifiers": [
+                                            "left_shift"
+                                        ]
                                     }
                                 ],
                                 "type": "basic"

@@ -102,8 +102,9 @@
 <rect x="767.0" y="291.5" width="60.0" height="66.0" rx="8" fill="#1e3a5f" stroke="#3d3d44" stroke-width="1"/>
 <text x="821.0" y="305.5" fill="#55555e" font-size="10" font-weight="500" text-anchor="end" opacity="0.85" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">P</text>
 <text x="797.0" y="329.5" fill="#8ecbff" font-size="20" font-weight="700" text-anchor="middle" opacity="1.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">9</text>
-<rect x="833.0" y="291.5" width="60.0" height="66.0" rx="8" fill="#232327" stroke="#3d3d44" stroke-width="1"/>
+<rect x="833.0" y="291.5" width="60.0" height="66.0" rx="8" fill="#1e3a5f" stroke="#3d3d44" stroke-width="1"/>
 <text x="887.0" y="305.5" fill="#55555e" font-size="10" font-weight="500" text-anchor="end" opacity="0.85" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">[</text>
+<text x="863.0" y="329.5" fill="#8ecbff" font-size="20" font-weight="700" text-anchor="middle" opacity="1.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">~</text>
 <rect x="899.0" y="291.5" width="60.0" height="66.0" rx="8" fill="#000000" stroke="#3d3d44" stroke-width="1"/>
 <text x="953.0" y="305.5" fill="#55555e" font-size="10" font-weight="500" text-anchor="end" opacity="0.85" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">]</text>
 <text x="929.0" y="329.5" fill="#63636b" font-size="11" font-weight="600" text-anchor="middle" opacity="1.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">Disabled</text>
@@ -170,8 +171,9 @@
 <rect x="816.5" y="435.5" width="60.0" height="66.0" rx="8" fill="#1e3a5f" stroke="#3d3d44" stroke-width="1"/>
 <text x="870.5" y="449.5" fill="#55555e" font-size="10" font-weight="500" text-anchor="end" opacity="0.85" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">/</text>
 <text x="846.5" y="473.5" fill="#8ecbff" font-size="20" font-weight="700" text-anchor="middle" opacity="1.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">6</text>
-<rect x="882.5" y="435.5" width="142.5" height="66.0" rx="8" fill="#232327" stroke="#3d3d44" stroke-width="1"/>
+<rect x="882.5" y="435.5" width="142.5" height="66.0" rx="8" fill="#1e3a5f" stroke="#3d3d44" stroke-width="1"/>
 <text x="1019.0" y="449.5" fill="#55555e" font-size="10" font-weight="500" text-anchor="end" opacity="0.85" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">shift</text>
+<text x="953.8" y="473.5" fill="#8ecbff" font-size="20" font-weight="700" text-anchor="middle" opacity="1.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">_</text>
 <rect x="74.0" y="507.5" width="60.0" height="66.0" rx="8" fill="#232327" stroke="#3d3d44" stroke-width="1"/>
 <text x="128.0" y="521.5" fill="#55555e" font-size="10" font-weight="500" text-anchor="end" opacity="0.85" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">fn</text>
 <rect x="140.0" y="507.5" width="60.0" height="66.0" rx="8" fill="#000000" stroke="#3d3d44" stroke-width="1"/>

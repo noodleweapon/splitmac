@@ -154,10 +154,11 @@ for _k in TRAINER_KEYS:
 
 NUM = {
     "i": ("7", "", "punct"), "o": ("8", "", "punct"), "p": ("9", "", "punct"),
+    "open_bracket": ("~", "", "punct"),
     "k": ("0", "", "punct"), "l": ("1", "", "punct"),
     "semicolon": ("2", "", "punct"), "quote": ("3", "", "punct"),
     "comma": ("4", "", "punct"), "period": ("5", "", "punct"),
-    "slash": ("6", "", "punct"),
+    "slash": ("6", "", "punct"), "right_shift": ("_", "", "punct"),
     "f": ("hold", "S", "layer"),
 }
 
