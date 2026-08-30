@@ -2471,7 +2471,7 @@
                         ]
                     },
                     {
-                        "description": "Hold P => symbol layer: BLDC=^<>| NRTS=+!/= ZXQM=`-*@",
+                        "description": "Hold P => symbol layer: BLDC=^*-| NRTS=+!/= ZXQM=`<>@",
                         "manipulators": [
                             {
                                 "conditions": [
@@ -2529,7 +2529,7 @@
                                         }
                                     },
                                     {
-                                        "key_code": "comma",
+                                        "key_code": "8",
                                         "modifiers": [
                                             "left_shift"
                                         ]
@@ -2561,10 +2561,7 @@
                                         }
                                     },
                                     {
-                                        "key_code": "period",
-                                        "modifiers": [
-                                            "left_shift"
-                                        ]
+                                        "key_code": "hyphen"
                                     }
                                 ],
                                 "type": "basic"
@@ -2776,7 +2773,10 @@
                                         }
                                     },
                                     {
-                                        "key_code": "hyphen"
+                                        "key_code": "comma",
+                                        "modifiers": [
+                                            "left_shift"
+                                        ]
                                     }
                                 ],
                                 "type": "basic"
@@ -2805,7 +2805,7 @@
                                         }
                                     },
                                     {
-                                        "key_code": "8",
+                                        "key_code": "period",
                                         "modifiers": [
                                             "left_shift"
                                         ]

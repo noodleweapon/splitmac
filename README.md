@@ -168,8 +168,8 @@ manipulators of their own, and why the magic key still works after a tapped
 home-row mod or layer key.
 
 The hyphen and underscore that used to sit on this key are gone with it. `-`
-moved to the left symbol layer, in the slot the tilde had; `_` and `~` both moved
-to the number layer, on Right Shift and on the magic key itself.
+moved to the left symbol layer; `_` and `~` moved to the number layer, on Right
+Shift and on the magic key itself.
 
 ## Hold gate and home-row mods
 
@@ -240,9 +240,9 @@ magic key and `_` on Right Shift:
 **Symbol, left** — gate + hold `P`. Held by the right hand, typed with the left:
 
 ```
-   ^  <  >  |     B L D C
+   ^  *  -  |     B L D C
    +  !  /  =     N R T S
-`  -  *  @        Z X Q M
+`  <  >  @        Z X Q M
 ```
 
 **Symbol, right** — gate + hold `M`. Held by the left hand, typed with the right:

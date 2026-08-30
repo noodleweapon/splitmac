@@ -173,12 +173,12 @@ SYM_RIGHT = {
 }
 
 SYM_LEFT = {
-    "q": ("^", "", "punct"), "w": ("<", "", "punct"),
-    "e": (">", "", "punct"), "r": ("|", "", "punct"),
+    "q": ("^", "", "punct"), "w": ("*", "", "punct"),
+    "e": ("-", "", "punct"), "r": ("|", "", "punct"),
     "a": ("+", "", "punct"), "s": ("!", "", "punct"),
     "d": ("/", "", "punct"), "f": ("=", "", "punct"),
-    "left_shift": ("`", "", "punct"), "z": ("-", "", "punct"),
-    "x": ("*", "", "punct"), "c": ("@", "", "punct"),
+    "left_shift": ("`", "", "punct"), "z": ("<", "", "punct"),
+    "x": (">", "", "punct"), "c": ("@", "", "punct"),
     "comma": ("hold", "P", "layer"),
 }
 
