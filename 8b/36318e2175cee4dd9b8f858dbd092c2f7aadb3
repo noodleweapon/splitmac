@@ -1,0 +1,25 @@
+README.md
+  s_bb07d236a2a367::t_88010530ebfdc7 246-247
+  s_bb07d236a2a367::t_65887051c5054b 196
+  s_bb07d236a2a367::t_c4c05f1428516a 237,243-245
+  s_bb07d236a2a367::t_a21fcd10fa0a82 248
+kanata/splitmac.kbd
+  s_bb07d236a2a367::t_7a2c45ab76ebbb 180,212
+  s_bb07d236a2a367::t_07837dcb6a4503 87-88,208-211,218
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.2",
+  "base_commit_sha": "8b36318e2175cee4dd9b8f858dbd092c2f7aadb3",
+  "prompts": {},
+  "sessions": {
+    "s_bb07d236a2a367": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "dffe1207-6a7e-4849-b480-a1b3b109f75f",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Jason Yeon <seojoony9000@gmail.com>"
+    }
+  }
+}
