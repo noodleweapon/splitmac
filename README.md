@@ -193,6 +193,7 @@ four become layer keys:
 | `A` | `L` | Left Command |
 | `R` | `S` | Left Option |
 | `E` | `;` | Left Option |
+| `I` | `'` | Left Option |
 | `S` | `F` | Number layer |
 | `H` | `K` | Navigation layer |
 | `M` | `C` | Symbol layer, right |
@@ -233,11 +234,17 @@ modifier on those keys. One pair always survives:
 | Number — physical `F` | Left Command `D`, Left Option `S` |
 | Symbol right — physical `C` | Left Command `D`, Left Option `S` |
 | Symbol left — physical `,` | Left Command `L`, Left Option `;` |
-| Navigation — physical `K` | Left Command `L`, Left Option `;` |
+| Navigation — physical `K` | Left Command `L`, Left Option `'` |
 
 In every case the surviving pair is on the same hand that holds the layer, which
 takes some getting used to. The other hand's Command and Option are typing layer
 glyphs and cannot also be modifiers.
+
+Navigation is the one exception to the `;` convention: its Option is on `'`. The
+laptop's key matrix ghosts on `;` + `K` + any left-hand key — the controller
+gives up and reports `ErrorRollOver`, so the arrow never reaches the keymap at
+all. `'` + `K` is clean. The gate layer carries `'` as well, so it is Option
+whether you reach for it before or after `K`.
 
 ## The layers
 

@@ -84,6 +84,8 @@
   ;; Option
   m-r  (tap-hold-press $tap $hold r lalt)
   m-e  (tap-hold-press $tap $hold e lalt)
+  ;; nav's Option sits on ' rather than ; — see the note on the nav layer
+  m-i  (tap-hold-press $tap $hold i lalt)
   ;; layers
   l-s  (tap-hold-press $tap $hold s (layer-while-held num))
   l-h  (tap-hold-press $tap $hold h (layer-while-held nav))
@@ -175,6 +177,7 @@
 (deflayermap (gate)
   d @m-t     l @m-a          ;; Left Command
   s @m-r     ; @m-e          ;; Left Option
+  ' @m-i                     ;; Left Option, nav's spelling of it
   f @l-s                     ;; number layer
   k @l-h                     ;; navigation layer
   c @l-m                     ;; symbol layer, right
@@ -202,12 +205,17 @@
 ;; ---------------------------------------------------------------------------
 ;;       ←  ↑  ↓  →
 ;;    ←5 ↑5 ↓5 →5
+;;
+;; Option lives on ' here, not on ; like the other layers.  The laptop's key
+;; matrix ghosts on ; + K + any left-hand key: the controller gives up and
+;; reports ErrorRollOver instead, so the arrow never arrives.  ' + K is clean.
+;; `gate` carries ' too, so it is Option whether it is pressed before or after K.
 
 (deflayermap (nav)
   a left  s up    d down  f rght
   lsft @a-l5      z @a-u5   x @a-d5   c @a-r5
   l @m-a
-  ; @m-e
+  ' @m-i
 )
 
 ;; ---------------------------------------------------------------------------
