@@ -1,10 +1,10 @@
 # splitmac
 
-Split-keyboard ergonomics on a stock MacBook, in one Karabiner-Elements config.
+Split-keyboard ergonomics on a stock MacBook, in one [kanata](https://github.com/jtroo/kanata) config.
 The right hand moves a column over, the home row becomes modifiers and four hold
 layers, and 26 keys you should stop reaching for are switched off.
 
-No firmware. No external keyboard. One `karabiner.json`.
+No firmware. No external keyboard. One `.kbd` file.
 
 <table>
   <tr>
@@ -160,12 +160,22 @@ Each press feeds its own output back in, so the key chains: `r` `[` `[` `[` `[`
 types `rlmcs`. Two of the pairs point at each other — `p`/`y` and `s`/`c` — so
 repeated presses there simply alternate.
 
-It reads the letter that *came out*, not the key you hit: the memory lives in a
-Karabiner variable named `magic_prev`, and every manipulator in the config that
-types a letter sets it while everything else clears it. That is why the space
-bar and physical `G` — which otherwise pass straight through — now have
-manipulators of their own, and why the magic key still works after a tapped
-home-row mod or layer key.
+It reads the letter that *came out*, not the key you hit. That is one
+`switch` on kanata's output history:
+
+```lisp
+(defalias
+  magic (switch
+    ((key-history p 1)) y break
+    ((key-history s 1)) c break
+    ;; ...
+    () XX break))
+```
+
+`key-history` is the history of what kanata *emitted*, so there is no
+bookkeeping to keep in sync — the key works after a tapped home-row mod, after
+a layer glyph, after the trainer, and it chains for free because its own output
+lands in the same history.
 
 The hyphen and underscore that used to sit on this key are gone with it. `-`
 moved to the left symbol layer; `_` and `~` moved to the number layer, on Right
@@ -173,8 +183,9 @@ Shift and on the magic key itself.
 
 ## Hold gate and home-row mods
 
-Hold **Caps Lock** or **Return** to arm the gate (`hold_mods_enabled`). While it
-is held, four home-row keys become modifiers and four become layer keys:
+Hold **Caps Lock** or **Return** to arm the gate — a `layer-while-held` onto
+the `gate` layer. While it is held, four home-row keys become modifiers and
+four become layer keys:
 
 | Home-row key | Physical | Hold |
 | --- | --- | --- |
@@ -193,24 +204,26 @@ emits a right-hand modifier any more, so apps that tell the two sides apart
 only ever see the left one.
 
 The gate is the whole trick. Home-row mods normally misfire during fast typing;
-here they simply do not exist until you ask for them, and only one layer can be
-active at a time — each layer key is conditioned on the other three being off.
+here they do not exist at all until you ask for them, because the eight mod and
+layer keys are only defined inside the `gate` layer. Outside it they are eight
+plain letters and there is nothing to misfire.
 
-**Every hold latches on key-down, so order never matters.** All eight of them —
-four layers, two Commands, two Options — are written the same way: `to` sets the
-modifier or the layer variable the instant the key goes down, `to_if_alone`
-emits the letter if you tap it and press nothing else, `to_after_key_up` clears
-it on release. Hold the layer first or the modifier first; the result is
-identical.
+All eight are written the same way:
 
-This is worth stating because the obvious way to write a layer key — a
-`to_if_held_down` timer, optionally with a `to_delayed_action` — does not
-compose. Both are cancelable by later key events, so whichever hold you started
-first wins and the second one silently does nothing. Nothing here uses a timer.
+```lisp
+(defalias
+  m-t  (tap-hold-press $tap $hold t lmet)                       ;; Command
+  l-s  (tap-hold-press $tap $hold s (layer-while-held num)))    ;; layer
+```
 
-One thing the gate cannot make order-free: it has to be held *first*. Conditions
-are evaluated when a key goes down, so a layer or modifier key pressed before
-Caps Lock sees `hold_mods_enabled` as 0 and just types its letter.
+`tap-hold-press` resolves to the hold the instant any other key goes down, so a
+modifier or a layer is there as soon as you need it and never waits out a
+timer; the 200 ms timeout only decides an *idle* hold. Tap it and you get the
+letter. Hold the layer first or the modifier first — the result is identical.
+
+One thing the gate cannot make order-free: it has to be held *first*. The mod
+and layer keys live in the `gate` layer, so a key pressed before Caps Lock is
+still an ordinary letter.
 
 Each layer also borrows some home-row keys for its own glyphs, which shadows the
 modifier on those keys. One pair always survives:
@@ -281,8 +294,8 @@ Every one of them has a home-row replacement:
 | `esc` | Shift + `/` |
 | `return` | tap Left Command |
 
-It is a blunt instrument and it works. Delete the rule named
-`Bad-habit trainer` once the habit is gone — or keep it forever, nobody is
+It is a blunt instrument and it works. Delete the `@herr` entries at the bottom
+of the base layer once the habit is gone — or keep them forever, nobody is
 judging.
 
 ## Function row and system keys
@@ -300,41 +313,77 @@ judging.
 | `⌥` + `F` | AeroSpace shrink window (`⌥` + `s` — `resize smart -50`) |
 | `⌘⌃⌥⇧` + `D` | Mouseless free-click (`⌘⌃⌥⇧` + `tab`) |
 
-`F6` runs [`toggle_profile.sh`](karabiner/toggle_profile.sh), which flips
-Karabiner between the `Default profile` and a `Disabled` profile that contains
-nothing but the toggle itself. Handy when someone else needs to use your laptop,
-or when you need to type a password into a field that fights you.
+`F6` switches to the `off` layer, where every key is `use-defsrc` — itself —
+and `F6` switches back. Handy when someone else needs to use your laptop, or
+when you need to type a password into a field that fights you.
+
+If something goes properly wrong, `Control` + `Space` + `Escape` on the
+*physical* keys is kanata's emergency exit and stops the process outright.
 
 ## Install
 
-Requires [Karabiner-Elements](https://karabiner-elements.pqrs.org/).
+Two pieces: **kanata**, and the
+[Karabiner VirtualHIDDevice](https://github.com/pqrs-org/Karabiner-DriverKit-VirtualHIDDevice)
+driver that kanata grabs the keyboard through — which is also why kanata runs
+as root on macOS.
+
+**1. The driver.** Install Karabiner-Elements (it ships the driver and keeps
+the daemon alive) or the standalone `.pkg` from the driver's release page, then
+activate it and switch it on in *System Settings › General › Login Items &
+Extensions › Driver Extensions*:
+
+```sh
+sudo /Applications/.Karabiner-VirtualHIDDevice-Manager.app/Contents/MacOS/Karabiner-VirtualHIDDevice-Manager forceActivate
+sudo launchctl list | grep org.pqrs   # daemon should be listed
+```
+
+**2. kanata.** Driver v8 support is not in a tagged release yet, so build HEAD:
+
+```sh
+brew install --HEAD kanata
+```
+
+**3. The config.**
 
 ```sh
 git clone git@github.com:noodleweapon/splitmac.git
 cd splitmac
-
-mkdir -p ~/.config/karabiner
-
-# back up whatever you have now
-cp ~/.config/karabiner/karabiner.json ~/.config/karabiner/karabiner.json.bak
-
-cp karabiner/karabiner.json      ~/.config/karabiner/karabiner.json
-cp karabiner/toggle_profile.sh   ~/.config/karabiner/toggle_profile.sh
-chmod +x ~/.config/karabiner/toggle_profile.sh
+mkdir -p ~/.config/kanata
+cp kanata/splitmac.kbd ~/.config/kanata/kanata.kbd
+kanata --cfg ~/.config/kanata/kanata.kbd --check
+sudo kanata --cfg ~/.config/kanata/kanata.kbd
 ```
 
-Karabiner picks the file up as soon as it is written. One path in the config
-points at this machine — the `F6` toggle script — so edit or drop that rule if
-you do not want it.
+The first run is the one that asks for permissions: add the kanata binary under
+*Privacy & Security › Input Monitoring* and *› Accessibility*, then run it
+again. To start it at boot instead:
 
-> **Warning:** this replaces your entire Karabiner config, and the alpha layout
-> means you cannot touch-type on the machine until you learn it. Keep the backup
-> and remember that `F6` turns everything off.
+```sh
+sudo cp kanata/com.splitmac.kanata.plist /Library/LaunchDaemons/
+sudo sed -i '' "s|/Users/YOU|$HOME|" /Library/LaunchDaemons/com.splitmac.kanata.plist
+sudo chown root:wheel /Library/LaunchDaemons/com.splitmac.kanata.plist
+sudo launchctl bootstrap system /Library/LaunchDaemons/com.splitmac.kanata.plist
+```
 
-Rule order in `karabiner.json` matters. Karabiner chains manipulators, so each
-rule sees the output of the ones above it — the disabled-key rule runs first so
-it wins on `Y`/`H`/`B`/`N`, and `Left Option => Left Control` runs last so the
-`⌥`+letter shortcuts above it still match.
+It logs to `/var/log/kanata.log`. `sudo launchctl bootout system/com.splitmac.kanata`
+stops it again.
+
+> **Warning:** this replaces your entire keyboard, and the alpha layout means
+> you cannot touch-type on the machine until you learn it. `F6` turns
+> everything off; `Control` + `Space` + `Escape` on the physical keys kills
+> kanata outright.
+
+Run kanata **or** Karabiner-Elements, not both — they both seize the keyboard.
+Keeping Karabiner-Elements installed but quiet is fine and is the easiest way
+to keep the driver maintained.
+
+Precedence here is the layer stack, not rule order. A layer's own entries win,
+anything it does not define falls through to `base`, and the trainer lives in
+`base` — so `Y`/`H`/`B`/`N` stay trapped inside every layer. The `⌥` and `⇧`
+shortcuts are `defoverridesv2` entries, which match on what kanata is about to
+*output*: they are written in the letters this layout types, so `(lalt y)` is
+physical `J`. The two `⇧` rules list the symbol layers as excluded, because
+`<` and `>` are shift+comma and shift+period and would otherwise trip them.
 
 ## Regenerating the diagrams
 
@@ -347,6 +396,19 @@ python3 tools/build_html.py     # writes keymap.html
 ```
 
 No dependencies beyond the standard library.
+
+## Testing the keymap
+
+`--check` only proves the config parses. For behaviour there is
+[`tools/sim_tests.rs`](tools/sim_tests.rs), which drives kanata's own
+simulation harness — the alphas, the gate, all four layers, the magic key and
+every override, with no keyboard involved:
+
+```sh
+sh tools/sim_test.sh
+```
+
+It clones kanata, drops the test in and runs it, so it needs `cargo`.
 
 ## Sponsor
 
@@ -377,7 +439,9 @@ If you use them, say hello from `splitmac`.
 ## Credits
 
 - [PCBWay](https://www.pcbway.com/) for sponsoring the project
-- [Karabiner-Elements](https://karabiner-elements.pqrs.org/) by Takayama Fumihiko
+- [kanata](https://github.com/jtroo/kanata) by jtroo — the engine
+- [Karabiner-DriverKit-VirtualHIDDevice](https://github.com/pqrs-org/Karabiner-DriverKit-VirtualHIDDevice)
+  by Takayama Fumihiko — the virtual keyboard kanata writes through
 - [@getreuer's QMK keymap](https://github.com/getreuer/qmk-keymap) for the
   documentation format
 - [Gallium](https://github.com/GalileoBlues/Gallium) by GalileoBlues — the

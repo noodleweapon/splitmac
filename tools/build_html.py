@@ -11,7 +11,7 @@ import sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from keymap import ROWS, ROW_WIDTH, LAYERS  # noqa: E402
 
-# Karabiner key_code -> DOM KeyboardEvent.code, so the page can light up the
+# physical key id -> DOM KeyboardEvent.code, so the page can light up the
 # cap you are physically pressing.
 CODES = {
     "escape": "Escape", "f1": "F1", "f2": "F2", "f3": "F3", "f4": "F4",
@@ -414,7 +414,7 @@ footer a { color: var(--fg-dim); }
 <div class="wrap">
 
 <header>
-  <div class="eyebrow">Karabiner-Elements · MacBook Air · US layout</div>
+  <div class="eyebrow">kanata · MacBook Air · US layout</div>
   <h1>splitmac</h1>
   <p class="standfirst">Split-keyboard ergonomics on a stock MacBook: the right
   hand moves a column over, the home row becomes modifiers and four layers, and
@@ -422,7 +422,7 @@ footer a { color: var(--fg-dim); }
   <div class="meta">
     <span>No firmware</span>
     <span>No external board</span>
-    <span>One karabiner.json</span>
+    <span>One .kbd file</span>
     <a href="https://github.com/noodleweapon/splitmac">github.com/noodleweapon/splitmac</a>
   </div>
 </header>
@@ -465,7 +465,7 @@ footer a { color: var(--fg-dim); }
     arrow cluster and the <code>Y</code>/<code>H</code>/<code>B</code> positions all
     type <code>HERROPERS</code>. It is deliberately embarrassing. Every trapped key
     has a home-row replacement, and after about a week you stop reaching.</p>
-    <p>Delete the rule named <em>Bad-habit trainer</em> when the habit is gone. Or
+    <p>Delete the <code>@herr</code> entries when the habit is gone. Or
     keep it. Nobody is judging.</p>
   </section>
 </div>
@@ -475,8 +475,8 @@ footer a { color: var(--fg-dim); }
   <table>
     <thead><tr><th>Physical key</th><th>Does</th></tr></thead>
     <tbody>
-      <tr><td>Left Shift</td><td>types <code>'</code></td></tr>
-      <tr><td>Right Shift</td><td>types <code>;</code></td></tr>
+      <tr><td>Left Shift</td><td>types <code>Z</code></td></tr>
+      <tr><td>Right Shift</td><td>types <code>'</code></td></tr>
       <tr><td>Left Command</td><td>tap = Return, hold = Shift</td></tr>
       <tr><td>Right Option</td><td>tap = Tab, hold = Shift</td></tr>
       <tr><td>Right Command</td><td>Delete</td></tr>
@@ -489,9 +489,9 @@ footer a { color: var(--fg-dim); }
 </section>
 
 <footer>
-  <span>Layout data generated from karabiner.json</span>
+  <span>Layout data generated from tools/keymap.py</span>
   <a href="https://github.com/getreuer/qmk-keymap">Reference: @getreuer's QMK keymap</a>
-  <a href="https://karabiner-elements.pqrs.org/">Karabiner-Elements</a>
+  <a href="https://github.com/jtroo/kanata">kanata</a>
   <a href="https://github.com/GalileoBlues/Gallium">Gallium v2 by GalileoBlues</a>
 </footer>
 

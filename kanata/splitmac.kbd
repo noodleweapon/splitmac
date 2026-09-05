@@ -1,0 +1,282 @@
+;; splitmac — split-keyboard ergonomics on a stock MacBook, in one kanata config.
+;;
+;; Physical keys are named on the left, what they do on the right.  Read the
+;; base layer as: "the key printed X now types Y".
+;;
+;; Layer stack:
+;;   base                     the alpha layout + trainer + remapped modifiers
+;;   gate   caps / return     home-row mods and the four layer keys
+;;   num    gate + F          digits
+;;   nav    gate + K          arrows
+;;   syml   gate + ,          symbols typed with the left hand
+;;   symr   gate + C          symbols typed with the right hand
+;;   off    F6                everything off, F6 to come back
+;;
+;; Sub-layers hang off `gate`, so a layer key only exists while the gate is
+;; held.  Anything a layer does not define falls through to `base`.
+
+(defcfg
+  ;; fn / globe and Touch ID are left alone: not in defsrc, not processed.
+  process-unmapped-keys no
+  ;; two home-row holds at once (two Commands, or a mod plus a layer)
+  concurrent-tap-hold yes
+  ;; the ⌥/⇧ shortcuts in defoverridesv2 are one-shot commands, never held
+  override-release-on-activation yes
+)
+
+(defsrc
+  esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12
+  grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
+  tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
+  caps a    s    d    f    g    h    j    k    l    ;    '    ret
+  lsft z    x    c    v    b    n    m    ,    .    /    rsft
+  lctl lalt lmet           spc            rmet ralt left up   down rght
+)
+
+(defvar
+  ;; Karabiner's basic.to_if_alone_timeout_milliseconds was 200
+  tap 200
+  hold 200
+)
+
+;; ---------------------------------------------------------------------------
+;; The magic key
+;; ---------------------------------------------------------------------------
+;; `[` emits whatever should come after the letter that just came *out* —
+;; kanata's key-history is the output history, so this needs no bookkeeping
+;; and chains for free: r [ [ [ [ types "rlmcs".  After a digit, a symbol, a
+;; space or a fresh document it does nothing.
+
+(defalias
+  magic (switch
+    ((key-history p 1)) y break
+    ((key-history s 1)) c break
+    ((key-history u 1)) e break
+    ((key-history r 1)) l break
+    ((key-history o 1)) a break
+    ((key-history g 1)) s break
+    ((key-history w 1)) s break
+    ((key-history h 1)) y break
+    ((key-history t 1)) m break
+    ((key-history l 1)) m break
+    ((key-history c 1)) s break
+    ((key-history m 1)) c break
+    ((key-history y 1)) p break
+    () XX break
+  )
+)
+
+;; ---------------------------------------------------------------------------
+;; Home-row mods and layer keys — only live inside the `gate` layer
+;; ---------------------------------------------------------------------------
+;; tap-hold-press: the hold wins the moment another key goes down, so a mod or
+;; a layer is available immediately and never waits out a timer.  Tap still
+;; types the letter.  Every one of them sends the *left*-hand modifier.
+
+(defalias
+  ;; Command
+  m-t  (tap-hold-press $tap $hold t lmet)
+  m-a  (tap-hold-press $tap $hold a lmet)
+  ;; Option
+  m-r  (tap-hold-press $tap $hold r lalt)
+  m-e  (tap-hold-press $tap $hold e lalt)
+  ;; layers
+  l-s  (tap-hold-press $tap $hold s (layer-while-held num))
+  l-h  (tap-hold-press $tap $hold h (layer-while-held nav))
+  l-m  (tap-hold-press $tap $hold m (layer-while-held symr))
+  l-p  (tap-hold-press $tap $hold p (layer-while-held syml))
+
+  gate (layer-while-held gate)
+)
+
+;; ---------------------------------------------------------------------------
+;; Odds and ends
+;; ---------------------------------------------------------------------------
+
+(defalias
+  ;; the bad-habit trainer: 26 keys you should stop reaching for
+  herr (macro S-h 8 S-e 8 S-r 8 S-r 8 S-o 8 S-p 8 S-e 8 S-r 8 S-s)
+
+  ;; five caret steps, one key event every 30 ms
+  a-l5 (macro left 30 left 30 left 30 left 30 left)
+  a-u5 (macro up   30 up   30 up   30 up   30 up)
+  a-d5 (macro down 30 down 30 down 30 down 30 down)
+  a-r5 (macro rght 30 rght 30 rght 30 rght 30 rght)
+
+  ;; tap = Enter / Tab, hold = left Shift
+  s-ret (tap-hold-press $tap $hold ret lsft)
+  s-tab (tap-hold-press $tap $hold tab lsft)
+
+  ;; F6 kills the whole keymap; F6 again brings it back
+  off  (layer-switch off)
+  on   (layer-switch base)
+
+  scrn M-C-S-4        ;; screenshot a region to the clipboard
+  ray  M-C-A-S-a      ;; Raycast
+)
+
+;; ---------------------------------------------------------------------------
+;; Base layer
+;; ---------------------------------------------------------------------------
+;;       B  L  D  C  V        J  F  O  U  ✦
+;;       N  R  T  S  G        Y  H  A  E  I
+;;    Z  X  Q  M  W              K  P  ,  .
+
+(deflayermap (base)
+  ;; alphas — the right hand sits one column to the right of QWERTY
+  q  b     w  l     e  d     r  c     t  v
+  u  j     i  f     o  o     p  u
+  a  n     s  r     d  t     f  s     g  g
+  j  y     k  h     l  a     ;  e     '  i
+  z  x     x  q     c  m     v  w     m  k
+  ,  p     .  ,     /  .
+
+  ;; the magic key
+  [  @magic
+
+  ;; punctuation that is normally shifted lives on the shift keys
+  lsft z
+  rsft '
+
+  ;; gate: hold to arm the layers, tap does nothing
+  caps @gate
+  ret  @gate
+
+  ;; modifiers
+  lmet @s-ret         ;; tap = return, hold = shift
+  ralt @s-tab         ;; tap = tab,    hold = shift
+  rmet bspc
+  lalt lctl
+
+  ;; system keys
+  f3 @scrn
+  f4 @ray
+  f6 @off
+
+  ;; the bad-habit trainer
+  grv  @herr   1 @herr   2 @herr   3 @herr   4 @herr   5 @herr
+  6    @herr   7 @herr   8 @herr   9 @herr   0 @herr
+  -    @herr   = @herr   bspc @herr
+  tab  @herr   ] @herr   \ @herr
+  esc  @herr   lctl @herr
+  left @herr   rght @herr   up @herr   down @herr
+  y    @herr   h @herr   b @herr   n @herr
+)
+
+;; ---------------------------------------------------------------------------
+;; Hold gate: caps lock or return held
+;; ---------------------------------------------------------------------------
+;;    Command Option  num  nav          symr symL
+
+(deflayermap (gate)
+  d @m-t     l @m-a          ;; Left Command
+  s @m-r     ; @m-e          ;; Left Option
+  f @l-s                     ;; number layer
+  k @l-h                     ;; navigation layer
+  c @l-m                     ;; symbol layer, right
+  , @l-p                     ;; symbol layer, left
+)
+
+;; ---------------------------------------------------------------------------
+;; Number layer — gate + hold S (physical F)
+;; ---------------------------------------------------------------------------
+;;    7  8  9  ~
+;;    0  1  2  3
+;;       4  5  6  _
+
+(deflayermap (num)
+  i 7     o 8     p 9     [ S-grv
+  k 0     l 1     ; 2     ' 3
+  , 4     . 5     / 6     rsft S--
+  ;; the left hand keeps its mods; the right hand is typing digits
+  d @m-t
+  s @m-r
+)
+
+;; ---------------------------------------------------------------------------
+;; Navigation layer — gate + hold H (physical K)
+;; ---------------------------------------------------------------------------
+;;       ←  ↑  ↓  →
+;;    ←5 ↑5 ↓5 →5
+
+(deflayermap (nav)
+  a left  s up    d down  f rght
+  lsft @a-l5      z @a-u5   x @a-d5   c @a-r5
+  l @m-a
+  ; @m-e
+)
+
+;; ---------------------------------------------------------------------------
+;; Symbol layer, left — gate + hold P (physical ,)
+;; ---------------------------------------------------------------------------
+;;    ^  *  -  |
+;;    +  !  /  =
+;; `  <  >  @
+
+(deflayermap (syml)
+  q S-6   w S-8   e -       r S-\
+  a S-=   s S-1   d /       f =
+  lsft grv
+  z S-,   x S-.   c S-2
+  l @m-a
+  ; @m-e
+)
+
+;; ---------------------------------------------------------------------------
+;; Symbol layer, right — gate + hold M (physical C)
+;; ---------------------------------------------------------------------------
+;;    ;  &  $  #
+;;    [  ]  (  )
+;;       :  \  %  ?
+
+(deflayermap (symr)
+  i ;     o S-7   p S-4   [ S-3
+  k [     l ]     ; S-9   ' S-0
+  , S-;   . \     / S-5   rsft S-/
+  d @m-t
+  s @m-r
+)
+
+;; ---------------------------------------------------------------------------
+;; Off — F6 to come back
+;; ---------------------------------------------------------------------------
+
+(deflayermap (off)
+  f6 @on
+  _  use-defsrc
+)
+
+;; ---------------------------------------------------------------------------
+;; Global overrides
+;; ---------------------------------------------------------------------------
+;; These match on what kanata is about to *output*, so they are written in
+;; terms of the letters this layout types, not the keys you press.  The
+;; comment gives the physical key.
+;;
+;; The 4th column excludes layers: the symbol layers type `<` and `>` as
+;; shift+comma and shift+period, which would otherwise trip the two ⇧ rules.
+
+(defoverridesv2
+  ;; Shift + / = esc, Shift + . = ⌥C
+  (lsft .) (esc)          () (syml symr num nav)
+  (lsft ,) (lalt c)       () (syml symr num nav)
+
+  ;; ⌥ + letter — app shortcuts
+  (lalt v) (esc)                  () ()   ;; physical T
+  (lalt n) (lalt lctl lmet lsft a) () ()   ;; physical A — Raycast
+  (lalt r) (lalt lctl lmet lsft c) () ()   ;; physical S — Mouseless
+  (lalt d) (lmet lalt spc)         () ()   ;; physical E — Homerow
+  (lalt m) (lctl c)                () ()   ;; physical C — ⌃C for the terminal
+
+  ;; AeroSpace: focus and resize
+  (lalt y) (lalt h)       () ()   ;; physical J
+  (lalt h) (lalt a)       () ()   ;; physical K
+  (lalt a) (lalt e)       () ()   ;; physical L
+  (lalt e) (lalt i)       () ()   ;; physical ;
+
+  ;; Mouseless free-click
+  (lmet lctl lalt lsft t) (lmet lctl lalt lsft tab) () ()   ;; physical D
+
+  ;; ⌘M is where ⌘C used to be: swallow it instead of minimising the window
+  (lmet m) (lmet nop0)    () ()   ;; physical C
+)
