@@ -22,6 +22,10 @@
   concurrent-tap-hold yes
   ;; the ⌥/⇧ shortcuts in defoverridesv2 are one-shot commands, never held
   override-release-on-activation yes
+  ;; This layout is for the laptop's own keyboard.  Grabbing only that one
+  ;; leaves external keyboards alone, and keeps kanata off the Karabiner
+  ;; virtual keyboard it writes through.
+  macos-dev-names-include ("Apple Internal Keyboard / Trackpad")
 )
 
 (defsrc

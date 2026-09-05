@@ -374,8 +374,12 @@ stops it again.
 > kanata outright.
 
 Run kanata **or** Karabiner-Elements, not both — they both seize the keyboard.
-Keeping Karabiner-Elements installed but quiet is fine and is the easiest way
+Keeping Karabiner-Elements installed but quit is fine, and is the easiest way
 to keep the driver maintained.
+
+The config grabs `Apple Internal Keyboard / Trackpad` and nothing else, so an
+external keyboard stays exactly as it was. `kanata -l` lists the names if
+yours differs.
 
 Precedence here is the layer stack, not rule order. A layer's own entries win,
 anything it does not define falls through to `base`, and the trainer lives in
