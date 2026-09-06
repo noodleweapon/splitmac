@@ -1,0 +1,29 @@
+tools/build_html.py
+  s_bb07d236a2a367::t_358251ef79b2f5 14,417,425,468,478-479,492,494
+README.md
+  s_bb07d236a2a367::t_358251ef79b2f5 3,7,163-168,176-177,196-197,199-204,206-209,211-213,223,284-285,303-306,310,316,318-319,321-324,326-328,330-332,334-337,380
+tools/keymap.py
+  s_bb07d236a2a367::t_358251ef79b2f5 4,12
+keymap.html
+  s_bb07d236a2a367::t_358251ef79b2f5 364,372,415,425-426,439,441
+karabiner/karabiner.json
+  s_bb07d236a2a367::t_358251ef79b2f5 1-5629
+karabiner/toggle_profile.sh
+  s_bb07d236a2a367::t_358251ef79b2f5 1-19
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.2",
+  "base_commit_sha": "040bca1e45bbb6d85874acdb1a6f6cc3ca5c1147",
+  "prompts": {},
+  "sessions": {
+    "s_bb07d236a2a367": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "dffe1207-6a7e-4849-b480-a1b3b109f75f",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Jason Yeon <seojoony9000@gmail.com>"
+    }
+  }
+}
