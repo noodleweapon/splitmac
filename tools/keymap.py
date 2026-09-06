@@ -1,7 +1,7 @@
 """Single source of truth for the splitmac layout.
 
 Everything downstream (the SVG renderer, the interactive page) reads its data
-from here so the diagrams can never drift away from splitmac.kbd.
+from here so the diagrams can never drift away from karabiner.json.
 
 Geometry follows a US MacBook Air (M2/M3/M4) Magic Keyboard: six rows, every
 row 14.5u wide, full-height function row with Touch ID, inverted-T arrows.
@@ -9,7 +9,7 @@ row 14.5u wide, full-height function row with Touch ID, inverted-T arrows.
 
 # ---------------------------------------------------------------------------
 # Physical keyboard geometry.  Each key is (id, label, width_in_units).
-# `id` names the *physical* key; kanata's own key names are in splitmac.kbd.
+# `id` is the Karabiner key_code of the *physical* key.
 # ---------------------------------------------------------------------------
 
 ROWS = [
