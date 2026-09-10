@@ -7,7 +7,7 @@
                 },
                 "rules": [
                     {
-                        "description": "Bad-habit trainer: numbers ` ⌫ - = ⇥ ] \\ arrows ⌃ ⎋ Y H B N => type HERROPERS",
+                        "description": "Bad-habit trainer: numbers ` ⌫ - = ⇥ ] \\ ⌃ ⎋ Y H B N => type HERROPERS (1 instead types the \"reply in N sentences\" macro, 2 types \"explain what is meant by \")",
                         "manipulators": [
                             {
                                 "from": {
@@ -26,58 +26,94 @@
                                         }
                                     },
                                     {
-                                        "key_code": "h",
-                                        "modifiers": [
-                                            "left_shift"
-                                        ]
+                                        "key_code": "left_arrow"
                                     },
                                     {
-                                        "key_code": "e",
-                                        "modifiers": [
-                                            "left_shift"
-                                        ]
+                                        "key_code": "r"
                                     },
                                     {
-                                        "key_code": "r",
-                                        "modifiers": [
-                                            "left_shift"
-                                        ]
+                                        "key_code": "e"
                                     },
                                     {
-                                        "key_code": "r",
-                                        "modifiers": [
-                                            "left_shift"
-                                        ]
+                                        "key_code": "p"
                                     },
                                     {
-                                        "key_code": "o",
-                                        "modifiers": [
-                                            "left_shift"
-                                        ]
+                                        "key_code": "l"
                                     },
                                     {
-                                        "key_code": "p",
-                                        "modifiers": [
-                                            "left_shift"
-                                        ]
+                                        "key_code": "y"
                                     },
                                     {
-                                        "key_code": "e",
-                                        "modifiers": [
-                                            "left_shift"
-                                        ]
+                                        "key_code": "spacebar"
                                     },
                                     {
-                                        "key_code": "r",
-                                        "modifiers": [
-                                            "left_shift"
-                                        ]
+                                        "key_code": "i"
                                     },
                                     {
-                                        "key_code": "s",
-                                        "modifiers": [
-                                            "left_shift"
-                                        ]
+                                        "key_code": "n"
+                                    },
+                                    {
+                                        "key_code": "spacebar"
+                                    },
+                                    {
+                                        "key_code": "right_arrow"
+                                    },
+                                    {
+                                        "key_code": "right_arrow"
+                                    },
+                                    {
+                                        "key_code": "right_arrow"
+                                    },
+                                    {
+                                        "key_code": "right_arrow"
+                                    },
+                                    {
+                                        "key_code": "right_arrow"
+                                    },
+                                    {
+                                        "key_code": "right_arrow"
+                                    },
+                                    {
+                                        "key_code": "right_arrow"
+                                    },
+                                    {
+                                        "key_code": "right_arrow"
+                                    },
+                                    {
+                                        "key_code": "right_arrow"
+                                    },
+                                    {
+                                        "key_code": "right_arrow"
+                                    },
+                                    {
+                                        "key_code": "spacebar"
+                                    },
+                                    {
+                                        "key_code": "s"
+                                    },
+                                    {
+                                        "key_code": "e"
+                                    },
+                                    {
+                                        "key_code": "n"
+                                    },
+                                    {
+                                        "key_code": "t"
+                                    },
+                                    {
+                                        "key_code": "e"
+                                    },
+                                    {
+                                        "key_code": "n"
+                                    },
+                                    {
+                                        "key_code": "c"
+                                    },
+                                    {
+                                        "key_code": "e"
+                                    },
+                                    {
+                                        "key_code": "s"
                                     }
                                 ],
                                 "type": "basic"
@@ -95,62 +131,83 @@
                                     {
                                         "set_variable": {
                                             "name": "magic_prev",
-                                            "value": "s"
+                                            "value": ""
                                         }
                                     },
                                     {
-                                        "key_code": "h",
-                                        "modifiers": [
-                                            "left_shift"
-                                        ]
+                                        "key_code": "e"
                                     },
                                     {
-                                        "key_code": "e",
-                                        "modifiers": [
-                                            "left_shift"
-                                        ]
+                                        "key_code": "x"
                                     },
                                     {
-                                        "key_code": "r",
-                                        "modifiers": [
-                                            "left_shift"
-                                        ]
+                                        "key_code": "p"
                                     },
                                     {
-                                        "key_code": "r",
-                                        "modifiers": [
-                                            "left_shift"
-                                        ]
+                                        "key_code": "l"
                                     },
                                     {
-                                        "key_code": "o",
-                                        "modifiers": [
-                                            "left_shift"
-                                        ]
+                                        "key_code": "a"
                                     },
                                     {
-                                        "key_code": "p",
-                                        "modifiers": [
-                                            "left_shift"
-                                        ]
+                                        "key_code": "i"
                                     },
                                     {
-                                        "key_code": "e",
-                                        "modifiers": [
-                                            "left_shift"
-                                        ]
+                                        "key_code": "n"
                                     },
                                     {
-                                        "key_code": "r",
-                                        "modifiers": [
-                                            "left_shift"
-                                        ]
+                                        "key_code": "spacebar"
                                     },
                                     {
-                                        "key_code": "s",
-                                        "modifiers": [
-                                            "left_shift"
-                                        ]
+                                        "key_code": "w"
+                                    },
+                                    {
+                                        "key_code": "h"
+                                    },
+                                    {
+                                        "key_code": "a"
+                                    },
+                                    {
+                                        "key_code": "t"
+                                    },
+                                    {
+                                        "key_code": "spacebar"
+                                    },
+                                    {
+                                        "key_code": "i"
+                                    },
+                                    {
+                                        "key_code": "s"
+                                    },
+                                    {
+                                        "key_code": "spacebar"
+                                    },
+                                    {
+                                        "key_code": "m"
+                                    },
+                                    {
+                                        "key_code": "e"
+                                    },
+                                    {
+                                        "key_code": "a"
+                                    },
+                                    {
+                                        "key_code": "n"
+                                    },
+                                    {
+                                        "key_code": "t"
+                                    },
+                                    {
+                                        "key_code": "spacebar"
+                                    },
+                                    {
+                                        "key_code": "b"
+                                    },
+                                    {
+                                        "key_code": "y"
+                                    },
+                                    {
+                                        "key_code": "spacebar"
                                     }
                                 ],
                                 "type": "basic"
@@ -1252,298 +1309,6 @@
                             },
                             {
                                 "from": {
-                                    "key_code": "left_arrow",
-                                    "modifiers": {
-                                        "optional": [
-                                            "any"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": "s"
-                                        }
-                                    },
-                                    {
-                                        "key_code": "h",
-                                        "modifiers": [
-                                            "left_shift"
-                                        ]
-                                    },
-                                    {
-                                        "key_code": "e",
-                                        "modifiers": [
-                                            "left_shift"
-                                        ]
-                                    },
-                                    {
-                                        "key_code": "r",
-                                        "modifiers": [
-                                            "left_shift"
-                                        ]
-                                    },
-                                    {
-                                        "key_code": "r",
-                                        "modifiers": [
-                                            "left_shift"
-                                        ]
-                                    },
-                                    {
-                                        "key_code": "o",
-                                        "modifiers": [
-                                            "left_shift"
-                                        ]
-                                    },
-                                    {
-                                        "key_code": "p",
-                                        "modifiers": [
-                                            "left_shift"
-                                        ]
-                                    },
-                                    {
-                                        "key_code": "e",
-                                        "modifiers": [
-                                            "left_shift"
-                                        ]
-                                    },
-                                    {
-                                        "key_code": "r",
-                                        "modifiers": [
-                                            "left_shift"
-                                        ]
-                                    },
-                                    {
-                                        "key_code": "s",
-                                        "modifiers": [
-                                            "left_shift"
-                                        ]
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
-                                    "key_code": "right_arrow",
-                                    "modifiers": {
-                                        "optional": [
-                                            "any"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": "s"
-                                        }
-                                    },
-                                    {
-                                        "key_code": "h",
-                                        "modifiers": [
-                                            "left_shift"
-                                        ]
-                                    },
-                                    {
-                                        "key_code": "e",
-                                        "modifiers": [
-                                            "left_shift"
-                                        ]
-                                    },
-                                    {
-                                        "key_code": "r",
-                                        "modifiers": [
-                                            "left_shift"
-                                        ]
-                                    },
-                                    {
-                                        "key_code": "r",
-                                        "modifiers": [
-                                            "left_shift"
-                                        ]
-                                    },
-                                    {
-                                        "key_code": "o",
-                                        "modifiers": [
-                                            "left_shift"
-                                        ]
-                                    },
-                                    {
-                                        "key_code": "p",
-                                        "modifiers": [
-                                            "left_shift"
-                                        ]
-                                    },
-                                    {
-                                        "key_code": "e",
-                                        "modifiers": [
-                                            "left_shift"
-                                        ]
-                                    },
-                                    {
-                                        "key_code": "r",
-                                        "modifiers": [
-                                            "left_shift"
-                                        ]
-                                    },
-                                    {
-                                        "key_code": "s",
-                                        "modifiers": [
-                                            "left_shift"
-                                        ]
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
-                                    "key_code": "up_arrow",
-                                    "modifiers": {
-                                        "optional": [
-                                            "any"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": "s"
-                                        }
-                                    },
-                                    {
-                                        "key_code": "h",
-                                        "modifiers": [
-                                            "left_shift"
-                                        ]
-                                    },
-                                    {
-                                        "key_code": "e",
-                                        "modifiers": [
-                                            "left_shift"
-                                        ]
-                                    },
-                                    {
-                                        "key_code": "r",
-                                        "modifiers": [
-                                            "left_shift"
-                                        ]
-                                    },
-                                    {
-                                        "key_code": "r",
-                                        "modifiers": [
-                                            "left_shift"
-                                        ]
-                                    },
-                                    {
-                                        "key_code": "o",
-                                        "modifiers": [
-                                            "left_shift"
-                                        ]
-                                    },
-                                    {
-                                        "key_code": "p",
-                                        "modifiers": [
-                                            "left_shift"
-                                        ]
-                                    },
-                                    {
-                                        "key_code": "e",
-                                        "modifiers": [
-                                            "left_shift"
-                                        ]
-                                    },
-                                    {
-                                        "key_code": "r",
-                                        "modifiers": [
-                                            "left_shift"
-                                        ]
-                                    },
-                                    {
-                                        "key_code": "s",
-                                        "modifiers": [
-                                            "left_shift"
-                                        ]
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
-                                    "key_code": "down_arrow",
-                                    "modifiers": {
-                                        "optional": [
-                                            "any"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": "s"
-                                        }
-                                    },
-                                    {
-                                        "key_code": "h",
-                                        "modifiers": [
-                                            "left_shift"
-                                        ]
-                                    },
-                                    {
-                                        "key_code": "e",
-                                        "modifiers": [
-                                            "left_shift"
-                                        ]
-                                    },
-                                    {
-                                        "key_code": "r",
-                                        "modifiers": [
-                                            "left_shift"
-                                        ]
-                                    },
-                                    {
-                                        "key_code": "r",
-                                        "modifiers": [
-                                            "left_shift"
-                                        ]
-                                    },
-                                    {
-                                        "key_code": "o",
-                                        "modifiers": [
-                                            "left_shift"
-                                        ]
-                                    },
-                                    {
-                                        "key_code": "p",
-                                        "modifiers": [
-                                            "left_shift"
-                                        ]
-                                    },
-                                    {
-                                        "key_code": "e",
-                                        "modifiers": [
-                                            "left_shift"
-                                        ]
-                                    },
-                                    {
-                                        "key_code": "r",
-                                        "modifiers": [
-                                            "left_shift"
-                                        ]
-                                    },
-                                    {
-                                        "key_code": "s",
-                                        "modifiers": [
-                                            "left_shift"
-                                        ]
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
                                     "key_code": "left_control",
                                     "modifiers": {
                                         "optional": [
@@ -1905,7 +1670,14 @@
                                         ]
                                     }
                                 ],
-                                "type": "basic"
+                                "type": "basic",
+                                "conditions": [
+                                    {
+                                        "name": "arrow_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    }
+                                ]
                             },
                             {
                                 "from": {
@@ -1983,7 +1755,124 @@
                         ]
                     },
                     {
-                        "description": "Disable Command-C on remapped M key",
+                        "description": "Arrow keys => orbital mouse (tank controls: up/down drive, left/right orbit). Reported to tools/orbital_mouse over UDP.",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "left_arrow",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "set_variable": {
+                                            "name": "magic_prev",
+                                            "value": ""
+                                        }
+                                    },
+                                    {
+                                        "shell_command": "printf l1 > /dev/udp/127.0.0.1/45454",
+                                        "repeat": false
+                                    }
+                                ],
+                                "to_after_key_up": [
+                                    {
+                                        "shell_command": "printf l0 > /dev/udp/127.0.0.1/45454"
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "right_arrow",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "set_variable": {
+                                            "name": "magic_prev",
+                                            "value": ""
+                                        }
+                                    },
+                                    {
+                                        "shell_command": "printf r1 > /dev/udp/127.0.0.1/45454",
+                                        "repeat": false
+                                    }
+                                ],
+                                "to_after_key_up": [
+                                    {
+                                        "shell_command": "printf r0 > /dev/udp/127.0.0.1/45454"
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "up_arrow",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "set_variable": {
+                                            "name": "magic_prev",
+                                            "value": ""
+                                        }
+                                    },
+                                    {
+                                        "shell_command": "printf u1 > /dev/udp/127.0.0.1/45454",
+                                        "repeat": false
+                                    }
+                                ],
+                                "to_after_key_up": [
+                                    {
+                                        "shell_command": "printf u0 > /dev/udp/127.0.0.1/45454"
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "down_arrow",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "set_variable": {
+                                            "name": "magic_prev",
+                                            "value": ""
+                                        }
+                                    },
+                                    {
+                                        "shell_command": "printf d1 > /dev/udp/127.0.0.1/45454",
+                                        "repeat": false
+                                    }
+                                ],
+                                "to_after_key_up": [
+                                    {
+                                        "shell_command": "printf d0 > /dev/udp/127.0.0.1/45454"
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Physical C: Command-C swallowed, Option+C => Control+C",
                         "manipulators": [
                             {
                                 "from": {
@@ -1999,13 +1888,7 @@
                                 },
                                 "to": [],
                                 "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "Map Alt+C to Control+C",
-                        "enabled": false,
-                        "manipulators": [
+                            },
                             {
                                 "from": {
                                     "key_code": "c",
@@ -2034,7 +1917,378 @@
                         ]
                     },
                     {
-                        "description": "Hold M => symbol layer: FOU;=;&$# HAEI=[]() P,.'=:\\%?",
+                        "description": "Right gate => orbital mouse: NRTS = turn left / back / forward / turn right, O = double speed, F = click (hold to drag), U = right click (off while a layer or a modifier is held)",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "description": "right gate held",
+                                        "name": "trackpad_mouse",
+                                        "type": "variable_unless",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "arrow_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "left_symbol_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "number_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "right_symbol_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "a",
+                                    "modifiers": {
+                                        "optional": []
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "set_variable": {
+                                            "name": "magic_prev",
+                                            "value": ""
+                                        }
+                                    },
+                                    {
+                                        "shell_command": "printf l1 > /dev/udp/127.0.0.1/45454",
+                                        "repeat": false
+                                    }
+                                ],
+                                "to_after_key_up": [
+                                    {
+                                        "shell_command": "printf l0 > /dev/udp/127.0.0.1/45454"
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "description": "right gate held",
+                                        "name": "trackpad_mouse",
+                                        "type": "variable_unless",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "arrow_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "left_symbol_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "number_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "right_symbol_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "s",
+                                    "modifiers": {
+                                        "optional": []
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "set_variable": {
+                                            "name": "magic_prev",
+                                            "value": ""
+                                        }
+                                    },
+                                    {
+                                        "shell_command": "printf d1 > /dev/udp/127.0.0.1/45454",
+                                        "repeat": false
+                                    }
+                                ],
+                                "to_after_key_up": [
+                                    {
+                                        "shell_command": "printf d0 > /dev/udp/127.0.0.1/45454"
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "description": "right gate held",
+                                        "name": "trackpad_mouse",
+                                        "type": "variable_unless",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "arrow_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "left_symbol_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "number_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "right_symbol_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "d",
+                                    "modifiers": {
+                                        "optional": []
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "set_variable": {
+                                            "name": "magic_prev",
+                                            "value": ""
+                                        }
+                                    },
+                                    {
+                                        "shell_command": "printf u1 > /dev/udp/127.0.0.1/45454",
+                                        "repeat": false
+                                    }
+                                ],
+                                "to_after_key_up": [
+                                    {
+                                        "shell_command": "printf u0 > /dev/udp/127.0.0.1/45454"
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "description": "right gate held",
+                                        "name": "trackpad_mouse",
+                                        "type": "variable_unless",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "arrow_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "left_symbol_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "number_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "right_symbol_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "f",
+                                    "modifiers": {
+                                        "optional": []
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "set_variable": {
+                                            "name": "magic_prev",
+                                            "value": ""
+                                        }
+                                    },
+                                    {
+                                        "shell_command": "printf r1 > /dev/udp/127.0.0.1/45454",
+                                        "repeat": false
+                                    }
+                                ],
+                                "to_after_key_up": [
+                                    {
+                                        "shell_command": "printf r0 > /dev/udp/127.0.0.1/45454"
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "description": "right gate held",
+                                        "name": "trackpad_mouse",
+                                        "type": "variable_unless",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "arrow_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "left_symbol_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "number_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "right_symbol_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "o",
+                                    "modifiers": {
+                                        "optional": []
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "set_variable": {
+                                            "name": "magic_prev",
+                                            "value": ""
+                                        }
+                                    },
+                                    {
+                                        "shell_command": "printf b1 > /dev/udp/127.0.0.1/45454",
+                                        "repeat": false
+                                    }
+                                ],
+                                "to_after_key_up": [
+                                    {
+                                        "shell_command": "printf b0 > /dev/udp/127.0.0.1/45454"
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "description": "right gate held",
+                                        "name": "trackpad_mouse",
+                                        "type": "variable_unless",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "arrow_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "left_symbol_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "number_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "right_symbol_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "i",
+                                    "modifiers": {
+                                        "optional": []
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "set_variable": {
+                                            "name": "magic_prev",
+                                            "value": ""
+                                        }
+                                    },
+                                    {
+                                        "pointing_button": "button1"
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "description": "right gate held",
+                                        "name": "trackpad_mouse",
+                                        "type": "variable_unless",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "arrow_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "left_symbol_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "number_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "right_symbol_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "p",
+                                    "modifiers": {
+                                        "optional": []
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "set_variable": {
+                                            "name": "magic_prev",
+                                            "value": ""
+                                        }
+                                    },
+                                    {
+                                        "pointing_button": "button2"
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Hold N => symbol layer: FOU;=;&$# HAEI=[]() P,.'=:\\%?",
                         "manipulators": [
                             {
                                 "conditions": [
@@ -2426,13 +2680,14 @@
                                         "value": 1
                                     },
                                     {
-                                        "name": "hold_mods_enabled",
-                                        "type": "variable_if",
-                                        "value": 1
+                                        "description": "gate held",
+                                        "name": "trackpad_gate",
+                                        "type": "variable_unless",
+                                        "value": 0
                                     }
                                 ],
                                 "from": {
-                                    "key_code": "c",
+                                    "key_code": "a",
                                     "modifiers": {
                                         "optional": [
                                             "any"
@@ -2451,11 +2706,11 @@
                                     {
                                         "set_variable": {
                                             "name": "magic_prev",
-                                            "value": "m"
+                                            "value": "n"
                                         }
                                     },
                                     {
-                                        "key_code": "m"
+                                        "key_code": "n"
                                     }
                                 ],
                                 "type": "basic",
@@ -2471,7 +2726,7 @@
                         ]
                     },
                     {
-                        "description": "Hold P => symbol layer: BLDC=^*-| NRTS=+!/= ZXQM=`<>@",
+                        "description": "Hold I => symbol layer: BLDC=^*-| NRTS=+!/= ZXQM=`<>@",
                         "manipulators": [
                             {
                                 "conditions": [
@@ -2863,13 +3118,14 @@
                                         "value": 1
                                     },
                                     {
-                                        "name": "hold_mods_enabled",
-                                        "type": "variable_if",
-                                        "value": 1
+                                        "description": "gate held",
+                                        "name": "trackpad_gate",
+                                        "type": "variable_unless",
+                                        "value": 0
                                     }
                                 ],
                                 "from": {
-                                    "key_code": "comma",
+                                    "key_code": "quote",
                                     "modifiers": {
                                         "optional": [
                                             "any"
@@ -2888,11 +3144,11 @@
                                     {
                                         "set_variable": {
                                             "name": "magic_prev",
-                                            "value": "p"
+                                            "value": "i"
                                         }
                                     },
                                     {
-                                        "key_code": "p"
+                                        "key_code": "i"
                                     }
                                 ],
                                 "type": "basic",
@@ -2908,7 +3164,7 @@
                         ]
                     },
                     {
-                        "description": "Hold S => number layer: FOU=789, HAEI=0123, P,.=456, magic=~, '=_",
+                        "description": "Hold S => number layer: FOU=789, HAEI=0123, P,.=456, magic=~",
                         "manipulators": [
                             {
                                 "conditions": [
@@ -3235,38 +3491,6 @@
                             {
                                 "conditions": [
                                     {
-                                        "name": "number_layer",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "right_shift",
-                                    "modifiers": {
-                                        "optional": [
-                                            "any"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": ""
-                                        }
-                                    },
-                                    {
-                                        "key_code": "hyphen",
-                                        "modifiers": [
-                                            "left_shift"
-                                        ]
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
                                         "name": "right_symbol_layer",
                                         "type": "variable_unless",
                                         "value": 1
@@ -3282,9 +3506,10 @@
                                         "value": 1
                                     },
                                     {
-                                        "name": "hold_mods_enabled",
-                                        "type": "variable_if",
-                                        "value": 1
+                                        "description": "gate held",
+                                        "name": "trackpad_gate",
+                                        "type": "variable_unless",
+                                        "value": 0
                                     }
                                 ],
                                 "from": {
@@ -3327,7 +3552,7 @@
                         ]
                     },
                     {
-                        "description": "Hold H => arrow layer: N/R/T/S = arrows; Z/X/Q/M = 5x arrows",
+                        "description": "Hold H => arrow layer: N/R/T/S = arrows; Z/X/Q/M = 5x arrows; D = tab, B = ~",
                         "manipulators": [
                             {
                                 "conditions": [
@@ -3643,9 +3868,10 @@
                                         "value": 1
                                     },
                                     {
-                                        "name": "hold_mods_enabled",
-                                        "type": "variable_if",
-                                        "value": 1
+                                        "description": "gate held",
+                                        "name": "trackpad_gate",
+                                        "type": "variable_unless",
+                                        "value": 0
                                     }
                                 ],
                                 "from": {
@@ -3684,15 +3910,17 @@
                                         }
                                     }
                                 ]
-                            }
-                        ]
-                    },
-                    {
-                        "description": "Caps Lock / Enter: hold = enable RTSMHAEP hold layers (tap does nothing)",
-                        "manipulators": [
+                            },
                             {
+                                "conditions": [
+                                    {
+                                        "name": "arrow_layer",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
                                 "from": {
-                                    "key_code": "caps_lock",
+                                    "key_code": "e",
                                     "modifiers": {
                                         "optional": [
                                             "any"
@@ -3702,24 +3930,26 @@
                                 "to": [
                                     {
                                         "set_variable": {
-                                            "name": "hold_mods_enabled",
-                                            "value": 1
+                                            "name": "magic_prev",
+                                            "value": ""
                                         }
-                                    }
-                                ],
-                                "to_after_key_up": [
+                                    },
                                     {
-                                        "set_variable": {
-                                            "name": "hold_mods_enabled",
-                                            "value": 0
-                                        }
+                                        "key_code": "tab"
                                     }
                                 ],
                                 "type": "basic"
                             },
                             {
+                                "conditions": [
+                                    {
+                                        "name": "arrow_layer",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
                                 "from": {
-                                    "key_code": "return_or_enter",
+                                    "key_code": "b",
                                     "modifiers": {
                                         "optional": [
                                             "any"
@@ -3729,17 +3959,15 @@
                                 "to": [
                                     {
                                         "set_variable": {
-                                            "name": "hold_mods_enabled",
-                                            "value": 1
+                                            "name": "magic_prev",
+                                            "value": ""
                                         }
-                                    }
-                                ],
-                                "to_after_key_up": [
+                                    },
                                     {
-                                        "set_variable": {
-                                            "name": "hold_mods_enabled",
-                                            "value": 0
-                                        }
+                                        "key_code": "grave_accent_and_tilde",
+                                        "modifiers": [
+                                            "left_shift"
+                                        ]
                                     }
                                 ],
                                 "type": "basic"
@@ -3752,9 +3980,10 @@
                             {
                                 "conditions": [
                                     {
-                                        "name": "hold_mods_enabled",
-                                        "type": "variable_if",
-                                        "value": 1
+                                        "description": "gate held",
+                                        "name": "trackpad_gate",
+                                        "type": "variable_unless",
+                                        "value": 0
                                     }
                                 ],
                                 "from": {
@@ -3792,9 +4021,10 @@
                             {
                                 "conditions": [
                                     {
-                                        "name": "hold_mods_enabled",
-                                        "type": "variable_if",
-                                        "value": 1
+                                        "description": "gate held",
+                                        "name": "trackpad_gate",
+                                        "type": "variable_unless",
+                                        "value": 0
                                     }
                                 ],
                                 "from": {
@@ -3832,9 +4062,10 @@
                             {
                                 "conditions": [
                                     {
-                                        "name": "hold_mods_enabled",
-                                        "type": "variable_if",
-                                        "value": 1
+                                        "description": "gate held",
+                                        "name": "trackpad_gate",
+                                        "type": "variable_unless",
+                                        "value": 0
                                     }
                                 ],
                                 "from": {
@@ -3872,9 +4103,10 @@
                             {
                                 "conditions": [
                                     {
-                                        "name": "hold_mods_enabled",
-                                        "type": "variable_if",
-                                        "value": 1
+                                        "description": "gate held",
+                                        "name": "trackpad_gate",
+                                        "type": "variable_unless",
+                                        "value": 0
                                     }
                                 ],
                                 "from": {
@@ -3905,6 +4137,44 @@
                                     },
                                     {
                                         "key_code": "e"
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Gate + spacebar => _ (was the number layer's Right Shift)",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "description": "gate held",
+                                        "name": "trackpad_gate",
+                                        "type": "variable_unless",
+                                        "value": 0
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "spacebar",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "set_variable": {
+                                            "name": "magic_prev",
+                                            "value": ""
+                                        }
+                                    },
+                                    {
+                                        "key_code": "hyphen",
+                                        "modifiers": [
+                                            "left_shift"
+                                        ]
                                     }
                                 ],
                                 "type": "basic"
@@ -5117,188 +5387,7 @@
                         ]
                     },
                     {
-                        "description": "MOUSELESS FREE",
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "d",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "command",
-                                            "control",
-                                            "option",
-                                            "shift"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": ""
-                                        }
-                                    },
-                                    {
-                                        "key_code": "tab",
-                                        "modifiers": [
-                                            "command",
-                                            "control",
-                                            "option",
-                                            "shift"
-                                        ]
-                                    }
-                                ],
-                                "to_after_key_up": [
-                                    {
-                                        "key_code": "tab",
-                                        "modifiers": [
-                                            "command",
-                                            "control",
-                                            "option",
-                                            "shift"
-                                        ]
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "Map Option+T to Escape",
-                        "enabled": false,
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "t",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "option"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": ""
-                                        }
-                                    },
-                                    {
-                                        "key_code": "escape"
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "RAYCAST: Change option+A to option+control+command+shift+R",
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "a",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "option"
-                                        ],
-                                        "optional": [
-                                            "any"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": ""
-                                        }
-                                    },
-                                    {
-                                        "key_code": "a",
-                                        "modifiers": [
-                                            "option",
-                                            "control",
-                                            "command",
-                                            "shift"
-                                        ]
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "MOUSELESS: Change option+S to option+control+command+shift+c",
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "s",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "option"
-                                        ],
-                                        "optional": [
-                                            "any"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": ""
-                                        }
-                                    },
-                                    {
-                                        "key_code": "c",
-                                        "modifiers": [
-                                            "option",
-                                            "control",
-                                            "command",
-                                            "shift"
-                                        ]
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "HOMEROW: Change option+e to command+option+space",
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "e",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "option"
-                                        ],
-                                        "optional": [
-                                            "any"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": ""
-                                        }
-                                    },
-                                    {
-                                        "key_code": "spacebar",
-                                        "modifiers": [
-                                            "left_command",
-                                            "option"
-                                        ]
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "Map F3 to Command+Shift+Control+4 (screenshot area to clipboard)",
+                        "description": "System keys: F3 = screenshot area to clipboard, F4 = Raycast",
                         "manipulators": [
                             {
                                 "from": {
@@ -5326,12 +5415,7 @@
                                     }
                                 ],
                                 "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "RAYCAST: Map F4 to option+control+command+shift+R",
-                        "manipulators": [
+                            },
                             {
                                 "from": {
                                     "key_code": "f4",
@@ -5363,11 +5447,11 @@
                         ]
                     },
                     {
-                        "description": "Left Command: tap = Enter, hold = Shift",
+                        "description": "Modifier keys: caps = esc / shift, return = enter / shift, right command = delete, shifts = Z and ', left option = control, left command and right option dead",
                         "manipulators": [
                             {
                                 "from": {
-                                    "key_code": "left_command",
+                                    "key_code": "return_or_enter",
                                     "modifiers": {
                                         "optional": [
                                             "any"
@@ -5397,15 +5481,10 @@
                                     }
                                 ],
                                 "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "Right Option: tap = Tab, hold = Left Shift",
-                        "manipulators": [
+                            },
                             {
                                 "from": {
-                                    "key_code": "right_option",
+                                    "key_code": "caps_lock",
                                     "modifiers": {
                                         "optional": [
                                             "any"
@@ -5431,16 +5510,11 @@
                                         }
                                     },
                                     {
-                                        "key_code": "tab"
+                                        "key_code": "escape"
                                     }
                                 ],
                                 "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "Map Right Command to Backspace",
-                        "manipulators": [
+                            },
                             {
                                 "from": {
                                     "key_code": "right_command",
@@ -5462,12 +5536,31 @@
                                     }
                                 ],
                                 "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "Left Shift => Z, Right Shift => single quote (no hold behavior)",
-                        "manipulators": [
+                            },
+                            {
+                                "from": {
+                                    "key_code": "left_command",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "right_option",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [],
+                                "type": "basic"
+                            },
                             {
                                 "from": {
                                     "key_code": "left_shift",
@@ -5511,12 +5604,7 @@
                                     }
                                 ],
                                 "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "Left Option => Left Control",
-                        "manipulators": [
+                            },
                             {
                                 "from": {
                                     "key_code": "left_option",
@@ -5600,6 +5688,123 @@
                                 "to": [
                                     {
                                         "shell_command": "/Users/jason/.config/karabiner/toggle_profile.sh"
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Arrow keys => orbital mouse (tank controls: up/down drive, left/right orbit). Reported to tools/orbital_mouse over UDP.",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "left_arrow",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "set_variable": {
+                                            "name": "magic_prev",
+                                            "value": ""
+                                        }
+                                    },
+                                    {
+                                        "shell_command": "printf l1 > /dev/udp/127.0.0.1/45454",
+                                        "repeat": false
+                                    }
+                                ],
+                                "to_after_key_up": [
+                                    {
+                                        "shell_command": "printf l0 > /dev/udp/127.0.0.1/45454"
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "right_arrow",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "set_variable": {
+                                            "name": "magic_prev",
+                                            "value": ""
+                                        }
+                                    },
+                                    {
+                                        "shell_command": "printf r1 > /dev/udp/127.0.0.1/45454",
+                                        "repeat": false
+                                    }
+                                ],
+                                "to_after_key_up": [
+                                    {
+                                        "shell_command": "printf r0 > /dev/udp/127.0.0.1/45454"
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "up_arrow",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "set_variable": {
+                                            "name": "magic_prev",
+                                            "value": ""
+                                        }
+                                    },
+                                    {
+                                        "shell_command": "printf u1 > /dev/udp/127.0.0.1/45454",
+                                        "repeat": false
+                                    }
+                                ],
+                                "to_after_key_up": [
+                                    {
+                                        "shell_command": "printf u0 > /dev/udp/127.0.0.1/45454"
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "down_arrow",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "set_variable": {
+                                            "name": "magic_prev",
+                                            "value": ""
+                                        }
+                                    },
+                                    {
+                                        "shell_command": "printf d1 > /dev/udp/127.0.0.1/45454",
+                                        "repeat": false
+                                    }
+                                ],
+                                "to_after_key_up": [
+                                    {
+                                        "shell_command": "printf d0 > /dev/udp/127.0.0.1/45454"
                                     }
                                 ],
                                 "type": "basic"

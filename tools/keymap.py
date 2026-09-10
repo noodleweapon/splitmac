@@ -83,7 +83,6 @@ TRAINER_KEYS = [
     "grave_accent_and_tilde", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0",
     "hyphen", "equal_sign", "delete_or_backspace", "tab", "close_bracket",
     "backslash", "escape", "left_control", "y", "h", "b", "n",
-    "left_arrow", "right_arrow", "up_arrow", "down_arrow", "__updown",
 ]
 
 # --- base layer -------------------------------------------------------------
@@ -98,7 +97,7 @@ BASE = {
     "o": ("O", "", "alpha"),   "p": ("U", "", "alpha"),
     "open_bracket": ("✦", "magic", "magic"),
 
-    "a": ("N", "", "alpha"),
+    "a": ("N", "& sym", "layer"),
     "s": ("R", "⌥ opt", "mod"),
     "d": ("T", "⌘ cmd", "mod"),
     "f": ("S", "№ num", "layer"),
@@ -107,27 +106,27 @@ BASE = {
     "k": ("H", "→ nav", "layer"),
     "l": ("A", "⌘ cmd", "mod"),
     "semicolon": ("E", "⌥ opt", "mod"),
-    "quote": ("I", "", "alpha"),
+    "quote": ("I", "# sym", "layer"),
 
     "z": ("X", "", "alpha"),   "x": ("Q", "", "alpha"),
-    "c": ("M", "& sym", "layer"),
+    "c": ("M", "", "alpha"),
     "v": ("W", "", "alpha"),
     "m": ("K", "", "alpha"),
-    "comma": ("P", "# sym", "layer"),
+    "comma": ("P", "", "alpha"),
     "period": (",", "⇧ ⌥C", "alpha"),
     "slash": (".", "⇧ esc", "alpha"),
 
     # gates
-    "caps_lock": ("hold =\nlayers", "tap: nothing", "gate"),
-    "return_or_enter": ("hold =\nlayers", "tap: nothing", "gate"),
+    "caps_lock": ("⇧ shift", "tap: esc", "mod"),
+    "return_or_enter": ("⇧ shift", "tap: return", "mod"),
 
     # modifiers & thumbs
     "left_shift": ("Z", "", "alpha"),
     "right_shift": ("'", "", "punct"),
     "left_option": ("control", "", "mod"),
-    "left_command": ("⇧ shift", "tap: return", "mod"),
+    "left_command": ("no-op", "", "dead"),
     "right_command": ("⌫ delete", "", "mod"),
-    "right_option": ("⇧ shift", "tap: tab", "mod"),
+    "right_option": ("no-op", "", "dead"),
     "spacebar": ("space", "", "dead"),
     "fn": ("fn", "", "dead"),
     "touch_id": ("⏻", "", "dead"),
@@ -150,6 +149,15 @@ for _k, _legend in _MEDIA.items():
 for _k in TRAINER_KEYS:
     BASE[_k] = ("Disabled", "", "trainer")
 
+# The arrows are off the trainer list too: they are the orbital mouse.
+BASE["left_arrow"] = ("◀ orbit", "", "system")
+BASE["right_arrow"] = ("orbit ▶", "", "system")
+BASE["__updown"] = ("drive\n▲ ▼", "", "system")
+
+# 1 is off the trainer list: it types "reply in <cursor's digit> sentences".
+BASE["1"] = ("reply in\n_ sentences", "macro", "system")
+BASE["2"] = ("explain what\nis meant by", "macro", "system")
+
 # --- hold layers ------------------------------------------------------------
 
 NUM = {
@@ -158,7 +166,7 @@ NUM = {
     "k": ("0", "", "punct"), "l": ("1", "", "punct"),
     "semicolon": ("2", "", "punct"), "quote": ("3", "", "punct"),
     "comma": ("4", "", "punct"), "period": ("5", "", "punct"),
-    "slash": ("6", "", "punct"), "right_shift": ("_", "", "punct"),
+    "slash": ("6", "", "punct"),
     "f": ("hold", "S", "layer"),
 }
 
@@ -169,7 +177,7 @@ SYM_RIGHT = {
     "semicolon": ("(", "", "punct"), "quote": (")", "", "punct"),
     "comma": (":", "", "punct"), "period": ("\\", "", "punct"),
     "slash": ("%", "", "punct"), "right_shift": ("?", "", "punct"),
-    "c": ("hold", "M", "layer"),
+    "a": ("hold", "N", "layer"),
 }
 
 SYM_LEFT = {
@@ -179,10 +187,11 @@ SYM_LEFT = {
     "d": ("/", "", "punct"), "f": ("=", "", "punct"),
     "left_shift": ("`", "", "punct"), "z": ("<", "", "punct"),
     "x": (">", "", "punct"), "c": ("@", "", "punct"),
-    "comma": ("hold", "P", "layer"),
+    "quote": ("hold", "I", "layer"),
 }
 
 NAV = {
+    "e": ("⇥ tab", "", "punct"), "b": ("~", "", "punct"),
     "a": ("←", "", "punct"), "s": ("↑", "", "punct"),
     "d": ("↓", "", "punct"), "f": ("→", "", "punct"),
     "left_shift": ("←×5", "", "punct"), "z": ("↑×5", "", "punct"),
@@ -190,17 +199,26 @@ NAV = {
     "k": ("hold", "H", "layer"),
 }
 
+MOUSE = {
+    "a": ("↺ turn", "", "system"), "s": ("▼ back", "", "system"),
+    "d": ("▲ drive", "", "system"), "f": ("↻ turn", "", "system"),
+    "i": ("click", "hold = drag", "system"),
+    "o": ("×2", "hold = faster", "system"),
+    "p": ("right\nclick", "hold = drag", "system"),
+    "left_arrow": ("↺ turn", "", "system"), "right_arrow": ("↻ turn", "", "system"),
+    "__updown": ("drive\n▲ ▼", "", "system"),
+}
+
 MODS = {
     "s": ("⌥", "left", "mod"),
     "d": ("⌘", "left", "mod"),
     "l": ("⌘", "left", "mod"),
     "semicolon": ("⌥", "left", "mod"),
+    "spacebar": ("_", "", "punct"),
     "f": ("№", "numbers", "layer"),
     "k": ("→", "nav", "layer"),
-    "c": ("&", "sym R", "layer"),
-    "comma": ("#", "sym L", "layer"),
-    "caps_lock": ("hold", "arms all of it", "gate"),
-    "return_or_enter": ("hold", "arms all of it", "gate"),
+    "a": ("&", "sym R", "layer"),
+    "quote": ("#", "sym L", "layer"),
 }
 
 def _with_disabled(keys):
@@ -221,35 +239,42 @@ LAYERS = [
     {
         "id": "mods",
         "name": "Hold gate + home-row mods",
-        "sub": "Hold caps or return to arm. Then hold a home-row key for its modifier or layer.",
+        "sub": "Press either gate to arm. Then hold a home-row key for its modifier or layer.",
         "keys": _with_disabled(MODS),
         "full": False,
     },
     {
         "id": "number",
         "name": "Number layer",
-        "sub": "caps/return + hold S (physical F). Digits land on the right hand.",
+        "sub": "gate + hold S (physical F). Digits land on the right hand.",
         "keys": _with_disabled(NUM),
         "full": False,
     },
     {
         "id": "sym-left",
         "name": "Symbol layer — left",
-        "sub": "caps/return + hold P (physical comma). Math, brackets and shell glyphs.",
+        "sub": "gate + hold I (physical '). Math, brackets and shell glyphs.",
         "keys": _with_disabled(SYM_LEFT),
         "full": False,
     },
     {
         "id": "sym-right",
         "name": "Symbol layer — right",
-        "sub": "caps/return + hold M (physical C). Pairs, punctuation and money.",
+        "sub": "gate + hold N (physical A). Pairs, punctuation and money.",
         "keys": _with_disabled(SYM_RIGHT),
+        "full": False,
+    },
+    {
+        "id": "mouse",
+        "name": "Orbital mouse",
+        "sub": "Right gate held, nothing else. N/R/T/S steer, O doubles the speed, F clicks and U right-clicks; the arrow keys always steer.",
+        "keys": _with_disabled(MOUSE),
         "full": False,
     },
     {
         "id": "nav",
         "name": "Navigation layer",
-        "sub": "caps/return + hold H (physical K). Bottom row jumps five at a time.",
+        "sub": "gate + hold H (physical K). Bottom row jumps five at a time.",
         "keys": _with_disabled(NAV),
         "full": False,
     },

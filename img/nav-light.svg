@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1099" height="648" viewBox="0 0 1099 648" role="img" aria-label="Navigation layer layer of the splitmac">
 <rect width="1099" height="648" fill="#f4f4f2"/>
 <text x="44.0" y="46.0" fill="#17171a" font-size="30" font-weight="700" text-anchor="start" opacity="1.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">Navigation layer</text>
-<text x="44.0" y="72.0" fill="#5f5f6a" font-size="15" font-weight="400" text-anchor="start" opacity="1.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">caps/return + hold H (physical K). Bottom row jumps five at a time.</text>
+<text x="44.0" y="72.0" fill="#5f5f6a" font-size="15" font-weight="400" text-anchor="start" opacity="1.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">gate + hold H (physical K). Bottom row jumps five at a time.</text>
 <rect x="20.0" y="112.0" width="1059.0" height="515.5" rx="22" fill="#d8d8d5" stroke="#bdbdb9" stroke-width="1.5"/>
 <rect x="40.0" y="132.0" width="1019.0" height="475.5" rx="12" fill="#1b1b1f"/>
 <rect x="74.0" y="166.0" width="93.0" height="47.5" rx="8" fill="#000000" stroke="#3d3d44" stroke-width="1"/>
@@ -82,8 +82,9 @@
 <text x="227.0" y="305.5" fill="#55555e" font-size="10" font-weight="500" text-anchor="end" opacity="0.85" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">Q</text>
 <rect x="239.0" y="291.5" width="60.0" height="66.0" rx="8" fill="#232327" stroke="#3d3d44" stroke-width="1"/>
 <text x="293.0" y="305.5" fill="#55555e" font-size="10" font-weight="500" text-anchor="end" opacity="0.85" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">W</text>
-<rect x="305.0" y="291.5" width="60.0" height="66.0" rx="8" fill="#232327" stroke="#3d3d44" stroke-width="1"/>
+<rect x="305.0" y="291.5" width="60.0" height="66.0" rx="8" fill="#1e3a5f" stroke="#3d3d44" stroke-width="1"/>
 <text x="359.0" y="305.5" fill="#55555e" font-size="10" font-weight="500" text-anchor="end" opacity="0.85" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">E</text>
+<text x="335.0" y="329.5" fill="#8ecbff" font-size="13" font-weight="600" text-anchor="middle" opacity="1.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">⇥ tab</text>
 <rect x="371.0" y="291.5" width="60.0" height="66.0" rx="8" fill="#232327" stroke="#3d3d44" stroke-width="1"/>
 <text x="425.0" y="305.5" fill="#55555e" font-size="10" font-weight="500" text-anchor="end" opacity="0.85" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">R</text>
 <rect x="437.0" y="291.5" width="60.0" height="66.0" rx="8" fill="#232327" stroke="#3d3d44" stroke-width="1"/>
@@ -154,9 +155,9 @@
 <text x="384.5" y="473.5" fill="#8ecbff" font-size="13" font-weight="600" text-anchor="middle" opacity="1.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">→×5</text>
 <rect x="420.5" y="435.5" width="60.0" height="66.0" rx="8" fill="#232327" stroke="#3d3d44" stroke-width="1"/>
 <text x="474.5" y="449.5" fill="#55555e" font-size="10" font-weight="500" text-anchor="end" opacity="0.85" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">V</text>
-<rect x="486.5" y="435.5" width="60.0" height="66.0" rx="8" fill="#000000" stroke="#3d3d44" stroke-width="1"/>
+<rect x="486.5" y="435.5" width="60.0" height="66.0" rx="8" fill="#1e3a5f" stroke="#3d3d44" stroke-width="1"/>
 <text x="540.5" y="449.5" fill="#55555e" font-size="10" font-weight="500" text-anchor="end" opacity="0.85" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">B</text>
-<text x="516.5" y="473.5" fill="#63636b" font-size="11" font-weight="600" text-anchor="middle" opacity="1.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">Disabled</text>
+<text x="516.5" y="473.5" fill="#8ecbff" font-size="20" font-weight="700" text-anchor="middle" opacity="1.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">~</text>
 <rect x="552.5" y="435.5" width="60.0" height="66.0" rx="8" fill="#000000" stroke="#3d3d44" stroke-width="1"/>
 <text x="606.5" y="449.5" fill="#55555e" font-size="10" font-weight="500" text-anchor="end" opacity="0.85" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">N</text>
 <text x="582.5" y="473.5" fill="#63636b" font-size="11" font-weight="600" text-anchor="middle" opacity="1.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">Disabled</text>
@@ -184,14 +185,12 @@
 <text x="755.0" y="521.5" fill="#55555e" font-size="10" font-weight="500" text-anchor="end" opacity="0.85" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">command</text>
 <rect x="767.0" y="507.5" width="60.0" height="66.0" rx="8" fill="#232327" stroke="#3d3d44" stroke-width="1"/>
 <text x="821.0" y="521.5" fill="#55555e" font-size="10" font-weight="500" text-anchor="end" opacity="0.85" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">option</text>
-<rect x="833.0" y="507.5" width="60.0" height="66.0" rx="8" fill="#000000" stroke="#3d3d44" stroke-width="1"/>
+<rect x="833.0" y="507.5" width="60.0" height="66.0" rx="8" fill="#232327" stroke="#3d3d44" stroke-width="1"/>
 <text x="887.0" y="521.5" fill="#55555e" font-size="10" font-weight="500" text-anchor="end" opacity="0.85" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">←</text>
-<text x="863.0" y="545.5" fill="#63636b" font-size="11" font-weight="600" text-anchor="middle" opacity="1.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">Disabled</text>
-<rect x="899.0" y="507.5" width="60.0" height="32.0" rx="5" fill="#000000" stroke="#3d3d44" stroke-width="1"/>
-<text x="929.0" y="528.5" fill="#63636b" font-size="13" font-weight="600" text-anchor="middle" opacity="1.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">↑</text>
-<rect x="899.0" y="541.5" width="60.0" height="32.0" rx="5" fill="#000000" stroke="#3d3d44" stroke-width="1"/>
-<text x="929.0" y="562.5" fill="#63636b" font-size="13" font-weight="600" text-anchor="middle" opacity="1.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">↓</text>
-<rect x="965.0" y="507.5" width="60.0" height="66.0" rx="8" fill="#000000" stroke="#3d3d44" stroke-width="1"/>
+<rect x="899.0" y="507.5" width="60.0" height="32.0" rx="5" fill="#232327" stroke="#3d3d44" stroke-width="1"/>
+<text x="929.0" y="528.5" fill="#5a5a63" font-size="13" font-weight="600" text-anchor="middle" opacity="1.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">↑</text>
+<rect x="899.0" y="541.5" width="60.0" height="32.0" rx="5" fill="#232327" stroke="#3d3d44" stroke-width="1"/>
+<text x="929.0" y="562.5" fill="#5a5a63" font-size="13" font-weight="600" text-anchor="middle" opacity="1.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">↓</text>
+<rect x="965.0" y="507.5" width="60.0" height="66.0" rx="8" fill="#232327" stroke="#3d3d44" stroke-width="1"/>
 <text x="1019.0" y="521.5" fill="#55555e" font-size="10" font-weight="500" text-anchor="end" opacity="0.85" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">→</text>
-<text x="995.0" y="545.5" fill="#63636b" font-size="11" font-weight="600" text-anchor="middle" opacity="1.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">Disabled</text>
 </svg>

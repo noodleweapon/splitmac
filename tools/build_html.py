@@ -441,7 +441,7 @@ footer a { color: var(--fg-dim); }
 
   <div class="readout" id="readout">
     <span class="hint">Press keys on your own keyboard — the matching cap lights up.
-    Hold Caps Lock or Return, then hold S, P, M or H to preview a layer live.</span>
+    Caps Lock stands in for the gate here: hold it, then hold S, I, N or H to preview a layer.</span>
   </div>
 
   <div class="legend-row" id="legend"></div>
@@ -452,7 +452,7 @@ footer a { color: var(--fg-dim); }
     <h3>Why a gate</h3>
     <p>Home-row mods misfire when you type fast — the roll from <code>t</code> to
     <code>h</code> becomes a stray Command press. Here they simply do not exist
-    until you hold Caps Lock or Return. Let go and the home row is eight plain
+    until you press a gate. Let go and the home row is eight plain
     letters again.</p>
     <p>Only one layer can be live at a time: every layer key is conditioned on the
     other three being off, so a fumbled two-key hold does nothing rather than
@@ -477,11 +477,11 @@ footer a { color: var(--fg-dim); }
     <tbody>
       <tr><td>Left Shift</td><td>types <code>'</code></td></tr>
       <tr><td>Right Shift</td><td>types <code>;</code></td></tr>
-      <tr><td>Left Command</td><td>tap = Return, hold = Shift</td></tr>
-      <tr><td>Right Option</td><td>tap = Tab, hold = Shift</td></tr>
+      <tr><td>Caps Lock</td><td>tap = Escape, hold = Shift</td></tr>
+      <tr><td>Return</td><td>tap = Return, hold = Shift</td></tr>
       <tr><td>Right Command</td><td>Delete</td></tr>
       <tr><td>Left Option</td><td>Control</td></tr>
-      <tr><td>Caps Lock / Return</td><td>hold arms the layers; tap does nothing</td></tr>
+      <tr><td>Left Command / Right Option</td><td>disabled</td></tr>
       <tr><td>Shift + <code>/</code></td><td>Escape</td></tr>
       <tr><td>F6</td><td>toggles the entire keymap off and on</td></tr>
     </tbody>
