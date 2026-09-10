@@ -1,0 +1,34 @@
+tools/trackpad_zones.swift
+  s_01c2a74e4c83b0::t_bb4d5e24d11ea1 48,376,378,380,382
+  s_01c2a74e4c83b0::t_b73d7ec65c2dcb 92,396,398-399,414,418,423,427,435,438
+keymap.html
+  s_01c2a74e4c83b0::t_5e86f564e18db2 448
+README.md
+  s_01c2a74e4c83b0::t_5e86f564e18db2 224,231,340-343
+img/base-dark.svg
+  s_01c2a74e4c83b0::t_5e86f564e18db2 250,257
+tools/trackpad_zones.json
+  s_01c2a74e4c83b0::t_b73d7ec65c2dcb 9-10
+karabiner/karabiner.json
+  s_01c2a74e4c83b0::t_7cddbdcebcef60 1758,1777-1779,1801-1803,1825-1827,1849-1851,5311,5330-5332,5354-5356,5378-5380,5402-5404
+img/base-light.svg
+  s_01c2a74e4c83b0::t_5e86f564e18db2 250,257
+tools/keymap.py
+  s_01c2a74e4c83b0::t_5e86f564e18db2 152-155
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "4ee7ad3a5c55d857a2051a94293c624a1ddb99e6",
+  "prompts": {},
+  "sessions": {
+    "s_01c2a74e4c83b0": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "e473a931-ba8f-44a9-9d41-f71dce750d9c",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Jason Yeon <seojoony9000@gmail.com>"
+    }
+  }
+}
