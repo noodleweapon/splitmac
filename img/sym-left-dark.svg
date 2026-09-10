@@ -1,9 +1,16 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1099" height="648" viewBox="0 0 1099 648" role="img" aria-label="Symbol layer — left layer of the splitmac">
-<rect width="1099" height="648" fill="#0d0d10"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="1099" height="958" viewBox="0 0 1099 958" role="img" aria-label="Symbol layer — left layer of the splitmac">
+<rect width="1099" height="958" fill="#0d0d10"/>
 <text x="44.0" y="46.0" fill="#f2f2f5" font-size="30" font-weight="700" text-anchor="start" opacity="1.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">Symbol layer — left</text>
 <text x="44.0" y="72.0" fill="#9a9aa6" font-size="15" font-weight="400" text-anchor="start" opacity="1.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">gate + hold I (physical '). Math, brackets and shell glyphs.</text>
-<rect x="20.0" y="112.0" width="1059.0" height="515.5" rx="22" fill="#1e1e22" stroke="#2c2c32" stroke-width="1.5"/>
+<rect x="20.0" y="112.0" width="1059.0" height="825.8" rx="22" fill="#1e1e22" stroke="#2c2c32" stroke-width="1.5"/>
 <rect x="40.0" y="132.0" width="1019.0" height="475.5" rx="12" fill="#0a0a0c"/>
+<rect x="320.2" y="633.5" width="458.6" height="284.3" rx="12" fill="#1f1f24" stroke="#33333b" stroke-width="1"/>
+<rect x="320.2" y="633.5" width="220.1" height="34.1" rx="5" fill="#152e26" stroke="#79dfbc" stroke-width="1"/>
+<text x="430.3" y="654.6" fill="#79dfbc" font-size="11" font-weight="600" text-anchor="middle" opacity="1.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">left gate</text>
+<rect x="558.7" y="633.5" width="220.1" height="34.1" rx="5" fill="#152e26" stroke="#79dfbc" stroke-width="1"/>
+<text x="668.7" y="654.6" fill="#79dfbc" font-size="11" font-weight="600" text-anchor="middle" opacity="1.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">right gate</text>
+<text x="549.5" y="693.6" fill="#7e7e8a" font-size="11" font-weight="500" text-anchor="middle" opacity="1.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">hold either gate</text>
+<text x="549.5" y="905.8" fill="#4a4a53" font-size="10" font-weight="500" text-anchor="middle" opacity="0.85" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">trackpad</text>
 <rect x="74.0" y="166.0" width="93.0" height="47.5" rx="8" fill="#000000" stroke="#33333b" stroke-width="1"/>
 <text x="161.0" y="180.0" fill="#4a4a53" font-size="10" font-weight="500" text-anchor="end" opacity="0.85" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">esc</text>
 <text x="120.5" y="194.8" fill="#5c5c64" font-size="11" font-weight="600" text-anchor="middle" opacity="1.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">Disabled</text>

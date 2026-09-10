@@ -19,6 +19,14 @@ GAP = 6           # gap between keycaps
 PAD = 34          # padding inside the deck
 DECK_PAD = 20     # chassis border around the deck
 HEADER = 92       # title block above the keyboard
+PAD_GAP = 26      # deck to trackpad
+# The trackpad, roughly to scale against the deck: 130mm across and 82mm deep
+# on a 14" MacBook Pro, against a 278mm deck.
+TRACKPAD_W = 0.45
+TRACKPAD_ASPECT = 0.62
+GATE_DEPTH = 0.12   # matches trackpad_zones.json
+GATE_WIDTH = 0.48
+
 
 THEMES = {
     "light": dict(
@@ -67,6 +75,11 @@ def board_size():
     return w, h
 
 
+def trackpad_size(deck_w):
+    w = deck_w * TRACKPAD_W
+    return w, w * TRACKPAD_ASPECT
+
+
 def rounded(x, y, w, h, r, fill, stroke=None, sw=1):
     s = f'<rect x="{x:.1f}" y="{y:.1f}" width="{w:.1f}" height="{h:.1f}" rx="{r}" fill="{fill}"'
     if stroke:
@@ -88,11 +101,33 @@ def text(x, y, s, fill, size, weight=500, anchor="middle", opacity=1.0, family=N
             f'font-family="{fam}">{escape(s)}</text>')
 
 
+def trackpad(layer, t, ox, oy, bw, bh, tw, th):
+    """The pad with its two gates, since that is where the gate lives now."""
+    tx = ox + (bw - tw) / 2
+    ty = oy + bh + PAD_GAP
+    gate_h = th * GATE_DEPTH
+    gate_w = tw * GATE_WIDTH
+
+    out = [rounded(tx, ty, tw, th, 12, t["cap"], t["cap_edge"], 1)]
+    for label, gx in (("left gate", tx), ("right gate", tx + tw - gate_w)):
+        out.append(rounded(gx, ty, gate_w, gate_h, 5, t["gate"], t["gate_t"], 1))
+        out.append(text(gx + gate_w / 2, ty + gate_h / 2 + 4, label, t["gate_t"],
+                        fit(label, 11, gate_w - 10), 600))
+
+    caption = ("press either gate to arm the layers" if layer["full"]
+               else "hold either gate")
+    out.append(text(tx + tw / 2, ty + gate_h + 26, caption, t["sub"], 11, 500))
+    out.append(text(tx + tw / 2, th + ty - 12, "trackpad", t["ghost"], 10, 500, opacity=0.85))
+    return out
+
+
 def render(layer, theme_name):
     t = THEMES[theme_name]
     bw, bh = board_size()
+    tw, th = trackpad_size(bw)
+    chassis_h = bh + 2 * DECK_PAD + PAD_GAP + th
     W = bw + 2 * DECK_PAD + 40
-    H = bh + 2 * DECK_PAD + HEADER + 40
+    H = chassis_h + HEADER + 40
     ox, oy = 20 + DECK_PAD, HEADER + 20 + DECK_PAD
 
     out = [f'<svg xmlns="http://www.w3.org/2000/svg" width="{W:.0f}" height="{H:.0f}" '
@@ -105,9 +140,10 @@ def render(layer, theme_name):
     out.append(text(20 + DECK_PAD + 4, 72, layer["sub"], t["subtitle"], 15, 400, "start"))
 
     # laptop chassis + recessed deck
-    out.append(rounded(20, HEADER + 20, bw + 2 * DECK_PAD, bh + 2 * DECK_PAD, 22,
+    out.append(rounded(20, HEADER + 20, bw + 2 * DECK_PAD, chassis_h, 22,
                        t["chassis"], t["chassis_edge"], 1.5))
     out.append(rounded(ox, oy, bw, bh, 12, t["deck"]))
+    out.extend(trackpad(layer, t, ox, oy, bw, bh, tw, th))
 
     keys = layer["keys"]
     dim = not layer["full"]
