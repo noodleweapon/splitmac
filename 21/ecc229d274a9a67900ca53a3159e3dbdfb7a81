@@ -1,0 +1,43 @@
+img/base-light.svg
+  s_01c2a74e4c83b0::t_360a6f55ceef0b 1-2,5,7-13
+img/number-light.svg
+  s_01c2a74e4c83b0::t_360a6f55ceef0b 1-2,5,7-13
+img/number-dark.svg
+  s_01c2a74e4c83b0::t_360a6f55ceef0b 1-2,5,7-13
+img/sym-left-light.svg
+  s_01c2a74e4c83b0::t_360a6f55ceef0b 1-2,5,7-13
+img/nav-dark.svg
+  s_01c2a74e4c83b0::t_360a6f55ceef0b 1-2,5,7-13
+img/sym-right-dark.svg
+  s_01c2a74e4c83b0::t_360a6f55ceef0b 1-2,5,7-13
+img/mods-light.svg
+  s_01c2a74e4c83b0::t_360a6f55ceef0b 1-2,5,7-13
+img/sym-left-dark.svg
+  s_01c2a74e4c83b0::t_360a6f55ceef0b 1-2,5,7-13
+img/sym-right-light.svg
+  s_01c2a74e4c83b0::t_360a6f55ceef0b 1-2,5,7-13
+img/mods-dark.svg
+  s_01c2a74e4c83b0::t_360a6f55ceef0b 1-2,5,7-13
+img/base-dark.svg
+  s_01c2a74e4c83b0::t_360a6f55ceef0b 1-2,5,7-13
+tools/render_svg.py
+  s_01c2a74e4c83b0::t_360a6f55ceef0b 22-29,78-82,104-123,127-128,130,143,146
+img/nav-light.svg
+  s_01c2a74e4c83b0::t_360a6f55ceef0b 1-2,5,7-13
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "21ecc229d274a9a67900ca53a3159e3dbdfb7a81",
+  "prompts": {},
+  "sessions": {
+    "s_01c2a74e4c83b0": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "e473a931-ba8f-44a9-9d41-f71dce750d9c",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Jason Yeon <seojoony9000@gmail.com>"
+    }
+  }
+}
