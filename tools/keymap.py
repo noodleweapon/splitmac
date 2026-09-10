@@ -149,10 +149,10 @@ for _k, _legend in _MEDIA.items():
 for _k in TRAINER_KEYS:
     BASE[_k] = ("Disabled", "", "trainer")
 
-# The arrows are off the trainer list too: they are the orbital mouse.
-BASE["left_arrow"] = ("◀ orbit", "", "system")
-BASE["right_arrow"] = ("orbit ▶", "", "system")
-BASE["__updown"] = ("drive\n▲ ▼", "", "system")
+# The arrows are off the trainer list too: they move the mouse pointer.
+BASE["left_arrow"] = ("◀ mouse", "", "system")
+BASE["right_arrow"] = ("mouse ▶", "", "system")
+BASE["__updown"] = ("mouse\n▲ ▼", "", "system")
 
 # 1 is off the trainer list: it types "reply in <cursor's digit> sentences".
 BASE["1"] = ("reply in\n_ sentences", "macro", "system")
@@ -197,16 +197,6 @@ NAV = {
     "left_shift": ("←×5", "", "punct"), "z": ("↑×5", "", "punct"),
     "x": ("↓×5", "", "punct"), "c": ("→×5", "", "punct"),
     "k": ("hold", "H", "layer"),
-}
-
-MOUSE = {
-    "a": ("↺ turn", "", "system"), "s": ("▼ back", "", "system"),
-    "d": ("▲ drive", "", "system"), "f": ("↻ turn", "", "system"),
-    "i": ("click", "hold = drag", "system"),
-    "o": ("×2", "hold = faster", "system"),
-    "p": ("right\nclick", "hold = drag", "system"),
-    "left_arrow": ("↺ turn", "", "system"), "right_arrow": ("↻ turn", "", "system"),
-    "__updown": ("drive\n▲ ▼", "", "system"),
 }
 
 MODS = {
@@ -262,13 +252,6 @@ LAYERS = [
         "name": "Symbol layer — right",
         "sub": "gate + hold N (physical A). Pairs, punctuation and money.",
         "keys": _with_disabled(SYM_RIGHT),
-        "full": False,
-    },
-    {
-        "id": "mouse",
-        "name": "Orbital mouse",
-        "sub": "Right gate held, nothing else. N/R/T/S steer, O doubles the speed, F clicks and U right-clicks; the arrow keys always steer.",
-        "keys": _with_disabled(MOUSE),
         "full": False,
     },
     {

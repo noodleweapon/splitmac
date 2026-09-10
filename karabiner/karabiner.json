@@ -1755,7 +1755,7 @@
                         ]
                     },
                     {
-                        "description": "Arrow keys => orbital mouse (tank controls: up/down drive, left/right orbit). Reported to tools/orbital_mouse over UDP.",
+                        "description": "Arrow keys move the mouse pointer (1536 = Karabiner's reference speed)",
                         "manipulators": [
                             {
                                 "from": {
@@ -1774,13 +1774,9 @@
                                         }
                                     },
                                     {
-                                        "shell_command": "printf l1 > /dev/udp/127.0.0.1/45454",
-                                        "repeat": false
-                                    }
-                                ],
-                                "to_after_key_up": [
-                                    {
-                                        "shell_command": "printf l0 > /dev/udp/127.0.0.1/45454"
+                                        "mouse_key": {
+                                            "x": -1536
+                                        }
                                     }
                                 ],
                                 "type": "basic"
@@ -1802,13 +1798,9 @@
                                         }
                                     },
                                     {
-                                        "shell_command": "printf r1 > /dev/udp/127.0.0.1/45454",
-                                        "repeat": false
-                                    }
-                                ],
-                                "to_after_key_up": [
-                                    {
-                                        "shell_command": "printf r0 > /dev/udp/127.0.0.1/45454"
+                                        "mouse_key": {
+                                            "x": 1536
+                                        }
                                     }
                                 ],
                                 "type": "basic"
@@ -1830,13 +1822,9 @@
                                         }
                                     },
                                     {
-                                        "shell_command": "printf u1 > /dev/udp/127.0.0.1/45454",
-                                        "repeat": false
-                                    }
-                                ],
-                                "to_after_key_up": [
-                                    {
-                                        "shell_command": "printf u0 > /dev/udp/127.0.0.1/45454"
+                                        "mouse_key": {
+                                            "y": -1536
+                                        }
                                     }
                                 ],
                                 "type": "basic"
@@ -1858,13 +1846,9 @@
                                         }
                                     },
                                     {
-                                        "shell_command": "printf d1 > /dev/udp/127.0.0.1/45454",
-                                        "repeat": false
-                                    }
-                                ],
-                                "to_after_key_up": [
-                                    {
-                                        "shell_command": "printf d0 > /dev/udp/127.0.0.1/45454"
+                                        "mouse_key": {
+                                            "y": 1536
+                                        }
                                     }
                                 ],
                                 "type": "basic"
@@ -1910,377 +1894,6 @@
                                         "modifiers": [
                                             "control"
                                         ]
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "Right gate => orbital mouse: NRTS = turn left / back / forward / turn right, O = double speed, F = click (hold to drag), U = right click (off while a layer or a modifier is held)",
-                        "manipulators": [
-                            {
-                                "conditions": [
-                                    {
-                                        "description": "right gate held",
-                                        "name": "trackpad_mouse",
-                                        "type": "variable_unless",
-                                        "value": 0
-                                    },
-                                    {
-                                        "name": "arrow_layer",
-                                        "type": "variable_unless",
-                                        "value": 1
-                                    },
-                                    {
-                                        "name": "left_symbol_layer",
-                                        "type": "variable_unless",
-                                        "value": 1
-                                    },
-                                    {
-                                        "name": "number_layer",
-                                        "type": "variable_unless",
-                                        "value": 1
-                                    },
-                                    {
-                                        "name": "right_symbol_layer",
-                                        "type": "variable_unless",
-                                        "value": 1
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "a",
-                                    "modifiers": {
-                                        "optional": []
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": ""
-                                        }
-                                    },
-                                    {
-                                        "shell_command": "printf l1 > /dev/udp/127.0.0.1/45454",
-                                        "repeat": false
-                                    }
-                                ],
-                                "to_after_key_up": [
-                                    {
-                                        "shell_command": "printf l0 > /dev/udp/127.0.0.1/45454"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "description": "right gate held",
-                                        "name": "trackpad_mouse",
-                                        "type": "variable_unless",
-                                        "value": 0
-                                    },
-                                    {
-                                        "name": "arrow_layer",
-                                        "type": "variable_unless",
-                                        "value": 1
-                                    },
-                                    {
-                                        "name": "left_symbol_layer",
-                                        "type": "variable_unless",
-                                        "value": 1
-                                    },
-                                    {
-                                        "name": "number_layer",
-                                        "type": "variable_unless",
-                                        "value": 1
-                                    },
-                                    {
-                                        "name": "right_symbol_layer",
-                                        "type": "variable_unless",
-                                        "value": 1
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "s",
-                                    "modifiers": {
-                                        "optional": []
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": ""
-                                        }
-                                    },
-                                    {
-                                        "shell_command": "printf d1 > /dev/udp/127.0.0.1/45454",
-                                        "repeat": false
-                                    }
-                                ],
-                                "to_after_key_up": [
-                                    {
-                                        "shell_command": "printf d0 > /dev/udp/127.0.0.1/45454"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "description": "right gate held",
-                                        "name": "trackpad_mouse",
-                                        "type": "variable_unless",
-                                        "value": 0
-                                    },
-                                    {
-                                        "name": "arrow_layer",
-                                        "type": "variable_unless",
-                                        "value": 1
-                                    },
-                                    {
-                                        "name": "left_symbol_layer",
-                                        "type": "variable_unless",
-                                        "value": 1
-                                    },
-                                    {
-                                        "name": "number_layer",
-                                        "type": "variable_unless",
-                                        "value": 1
-                                    },
-                                    {
-                                        "name": "right_symbol_layer",
-                                        "type": "variable_unless",
-                                        "value": 1
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "d",
-                                    "modifiers": {
-                                        "optional": []
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": ""
-                                        }
-                                    },
-                                    {
-                                        "shell_command": "printf u1 > /dev/udp/127.0.0.1/45454",
-                                        "repeat": false
-                                    }
-                                ],
-                                "to_after_key_up": [
-                                    {
-                                        "shell_command": "printf u0 > /dev/udp/127.0.0.1/45454"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "description": "right gate held",
-                                        "name": "trackpad_mouse",
-                                        "type": "variable_unless",
-                                        "value": 0
-                                    },
-                                    {
-                                        "name": "arrow_layer",
-                                        "type": "variable_unless",
-                                        "value": 1
-                                    },
-                                    {
-                                        "name": "left_symbol_layer",
-                                        "type": "variable_unless",
-                                        "value": 1
-                                    },
-                                    {
-                                        "name": "number_layer",
-                                        "type": "variable_unless",
-                                        "value": 1
-                                    },
-                                    {
-                                        "name": "right_symbol_layer",
-                                        "type": "variable_unless",
-                                        "value": 1
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "f",
-                                    "modifiers": {
-                                        "optional": []
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": ""
-                                        }
-                                    },
-                                    {
-                                        "shell_command": "printf r1 > /dev/udp/127.0.0.1/45454",
-                                        "repeat": false
-                                    }
-                                ],
-                                "to_after_key_up": [
-                                    {
-                                        "shell_command": "printf r0 > /dev/udp/127.0.0.1/45454"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "description": "right gate held",
-                                        "name": "trackpad_mouse",
-                                        "type": "variable_unless",
-                                        "value": 0
-                                    },
-                                    {
-                                        "name": "arrow_layer",
-                                        "type": "variable_unless",
-                                        "value": 1
-                                    },
-                                    {
-                                        "name": "left_symbol_layer",
-                                        "type": "variable_unless",
-                                        "value": 1
-                                    },
-                                    {
-                                        "name": "number_layer",
-                                        "type": "variable_unless",
-                                        "value": 1
-                                    },
-                                    {
-                                        "name": "right_symbol_layer",
-                                        "type": "variable_unless",
-                                        "value": 1
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "o",
-                                    "modifiers": {
-                                        "optional": []
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": ""
-                                        }
-                                    },
-                                    {
-                                        "shell_command": "printf b1 > /dev/udp/127.0.0.1/45454",
-                                        "repeat": false
-                                    }
-                                ],
-                                "to_after_key_up": [
-                                    {
-                                        "shell_command": "printf b0 > /dev/udp/127.0.0.1/45454"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "description": "right gate held",
-                                        "name": "trackpad_mouse",
-                                        "type": "variable_unless",
-                                        "value": 0
-                                    },
-                                    {
-                                        "name": "arrow_layer",
-                                        "type": "variable_unless",
-                                        "value": 1
-                                    },
-                                    {
-                                        "name": "left_symbol_layer",
-                                        "type": "variable_unless",
-                                        "value": 1
-                                    },
-                                    {
-                                        "name": "number_layer",
-                                        "type": "variable_unless",
-                                        "value": 1
-                                    },
-                                    {
-                                        "name": "right_symbol_layer",
-                                        "type": "variable_unless",
-                                        "value": 1
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "i",
-                                    "modifiers": {
-                                        "optional": []
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": ""
-                                        }
-                                    },
-                                    {
-                                        "pointing_button": "button1"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "description": "right gate held",
-                                        "name": "trackpad_mouse",
-                                        "type": "variable_unless",
-                                        "value": 0
-                                    },
-                                    {
-                                        "name": "arrow_layer",
-                                        "type": "variable_unless",
-                                        "value": 1
-                                    },
-                                    {
-                                        "name": "left_symbol_layer",
-                                        "type": "variable_unless",
-                                        "value": 1
-                                    },
-                                    {
-                                        "name": "number_layer",
-                                        "type": "variable_unless",
-                                        "value": 1
-                                    },
-                                    {
-                                        "name": "right_symbol_layer",
-                                        "type": "variable_unless",
-                                        "value": 1
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "p",
-                                    "modifiers": {
-                                        "optional": []
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": ""
-                                        }
-                                    },
-                                    {
-                                        "pointing_button": "button2"
                                     }
                                 ],
                                 "type": "basic"
@@ -5695,7 +5308,7 @@
                         ]
                     },
                     {
-                        "description": "Arrow keys => orbital mouse (tank controls: up/down drive, left/right orbit). Reported to tools/orbital_mouse over UDP.",
+                        "description": "Arrow keys move the mouse pointer (1536 = Karabiner's reference speed)",
                         "manipulators": [
                             {
                                 "from": {
@@ -5714,13 +5327,9 @@
                                         }
                                     },
                                     {
-                                        "shell_command": "printf l1 > /dev/udp/127.0.0.1/45454",
-                                        "repeat": false
-                                    }
-                                ],
-                                "to_after_key_up": [
-                                    {
-                                        "shell_command": "printf l0 > /dev/udp/127.0.0.1/45454"
+                                        "mouse_key": {
+                                            "x": -1536
+                                        }
                                     }
                                 ],
                                 "type": "basic"
@@ -5742,13 +5351,9 @@
                                         }
                                     },
                                     {
-                                        "shell_command": "printf r1 > /dev/udp/127.0.0.1/45454",
-                                        "repeat": false
-                                    }
-                                ],
-                                "to_after_key_up": [
-                                    {
-                                        "shell_command": "printf r0 > /dev/udp/127.0.0.1/45454"
+                                        "mouse_key": {
+                                            "x": 1536
+                                        }
                                     }
                                 ],
                                 "type": "basic"
@@ -5770,13 +5375,9 @@
                                         }
                                     },
                                     {
-                                        "shell_command": "printf u1 > /dev/udp/127.0.0.1/45454",
-                                        "repeat": false
-                                    }
-                                ],
-                                "to_after_key_up": [
-                                    {
-                                        "shell_command": "printf u0 > /dev/udp/127.0.0.1/45454"
+                                        "mouse_key": {
+                                            "y": -1536
+                                        }
                                     }
                                 ],
                                 "type": "basic"
@@ -5798,13 +5399,9 @@
                                         }
                                     },
                                     {
-                                        "shell_command": "printf d1 > /dev/udp/127.0.0.1/45454",
-                                        "repeat": false
-                                    }
-                                ],
-                                "to_after_key_up": [
-                                    {
-                                        "shell_command": "printf d0 > /dev/udp/127.0.0.1/45454"
+                                        "mouse_key": {
+                                            "y": 1536
+                                        }
                                     }
                                 ],
                                 "type": "basic"

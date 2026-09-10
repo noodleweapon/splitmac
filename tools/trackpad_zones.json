@@ -3,13 +3,10 @@
     "palm_threshold": 0,
     "min_pressure": 20,
     "hysteresis": 1.5,
-    "slide_port": 45454,
-    "slide_step": 0.0015,
     "haptic_enter_id": 3,
     "haptic_exit_id": 3,
     "zones": [
-        { "name": "left_gate",        "x":  0, "y": 0, "width": 48, "height": 12, "variable": "trackpad_gate", "slide": "drive" },
-        { "name": "right_gate",       "x": 52, "y": 0, "width": 48, "height": 12, "variable": "trackpad_gate", "slide": "turn" },
-        { "name": "right_gate_mouse", "x": 52, "y": 0, "width": 48, "height": 12, "variable": "trackpad_mouse", "haptic": false }
+        { "name": "left_gate",  "x":  0, "y": 0, "width": 48, "height": 12, "variable": "trackpad_gate" },
+        { "name": "right_gate", "x": 52, "y": 0, "width": 48, "height": 12, "variable": "trackpad_gate" }
     ]
 }

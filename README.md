@@ -63,13 +63,6 @@ it. The big legend is what the key actually does.
   <img alt="Right symbol layer" src="img/sym-right-light.svg">
 </picture>
 
-### Orbital mouse
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="img/mouse-dark.svg">
-  <img alt="Orbital mouse layer" src="img/mouse-light.svg">
-</picture>
-
 ### Navigation layer
 
 <picture>
@@ -228,36 +221,14 @@ Two rectangles along the **top edge** of the trackpad, 12% deep, are the gate:
 the **left gate** from 0 to 48% across, the **right gate** from 52 to 100%.
 Press either and it arms for as long as the finger stays there, so the gate is
 reachable by either thumb without leaving the home row and without having to
-aim. Sliding a finger sideways along the left gate drives the [orbital
-mouse](#the-orbital-mouse) and along the right gate turns it — that part needs
-no press at all, only a finger resting in the rectangle and moving. Arming is
-gated on pressure; steering is not. The 4% gap down the middle means a thumb landing dead centre catches
+aim. The 4% gap down the middle means a thumb landing dead centre catches
 neither, rather than ambiguously both.
-
-The right gate arms one thing more. While it is held and neither a layer nor a
-modifier is — that is, while none of `H`, `A`, `E`, `I` are down — the left
-hand's `N` `R` `T` `S` steer the [orbital mouse](#the-orbital-mouse): turn left,
-back, forward, turn right — `T` drives, on the same finger as `⌘`. Hold `O`
-alongside them for double speed. `F` and
-`U` are the left and right buttons, held for as long as you hold the key, so a
-tap clicks and a hold drags — and all three sit under the right hand, which is
-free while the left one steers. Hold `H` and they go back to being caret arrows,
-hold `A` or `E` and they are letters again, so the mouse layer never shadows
-anything you were already reaching for. It is three zones in the config, not
-two: `right_gate` and `right_gate_mouse` are the same rectangle, one raising
-`trackpad_gate` and the other `trackpad_mouse`, with the second one's haptic
-switched off so entering the right gate still ticks only once.
-
-| Gate | Held alone | Held with `H` / `A` / `E` / `I` |
-| --- | --- | --- |
-| left gate | arms the gate | gate + that layer or modifier |
-| right gate | arms the gate, and `NRTS` steer the mouse | gate + that layer or modifier |
 
 `tools/trackpad_zones.swift` is what watches the pad. Karabiner's own
 [Multitouch
 Extension](https://karabiner-elements.pqrs.org/docs/json/extra/multitouch-extension/)
 only publishes finger *counts* per half and quarter of the pad, which cannot
-express "this patch", so this is a ~200-line replacement that takes rectangles
+express "this patch", so this is a small replacement that takes rectangles
 instead: `tools/trackpad_zones.json` gives each one an x, y, width and height in
 percent — x and y being its left and top sides — plus the Karabiner variable it
 raises.
@@ -358,81 +329,6 @@ on the row above, on the physical `E` and `B` caps:
 ←5 ↑5 ↓5 →5         Z X Q M
 ```
 
-## The orbital mouse
-
-The arrow keys drive the pointer like a tank:
-
-| Key | Does |
-| --- | --- |
-| `↑` / `↓` | drive forward and backward along the pointer's heading |
-| `←` / `→` | rotate in place about the dot drawn just ahead of the pointer |
-| right gate + `NRTS` | turn left, back, forward, turn right |
-| right gate + `O` | hold for double speed |
-| right gate + `F` | left button — tap to click, hold to drag |
-| right gate + `U` | right button, likewise |
-
-A tank, not a car: turning does not carry the pointer anywhere, it swings the
-pointer around the dot. That dot is the centre of rotation, `orbit_radius`
-pixels along the heading, and it is *derived* every tick rather than stored:
-
-    dot = position + radius * heading
-
-A turn rotates the position about the dot and the heading by the same angle,
-which has two consequences. The dot does not move during a pure turn, so the
-pointer sweeps a true circle around it and no integration error accumulates:
-360 degrees of turning returns to the starting pixel. And at a radius of ten
-pixels the pointer never strays further than the circle's diameter however long
-you hold the key — it spins on the spot. Driving then carries pointer and dot
-along together.
-
-The dot is also the heading readout. The ordinary cursor is left alone; the dot
-rides a few pixels off it in whatever direction the pointer faces, so the pair
-tells you which way `↑` will go. It lives in a borderless overlay window at
-`CGShieldingWindowLevel`, on every space, ignoring mouse events, glued to the
-pointer every tick whether the arrow keys moved it or the trackpad did. Set
-`pivot_dot` to false to hide it.
-
-The heading resets to "up the screen" whenever the trackpad moves the cursor. A
-real tank keeps its facing when you carry it, but ten pixels of offset is a
-faint readout, so without the reset `↑` could drive off along whatever angle the
-last spin happened to end on.
-
-Karabiner cannot do any of this. `mouse_key` is a constant velocity along a
-fixed axis with no heading to steer, so `tools/orbital_mouse.swift` does the
-steering and Karabiner only reports the keys:
-
-```json
-"to": [{ "shell_command": "printf l1 > /dev/udp/127.0.0.1/45454", "repeat": false }],
-"to_after_key_up": [{ "shell_command": "printf l0 > /dev/udp/127.0.0.1/45454" }]
-```
-
-`/bin/sh` on macOS is bash in sh mode, so it has `/dev/udp` — one datagram per
-press, no helper process, and `repeat: false` stops key auto-repeat from
-resending it. `b1`/`b0` is the boost key: while it is held, the turn angle and
-the drive distance are both multiplied by `fast_multiplier` (2). Boost is a rate
-rather than a direction of its own, which is why it is one key reported once
-instead of a second set of fast bindings. UDP means no event tap and **no Accessibility grant**: the pointer
-moves with `CGWarpMouseCursorPosition`, which needs no permission. A `mouseMoved`
-event is posted alongside it so hover states update where Accessibility happens
-to be granted, and is silently dropped where it is not. If the daemon is not
-running the datagrams go nowhere and the arrows simply do nothing.
-
-    swiftc -O tools/orbital_mouse.swift -o tools/orbital_mouse
-    tools/orbital_mouse             # run it
-    tools/orbital_mouse --watch     # print heading and pivot as you steer
-    tools/orbital_mouse --selftest  # orbit maths, no hardware
-
-The buttons are Karabiner's own `pointing_button`, not this daemon's doing: it
-holds the last `to` event for as long as the key is down, which is exactly a
-press-and-hold button. The daemon only has to notice them — a pointer moving
-with a button down posts `leftMouseDragged` or `rightMouseDragged` rather than
-`mouseMoved`, because that is the event apps track a drag by.
-
-`tools/orbital_mouse.json` holds `orbit_radius` (120px),
-`turn_degrees_per_second` (180), `forward_speed` (800px/s) and `tick_hz` (120).
-The trackpad still owns the pointer: if it moved the cursor since the last tick,
-the rig adopts that position and steers on from there.
-
 ## The disabled keys
 
 Twenty-two keys are booby-trapped. They do not just do nothing — press one and
@@ -441,9 +337,10 @@ it types `HERROPERS`, loudly, in the middle of whatever you were writing:
 `` ` `` `1` `2` `3` `4` `5` `6` `7` `8` `9` `0` `-` `=` `delete` `tab` `]` `\`
 `esc` `control` and the `Y` / `H` / `B` / `N` positions.
 
-The four arrow keys used to be on that list. They are the **orbital mouse** now,
-described below. The caret still moves on the navigation layer, which is the
-reach the trainer was defending.
+The four arrow keys used to be on that list. They move the **mouse pointer**
+instead — `mouse_key`, so the pointer keeps travelling while the key is held, at
+Karabiner's reference speed of 1536. The caret still moves on the navigation
+layer, which is the reach the trainer was defending.
 
 Every one of them has a home-row replacement:
 

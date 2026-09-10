@@ -5,5 +5,3 @@ __pycache__/
 # compiled by tools/trackpad_zones.swift
 tools/trackpad_zones
 
-# compiled by tools/orbital_mouse.swift
-tools/orbital_mouse

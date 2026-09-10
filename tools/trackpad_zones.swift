@@ -34,7 +34,6 @@ struct Zone: Decodable {
     let variable: String? // Karabiner variable to raise while a finger is inside
     let haptic: Bool?     // tick on enter and exit; default true
     let block_click: Bool?  // swallow clicks landing in here
-    let slide: String?      // "drive" or "turn": report horizontal slides to orbital_mouse
 
     var buzzes: Bool { haptic ?? (variable != nil) }
     var blocksClicks: Bool { block_click ?? false }
@@ -46,8 +45,7 @@ struct Config: Decodable {
     let palm_threshold: Double?    // contact size above which a touch is ignored; 0 = off
     let min_pressure: Double?      // force needed to arm a zone; 0 = any touch
     let hysteresis: Double?        // % added to the radius once inside, kills edge chatter
-    let slide_port: UInt16?        // orbital_mouse's UDP port
-    let slide_step: Double?        // smallest slide worth reporting, pad-width fraction
+
     let haptic_enter_id: Int32?    // actuation ID fired on entry; 0 = silent
     let haptic_exit_id: Int32?     // actuation ID fired on exit; 0 = silent
     let haptic_args: [Double]?     // trailing MTActuatorActuate args, see hapticArgs
@@ -61,13 +59,6 @@ struct Config: Decodable {
     // `size` cannot do this job — it only spans 0.5 to 1.9 in total.
     var minPressure: Double { min_pressure ?? 0 }
     var stickiness: Double { hysteresis ?? 1.5 }
-    var slidePort: UInt16 { slide_port ?? 45454 }
-    // A thumb resting on a gate is never perfectly still, and the gate is held
-    // for typing, so raw deltas would drift the pointer while you work. Slides
-    // are reported in whole steps instead, with the remainder carried over:
-    // deliberate motion accumulates, jitter cancels itself out.
-    var slideStep: Double { slide_step ?? 0.0015 }
-    var hasSlides: Bool { zones.contains { $0.slide != nil } }
     var enterID: Int32 { haptic_enter_id ?? 3 }
     var exitID: Int32 { haptic_exit_id ?? 3 }
     // MTActuatorActuate takes three more arguments after the actuation ID and
@@ -98,11 +89,10 @@ func inside(_ z: Zone, x: Double, y: Double, grown: Double = 0) -> Bool {
 // The private framework hands back an array of C structs. Rather than mirror
 // the whole 96-byte layout, read the four fields that matter by offset.
 private let contactStride = 96
-private let offIdentifier = 16, offState = 20, offX = 32, offY = 36
+private let offState = 20, offX = 32, offY = 36
 private let offSize = 48, offPressure = 52
 
 struct Contact {
-    let id: Int32       // stable while the finger stays down, so slides can be measured
     let touching: Bool  // state 4 = on the surface; 1-3 and 5-7 are hover
     let x: Double       // 0 left .. 1 right
     let y: Double       // 0 top .. 1 bottom (framework reports bottom-up; flipped here)
@@ -115,7 +105,6 @@ func readContacts(_ base: UnsafeMutableRawPointer?, _ count: Int32) -> [Contact]
     return (0..<Int(count)).map { i in
         let p = base.advanced(by: i * contactStride)
         return Contact(
-            id: p.loadUnaligned(fromByteOffset: offIdentifier, as: Int32.self),
             touching: p.loadUnaligned(fromByteOffset: offState, as: Int32.self) == 4,
             x: Double(p.loadUnaligned(fromByteOffset: offX, as: Float.self)),
             y: 1.0 - Double(p.loadUnaligned(fromByteOffset: offY, as: Float.self)),
@@ -209,33 +198,6 @@ final class Haptic {
     }
 }
 
-// MARK: - Slides out to orbital_mouse
-
-// `D` for drive, `T` for turn, then the signed fraction of the pad's width the
-// finger travelled. Fire and forget: with nothing listening the datagrams are
-// dropped and the gates just act as gates.
-final class SlideSender {
-    private let fd: Int32
-    private var address: sockaddr_in
-
-    init(port: UInt16) {
-        fd = socket(AF_INET, SOCK_DGRAM, 0)
-        address = sockaddr_in()
-        address.sin_family = sa_family_t(AF_INET)
-        address.sin_port = port.bigEndian
-        address.sin_addr.s_addr = INADDR_LOOPBACK.bigEndian
-    }
-
-    func send(_ kind: String, _ amount: Double) {
-        let word = Array(String(format: "%@%.5f", kind, amount).utf8)
-        withUnsafePointer(to: &address) {
-            _ = sendto(fd, word, word.count, 0,
-                       UnsafeRawPointer($0).assumingMemoryBound(to: sockaddr.self),
-                       socklen_t(MemoryLayout<sockaddr_in>.size))
-        }
-    }
-}
-
 // MARK: - State shared between the framework's callback thread and the tick
 
 final class Zones {
@@ -245,15 +207,10 @@ final class Zones {
     private var lastHit: [String: Date] = [:]
     private var lastContacts: [Contact] = []
     private var blockingNow = false
-    // Per sliding zone: which finger we are following, and where it was.
-    private var tracked: [String: (id: Int32, x: Double)] = [:]
-    private var residual: [String: Double] = [:]
 
     let config: Config
     // Called once per zone as a finger enters (true) or leaves (false) it.
     var onEdge: ((Zone, Bool) -> Void)?
-    // Called with ("drive" or "turn", fraction of the pad's width) per frame.
-    var onSlide: ((String, Double) -> Void)?
 
     init(_ config: Config) { self.config = config }
 
@@ -276,29 +233,6 @@ final class Zones {
         insideNow = zonesHit
         hitNow = Set(config.zones.filter { zonesHit.contains($0.name) }.compactMap { $0.variable })
 
-        // Horizontal slides, measured on the finger that is actually in the
-        // zone. Adopting a finger reports nothing, so arriving is not a jump.
-        //
-        // Deliberately not gated on `min_pressure`, unlike the variables above:
-        // a gate has to be *pressed* to arm, but steering only asks that a
-        // finger be resting in the rectangle and moving.
-        var slides: [(String, Double)] = []
-        for zone in config.zones {
-            guard let role = zone.slide else { continue }
-            guard let finger = contacts.first(where: { c in
-                      c.touching
-                          && !(config.palmSize > 0 && c.size > config.palmSize)
-                          && inside(zone, x: c.x, y: c.y)
-                  })
-            else { tracked[zone.name] = nil; residual[zone.name] = 0; continue }
-            if let last = tracked[zone.name], last.id == finger.id, finger.x != last.x {
-                let carried = (residual[zone.name] ?? 0) + (finger.x - last.x)
-                let steps = (carried / config.slideStep).rounded(.towardZero)
-                residual[zone.name] = carried - steps * config.slideStep
-                if steps != 0 { slides.append((role, steps * config.slideStep)) }
-            }
-            tracked[zone.name] = (finger.id, finger.x)
-        }
         // Blocking needs every touching contact to be inside a blocking zone:
         // one finger parked in the region must not freeze a click made with
         // another finger outside it.
@@ -313,8 +247,6 @@ final class Zones {
 
         // Outside the lock: the actuator call is a few microseconds, but the
         // callback thread is the one delivering contact frames.
-        for (role, amount) in slides { onSlide?(role, amount) }
-
         guard let onEdge else { return }
         for z in config.zones where z.buzzes {
             let now = zonesHit.contains(z.name), before = wasInside.contains(z.name)
@@ -441,14 +373,13 @@ func loadConfig(_ explicit: String?) -> Config {
 func selftest() {
     let cfg = Config(
         zones: [Zone(name: "a", x: 25, y: 0, width: 50, height: 5,
-                     variable: "gate", haptic: nil, block_click: nil, slide: nil),
+                     variable: "gate", haptic: nil, block_click: nil),
                 Zone(name: "b", x: 80, y: 0, width: 10, height: 5,
-                     variable: "shift", haptic: nil, block_click: nil, slide: nil),
+                     variable: "shift", haptic: nil, block_click: nil),
                 Zone(name: "top", x: 0, y: 0, width: 100, height: 20,
-                     variable: nil, haptic: nil, block_click: true, slide: nil)],
+                     variable: nil, haptic: nil, block_click: true)],
         release_delay_ms: 250, palm_threshold: 4.0, min_pressure: 55,
-        hysteresis: 1.5, slide_port: nil, slide_step: nil, haptic_enter_id: 3, haptic_exit_id: 3,
-        haptic_args: [0, 0.5])
+        hysteresis: 1.5, haptic_enter_id: 3, haptic_exit_id: 3, haptic_args: [0, 0.5])
     let gate = cfg.zones[0], shift = cfg.zones[1]
 
     precondition(inside(gate, x: 0.50, y: 0.00), "middle of the top edge hits")
@@ -462,10 +393,10 @@ func selftest() {
     // Clicks are blocked only when every touching contact is in a blocking
     // zone, so a finger parked up top cannot freeze a click made lower down.
     let blocker = Zones(cfg)
-    blocker.ingest([Contact(id: 1, touching: true, x: 0.50, y: 0.10, size: 1.0, pressure: 90)])
+    blocker.ingest([Contact(touching: true, x: 0.50, y: 0.10, size: 1.0, pressure: 90)])
     precondition(blocker.blockingClicks(), "a contact in the top 20% blocks clicks")
-    blocker.ingest([Contact(id: 1, touching: true, x: 0.50, y: 0.10, size: 1.0, pressure: 90),
-                    Contact(id: 1, touching: true, x: 0.50, y: 0.60, size: 1.0, pressure: 90)])
+    blocker.ingest([Contact(touching: true, x: 0.50, y: 0.10, size: 1.0, pressure: 90),
+                    Contact(touching: true, x: 0.50, y: 0.60, size: 1.0, pressure: 90)])
     precondition(!blocker.blockingClicks(), "a second contact below it does not")
     blocker.ingest([])
     precondition(!blocker.blockingClicks(), "no contacts, no blocking")
@@ -480,20 +411,20 @@ func selftest() {
     let t0 = Date()
 
     // A finger merely resting in the zone is not enough.
-    z.ingest([Contact(id: 1, touching: true, x: 0.50, y: 0.0, size: 1.0, pressure: 35)], now: t0)
+    z.ingest([Contact(touching: true, x: 0.50, y: 0.0, size: 1.0, pressure: 35)], now: t0)
     precondition(z.current(now: t0)["gate"] == 0, "a light touch does not arm")
     precondition(edges.isEmpty, "a light touch fires no edge: \(edges)")
 
-    z.ingest([Contact(id: 1, touching: true, x: 0.50, y: 0.0, size: 1.4, pressure: 70)], now: t0)
+    z.ingest([Contact(touching: true, x: 0.50, y: 0.0, size: 1.4, pressure: 70)], now: t0)
     precondition(z.current(now: t0) == ["gate": 1, "shift": 0], "only the touched zone is up")
     precondition(edges == ["+a"], "entering fires one edge: \(edges)")
 
     // Easing off keeps it: half the force holds what a full press armed.
-    z.ingest([Contact(id: 1, touching: true, x: 0.50, y: 0.0, size: 1.0, pressure: 30)], now: t0)
+    z.ingest([Contact(touching: true, x: 0.50, y: 0.0, size: 1.0, pressure: 30)], now: t0)
     precondition(edges == ["+a"], "easing off does not drop it: \(edges)")
 
     // Boundary chatter: 6% down is below the rectangle but inside the grown one.
-    z.ingest([Contact(id: 1, touching: true, x: 0.50, y: 0.06, size: 1.4, pressure: 70)], now: t0)
+    z.ingest([Contact(touching: true, x: 0.50, y: 0.06, size: 1.4, pressure: 70)], now: t0)
     precondition(edges == ["+a"], "hysteresis suppresses the chatter: \(edges)")
 
     z.ingest([], now: t0)
@@ -501,65 +432,12 @@ func selftest() {
     precondition(z.current(now: t0.addingTimeInterval(0.1))["gate"] == 1, "still held during the delay")
     precondition(z.current(now: t0.addingTimeInterval(0.3))["gate"] == 0, "released after the delay")
 
-    z.ingest([Contact(id: 1, touching: true, x: 0.50, y: 0.0, size: 5.0, pressure: 70)], now: t0)
+    z.ingest([Contact(touching: true, x: 0.50, y: 0.0, size: 5.0, pressure: 70)], now: t0)
     precondition(z.current(now: t0.addingTimeInterval(0.3))["gate"] == 0, "palm-sized contact ignored")
 
-    z.ingest([Contact(id: 1, touching: false, x: 0.50, y: 0.0, size: 1.4, pressure: 70)], now: t0)
+    z.ingest([Contact(touching: false, x: 0.50, y: 0.0, size: 1.4, pressure: 70)], now: t0)
     precondition(z.current(now: t0.addingTimeInterval(0.3))["gate"] == 0, "hovering contact ignored")
     precondition(edges == ["+a", "-a"], "ignored contacts fire no edges: \(edges)")
-
-    // Slides: adopting a finger reports nothing, moving it reports the delta,
-    // and a different finger does not inherit the last one's position.
-    let sliding = Config(
-        zones: [Zone(name: "drive", x: 0, y: 0, width: 48, height: 8,
-                     variable: "gate", haptic: nil, block_click: nil, slide: "drive")],
-        release_delay_ms: 250, palm_threshold: 0, min_pressure: 20,
-        hysteresis: 1.5, slide_port: nil, slide_step: nil, haptic_enter_id: 0,
-        haptic_exit_id: 0, haptic_args: nil)
-    let slider = Zones(sliding)
-    var reported: [(String, Double)] = []
-    slider.onSlide = { role, amount in reported.append((role, amount)) }
-
-    // Pressure 5 is far below the 20 these zones arm at: steering must not
-    // need the press that the gate does.
-    func touch(_ id: Int32, _ x: Double) -> Contact {
-        Contact(id: id, touching: true, x: x, y: 0.02, size: 1, pressure: 5)
-    }
-    slider.ingest([touch(7, 0.20)])
-    precondition(reported.isEmpty, "arriving reports nothing: \(reported)")
-    precondition(slider.current()["gate"] == 0, "a light finger slides but does not arm")
-    slider.ingest([touch(7, 0.30)])
-    precondition(slider.current()["gate"] == 0, "still unarmed while sliding")
-    precondition(reported.count == 1 && reported[0].0 == "drive"
-                 && abs(reported[0].1 - 0.10) < sliding.slideStep,
-                 "a slide reports its delta: \(reported)")
-    slider.ingest([touch(9, 0.10)])
-    precondition(reported.count == 1, "a new finger is adopted, not measured: \(reported)")
-    slider.ingest([touch(9, 0.05)])
-    precondition(reported.count == 2 && reported[1].1 < 0,
-                 "sliding the other way is negative: \(reported)")
-    slider.ingest([])
-    slider.ingest([touch(9, 0.40)])
-    precondition(reported.count == 2, "lifting forgets the position: \(reported)")
-
-    // Jitter below the step reports nothing however long it wobbles, but a
-    // slow deliberate slide still gets through, a step at a time.
-    let jitter = Zones(sliding)
-    var wobbles: [(String, Double)] = []
-    jitter.onSlide = { role, amount in wobbles.append((role, amount)) }
-    jitter.ingest([touch(3, 0.20)])
-    for i in 0..<200 {
-        jitter.ingest([touch(3, 0.20 + (i % 2 == 0 ? 0.0004 : -0.0004))])
-    }
-    precondition(wobbles.isEmpty, "jitter cancels: \(wobbles)")
-    var crept = 0.20
-    for _ in 0..<40 {
-        crept += 0.0002                     // a sixth of a step per frame
-        jitter.ingest([touch(3, crept)])
-    }
-    precondition(!wobbles.isEmpty, "a slow slide still reports")
-    precondition(abs(wobbles.reduce(0) { $0 + $1.1 } - 0.008) < sliding.slideStep,
-                 "and adds up to what the finger travelled: \(wobbles)")
 
     print("selftest ok")
 }
@@ -628,13 +506,6 @@ if hapticTest {
 }
 
 zones = Zones(loadConfig(configPath))
-
-if zones.config.hasSlides {
-    let sender = SlideSender(port: zones.config.slidePort)
-    zones.onSlide = { role, amount in
-        sender.send(role == "turn" ? "T" : "D", amount)
-    }
-}
 if let haptic {
     haptic.args = argsOverride ?? zones.config.hapticArgs
     zones.onEdge = { [config = zones.config] _, entered in

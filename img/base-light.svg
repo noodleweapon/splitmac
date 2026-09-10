@@ -247,12 +247,12 @@
 <text x="797.0" y="545.5" fill="#5a5a63" font-size="13" font-weight="600" text-anchor="middle" opacity="1.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">no-op</text>
 <rect x="833.0" y="507.5" width="60.0" height="66.0" rx="8" fill="#123a3c" stroke="#3d3d44" stroke-width="1"/>
 <text x="887.0" y="521.5" fill="#55555e" font-size="10" font-weight="500" text-anchor="end" opacity="0.85" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">←</text>
-<text x="863.0" y="545.5" fill="#7fe6e0" font-size="12.5" font-weight="600" text-anchor="middle" opacity="1.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">◀ orbit</text>
+<text x="863.0" y="545.5" fill="#7fe6e0" font-size="12.5" font-weight="600" text-anchor="middle" opacity="1.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">◀ mouse</text>
 <rect x="899.0" y="507.5" width="60.0" height="32.0" rx="5" fill="#000000" stroke="#3d3d44" stroke-width="1"/>
 <text x="929.0" y="528.5" fill="#63636b" font-size="13" font-weight="600" text-anchor="middle" opacity="1.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">↑</text>
 <rect x="899.0" y="541.5" width="60.0" height="32.0" rx="5" fill="#000000" stroke="#3d3d44" stroke-width="1"/>
 <text x="929.0" y="562.5" fill="#63636b" font-size="13" font-weight="600" text-anchor="middle" opacity="1.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">↓</text>
 <rect x="965.0" y="507.5" width="60.0" height="66.0" rx="8" fill="#123a3c" stroke="#3d3d44" stroke-width="1"/>
 <text x="1019.0" y="521.5" fill="#55555e" font-size="10" font-weight="500" text-anchor="end" opacity="0.85" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">→</text>
-<text x="995.0" y="545.5" fill="#7fe6e0" font-size="12.5" font-weight="600" text-anchor="middle" opacity="1.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">orbit ▶</text>
+<text x="995.0" y="545.5" fill="#7fe6e0" font-size="12.5" font-weight="600" text-anchor="middle" opacity="1.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">mouse ▶</text>
 </svg>
