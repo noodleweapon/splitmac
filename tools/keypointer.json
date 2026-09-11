@@ -1,0 +1,14 @@
+{
+    "port": 45455,
+    "base_speed": 140,
+    "max_speed": 1600,
+    "ramp_ms": 550,
+    "momentum": true,
+    "momentum_decay": 0.93,
+    "natural": false,
+    "tick_hz": 120,
+    "cell_width": 8,
+    "cell_height": 16,
+    "scroll_fast": 3,
+    "step_curve": 4
+}

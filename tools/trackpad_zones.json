@@ -6,7 +6,9 @@
     "haptic_enter_id": 3,
     "haptic_exit_id": 3,
     "zones": [
-        { "name": "left_gate",  "x":  0, "y": 0, "width": 48, "height": 12, "variable": "trackpad_gate" },
-        { "name": "right_gate", "x": 52, "y": 0, "width": 48, "height": 12, "variable": "trackpad_gate" }
+        { "name": "left_gate",       "x":  0, "y": 0, "width": 48, "height": 12, "variable": "trackpad_gate" },
+        { "name": "left_gate_side",  "x":  0, "y": 0, "width": 48, "height": 12, "variable": "trackpad_left",  "haptic": false },
+        { "name": "right_gate",      "x": 52, "y": 0, "width": 48, "height": 12, "variable": "trackpad_gate" },
+        { "name": "right_gate_side", "x": 52, "y": 0, "width": 48, "height": 12, "variable": "trackpad_right", "haptic": false }
     ]
 }

@@ -1901,6 +1901,3304 @@
                         ]
                     },
                     {
+                        "description": "Right gate + NRTS => arm a pointer step (nothing on their own; N left, R up, T down, S right)",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "description": "right gate held",
+                                        "name": "trackpad_right",
+                                        "type": "variable_unless",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "arrow_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "left_symbol_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "number_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "right_symbol_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "a",
+                                    "modifiers": {
+                                        "optional": []
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "set_variable": {
+                                            "name": "move_left",
+                                            "value": 1
+                                        }
+                                    },
+                                    {
+                                        "set_variable": {
+                                            "name": "magic_prev",
+                                            "value": ""
+                                        }
+                                    },
+                                    {
+                                        "shell_command": "printf L1 > /dev/udp/127.0.0.1/45455",
+                                        "repeat": false
+                                    }
+                                ],
+                                "to_after_key_up": [
+                                    {
+                                        "set_variable": {
+                                            "name": "move_left",
+                                            "value": 0
+                                        }
+                                    },
+                                    {
+                                        "shell_command": "printf L0 > /dev/udp/127.0.0.1/45455"
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "description": "right gate held",
+                                        "name": "trackpad_right",
+                                        "type": "variable_unless",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "arrow_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "left_symbol_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "number_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "right_symbol_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "s",
+                                    "modifiers": {
+                                        "optional": []
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "set_variable": {
+                                            "name": "move_up",
+                                            "value": 1
+                                        }
+                                    },
+                                    {
+                                        "set_variable": {
+                                            "name": "magic_prev",
+                                            "value": ""
+                                        }
+                                    },
+                                    {
+                                        "shell_command": "printf U1 > /dev/udp/127.0.0.1/45455",
+                                        "repeat": false
+                                    }
+                                ],
+                                "to_after_key_up": [
+                                    {
+                                        "set_variable": {
+                                            "name": "move_up",
+                                            "value": 0
+                                        }
+                                    },
+                                    {
+                                        "shell_command": "printf U0 > /dev/udp/127.0.0.1/45455"
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "description": "right gate held",
+                                        "name": "trackpad_right",
+                                        "type": "variable_unless",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "arrow_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "left_symbol_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "number_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "right_symbol_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "d",
+                                    "modifiers": {
+                                        "optional": []
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "set_variable": {
+                                            "name": "move_down",
+                                            "value": 1
+                                        }
+                                    },
+                                    {
+                                        "set_variable": {
+                                            "name": "magic_prev",
+                                            "value": ""
+                                        }
+                                    },
+                                    {
+                                        "shell_command": "printf D1 > /dev/udp/127.0.0.1/45455",
+                                        "repeat": false
+                                    }
+                                ],
+                                "to_after_key_up": [
+                                    {
+                                        "set_variable": {
+                                            "name": "move_down",
+                                            "value": 0
+                                        }
+                                    },
+                                    {
+                                        "shell_command": "printf D0 > /dev/udp/127.0.0.1/45455"
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "description": "right gate held",
+                                        "name": "trackpad_right",
+                                        "type": "variable_unless",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "arrow_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "left_symbol_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "number_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "right_symbol_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "f",
+                                    "modifiers": {
+                                        "optional": []
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "set_variable": {
+                                            "name": "move_right",
+                                            "value": 1
+                                        }
+                                    },
+                                    {
+                                        "set_variable": {
+                                            "name": "magic_prev",
+                                            "value": ""
+                                        }
+                                    },
+                                    {
+                                        "shell_command": "printf R1 > /dev/udp/127.0.0.1/45455",
+                                        "repeat": false
+                                    }
+                                ],
+                                "to_after_key_up": [
+                                    {
+                                        "set_variable": {
+                                            "name": "move_right",
+                                            "value": 0
+                                        }
+                                    },
+                                    {
+                                        "shell_command": "printf R0 > /dev/udp/127.0.0.1/45455"
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Right gate + a held NRTS + a right-hand digit => step that many cells (0 = ten, one cell is about a character)",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "description": "right gate held",
+                                        "name": "trackpad_right",
+                                        "type": "variable_unless",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "arrow_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "left_symbol_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "number_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "right_symbol_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "description": "a step direction is held",
+                                        "name": "move_left",
+                                        "type": "variable_unless",
+                                        "value": 0
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "k",
+                                    "modifiers": {
+                                        "optional": []
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "set_variable": {
+                                            "name": "magic_prev",
+                                            "value": ""
+                                        }
+                                    },
+                                    {
+                                        "shell_command": "printf n0 > /dev/udp/127.0.0.1/45455",
+                                        "repeat": false
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "description": "right gate held",
+                                        "name": "trackpad_right",
+                                        "type": "variable_unless",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "arrow_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "left_symbol_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "number_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "right_symbol_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "description": "a step direction is held",
+                                        "name": "move_up",
+                                        "type": "variable_unless",
+                                        "value": 0
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "k",
+                                    "modifiers": {
+                                        "optional": []
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "set_variable": {
+                                            "name": "magic_prev",
+                                            "value": ""
+                                        }
+                                    },
+                                    {
+                                        "shell_command": "printf n0 > /dev/udp/127.0.0.1/45455",
+                                        "repeat": false
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "description": "right gate held",
+                                        "name": "trackpad_right",
+                                        "type": "variable_unless",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "arrow_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "left_symbol_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "number_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "right_symbol_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "description": "a step direction is held",
+                                        "name": "move_down",
+                                        "type": "variable_unless",
+                                        "value": 0
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "k",
+                                    "modifiers": {
+                                        "optional": []
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "set_variable": {
+                                            "name": "magic_prev",
+                                            "value": ""
+                                        }
+                                    },
+                                    {
+                                        "shell_command": "printf n0 > /dev/udp/127.0.0.1/45455",
+                                        "repeat": false
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "description": "right gate held",
+                                        "name": "trackpad_right",
+                                        "type": "variable_unless",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "arrow_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "left_symbol_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "number_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "right_symbol_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "description": "a step direction is held",
+                                        "name": "move_right",
+                                        "type": "variable_unless",
+                                        "value": 0
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "k",
+                                    "modifiers": {
+                                        "optional": []
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "set_variable": {
+                                            "name": "magic_prev",
+                                            "value": ""
+                                        }
+                                    },
+                                    {
+                                        "shell_command": "printf n0 > /dev/udp/127.0.0.1/45455",
+                                        "repeat": false
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "description": "right gate held",
+                                        "name": "trackpad_right",
+                                        "type": "variable_unless",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "arrow_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "left_symbol_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "number_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "right_symbol_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "description": "a step direction is held",
+                                        "name": "move_left",
+                                        "type": "variable_unless",
+                                        "value": 0
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "l",
+                                    "modifiers": {
+                                        "optional": []
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "set_variable": {
+                                            "name": "magic_prev",
+                                            "value": ""
+                                        }
+                                    },
+                                    {
+                                        "shell_command": "printf n1 > /dev/udp/127.0.0.1/45455",
+                                        "repeat": false
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "description": "right gate held",
+                                        "name": "trackpad_right",
+                                        "type": "variable_unless",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "arrow_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "left_symbol_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "number_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "right_symbol_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "description": "a step direction is held",
+                                        "name": "move_up",
+                                        "type": "variable_unless",
+                                        "value": 0
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "l",
+                                    "modifiers": {
+                                        "optional": []
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "set_variable": {
+                                            "name": "magic_prev",
+                                            "value": ""
+                                        }
+                                    },
+                                    {
+                                        "shell_command": "printf n1 > /dev/udp/127.0.0.1/45455",
+                                        "repeat": false
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "description": "right gate held",
+                                        "name": "trackpad_right",
+                                        "type": "variable_unless",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "arrow_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "left_symbol_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "number_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "right_symbol_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "description": "a step direction is held",
+                                        "name": "move_down",
+                                        "type": "variable_unless",
+                                        "value": 0
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "l",
+                                    "modifiers": {
+                                        "optional": []
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "set_variable": {
+                                            "name": "magic_prev",
+                                            "value": ""
+                                        }
+                                    },
+                                    {
+                                        "shell_command": "printf n1 > /dev/udp/127.0.0.1/45455",
+                                        "repeat": false
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "description": "right gate held",
+                                        "name": "trackpad_right",
+                                        "type": "variable_unless",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "arrow_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "left_symbol_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "number_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "right_symbol_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "description": "a step direction is held",
+                                        "name": "move_right",
+                                        "type": "variable_unless",
+                                        "value": 0
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "l",
+                                    "modifiers": {
+                                        "optional": []
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "set_variable": {
+                                            "name": "magic_prev",
+                                            "value": ""
+                                        }
+                                    },
+                                    {
+                                        "shell_command": "printf n1 > /dev/udp/127.0.0.1/45455",
+                                        "repeat": false
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "description": "right gate held",
+                                        "name": "trackpad_right",
+                                        "type": "variable_unless",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "arrow_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "left_symbol_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "number_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "right_symbol_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "description": "a step direction is held",
+                                        "name": "move_left",
+                                        "type": "variable_unless",
+                                        "value": 0
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "semicolon",
+                                    "modifiers": {
+                                        "optional": []
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "set_variable": {
+                                            "name": "magic_prev",
+                                            "value": ""
+                                        }
+                                    },
+                                    {
+                                        "shell_command": "printf n2 > /dev/udp/127.0.0.1/45455",
+                                        "repeat": false
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "description": "right gate held",
+                                        "name": "trackpad_right",
+                                        "type": "variable_unless",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "arrow_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "left_symbol_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "number_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "right_symbol_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "description": "a step direction is held",
+                                        "name": "move_up",
+                                        "type": "variable_unless",
+                                        "value": 0
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "semicolon",
+                                    "modifiers": {
+                                        "optional": []
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "set_variable": {
+                                            "name": "magic_prev",
+                                            "value": ""
+                                        }
+                                    },
+                                    {
+                                        "shell_command": "printf n2 > /dev/udp/127.0.0.1/45455",
+                                        "repeat": false
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "description": "right gate held",
+                                        "name": "trackpad_right",
+                                        "type": "variable_unless",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "arrow_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "left_symbol_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "number_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "right_symbol_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "description": "a step direction is held",
+                                        "name": "move_down",
+                                        "type": "variable_unless",
+                                        "value": 0
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "semicolon",
+                                    "modifiers": {
+                                        "optional": []
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "set_variable": {
+                                            "name": "magic_prev",
+                                            "value": ""
+                                        }
+                                    },
+                                    {
+                                        "shell_command": "printf n2 > /dev/udp/127.0.0.1/45455",
+                                        "repeat": false
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "description": "right gate held",
+                                        "name": "trackpad_right",
+                                        "type": "variable_unless",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "arrow_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "left_symbol_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "number_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "right_symbol_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "description": "a step direction is held",
+                                        "name": "move_right",
+                                        "type": "variable_unless",
+                                        "value": 0
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "semicolon",
+                                    "modifiers": {
+                                        "optional": []
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "set_variable": {
+                                            "name": "magic_prev",
+                                            "value": ""
+                                        }
+                                    },
+                                    {
+                                        "shell_command": "printf n2 > /dev/udp/127.0.0.1/45455",
+                                        "repeat": false
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "description": "right gate held",
+                                        "name": "trackpad_right",
+                                        "type": "variable_unless",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "arrow_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "left_symbol_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "number_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "right_symbol_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "description": "a step direction is held",
+                                        "name": "move_left",
+                                        "type": "variable_unless",
+                                        "value": 0
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "quote",
+                                    "modifiers": {
+                                        "optional": []
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "set_variable": {
+                                            "name": "magic_prev",
+                                            "value": ""
+                                        }
+                                    },
+                                    {
+                                        "shell_command": "printf n3 > /dev/udp/127.0.0.1/45455",
+                                        "repeat": false
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "description": "right gate held",
+                                        "name": "trackpad_right",
+                                        "type": "variable_unless",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "arrow_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "left_symbol_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "number_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "right_symbol_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "description": "a step direction is held",
+                                        "name": "move_up",
+                                        "type": "variable_unless",
+                                        "value": 0
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "quote",
+                                    "modifiers": {
+                                        "optional": []
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "set_variable": {
+                                            "name": "magic_prev",
+                                            "value": ""
+                                        }
+                                    },
+                                    {
+                                        "shell_command": "printf n3 > /dev/udp/127.0.0.1/45455",
+                                        "repeat": false
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "description": "right gate held",
+                                        "name": "trackpad_right",
+                                        "type": "variable_unless",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "arrow_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "left_symbol_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "number_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "right_symbol_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "description": "a step direction is held",
+                                        "name": "move_down",
+                                        "type": "variable_unless",
+                                        "value": 0
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "quote",
+                                    "modifiers": {
+                                        "optional": []
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "set_variable": {
+                                            "name": "magic_prev",
+                                            "value": ""
+                                        }
+                                    },
+                                    {
+                                        "shell_command": "printf n3 > /dev/udp/127.0.0.1/45455",
+                                        "repeat": false
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "description": "right gate held",
+                                        "name": "trackpad_right",
+                                        "type": "variable_unless",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "arrow_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "left_symbol_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "number_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "right_symbol_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "description": "a step direction is held",
+                                        "name": "move_right",
+                                        "type": "variable_unless",
+                                        "value": 0
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "quote",
+                                    "modifiers": {
+                                        "optional": []
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "set_variable": {
+                                            "name": "magic_prev",
+                                            "value": ""
+                                        }
+                                    },
+                                    {
+                                        "shell_command": "printf n3 > /dev/udp/127.0.0.1/45455",
+                                        "repeat": false
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "description": "right gate held",
+                                        "name": "trackpad_right",
+                                        "type": "variable_unless",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "arrow_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "left_symbol_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "number_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "right_symbol_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "description": "a step direction is held",
+                                        "name": "move_left",
+                                        "type": "variable_unless",
+                                        "value": 0
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "comma",
+                                    "modifiers": {
+                                        "optional": []
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "set_variable": {
+                                            "name": "magic_prev",
+                                            "value": ""
+                                        }
+                                    },
+                                    {
+                                        "shell_command": "printf n4 > /dev/udp/127.0.0.1/45455",
+                                        "repeat": false
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "description": "right gate held",
+                                        "name": "trackpad_right",
+                                        "type": "variable_unless",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "arrow_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "left_symbol_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "number_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "right_symbol_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "description": "a step direction is held",
+                                        "name": "move_up",
+                                        "type": "variable_unless",
+                                        "value": 0
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "comma",
+                                    "modifiers": {
+                                        "optional": []
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "set_variable": {
+                                            "name": "magic_prev",
+                                            "value": ""
+                                        }
+                                    },
+                                    {
+                                        "shell_command": "printf n4 > /dev/udp/127.0.0.1/45455",
+                                        "repeat": false
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "description": "right gate held",
+                                        "name": "trackpad_right",
+                                        "type": "variable_unless",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "arrow_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "left_symbol_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "number_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "right_symbol_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "description": "a step direction is held",
+                                        "name": "move_down",
+                                        "type": "variable_unless",
+                                        "value": 0
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "comma",
+                                    "modifiers": {
+                                        "optional": []
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "set_variable": {
+                                            "name": "magic_prev",
+                                            "value": ""
+                                        }
+                                    },
+                                    {
+                                        "shell_command": "printf n4 > /dev/udp/127.0.0.1/45455",
+                                        "repeat": false
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "description": "right gate held",
+                                        "name": "trackpad_right",
+                                        "type": "variable_unless",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "arrow_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "left_symbol_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "number_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "right_symbol_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "description": "a step direction is held",
+                                        "name": "move_right",
+                                        "type": "variable_unless",
+                                        "value": 0
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "comma",
+                                    "modifiers": {
+                                        "optional": []
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "set_variable": {
+                                            "name": "magic_prev",
+                                            "value": ""
+                                        }
+                                    },
+                                    {
+                                        "shell_command": "printf n4 > /dev/udp/127.0.0.1/45455",
+                                        "repeat": false
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "description": "right gate held",
+                                        "name": "trackpad_right",
+                                        "type": "variable_unless",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "arrow_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "left_symbol_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "number_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "right_symbol_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "description": "a step direction is held",
+                                        "name": "move_left",
+                                        "type": "variable_unless",
+                                        "value": 0
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "period",
+                                    "modifiers": {
+                                        "optional": []
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "set_variable": {
+                                            "name": "magic_prev",
+                                            "value": ""
+                                        }
+                                    },
+                                    {
+                                        "shell_command": "printf n5 > /dev/udp/127.0.0.1/45455",
+                                        "repeat": false
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "description": "right gate held",
+                                        "name": "trackpad_right",
+                                        "type": "variable_unless",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "arrow_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "left_symbol_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "number_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "right_symbol_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "description": "a step direction is held",
+                                        "name": "move_up",
+                                        "type": "variable_unless",
+                                        "value": 0
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "period",
+                                    "modifiers": {
+                                        "optional": []
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "set_variable": {
+                                            "name": "magic_prev",
+                                            "value": ""
+                                        }
+                                    },
+                                    {
+                                        "shell_command": "printf n5 > /dev/udp/127.0.0.1/45455",
+                                        "repeat": false
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "description": "right gate held",
+                                        "name": "trackpad_right",
+                                        "type": "variable_unless",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "arrow_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "left_symbol_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "number_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "right_symbol_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "description": "a step direction is held",
+                                        "name": "move_down",
+                                        "type": "variable_unless",
+                                        "value": 0
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "period",
+                                    "modifiers": {
+                                        "optional": []
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "set_variable": {
+                                            "name": "magic_prev",
+                                            "value": ""
+                                        }
+                                    },
+                                    {
+                                        "shell_command": "printf n5 > /dev/udp/127.0.0.1/45455",
+                                        "repeat": false
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "description": "right gate held",
+                                        "name": "trackpad_right",
+                                        "type": "variable_unless",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "arrow_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "left_symbol_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "number_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "right_symbol_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "description": "a step direction is held",
+                                        "name": "move_right",
+                                        "type": "variable_unless",
+                                        "value": 0
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "period",
+                                    "modifiers": {
+                                        "optional": []
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "set_variable": {
+                                            "name": "magic_prev",
+                                            "value": ""
+                                        }
+                                    },
+                                    {
+                                        "shell_command": "printf n5 > /dev/udp/127.0.0.1/45455",
+                                        "repeat": false
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "description": "right gate held",
+                                        "name": "trackpad_right",
+                                        "type": "variable_unless",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "arrow_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "left_symbol_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "number_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "right_symbol_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "description": "a step direction is held",
+                                        "name": "move_left",
+                                        "type": "variable_unless",
+                                        "value": 0
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "slash",
+                                    "modifiers": {
+                                        "optional": []
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "set_variable": {
+                                            "name": "magic_prev",
+                                            "value": ""
+                                        }
+                                    },
+                                    {
+                                        "shell_command": "printf n6 > /dev/udp/127.0.0.1/45455",
+                                        "repeat": false
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "description": "right gate held",
+                                        "name": "trackpad_right",
+                                        "type": "variable_unless",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "arrow_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "left_symbol_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "number_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "right_symbol_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "description": "a step direction is held",
+                                        "name": "move_up",
+                                        "type": "variable_unless",
+                                        "value": 0
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "slash",
+                                    "modifiers": {
+                                        "optional": []
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "set_variable": {
+                                            "name": "magic_prev",
+                                            "value": ""
+                                        }
+                                    },
+                                    {
+                                        "shell_command": "printf n6 > /dev/udp/127.0.0.1/45455",
+                                        "repeat": false
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "description": "right gate held",
+                                        "name": "trackpad_right",
+                                        "type": "variable_unless",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "arrow_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "left_symbol_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "number_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "right_symbol_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "description": "a step direction is held",
+                                        "name": "move_down",
+                                        "type": "variable_unless",
+                                        "value": 0
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "slash",
+                                    "modifiers": {
+                                        "optional": []
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "set_variable": {
+                                            "name": "magic_prev",
+                                            "value": ""
+                                        }
+                                    },
+                                    {
+                                        "shell_command": "printf n6 > /dev/udp/127.0.0.1/45455",
+                                        "repeat": false
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "description": "right gate held",
+                                        "name": "trackpad_right",
+                                        "type": "variable_unless",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "arrow_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "left_symbol_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "number_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "right_symbol_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "description": "a step direction is held",
+                                        "name": "move_right",
+                                        "type": "variable_unless",
+                                        "value": 0
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "slash",
+                                    "modifiers": {
+                                        "optional": []
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "set_variable": {
+                                            "name": "magic_prev",
+                                            "value": ""
+                                        }
+                                    },
+                                    {
+                                        "shell_command": "printf n6 > /dev/udp/127.0.0.1/45455",
+                                        "repeat": false
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "description": "right gate held",
+                                        "name": "trackpad_right",
+                                        "type": "variable_unless",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "arrow_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "left_symbol_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "number_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "right_symbol_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "description": "a step direction is held",
+                                        "name": "move_left",
+                                        "type": "variable_unless",
+                                        "value": 0
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "i",
+                                    "modifiers": {
+                                        "optional": []
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "set_variable": {
+                                            "name": "magic_prev",
+                                            "value": ""
+                                        }
+                                    },
+                                    {
+                                        "shell_command": "printf n7 > /dev/udp/127.0.0.1/45455",
+                                        "repeat": false
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "description": "right gate held",
+                                        "name": "trackpad_right",
+                                        "type": "variable_unless",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "arrow_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "left_symbol_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "number_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "right_symbol_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "description": "a step direction is held",
+                                        "name": "move_up",
+                                        "type": "variable_unless",
+                                        "value": 0
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "i",
+                                    "modifiers": {
+                                        "optional": []
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "set_variable": {
+                                            "name": "magic_prev",
+                                            "value": ""
+                                        }
+                                    },
+                                    {
+                                        "shell_command": "printf n7 > /dev/udp/127.0.0.1/45455",
+                                        "repeat": false
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "description": "right gate held",
+                                        "name": "trackpad_right",
+                                        "type": "variable_unless",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "arrow_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "left_symbol_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "number_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "right_symbol_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "description": "a step direction is held",
+                                        "name": "move_down",
+                                        "type": "variable_unless",
+                                        "value": 0
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "i",
+                                    "modifiers": {
+                                        "optional": []
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "set_variable": {
+                                            "name": "magic_prev",
+                                            "value": ""
+                                        }
+                                    },
+                                    {
+                                        "shell_command": "printf n7 > /dev/udp/127.0.0.1/45455",
+                                        "repeat": false
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "description": "right gate held",
+                                        "name": "trackpad_right",
+                                        "type": "variable_unless",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "arrow_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "left_symbol_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "number_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "right_symbol_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "description": "a step direction is held",
+                                        "name": "move_right",
+                                        "type": "variable_unless",
+                                        "value": 0
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "i",
+                                    "modifiers": {
+                                        "optional": []
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "set_variable": {
+                                            "name": "magic_prev",
+                                            "value": ""
+                                        }
+                                    },
+                                    {
+                                        "shell_command": "printf n7 > /dev/udp/127.0.0.1/45455",
+                                        "repeat": false
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "description": "right gate held",
+                                        "name": "trackpad_right",
+                                        "type": "variable_unless",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "arrow_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "left_symbol_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "number_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "right_symbol_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "description": "a step direction is held",
+                                        "name": "move_left",
+                                        "type": "variable_unless",
+                                        "value": 0
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "o",
+                                    "modifiers": {
+                                        "optional": []
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "set_variable": {
+                                            "name": "magic_prev",
+                                            "value": ""
+                                        }
+                                    },
+                                    {
+                                        "shell_command": "printf n8 > /dev/udp/127.0.0.1/45455",
+                                        "repeat": false
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "description": "right gate held",
+                                        "name": "trackpad_right",
+                                        "type": "variable_unless",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "arrow_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "left_symbol_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "number_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "right_symbol_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "description": "a step direction is held",
+                                        "name": "move_up",
+                                        "type": "variable_unless",
+                                        "value": 0
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "o",
+                                    "modifiers": {
+                                        "optional": []
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "set_variable": {
+                                            "name": "magic_prev",
+                                            "value": ""
+                                        }
+                                    },
+                                    {
+                                        "shell_command": "printf n8 > /dev/udp/127.0.0.1/45455",
+                                        "repeat": false
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "description": "right gate held",
+                                        "name": "trackpad_right",
+                                        "type": "variable_unless",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "arrow_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "left_symbol_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "number_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "right_symbol_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "description": "a step direction is held",
+                                        "name": "move_down",
+                                        "type": "variable_unless",
+                                        "value": 0
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "o",
+                                    "modifiers": {
+                                        "optional": []
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "set_variable": {
+                                            "name": "magic_prev",
+                                            "value": ""
+                                        }
+                                    },
+                                    {
+                                        "shell_command": "printf n8 > /dev/udp/127.0.0.1/45455",
+                                        "repeat": false
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "description": "right gate held",
+                                        "name": "trackpad_right",
+                                        "type": "variable_unless",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "arrow_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "left_symbol_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "number_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "right_symbol_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "description": "a step direction is held",
+                                        "name": "move_right",
+                                        "type": "variable_unless",
+                                        "value": 0
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "o",
+                                    "modifiers": {
+                                        "optional": []
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "set_variable": {
+                                            "name": "magic_prev",
+                                            "value": ""
+                                        }
+                                    },
+                                    {
+                                        "shell_command": "printf n8 > /dev/udp/127.0.0.1/45455",
+                                        "repeat": false
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "description": "right gate held",
+                                        "name": "trackpad_right",
+                                        "type": "variable_unless",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "arrow_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "left_symbol_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "number_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "right_symbol_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "description": "a step direction is held",
+                                        "name": "move_left",
+                                        "type": "variable_unless",
+                                        "value": 0
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "p",
+                                    "modifiers": {
+                                        "optional": []
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "set_variable": {
+                                            "name": "magic_prev",
+                                            "value": ""
+                                        }
+                                    },
+                                    {
+                                        "shell_command": "printf n9 > /dev/udp/127.0.0.1/45455",
+                                        "repeat": false
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "description": "right gate held",
+                                        "name": "trackpad_right",
+                                        "type": "variable_unless",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "arrow_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "left_symbol_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "number_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "right_symbol_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "description": "a step direction is held",
+                                        "name": "move_up",
+                                        "type": "variable_unless",
+                                        "value": 0
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "p",
+                                    "modifiers": {
+                                        "optional": []
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "set_variable": {
+                                            "name": "magic_prev",
+                                            "value": ""
+                                        }
+                                    },
+                                    {
+                                        "shell_command": "printf n9 > /dev/udp/127.0.0.1/45455",
+                                        "repeat": false
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "description": "right gate held",
+                                        "name": "trackpad_right",
+                                        "type": "variable_unless",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "arrow_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "left_symbol_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "number_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "right_symbol_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "description": "a step direction is held",
+                                        "name": "move_down",
+                                        "type": "variable_unless",
+                                        "value": 0
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "p",
+                                    "modifiers": {
+                                        "optional": []
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "set_variable": {
+                                            "name": "magic_prev",
+                                            "value": ""
+                                        }
+                                    },
+                                    {
+                                        "shell_command": "printf n9 > /dev/udp/127.0.0.1/45455",
+                                        "repeat": false
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "description": "right gate held",
+                                        "name": "trackpad_right",
+                                        "type": "variable_unless",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "arrow_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "left_symbol_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "number_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "right_symbol_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "description": "a step direction is held",
+                                        "name": "move_right",
+                                        "type": "variable_unless",
+                                        "value": 0
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "p",
+                                    "modifiers": {
+                                        "optional": []
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "set_variable": {
+                                            "name": "magic_prev",
+                                            "value": ""
+                                        }
+                                    },
+                                    {
+                                        "shell_command": "printf n9 > /dev/udp/127.0.0.1/45455",
+                                        "repeat": false
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Left gate + HAEI => smooth scroll via tools/keypointer (H left, A down, E up, I right)",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "description": "left gate held",
+                                        "name": "trackpad_left",
+                                        "type": "variable_unless",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "arrow_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "left_symbol_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "number_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "right_symbol_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "k",
+                                    "modifiers": {
+                                        "optional": []
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "set_variable": {
+                                            "name": "magic_prev",
+                                            "value": ""
+                                        }
+                                    },
+                                    {
+                                        "shell_command": "printf l1 > /dev/udp/127.0.0.1/45455",
+                                        "repeat": false
+                                    }
+                                ],
+                                "to_after_key_up": [
+                                    {
+                                        "shell_command": "printf l0 > /dev/udp/127.0.0.1/45455"
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "description": "left gate held",
+                                        "name": "trackpad_left",
+                                        "type": "variable_unless",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "arrow_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "left_symbol_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "number_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "right_symbol_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "l",
+                                    "modifiers": {
+                                        "optional": []
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "set_variable": {
+                                            "name": "magic_prev",
+                                            "value": ""
+                                        }
+                                    },
+                                    {
+                                        "shell_command": "printf d1 > /dev/udp/127.0.0.1/45455",
+                                        "repeat": false
+                                    }
+                                ],
+                                "to_after_key_up": [
+                                    {
+                                        "shell_command": "printf d0 > /dev/udp/127.0.0.1/45455"
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "description": "left gate held",
+                                        "name": "trackpad_left",
+                                        "type": "variable_unless",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "arrow_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "left_symbol_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "number_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "right_symbol_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "semicolon",
+                                    "modifiers": {
+                                        "optional": []
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "set_variable": {
+                                            "name": "magic_prev",
+                                            "value": ""
+                                        }
+                                    },
+                                    {
+                                        "shell_command": "printf u1 > /dev/udp/127.0.0.1/45455",
+                                        "repeat": false
+                                    }
+                                ],
+                                "to_after_key_up": [
+                                    {
+                                        "shell_command": "printf u0 > /dev/udp/127.0.0.1/45455"
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "description": "left gate held",
+                                        "name": "trackpad_left",
+                                        "type": "variable_unless",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "arrow_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "left_symbol_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "number_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "right_symbol_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "quote",
+                                    "modifiers": {
+                                        "optional": []
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "set_variable": {
+                                            "name": "magic_prev",
+                                            "value": ""
+                                        }
+                                    },
+                                    {
+                                        "shell_command": "printf r1 > /dev/udp/127.0.0.1/45455",
+                                        "repeat": false
+                                    }
+                                ],
+                                "to_after_key_up": [
+                                    {
+                                        "shell_command": "printf r0 > /dev/udp/127.0.0.1/45455"
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Left gate + P , . ' => the same scroll, faster (P left, comma down, dot up, quote right)",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "description": "left gate held",
+                                        "name": "trackpad_left",
+                                        "type": "variable_unless",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "arrow_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "left_symbol_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "number_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "right_symbol_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "comma",
+                                    "modifiers": {
+                                        "optional": []
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "set_variable": {
+                                            "name": "magic_prev",
+                                            "value": ""
+                                        }
+                                    },
+                                    {
+                                        "shell_command": "printf Fl1 > /dev/udp/127.0.0.1/45455",
+                                        "repeat": false
+                                    }
+                                ],
+                                "to_after_key_up": [
+                                    {
+                                        "shell_command": "printf Fl0 > /dev/udp/127.0.0.1/45455"
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "description": "left gate held",
+                                        "name": "trackpad_left",
+                                        "type": "variable_unless",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "arrow_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "left_symbol_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "number_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "right_symbol_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "period",
+                                    "modifiers": {
+                                        "optional": []
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "set_variable": {
+                                            "name": "magic_prev",
+                                            "value": ""
+                                        }
+                                    },
+                                    {
+                                        "shell_command": "printf Fd1 > /dev/udp/127.0.0.1/45455",
+                                        "repeat": false
+                                    }
+                                ],
+                                "to_after_key_up": [
+                                    {
+                                        "shell_command": "printf Fd0 > /dev/udp/127.0.0.1/45455"
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "description": "left gate held",
+                                        "name": "trackpad_left",
+                                        "type": "variable_unless",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "arrow_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "left_symbol_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "number_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "right_symbol_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "slash",
+                                    "modifiers": {
+                                        "optional": []
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "set_variable": {
+                                            "name": "magic_prev",
+                                            "value": ""
+                                        }
+                                    },
+                                    {
+                                        "shell_command": "printf Fu1 > /dev/udp/127.0.0.1/45455",
+                                        "repeat": false
+                                    }
+                                ],
+                                "to_after_key_up": [
+                                    {
+                                        "shell_command": "printf Fu0 > /dev/udp/127.0.0.1/45455"
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "description": "left gate held",
+                                        "name": "trackpad_left",
+                                        "type": "variable_unless",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "arrow_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "left_symbol_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "number_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "right_symbol_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "right_shift",
+                                    "modifiers": {
+                                        "optional": []
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "set_variable": {
+                                            "name": "magic_prev",
+                                            "value": ""
+                                        }
+                                    },
+                                    {
+                                        "shell_command": "printf Fr1 > /dev/udp/127.0.0.1/45455",
+                                        "repeat": false
+                                    }
+                                ],
+                                "to_after_key_up": [
+                                    {
+                                        "shell_command": "printf Fr0 > /dev/udp/127.0.0.1/45455"
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Right gate + ZXQM => NRTS with the mouse button down, so a step drags (Z left, X up, Q down, M right)",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "description": "right gate held",
+                                        "name": "trackpad_right",
+                                        "type": "variable_unless",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "arrow_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "left_symbol_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "number_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "right_symbol_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "left_shift",
+                                    "modifiers": {
+                                        "optional": []
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "set_variable": {
+                                            "name": "move_left",
+                                            "value": 1
+                                        }
+                                    },
+                                    {
+                                        "set_variable": {
+                                            "name": "magic_prev",
+                                            "value": ""
+                                        }
+                                    },
+                                    {
+                                        "shell_command": "printf L1 > /dev/udp/127.0.0.1/45455",
+                                        "repeat": false
+                                    },
+                                    {
+                                        "pointing_button": "button1"
+                                    }
+                                ],
+                                "to_after_key_up": [
+                                    {
+                                        "set_variable": {
+                                            "name": "move_left",
+                                            "value": 0
+                                        }
+                                    },
+                                    {
+                                        "shell_command": "printf L0 > /dev/udp/127.0.0.1/45455"
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "description": "right gate held",
+                                        "name": "trackpad_right",
+                                        "type": "variable_unless",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "arrow_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "left_symbol_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "number_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "right_symbol_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "z",
+                                    "modifiers": {
+                                        "optional": []
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "set_variable": {
+                                            "name": "move_up",
+                                            "value": 1
+                                        }
+                                    },
+                                    {
+                                        "set_variable": {
+                                            "name": "magic_prev",
+                                            "value": ""
+                                        }
+                                    },
+                                    {
+                                        "shell_command": "printf U1 > /dev/udp/127.0.0.1/45455",
+                                        "repeat": false
+                                    },
+                                    {
+                                        "pointing_button": "button1"
+                                    }
+                                ],
+                                "to_after_key_up": [
+                                    {
+                                        "set_variable": {
+                                            "name": "move_up",
+                                            "value": 0
+                                        }
+                                    },
+                                    {
+                                        "shell_command": "printf U0 > /dev/udp/127.0.0.1/45455"
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "description": "right gate held",
+                                        "name": "trackpad_right",
+                                        "type": "variable_unless",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "arrow_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "left_symbol_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "number_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "right_symbol_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "x",
+                                    "modifiers": {
+                                        "optional": []
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "set_variable": {
+                                            "name": "move_down",
+                                            "value": 1
+                                        }
+                                    },
+                                    {
+                                        "set_variable": {
+                                            "name": "magic_prev",
+                                            "value": ""
+                                        }
+                                    },
+                                    {
+                                        "shell_command": "printf D1 > /dev/udp/127.0.0.1/45455",
+                                        "repeat": false
+                                    },
+                                    {
+                                        "pointing_button": "button1"
+                                    }
+                                ],
+                                "to_after_key_up": [
+                                    {
+                                        "set_variable": {
+                                            "name": "move_down",
+                                            "value": 0
+                                        }
+                                    },
+                                    {
+                                        "shell_command": "printf D0 > /dev/udp/127.0.0.1/45455"
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "description": "right gate held",
+                                        "name": "trackpad_right",
+                                        "type": "variable_unless",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "arrow_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "left_symbol_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "number_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "right_symbol_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "c",
+                                    "modifiers": {
+                                        "optional": []
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "set_variable": {
+                                            "name": "move_right",
+                                            "value": 1
+                                        }
+                                    },
+                                    {
+                                        "set_variable": {
+                                            "name": "magic_prev",
+                                            "value": ""
+                                        }
+                                    },
+                                    {
+                                        "shell_command": "printf R1 > /dev/udp/127.0.0.1/45455",
+                                        "repeat": false
+                                    },
+                                    {
+                                        "pointing_button": "button1"
+                                    }
+                                ],
+                                "to_after_key_up": [
+                                    {
+                                        "set_variable": {
+                                            "name": "move_right",
+                                            "value": 0
+                                        }
+                                    },
+                                    {
+                                        "shell_command": "printf R0 > /dev/udp/127.0.0.1/45455"
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Left gate + X / Q => page up / page down",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "description": "left gate held",
+                                        "name": "trackpad_left",
+                                        "type": "variable_unless",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "arrow_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "left_symbol_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "number_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "right_symbol_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "z",
+                                    "modifiers": {
+                                        "optional": []
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "set_variable": {
+                                            "name": "magic_prev",
+                                            "value": ""
+                                        }
+                                    },
+                                    {
+                                        "key_code": "page_up"
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "description": "left gate held",
+                                        "name": "trackpad_left",
+                                        "type": "variable_unless",
+                                        "value": 0
+                                    },
+                                    {
+                                        "name": "arrow_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "left_symbol_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "number_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "right_symbol_layer",
+                                        "type": "variable_unless",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "x",
+                                    "modifiers": {
+                                        "optional": []
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "set_variable": {
+                                            "name": "magic_prev",
+                                            "value": ""
+                                        }
+                                    },
+                                    {
+                                        "key_code": "page_down"
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
                         "description": "Hold N => symbol layer: FOU;=;&$# HAEI=[]() P,.'=:\\%?",
                         "manipulators": [
                             {

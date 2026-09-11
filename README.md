@@ -63,6 +63,20 @@ it. The big legend is what the key actually does.
   <img alt="Right symbol layer" src="img/sym-right-light.svg">
 </picture>
 
+### Pointer steps
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="img/step-dark.svg">
+  <img alt="Pointer step layer" src="img/step-light.svg">
+</picture>
+
+### Scroll
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="img/scroll-dark.svg">
+  <img alt="Scroll layer" src="img/scroll-light.svg">
+</picture>
+
 ### Navigation layer
 
 <picture>
@@ -224,6 +238,26 @@ reachable by either thumb without leaving the home row and without having to
 aim. The 4% gap down the middle means a thumb landing dead centre catches
 neither, rather than ambiguously both.
 
+Each gate also carries a pointer mode for the hand that is free. While a gate is
+held and neither a layer nor a modifier is:
+
+| Gate | Keys | Does |
+| --- | --- | --- |
+| left | `H` `A` `E` `I` | scroll left, down, up, right |
+| left | `P` `,` `.` `'` | the same three times over |
+| left | `X` / `Q` | page up / page down |
+| right | `N` `R` `T` `S` | hold a direction — nothing on its own |
+| right | `Z` `X` `Q` `M` | the same, with the mouse button held down |
+| right | a digit, while a direction is held | step that many cells |
+| either | spacebar | `_` |
+
+The digits are the ones the number layer already puts under the right hand, and
+they are worth what `tools/keypointer.json` says: 1 is one cell, 9 is forty-five,
+and 0 is half of one for a final nudge. Every layer and modifier still has a gate
+that reaches it — the left hand's `⌘`, `⌥`, number and right-symbol layers off
+the left gate, the right hand's off the right — and that constraint is what
+decides which mode lives on which gate.
+
 `tools/trackpad_zones.swift` is what watches the pad. Karabiner's own
 [Multitouch
 Extension](https://karabiner-elements.pqrs.org/docs/json/extra/multitouch-extension/)
@@ -237,6 +271,28 @@ raises.
     tools/trackpad_zones --watch     # print live contacts and zone hits
     tools/trackpad_zones             # run it for real
     tools/trackpad_zones --selftest  # zone math, no hardware needed
+
+`tools/keypointer.swift` is the other half: Karabiner reports those keys over
+UDP — `printf u1 > /dev/udp/127.0.0.1/45455`, which `/bin/sh` supports — and the
+daemon does the moving. It exists because Karabiner's own `mouse_key` wheel is a
+line-based USB wheel, so macOS layers its own scroll acceleration on top and the
+result is a ramp you cannot tune. Posting *pixel* deltas instead, the way a
+trackpad does, means the speed is exactly what the config says. Pixel deltas
+also carry `began`/`changed`/`ended` and momentum phases, so documents
+rubber-band at their edges and a release coasts to a stop.
+
+    swiftc -O tools/keypointer.swift -o tools/keypointer
+    tools/keypointer             # run it
+    tools/keypointer --watch     # print the velocity, phase and steps
+    tools/keypointer --selftest  # ramp, momentum and step maths, no hardware
+
+Scrolling ramps from `base_speed` to `max_speed` over `ramp_ms` on a *quadratic*
+curve, so the first tenth of the ramp stays within a couple of percent of the
+base speed: a tap is a nudge, a hold is a glide. Steps land on the curve
+`n x (1 + step_curve x ((n-1)/8)^2)`, which keeps the low digits near their own
+value and only opens up at the top — 9 is five times a linear nine. A step taken
+with a mouse button held posts `leftMouseDragged` rather than `mouseMoved`,
+because that is the event apps track a drag by.
 
 Entering a zone ticks the Force Touch actuator, leaving it ticks again — the
 zones are invisible targets, so without feedback you cannot tell 20% from 24%

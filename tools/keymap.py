@@ -199,6 +199,31 @@ NAV = {
     "k": ("hold", "H", "layer"),
 }
 
+# Cells a digit is worth on the step curve in tools/keypointer.json.
+STEP_CELLS = {0: "½", 1: "1", 2: "2.1", 3: "3.8", 4: "6.3",
+              5: "10", 6: "15.4", 7: "22.8", 8: "32.5", 9: "45"}
+_STEP_DIGITS = [("k", 0), ("l", 1), ("semicolon", 2), ("quote", 3), ("comma", 4),
+                ("period", 5), ("slash", 6), ("i", 7), ("o", 8), ("p", 9)]
+
+STEP = {
+    "a": ("◀", "hold", "layer"), "s": ("▲", "hold", "layer"),
+    "d": ("▼", "hold", "layer"), "f": ("▶", "hold", "layer"),
+    "left_shift": ("◀", "drag", "magic"), "z": ("▲", "drag", "magic"),
+    "x": ("▼", "drag", "magic"), "c": ("▶", "drag", "magic"),
+}
+STEP.update({key: (str(digit),
+                   STEP_CELLS[digit] + (" cell" if STEP_CELLS[digit] in ("½", "1") else " cells"),
+                   "punct")
+             for key, digit in _STEP_DIGITS})
+
+SCROLL = {
+    "k": ("◀", "scroll", "system"), "l": ("▼", "scroll", "system"),
+    "semicolon": ("▲", "scroll", "system"), "quote": ("▶", "scroll", "system"),
+    "comma": ("◀", "×3", "magic"), "period": ("▼", "×3", "magic"),
+    "slash": ("▲", "×3", "magic"), "right_shift": ("▶", "×3", "magic"),
+    "z": ("page\n▲", "", "punct"), "x": ("page\n▼", "", "punct"),
+}
+
 MODS = {
     "s": ("⌥", "left", "mod"),
     "d": ("⌘", "left", "mod"),
@@ -253,6 +278,22 @@ LAYERS = [
         "sub": "gate + hold N (physical A). Pairs, punctuation and money.",
         "keys": _with_disabled(SYM_RIGHT),
         "full": False,
+    },
+    {
+        "id": "step",
+        "name": "Pointer steps",
+        "sub": "Right gate. Hold a direction on N/R/T/S — or Z/X/Q/M to drag — then tap a digit for that many cells.",
+        "keys": _with_disabled(STEP),
+        "full": False,
+        "gate": "right",
+    },
+    {
+        "id": "scroll",
+        "name": "Scroll",
+        "sub": "Left gate. H/A/E/I scroll, P/,/./' do the same three times over, X/Q page.",
+        "keys": _with_disabled(SCROLL),
+        "full": False,
+        "gate": "left",
     },
     {
         "id": "nav",

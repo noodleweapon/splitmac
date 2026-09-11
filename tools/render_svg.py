@@ -108,13 +108,21 @@ def trackpad(layer, t, ox, oy, bw, bh, tw, th):
     gate_h = th * GATE_DEPTH
     gate_w = tw * GATE_WIDTH
 
+    # A layer that lives on one gate says so: the other one is drawn dead.
+    wanted = layer.get("gate")
     out = [rounded(tx, ty, tw, th, 12, t["cap"], t["cap_edge"], 1)]
-    for label, gx in (("left gate", tx), ("right gate", tx + tw - gate_w)):
-        out.append(rounded(gx, ty, gate_w, gate_h, 5, t["gate"], t["gate_t"], 1))
-        out.append(text(gx + gate_w / 2, ty + gate_h / 2 + 4, label, t["gate_t"],
+    for side, label, gx in (("left", "left gate", tx),
+                            ("right", "right gate", tx + tw - gate_w)):
+        live = wanted is None or wanted == side
+        out.append(rounded(gx, ty, gate_w, gate_h, 5,
+                           t["gate"] if live else t["dead"],
+                           t["gate_t"] if live else t["cap_edge"], 1))
+        out.append(text(gx + gate_w / 2, ty + gate_h / 2 + 4, label,
+                        t["gate_t"] if live else t["dead_t"],
                         fit(label, 11, gate_w - 10), 600))
 
     caption = ("press either gate to arm the layers" if layer["full"]
+               else f"hold the {wanted} gate" if wanted
                else "hold either gate")
     out.append(text(tx + tw / 2, ty + gate_h + 26, caption, t["sub"], 11, 500))
     out.append(text(tx + tw / 2, th + ty - 12, "trackpad", t["ghost"], 10, 500, opacity=0.85))

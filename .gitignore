@@ -5,3 +5,7 @@ __pycache__/
 # compiled by tools/trackpad_zones.swift
 tools/trackpad_zones
 
+
+# compiled by tools/keypointer.swift
+tools/keypointer
+
