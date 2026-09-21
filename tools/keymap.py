@@ -83,6 +83,7 @@ TRAINER_KEYS = [
     "grave_accent_and_tilde", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0",
     "hyphen", "equal_sign", "delete_or_backspace", "tab", "close_bracket",
     "backslash", "escape", "left_control", "y", "h", "b", "n",
+    "left_arrow", "right_arrow", "up_arrow", "down_arrow", "__updown",
 ]
 
 # --- base layer -------------------------------------------------------------
@@ -97,7 +98,7 @@ BASE = {
     "o": ("O", "", "alpha"),   "p": ("U", "", "alpha"),
     "open_bracket": ("✦", "magic", "magic"),
 
-    "a": ("N", "& sym", "layer"),
+    "a": ("N", "", "alpha"),
     "s": ("R", "⌥ opt", "mod"),
     "d": ("T", "⌘ cmd", "mod"),
     "f": ("S", "№ num", "layer"),
@@ -106,27 +107,27 @@ BASE = {
     "k": ("H", "→ nav", "layer"),
     "l": ("A", "⌘ cmd", "mod"),
     "semicolon": ("E", "⌥ opt", "mod"),
-    "quote": ("I", "# sym", "layer"),
+    "quote": ("I", "", "alpha"),
 
     "z": ("X", "", "alpha"),   "x": ("Q", "", "alpha"),
-    "c": ("M", "", "alpha"),
+    "c": ("M", "& sym", "layer"),
     "v": ("W", "", "alpha"),
     "m": ("K", "", "alpha"),
-    "comma": ("P", "", "alpha"),
+    "comma": ("P", "# sym", "layer"),
     "period": (",", "⇧ ⌥C", "alpha"),
     "slash": (".", "⇧ esc", "alpha"),
 
     # gates
-    "caps_lock": ("⇧ shift", "tap: esc", "mod"),
-    "return_or_enter": ("⇧ shift", "tap: return", "mod"),
+    "caps_lock": ("hold =\nlayers", "tap: nothing", "gate"),
+    "return_or_enter": ("hold =\nlayers", "tap: nothing", "gate"),
 
     # modifiers & thumbs
     "left_shift": ("Z", "", "alpha"),
     "right_shift": ("'", "", "punct"),
     "left_option": ("control", "", "mod"),
-    "left_command": ("no-op", "", "dead"),
+    "left_command": ("⇧ shift", "tap: return", "mod"),
     "right_command": ("⌫ delete", "", "mod"),
-    "right_option": ("no-op", "", "dead"),
+    "right_option": ("⇧ shift", "tap: tab", "mod"),
     "spacebar": ("space", "", "dead"),
     "fn": ("fn", "", "dead"),
     "touch_id": ("⏻", "", "dead"),
@@ -149,15 +150,6 @@ for _k, _legend in _MEDIA.items():
 for _k in TRAINER_KEYS:
     BASE[_k] = ("Disabled", "", "trainer")
 
-# The arrows are off the trainer list too: they move the mouse pointer.
-BASE["left_arrow"] = ("◀ mouse", "", "system")
-BASE["right_arrow"] = ("mouse ▶", "", "system")
-BASE["__updown"] = ("mouse\n▲ ▼", "", "system")
-
-# 1 is off the trainer list: it types "reply in <cursor's digit> sentences".
-BASE["1"] = ("reply in\n_ sentences", "macro", "system")
-BASE["2"] = ("explain what\nis meant by", "macro", "system")
-
 # --- hold layers ------------------------------------------------------------
 
 NUM = {
@@ -166,7 +158,7 @@ NUM = {
     "k": ("0", "", "punct"), "l": ("1", "", "punct"),
     "semicolon": ("2", "", "punct"), "quote": ("3", "", "punct"),
     "comma": ("4", "", "punct"), "period": ("5", "", "punct"),
-    "slash": ("6", "", "punct"),
+    "slash": ("6", "", "punct"), "right_shift": ("_", "", "punct"),
     "f": ("hold", "S", "layer"),
 }
 
@@ -177,7 +169,7 @@ SYM_RIGHT = {
     "semicolon": ("(", "", "punct"), "quote": (")", "", "punct"),
     "comma": (":", "", "punct"), "period": ("\\", "", "punct"),
     "slash": ("%", "", "punct"), "right_shift": ("?", "", "punct"),
-    "a": ("hold", "N", "layer"),
+    "c": ("hold", "M", "layer"),
 }
 
 SYM_LEFT = {
@@ -187,11 +179,10 @@ SYM_LEFT = {
     "d": ("/", "", "punct"), "f": ("=", "", "punct"),
     "left_shift": ("`", "", "punct"), "z": ("<", "", "punct"),
     "x": (">", "", "punct"), "c": ("@", "", "punct"),
-    "quote": ("hold", "I", "layer"),
+    "comma": ("hold", "P", "layer"),
 }
 
 NAV = {
-    "e": ("⇥ tab", "", "punct"), "b": ("~", "", "punct"),
     "a": ("←", "", "punct"), "s": ("↑", "", "punct"),
     "d": ("↓", "", "punct"), "f": ("→", "", "punct"),
     "left_shift": ("←×5", "", "punct"), "z": ("↑×5", "", "punct"),
@@ -199,41 +190,17 @@ NAV = {
     "k": ("hold", "H", "layer"),
 }
 
-# Cells a digit is worth on the step curve in tools/keypointer.json.
-STEP_CELLS = {0: "½", 1: "1", 2: "2.1", 3: "3.8", 4: "6.3",
-              5: "10", 6: "15.4", 7: "22.8", 8: "32.5", 9: "45"}
-_STEP_DIGITS = [("k", 0), ("l", 1), ("semicolon", 2), ("quote", 3), ("comma", 4),
-                ("period", 5), ("slash", 6), ("i", 7), ("o", 8), ("p", 9)]
-
-STEP = {
-    "a": ("◀", "hold", "layer"), "s": ("▲", "hold", "layer"),
-    "d": ("▼", "hold", "layer"), "f": ("▶", "hold", "layer"),
-    "left_shift": ("◀", "drag", "magic"), "z": ("▲", "drag", "magic"),
-    "x": ("▼", "drag", "magic"), "c": ("▶", "drag", "magic"),
-}
-STEP.update({key: (str(digit),
-                   STEP_CELLS[digit] + (" cell" if STEP_CELLS[digit] in ("½", "1") else " cells"),
-                   "punct")
-             for key, digit in _STEP_DIGITS})
-
-SCROLL = {
-    "k": ("◀", "scroll", "system"), "l": ("▼", "scroll", "system"),
-    "semicolon": ("▲", "scroll", "system"), "quote": ("▶", "scroll", "system"),
-    "comma": ("◀", "×3", "magic"), "period": ("▼", "×3", "magic"),
-    "slash": ("▲", "×3", "magic"), "right_shift": ("▶", "×3", "magic"),
-    "z": ("page\n▲", "", "punct"), "x": ("page\n▼", "", "punct"),
-}
-
 MODS = {
     "s": ("⌥", "left", "mod"),
     "d": ("⌘", "left", "mod"),
     "l": ("⌘", "left", "mod"),
     "semicolon": ("⌥", "left", "mod"),
-    "spacebar": ("_", "", "punct"),
     "f": ("№", "numbers", "layer"),
     "k": ("→", "nav", "layer"),
-    "a": ("&", "sym R", "layer"),
-    "quote": ("#", "sym L", "layer"),
+    "c": ("&", "sym R", "layer"),
+    "comma": ("#", "sym L", "layer"),
+    "caps_lock": ("hold", "arms all of it", "gate"),
+    "return_or_enter": ("hold", "arms all of it", "gate"),
 }
 
 def _with_disabled(keys):
@@ -254,51 +221,35 @@ LAYERS = [
     {
         "id": "mods",
         "name": "Hold gate + home-row mods",
-        "sub": "Press either gate to arm. Then hold a home-row key for its modifier or layer.",
+        "sub": "Hold caps or return to arm. Then hold a home-row key for its modifier or layer.",
         "keys": _with_disabled(MODS),
         "full": False,
     },
     {
         "id": "number",
         "name": "Number layer",
-        "sub": "gate + hold S (physical F). Digits land on the right hand.",
+        "sub": "caps/return + hold S (physical F). Digits land on the right hand.",
         "keys": _with_disabled(NUM),
         "full": False,
     },
     {
         "id": "sym-left",
         "name": "Symbol layer — left",
-        "sub": "gate + hold I (physical '). Math, brackets and shell glyphs.",
+        "sub": "caps/return + hold P (physical comma). Math, brackets and shell glyphs.",
         "keys": _with_disabled(SYM_LEFT),
         "full": False,
     },
     {
         "id": "sym-right",
         "name": "Symbol layer — right",
-        "sub": "gate + hold N (physical A). Pairs, punctuation and money.",
+        "sub": "caps/return + hold M (physical C). Pairs, punctuation and money.",
         "keys": _with_disabled(SYM_RIGHT),
         "full": False,
     },
     {
-        "id": "step",
-        "name": "Pointer steps",
-        "sub": "Right gate. Hold a direction on N/R/T/S — or Z/X/Q/M to drag — then tap a digit for that many cells.",
-        "keys": _with_disabled(STEP),
-        "full": False,
-        "gate": "right",
-    },
-    {
-        "id": "scroll",
-        "name": "Scroll",
-        "sub": "Left gate. H/A/E/I scroll, P/,/./' do the same three times over, X/Q page.",
-        "keys": _with_disabled(SCROLL),
-        "full": False,
-        "gate": "left",
-    },
-    {
         "id": "nav",
         "name": "Navigation layer",
-        "sub": "gate + hold H (physical K). Bottom row jumps five at a time.",
+        "sub": "caps/return + hold H (physical K). Bottom row jumps five at a time.",
         "keys": _with_disabled(NAV),
         "full": False,
     },
