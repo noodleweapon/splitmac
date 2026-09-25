@@ -441,7 +441,7 @@ footer a { color: var(--fg-dim); }
 
   <div class="readout" id="readout">
     <span class="hint">Press keys on your own keyboard — the matching cap lights up.
-    Hold Space or Right Command, then hold S, P, M or H to preview a layer live.</span>
+    Hold Space then S or M, or Right Command then P or H, to preview a layer live.</span>
   </div>
 
   <div class="legend-row" id="legend"></div>
@@ -477,12 +477,12 @@ footer a { color: var(--fg-dim); }
     <tbody>
       <tr><td>Left Shift</td><td>types <code>z</code></td></tr>
       <tr><td>Right Shift</td><td>types <code>'</code></td></tr>
-      <tr><td>Space / Right Command</td><td>left / right gate: hold arms the layers; tap does nothing</td></tr>
+      <tr><td>Space / Right Command</td><td>left / right gate: hold arms only that side's special keys; tap does nothing</td></tr>
       <tr><td>Caps Lock / Return</td><td>do nothing</td></tr>
       <tr><td>Left Command</td><td>Space</td></tr>
       <tr><td>Right Option</td><td>Delete</td></tr>
       <tr><td>Left Option</td><td>Control</td></tr>
-      <tr><td>gate + <code>A</code> / <code>'</code></td><td>Shift</td></tr>
+      <tr><td>left gate + <code>A</code> / right gate + <code>'</code></td><td>Shift</td></tr>
       <tr><td>Shift + <code>[</code></td><td>Escape</td></tr>
       <tr><td>F6</td><td>toggles the entire keymap off and on</td></tr>
     </tbody>
@@ -613,6 +613,8 @@ CLASSES.forEach(([cls, label]) => {
 
 let pinned = DATA.layers[0];
 let gate = false;
+const gates = new Set();
+const SIDE = { f: "spacebar", c: "spacebar", k: "right_command", comma: "right_command" };
 const held = new Set();
 const layerByHold = {};
 DATA.layers.forEach(l => { if (l.hold) layerByHold[l.hold] = l; });
@@ -639,7 +641,7 @@ function report(id) {
 function resolve() {
   if (gate) {
     for (const h of held) {
-      if (layerByHold[h]) return layerByHold[h];
+      if (layerByHold[h] && gates.has(SIDE[h])) return layerByHold[h];
     }
     return DATA.layers.find(l => l.id === "mods") || pinned;
   }
@@ -653,7 +655,7 @@ addEventListener("keydown", ev => {
   ev.preventDefault();
   held.add(id);
   cells.get(id)?.classList.add("down");
-  if (["spacebar", "right_command"].includes(id)) gate = true;
+  if (["spacebar", "right_command"].includes(id)) { gates.add(id); gate = true; }
   paint(resolve());
   report(id);
 });
@@ -663,12 +665,13 @@ addEventListener("keyup", ev => {
   if (!id) return;
   held.delete(id);
   cells.get(id)?.classList.remove("down");
-  if (["spacebar", "right_command"].includes(id)) gate = false;
+  if (["spacebar", "right_command"].includes(id)) { gates.delete(id); gate = gates.size > 0; }
   paint(resolve());
 });
 
 addEventListener("blur", () => {
   held.clear();
+  gates.clear();
   gate = false;
   cells.forEach(el => el.classList.remove("down"));
   paint(pinned);

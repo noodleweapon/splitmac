@@ -123,8 +123,8 @@ Punctuation that is normally shifted moves down to the shift keys themselves:
 | Left Shift | `Z` |
 | Right Shift | `'` |
 | Left Command | `space` |
-| Space | left gate: hold to arm the layers, tap does nothing |
-| Right Command | right gate: hold to arm the layers, tap does nothing |
+| Space | left gate: hold to arm the left hand's special keys, tap does nothing |
+| Right Command | right gate: hold to arm the right hand's special keys, tap does nothing |
 | Right Option | `delete` |
 | Left Option | `control` |
 | Caps Lock / Return | nothing |
@@ -174,26 +174,27 @@ Shift and physical `[`.
 
 ## Hold gate and home-row mods
 
-Hold **Space** (left gate) or **Right Command** (right gate) to arm the gate
-(`hold_mods_enabled`). Tapping a gate does
-nothing. While it is held, physical `A` and `'` become Shift, four home-row keys
-become modifiers and four become layer keys:
+There are two gates, one per side. Hold **Space** (left gate, `left_gate`) to arm
+the left hand's special keys, or **Right Command** (right gate, `right_gate`) to
+arm the right hand's. Each gate only arms its own side: while the left gate is
+held, the right hand's special keys are plain letters, and the other way round.
+Tapping a gate does nothing.
 
-| Home-row key | Physical | Hold |
-| --- | --- | --- |
-| `T` | `D` | Left Command |
-| `A` | `L` | Left Command |
-| `R` | `S` | Left Option |
-| `E` | `;` | Left Option |
-| `S` | `F` | Number layer |
-| `H` | `K` | Navigation layer |
-| `M` | `C` | Symbol layer, right |
-| `P` | `,` | Symbol layer, left |
+| Home-row key | Physical | Gate | Hold |
+| --- | --- | --- | --- |
+| `N` | `A` | left | Left Shift |
+| `R` | `S` | left | Left Option |
+| `T` | `D` | left | Left Command |
+| `S` | `F` | left | Number layer |
+| `M` | `C` | left | Symbol layer, right |
+| `H` | `K` | right | Navigation layer |
+| `A` | `L` | right | Left Command |
+| `E` | `;` | right | Left Option |
+| `I` | `'` | right | Right Shift |
+| `P` | `,` | right | Symbol layer, left |
 
-Every one of them sends the **left-hand** modifier — Left Command, Left Option,
-Left Shift — whichever side of the board you hold it on. Nothing on this board
-emits a right-hand modifier any more, so apps that tell the two sides apart
-only ever see the left one.
+Command and Option are always the **left-hand** modifier, whichever side of the
+board you hold them on.
 
 The gate is the whole trick. Home-row mods normally misfire during fast typing;
 here they simply do not exist until you ask for them, and only one layer can be
@@ -213,7 +214,7 @@ first wins and the second one silently does nothing. Nothing here uses a timer.
 
 One thing the gate cannot make order-free: it has to be held *first*. Conditions
 are evaluated when a key goes down, so a layer or modifier key pressed before
-the gate sees `hold_mods_enabled` as 0 and just types its letter.
+its gate sees the gate variable as 0 and just types its letter.
 
 Each layer also borrows some home-row keys for its own glyphs, which shadows the
 modifier on those keys. One pair always survives:
@@ -231,7 +232,7 @@ glyphs and cannot also be modifiers.
 
 ## The layers
 
-**Number** — gate + hold `S`. Digits sit under the right hand, with `~` on the
+**Number** — left gate + hold `S`. Digits sit under the right hand, with `~` on the
 `.` key (physical `[`) and `_` on Right Shift:
 
 ```
@@ -240,7 +241,7 @@ glyphs and cannot also be modifiers.
       4  5  6  _     K P , ✦ '
 ```
 
-**Symbol, left** — gate + hold `P`. Held by the right hand, typed with the left:
+**Symbol, left** — right gate + hold `P`. Held by the right hand, typed with the left:
 
 ```
    ^  *  -  |     B L D C
@@ -248,7 +249,7 @@ glyphs and cannot also be modifiers.
 `  <  >  @        Z X Q M
 ```
 
-**Symbol, right** — gate + hold `M`. Held by the left hand, typed with the right:
+**Symbol, right** — left gate + hold `M`. Held by the left hand, typed with the right:
 
 ```
    ;  &  $  #     F O U .
@@ -256,7 +257,7 @@ glyphs and cannot also be modifiers.
       :  \  %  ?     P , ✦ '
 ```
 
-**Navigation** — gate + hold `H`. The top row moves the caret one step, the home
+**Navigation** — right gate + hold `H`. The top row moves the caret one step, the home
 row is `caps lock` `tab` `esc` `return`, and the bottom row moves the caret five at a
 time (five key events at 30 ms each):
 
@@ -278,13 +279,13 @@ Every one of them has a home-row replacement:
 
 | Reach | Do this instead |
 | --- | --- |
-| Number row | gate + hold `S` |
+| Number row | left gate + hold `S` |
 | `-` `=` `[` `]` `\` and friends | the two symbol layers |
-| Arrow keys | gate + hold `H` |
+| Arrow keys | right gate + hold `H` |
 | `delete` | Right Option |
-| `tab` | gate + hold `H`, `R` |
-| `esc` | Shift + `[`, or gate + hold `H`, `T` |
-| `return` | gate + hold `H`, `S` |
+| `tab` | right gate + hold `H`, `R` |
+| `esc` | Shift + `[`, or right gate + hold `H`, `T` |
+| `return` | right gate + hold `H`, `S` |
 
 It is a blunt instrument and it works. Delete the rule named
 `Bad-habit trainer` once the habit is gone — or keep it forever, nobody is

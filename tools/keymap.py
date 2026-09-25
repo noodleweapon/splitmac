@@ -120,8 +120,8 @@ BASE = {
     # gates
     "caps_lock": ("no-op", "", "dead"),
     "return_or_enter": ("no-op", "", "dead"),
-    "spacebar": ("hold = layers", "left gate · tap: nothing", "gate"),
-    "right_command": ("hold =\nlayers", "right gate", "gate"),
+    "spacebar": ("hold = left gate", "arms left hand · tap: nothing", "gate"),
+    "right_command": ("right\ngate", "arms right", "gate"),
 
     # modifiers & thumbs
     "left_shift": ("Z", "", "alpha"),
@@ -225,35 +225,35 @@ LAYERS = [
     {
         "id": "mods",
         "name": "Hold gate + home-row mods",
-        "sub": "Hold space or right command to arm. Then hold a home-row key for its modifier or layer.",
+        "sub": "Space arms only the left hand, right command only the right. Then hold a key.",
         "keys": _with_disabled(MODS),
         "full": False,
     },
     {
         "id": "number",
         "name": "Number layer",
-        "sub": "gate + hold S (physical F). Digits land on the right hand.",
+        "sub": "space + hold S (physical F). Digits land on the right hand.",
         "keys": _with_disabled(NUM),
         "full": False,
     },
     {
         "id": "sym-left",
         "name": "Symbol layer — left",
-        "sub": "gate + hold P (physical comma). Math, brackets and shell glyphs.",
+        "sub": "right cmd + hold P (physical comma). Math, brackets and shell glyphs.",
         "keys": _with_disabled(SYM_LEFT),
         "full": False,
     },
     {
         "id": "sym-right",
         "name": "Symbol layer — right",
-        "sub": "gate + hold M (physical C). Pairs, punctuation and money.",
+        "sub": "space + hold M (physical C). Pairs, punctuation and money.",
         "keys": _with_disabled(SYM_RIGHT),
         "full": False,
     },
     {
         "id": "nav",
         "name": "Navigation layer",
-        "sub": "gate + hold H (physical K). Top row moves the caret, home row is caps / tab / esc / return, bottom row jumps five.",
+        "sub": "right cmd + hold H (physical K). Top row moves the caret, home row is caps / tab / esc / return, bottom row jumps five.",
         "keys": _with_disabled(NAV),
         "full": False,
     },
