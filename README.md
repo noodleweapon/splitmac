@@ -31,43 +31,43 @@ it. The big legend is what the key actually does.
 ### Base
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="img/base-dark.svg">
-  <img alt="Base layer" src="img/base-light.svg">
+  <source media="(prefers-color-scheme: dark)" srcset="img/base-dark.svg?v=2">
+  <img alt="Base layer" src="img/base-light.svg?v=2">
 </picture>
 
 ### Hold gate and home-row mods
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="img/mods-dark.svg">
-  <img alt="Hold gate and home-row mods" src="img/mods-light.svg">
+  <source media="(prefers-color-scheme: dark)" srcset="img/mods-dark.svg?v=2">
+  <img alt="Hold gate and home-row mods" src="img/mods-light.svg?v=2">
 </picture>
 
 ### Number layer
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="img/number-dark.svg">
-  <img alt="Number layer" src="img/number-light.svg">
+  <source media="(prefers-color-scheme: dark)" srcset="img/number-dark.svg?v=2">
+  <img alt="Number layer" src="img/number-light.svg?v=2">
 </picture>
 
 ### Symbol layer — left
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="img/sym-left-dark.svg">
-  <img alt="Left symbol layer" src="img/sym-left-light.svg">
+  <source media="(prefers-color-scheme: dark)" srcset="img/sym-left-dark.svg?v=2">
+  <img alt="Left symbol layer" src="img/sym-left-light.svg?v=2">
 </picture>
 
 ### Symbol layer — right
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="img/sym-right-dark.svg">
-  <img alt="Right symbol layer" src="img/sym-right-light.svg">
+  <source media="(prefers-color-scheme: dark)" srcset="img/sym-right-dark.svg?v=2">
+  <img alt="Right symbol layer" src="img/sym-right-light.svg?v=2">
 </picture>
 
 ### Navigation layer
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="img/nav-dark.svg">
-  <img alt="Navigation layer" src="img/nav-light.svg">
+  <source media="(prefers-color-scheme: dark)" srcset="img/nav-dark.svg?v=2">
+  <img alt="Navigation layer" src="img/nav-light.svg?v=2">
 </picture>
 
 There is also an [interactive version](keymap.html) — open it and press keys on
