@@ -1,0 +1,19 @@
+README.md
+  s_287731dacca2a2::t_355838ca21848b 34-35,41-42,48-49,55-56,62-63,69-70
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "0d08a33f4205dfdbf5aa2bba5b8b99589686bcf0",
+  "prompts": {},
+  "sessions": {
+    "s_287731dacca2a2": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "5ab4d302-6a8d-452a-8c54-e742aefa0a7c",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Jason Yeon <seojoony9000@gmail.com>"
+    }
+  }
+}
