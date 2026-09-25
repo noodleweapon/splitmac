@@ -72,7 +72,7 @@ ROW_WIDTH = 14.5
 # alpha    letters produced by the base layout
 # punct    punctuation / digits produced by a layer
 # trainer  bad-habit trainer: the key is deliberately booby-trapped
-# gate     Space / Right Command (and Caps Lock / Return), which arm the hold layers
+# gate     Space / Right Command, which arm the hold layers
 # layer    a key that holds down into a layer
 # mod      modifier behaviour (tap/hold, remapped modifiers)
 # magic    the magic key: emits the letter that follows the last one typed
@@ -118,8 +118,8 @@ BASE = {
     "slash": ("✦", "magic", "magic"),
 
     # gates
-    "caps_lock": ("hold =\nlayers", "tap: nothing", "gate"),
-    "return_or_enter": ("hold =\nlayers", "tap: nothing", "gate"),
+    "caps_lock": ("no-op", "", "dead"),
+    "return_or_enter": ("no-op", "", "dead"),
     "spacebar": ("hold = layers", "left gate · tap: nothing", "gate"),
     "right_command": ("hold =\nlayers", "right gate", "gate"),
 
@@ -203,8 +203,6 @@ MODS = {
     "k": ("→", "nav", "layer"),
     "c": ("&", "sym R", "layer"),
     "comma": ("#", "sym L", "layer"),
-    "caps_lock": ("hold", "arms all of it", "gate"),
-    "return_or_enter": ("hold", "arms all of it", "gate"),
     "spacebar": ("hold", "left gate", "gate"),
     "right_command": ("hold", "right gate", "gate"),
 }
@@ -227,7 +225,7 @@ LAYERS = [
     {
         "id": "mods",
         "name": "Hold gate + home-row mods",
-        "sub": "Hold space or right command (or caps / return) to arm. Then hold a home-row key for its modifier or layer.",
+        "sub": "Hold space or right command to arm. Then hold a home-row key for its modifier or layer.",
         "keys": _with_disabled(MODS),
         "full": False,
     },

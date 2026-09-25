@@ -3804,7 +3804,7 @@
                         ]
                     },
                     {
-                        "description": "Gates (hold only, tap does nothing): Spacebar = left, Right Command = right (Caps Lock / Enter also) => enable RTSMHAEP hold layers; gate + physical A / ' = Shift",
+                        "description": "Gates (hold only, tap does nothing): Spacebar = left, Right Command = right (Caps Lock / Enter do nothing) => enable RTSMHAEP hold layers; gate + physical A / ' = Shift",
                         "manipulators": [
                             {
                                 "from": {
@@ -3869,22 +3869,7 @@
                                         ]
                                     }
                                 },
-                                "to": [
-                                    {
-                                        "set_variable": {
-                                            "name": "hold_mods_enabled",
-                                            "value": 1
-                                        }
-                                    }
-                                ],
-                                "to_after_key_up": [
-                                    {
-                                        "set_variable": {
-                                            "name": "hold_mods_enabled",
-                                            "value": 0
-                                        }
-                                    }
-                                ],
+                                "to": [],
                                 "type": "basic"
                             },
                             {
@@ -3896,22 +3881,7 @@
                                         ]
                                     }
                                 },
-                                "to": [
-                                    {
-                                        "set_variable": {
-                                            "name": "hold_mods_enabled",
-                                            "value": 1
-                                        }
-                                    }
-                                ],
-                                "to_after_key_up": [
-                                    {
-                                        "set_variable": {
-                                            "name": "hold_mods_enabled",
-                                            "value": 0
-                                        }
-                                    }
-                                ],
+                                "to": [],
                                 "type": "basic"
                             }
                         ]

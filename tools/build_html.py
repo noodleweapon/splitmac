@@ -478,7 +478,7 @@ footer a { color: var(--fg-dim); }
       <tr><td>Left Shift</td><td>types <code>z</code></td></tr>
       <tr><td>Right Shift</td><td>types <code>'</code></td></tr>
       <tr><td>Space / Right Command</td><td>left / right gate: hold arms the layers; tap does nothing</td></tr>
-      <tr><td>Caps Lock / Return</td><td>also gates</td></tr>
+      <tr><td>Caps Lock / Return</td><td>do nothing</td></tr>
       <tr><td>Left Command</td><td>Space</td></tr>
       <tr><td>Right Option</td><td>Delete</td></tr>
       <tr><td>Left Option</td><td>Control</td></tr>
@@ -653,7 +653,7 @@ addEventListener("keydown", ev => {
   ev.preventDefault();
   held.add(id);
   cells.get(id)?.classList.add("down");
-  if (["caps_lock", "return_or_enter", "spacebar", "right_command"].includes(id)) gate = true;
+  if (["spacebar", "right_command"].includes(id)) gate = true;
   paint(resolve());
   report(id);
 });
@@ -663,7 +663,7 @@ addEventListener("keyup", ev => {
   if (!id) return;
   held.delete(id);
   cells.get(id)?.classList.remove("down");
-  if (["caps_lock", "return_or_enter", "spacebar", "right_command"].includes(id)) gate = false;
+  if (["spacebar", "right_command"].includes(id)) gate = false;
   paint(resolve());
 });
 

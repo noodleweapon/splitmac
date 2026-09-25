@@ -71,7 +71,7 @@ it. The big legend is what the key actually does.
 </picture>
 
 There is also an [interactive version](keymap.html) — open it and press keys on
-your own keyboard to light up the matching cap, or hold Caps Lock and a layer
+your own keyboard to light up the matching cap, or hold Space and a layer
 key to preview a layer live.
 
 Inspired by [@getreuer's QMK keymap](https://github.com/getreuer/qmk-keymap),
@@ -127,7 +127,7 @@ Punctuation that is normally shifted moves down to the shift keys themselves:
 | Right Command | right gate: hold to arm the layers, tap does nothing |
 | Right Option | `delete` |
 | Left Option | `control` |
-| Caps Lock / Return | also gates |
+| Caps Lock / Return | nothing |
 | Shift + `[` | `esc` |
 | Shift + `.` | `⌥C` |
 
@@ -175,7 +175,7 @@ Shift and physical `[`.
 ## Hold gate and home-row mods
 
 Hold **Space** (left gate) or **Right Command** (right gate) to arm the gate
-(`hold_mods_enabled`); Caps Lock and Return still work too. Tapping a gate does
+(`hold_mods_enabled`). Tapping a gate does
 nothing. While it is held, physical `A` and `'` become Shift, four home-row keys
 become modifiers and four become layer keys:
 
