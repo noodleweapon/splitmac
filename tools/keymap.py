@@ -128,7 +128,7 @@ BASE = {
     "right_shift": ("'", "", "punct"),
     "left_option": ("control", "", "mod"),
     "left_command": ("space", "", "mod"),
-    "right_option": ("repeat", "last letter", "magic"),
+    "right_option": ("⌫ delete", "", "mod"),
     "fn": ("fn", "", "dead"),
     "touch_id": ("⏻", "", "dead"),
 
@@ -185,8 +185,8 @@ SYM_LEFT = {
 NAV = {
     "q": ("←", "", "punct"), "w": ("↑", "", "punct"),
     "e": ("↓", "", "punct"), "r": ("→", "", "punct"),
-    "a": ("tab", "", "punct"), "s": ("esc", "", "punct"),
-    "d": ("⌫", "", "punct"), "f": ("⏎", "", "punct"),
+    "a": ("caps", "", "punct"), "s": ("tab", "", "punct"),
+    "d": ("esc", "", "punct"), "f": ("⏎", "", "punct"),
     "left_shift": ("←×5", "", "punct"), "z": ("↑×5", "", "punct"),
     "x": ("↓×5", "", "punct"), "c": ("→×5", "", "punct"),
     "k": ("hold", "H", "layer"),
@@ -255,7 +255,7 @@ LAYERS = [
     {
         "id": "nav",
         "name": "Navigation layer",
-        "sub": "gate + hold H (physical K). Top row moves the caret, home row is tab / esc / delete / return, bottom row jumps five.",
+        "sub": "gate + hold H (physical K). Top row moves the caret, home row is caps / tab / esc / return, bottom row jumps five.",
         "keys": _with_disabled(NAV),
         "full": False,
     },

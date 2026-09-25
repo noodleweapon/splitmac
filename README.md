@@ -125,7 +125,7 @@ Punctuation that is normally shifted moves down to the shift keys themselves:
 | Left Command | `space` |
 | Space | left gate: hold to arm the layers, tap does nothing |
 | Right Command | right gate: hold to arm the layers, tap does nothing |
-| Right Option | repeat the last letter |
+| Right Option | `delete` |
 | Left Option | `control` |
 | Caps Lock / Return | also gates |
 | Shift + `[` | `esc` |
@@ -257,12 +257,12 @@ glyphs and cannot also be modifiers.
 ```
 
 **Navigation** — gate + hold `H`. The top row moves the caret one step, the home
-row is `tab` `esc` `delete` `return`, and the bottom row moves the caret five at a
+row is `caps lock` `tab` `esc` `return`, and the bottom row moves the caret five at a
 time (five key events at 30 ms each):
 
 ```
    ←  ↑  ↓  →       B L D C
-  tab esc ⌫  ⏎      N R T S
+  caps tab esc ⏎    N R T S
 ←5 ↑5 ↓5 →5         Z X Q M
 ```
 
@@ -281,9 +281,9 @@ Every one of them has a home-row replacement:
 | Number row | gate + hold `S` |
 | `-` `=` `[` `]` `\` and friends | the two symbol layers |
 | Arrow keys | gate + hold `H` |
-| `delete` | gate + hold `H`, `T` |
-| `tab` | gate + hold `H`, `N` |
-| `esc` | Shift + `[`, or gate + hold `H`, `R` |
+| `delete` | Right Option |
+| `tab` | gate + hold `H`, `R` |
+| `esc` | Shift + `[`, or gate + hold `H`, `T` |
 | `return` | gate + hold `H`, `S` |
 
 It is a blunt instrument and it works. Delete the rule named

@@ -480,7 +480,7 @@ footer a { color: var(--fg-dim); }
       <tr><td>Space / Right Command</td><td>left / right gate: hold arms the layers; tap does nothing</td></tr>
       <tr><td>Caps Lock / Return</td><td>also gates</td></tr>
       <tr><td>Left Command</td><td>Space</td></tr>
-      <tr><td>Right Option</td><td>repeats the last letter</td></tr>
+      <tr><td>Right Option</td><td>Delete</td></tr>
       <tr><td>Left Option</td><td>Control</td></tr>
       <tr><td>gate + <code>A</code> / <code>'</code></td><td>Shift</td></tr>
       <tr><td>Shift + <code>[</code></td><td>Escape</td></tr>
