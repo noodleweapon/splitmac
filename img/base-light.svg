@@ -214,10 +214,9 @@
 <text x="804.5" y="449.5" fill="#55555e" font-size="10" font-weight="500" text-anchor="end" opacity="0.85" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">.</text>
 <text x="780.5" y="467.5" fill="#f2f2f4" font-size="20" font-weight="700" text-anchor="middle" opacity="1.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">,</text>
 <text x="780.5" y="492.5" fill="#8f8f9b" font-size="9.5" font-weight="500" text-anchor="middle" opacity="1.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">⇧ ⌥C</text>
-<rect x="816.5" y="435.5" width="60.0" height="66.0" rx="8" fill="#4a1f3a" stroke="#3d3d44" stroke-width="1"/>
+<rect x="816.5" y="435.5" width="60.0" height="66.0" rx="8" fill="#1e3a5f" stroke="#3d3d44" stroke-width="1"/>
 <text x="870.5" y="449.5" fill="#55555e" font-size="10" font-weight="500" text-anchor="end" opacity="0.85" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">/</text>
-<text x="846.5" y="467.5" fill="#ff9ed3" font-size="20" font-weight="700" text-anchor="middle" opacity="1.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">✦</text>
-<text x="846.5" y="492.5" fill="#8f8f9b" font-size="9.5" font-weight="500" text-anchor="middle" opacity="1.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">magic</text>
+<text x="846.5" y="473.5" fill="#8ecbff" font-size="20" font-weight="700" text-anchor="middle" opacity="1.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">_</text>
 <rect x="882.5" y="435.5" width="142.5" height="66.0" rx="8" fill="#1e3a5f" stroke="#3d3d44" stroke-width="1"/>
 <text x="1019.0" y="449.5" fill="#55555e" font-size="10" font-weight="500" text-anchor="end" opacity="0.85" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">shift</text>
 <text x="953.8" y="473.5" fill="#8ecbff" font-size="20" font-weight="700" text-anchor="middle" opacity="1.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">'</text>

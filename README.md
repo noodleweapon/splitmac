@@ -31,43 +31,43 @@ it. The big legend is what the key actually does.
 ### Base
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="img/base-dark.svg?v=2">
-  <img alt="Base layer" src="img/base-light.svg?v=2">
+  <source media="(prefers-color-scheme: dark)" srcset="img/base-dark.svg?v=3">
+  <img alt="Base layer" src="img/base-light.svg?v=3">
 </picture>
 
 ### Hold gate and home-row mods
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="img/mods-dark.svg?v=2">
-  <img alt="Hold gate and home-row mods" src="img/mods-light.svg?v=2">
+  <source media="(prefers-color-scheme: dark)" srcset="img/mods-dark.svg?v=3">
+  <img alt="Hold gate and home-row mods" src="img/mods-light.svg?v=3">
 </picture>
 
 ### Number layer
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="img/number-dark.svg?v=2">
-  <img alt="Number layer" src="img/number-light.svg?v=2">
+  <source media="(prefers-color-scheme: dark)" srcset="img/number-dark.svg?v=3">
+  <img alt="Number layer" src="img/number-light.svg?v=3">
 </picture>
 
 ### Symbol layer — left
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="img/sym-left-dark.svg?v=2">
-  <img alt="Left symbol layer" src="img/sym-left-light.svg?v=2">
+  <source media="(prefers-color-scheme: dark)" srcset="img/sym-left-dark.svg?v=3">
+  <img alt="Left symbol layer" src="img/sym-left-light.svg?v=3">
 </picture>
 
 ### Symbol layer — right
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="img/sym-right-dark.svg?v=2">
-  <img alt="Right symbol layer" src="img/sym-right-light.svg?v=2">
+  <source media="(prefers-color-scheme: dark)" srcset="img/sym-right-dark.svg?v=3">
+  <img alt="Right symbol layer" src="img/sym-right-light.svg?v=3">
 </picture>
 
 ### Navigation layer
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="img/nav-dark.svg?v=2">
-  <img alt="Navigation layer" src="img/nav-light.svg?v=2">
+  <source media="(prefers-color-scheme: dark)" srcset="img/nav-dark.svg?v=3">
+  <img alt="Navigation layer" src="img/nav-light.svg?v=3">
 </picture>
 
 There is also an [interactive version](keymap.html) — open it and press keys on
@@ -109,7 +109,7 @@ sit **one column to the right** of where QWERTY puts them, which is what leaves
 ```
       B  L  D  C  V        J  F  O  U  .
       N  R  T  S  G        Y  H  A  E  I
-   Z  X  Q  M  W              K  P  ,  ✦
+   Z  X  Q  M  W              K  P  ,  _
 ```
 
 That leading `Z` is **Left Shift** — the bottom row is one key short of a home
@@ -122,6 +122,7 @@ Punctuation that is normally shifted moves down to the shift keys themselves:
 | --- | --- |
 | Left Shift | `Z` |
 | Right Shift | `'` |
+| `/` | `_` |
 | Left Command | `space` |
 | Space | left gate: hold to arm the left hand's special keys, tap does nothing |
 | Right Command | right gate: hold to arm the right hand's special keys, tap does nothing |
@@ -130,47 +131,6 @@ Punctuation that is normally shifted moves down to the shift keys themselves:
 | Caps Lock / Return | disabled (types `HERROPERS`) |
 | Shift + `[` | `esc` |
 | Shift + `.` | `⌥C` |
-
-## The magic key
-
-The `/` key has no letter of its own. It is a **magic key**: it emits whatever
-should come after the letter you just typed. Thirteen of the layout's most
-awkward bigrams are folded into one key that is always in the same place.
-
-| You typed | `/` gives you | Bigram |
-| --- | --- | --- |
-| `p` | `y` | `py` — copy, type, happy |
-| `s` | `c` | `sc` — scale, discuss |
-| `u` | `e` | `ue` — value, queue |
-| `r` | `l` | `rl` — world, early |
-| `o` | `a` | `oa` — road, broad |
-| `g` | `s` | `gs` — things, logs |
-| `w` | `s` | `ws` — news, shows |
-| `h` | `y` | `hy` — why, hyper |
-| `t` | `m` | `tm` — batman, postman |
-| `l` | `m` | `lm` — film, calm |
-| `c` | `s` | `cs` — physics, basics |
-| `m` | `c` | `mc` |
-| `y` | `p` | `yp` — type, crypt |
-
-After anything else — a digit, a symbol, a space, a fresh document — `/` does
-nothing at all. Holding shift while you press it capitalises the letter, the
-same way shift works on every other key here.
-
-Each press feeds its own output back in, so the key chains: `r` `/` `/` `/` `/`
-types `rlmcs`. Two of the pairs point at each other — `p`/`y` and `s`/`c` — so
-repeated presses there simply alternate.
-
-It reads the letter that *came out*, not the key you hit: the memory lives in a
-Karabiner variable named `magic_prev`, and every manipulator in the config that
-types a letter sets it while everything else clears it. That is why physical
-Left Command (space) and physical `G` — which otherwise pass straight through — now have
-manipulators of their own, and why the magic key still works after a tapped
-home-row mod or layer key.
-
-The hyphen and underscore that used to sit on this key are gone with it. `-`
-moved to the left symbol layer; `_` and `~` moved to the number layer, on Right
-Shift and physical `[`.
 
 ## Hold gate and home-row mods
 
@@ -232,13 +192,13 @@ glyphs and cannot also be modifiers.
 
 ## The layers
 
-**Number** — left gate + hold `S`. Digits sit under the right hand, with `~` on the
-`.` key (physical `[`) and `_` on Right Shift:
+**Number** — left gate + hold `S`. Digits sit under the right hand, with `~` on Right
+Shift:
 
 ```
-   7  8  9  ~     F O U .
+   7  8  9        F O U .
    0  1  2  3     H A E I
-      4  5  6  _     K P , ✦ '
+      4  5  6  ~     K P , _ '
 ```
 
 **Symbol, left** — right gate + hold `P`. Held by the right hand, typed with the left:
@@ -254,7 +214,7 @@ glyphs and cannot also be modifiers.
 ```
    ;  &  $  #     F O U .
    [  ]  (  )     H A E I
-      :  \  %  ?     P , ✦ '
+      :  \  %  ?     P , _ '
 ```
 
 **Navigation** — right gate + hold `H`. The top row moves the caret one step, the home

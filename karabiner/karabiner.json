@@ -20,12 +20,6 @@
                                 },
                                 "to": [
                                     {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": "s"
-                                        }
-                                    },
-                                    {
                                         "key_code": "h",
                                         "modifiers": [
                                             "left_shift"
@@ -92,12 +86,6 @@
                                     }
                                 },
                                 "to": [
-                                    {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": "s"
-                                        }
-                                    },
                                     {
                                         "key_code": "h",
                                         "modifiers": [
@@ -166,12 +154,6 @@
                                 },
                                 "to": [
                                     {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": "s"
-                                        }
-                                    },
-                                    {
                                         "key_code": "h",
                                         "modifiers": [
                                             "left_shift"
@@ -238,12 +220,6 @@
                                     }
                                 },
                                 "to": [
-                                    {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": "s"
-                                        }
-                                    },
                                     {
                                         "key_code": "h",
                                         "modifiers": [
@@ -312,12 +288,6 @@
                                 },
                                 "to": [
                                     {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": "s"
-                                        }
-                                    },
-                                    {
                                         "key_code": "h",
                                         "modifiers": [
                                             "left_shift"
@@ -384,12 +354,6 @@
                                     }
                                 },
                                 "to": [
-                                    {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": "s"
-                                        }
-                                    },
                                     {
                                         "key_code": "h",
                                         "modifiers": [
@@ -458,12 +422,6 @@
                                 },
                                 "to": [
                                     {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": "s"
-                                        }
-                                    },
-                                    {
                                         "key_code": "h",
                                         "modifiers": [
                                             "left_shift"
@@ -530,12 +488,6 @@
                                     }
                                 },
                                 "to": [
-                                    {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": "s"
-                                        }
-                                    },
                                     {
                                         "key_code": "h",
                                         "modifiers": [
@@ -604,12 +556,6 @@
                                 },
                                 "to": [
                                     {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": "s"
-                                        }
-                                    },
-                                    {
                                         "key_code": "h",
                                         "modifiers": [
                                             "left_shift"
@@ -676,12 +622,6 @@
                                     }
                                 },
                                 "to": [
-                                    {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": "s"
-                                        }
-                                    },
                                     {
                                         "key_code": "h",
                                         "modifiers": [
@@ -750,12 +690,6 @@
                                 },
                                 "to": [
                                     {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": "s"
-                                        }
-                                    },
-                                    {
                                         "key_code": "h",
                                         "modifiers": [
                                             "left_shift"
@@ -822,12 +756,6 @@
                                     }
                                 },
                                 "to": [
-                                    {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": "s"
-                                        }
-                                    },
                                     {
                                         "key_code": "h",
                                         "modifiers": [
@@ -896,12 +824,6 @@
                                 },
                                 "to": [
                                     {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": "s"
-                                        }
-                                    },
-                                    {
                                         "key_code": "h",
                                         "modifiers": [
                                             "left_shift"
@@ -968,12 +890,6 @@
                                     }
                                 },
                                 "to": [
-                                    {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": "s"
-                                        }
-                                    },
                                     {
                                         "key_code": "h",
                                         "modifiers": [
@@ -1042,12 +958,6 @@
                                 },
                                 "to": [
                                     {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": "s"
-                                        }
-                                    },
-                                    {
                                         "key_code": "h",
                                         "modifiers": [
                                             "left_shift"
@@ -1114,12 +1024,6 @@
                                     }
                                 },
                                 "to": [
-                                    {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": "s"
-                                        }
-                                    },
                                     {
                                         "key_code": "h",
                                         "modifiers": [
@@ -1188,12 +1092,6 @@
                                 },
                                 "to": [
                                     {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": "s"
-                                        }
-                                    },
-                                    {
                                         "key_code": "h",
                                         "modifiers": [
                                             "left_shift"
@@ -1260,12 +1158,6 @@
                                     }
                                 },
                                 "to": [
-                                    {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": "s"
-                                        }
-                                    },
                                     {
                                         "key_code": "h",
                                         "modifiers": [
@@ -1334,12 +1226,6 @@
                                 },
                                 "to": [
                                     {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": "s"
-                                        }
-                                    },
-                                    {
                                         "key_code": "h",
                                         "modifiers": [
                                             "left_shift"
@@ -1406,12 +1292,6 @@
                                     }
                                 },
                                 "to": [
-                                    {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": "s"
-                                        }
-                                    },
                                     {
                                         "key_code": "h",
                                         "modifiers": [
@@ -1480,12 +1360,6 @@
                                 },
                                 "to": [
                                     {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": "s"
-                                        }
-                                    },
-                                    {
                                         "key_code": "h",
                                         "modifiers": [
                                             "left_shift"
@@ -1552,12 +1426,6 @@
                                     }
                                 },
                                 "to": [
-                                    {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": "s"
-                                        }
-                                    },
                                     {
                                         "key_code": "h",
                                         "modifiers": [
@@ -1626,12 +1494,6 @@
                                 },
                                 "to": [
                                     {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": "s"
-                                        }
-                                    },
-                                    {
                                         "key_code": "h",
                                         "modifiers": [
                                             "left_shift"
@@ -1698,12 +1560,6 @@
                                     }
                                 },
                                 "to": [
-                                    {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": "s"
-                                        }
-                                    },
                                     {
                                         "key_code": "h",
                                         "modifiers": [
@@ -1772,12 +1628,6 @@
                                 },
                                 "to": [
                                     {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": "s"
-                                        }
-                                    },
-                                    {
                                         "key_code": "h",
                                         "modifiers": [
                                             "left_shift"
@@ -1844,12 +1694,6 @@
                                     }
                                 },
                                 "to": [
-                                    {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": "s"
-                                        }
-                                    },
                                     {
                                         "key_code": "h",
                                         "modifiers": [
@@ -1918,12 +1762,6 @@
                                 },
                                 "to": [
                                     {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": "s"
-                                        }
-                                    },
-                                    {
                                         "key_code": "h",
                                         "modifiers": [
                                             "left_shift"
@@ -1991,12 +1829,6 @@
                                 },
                                 "to": [
                                     {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": "s"
-                                        }
-                                    },
-                                    {
                                         "key_code": "h",
                                         "modifiers": [
                                             "left_shift"
@@ -2063,12 +1895,6 @@
                                     }
                                 },
                                 "to": [
-                                    {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": "s"
-                                        }
-                                    },
                                     {
                                         "key_code": "h",
                                         "modifiers": [
@@ -2163,12 +1989,6 @@
                                 },
                                 "to": [
                                     {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": ""
-                                        }
-                                    },
-                                    {
                                         "key_code": "c",
                                         "modifiers": [
                                             "control"
@@ -2200,12 +2020,6 @@
                                 },
                                 "to": [
                                     {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": ""
-                                        }
-                                    },
-                                    {
                                         "key_code": "semicolon"
                                     }
                                 ],
@@ -2228,12 +2042,6 @@
                                     }
                                 },
                                 "to": [
-                                    {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": ""
-                                        }
-                                    },
                                     {
                                         "key_code": "7",
                                         "modifiers": [
@@ -2261,12 +2069,6 @@
                                 },
                                 "to": [
                                     {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": ""
-                                        }
-                                    },
-                                    {
                                         "key_code": "4",
                                         "modifiers": [
                                             "left_shift"
@@ -2292,12 +2094,6 @@
                                     }
                                 },
                                 "to": [
-                                    {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": ""
-                                        }
-                                    },
                                     {
                                         "key_code": "3",
                                         "modifiers": [
@@ -2325,12 +2121,6 @@
                                 },
                                 "to": [
                                     {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": ""
-                                        }
-                                    },
-                                    {
                                         "key_code": "open_bracket"
                                     }
                                 ],
@@ -2354,12 +2144,6 @@
                                 },
                                 "to": [
                                     {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": ""
-                                        }
-                                    },
-                                    {
                                         "key_code": "close_bracket"
                                     }
                                 ],
@@ -2382,12 +2166,6 @@
                                     }
                                 },
                                 "to": [
-                                    {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": ""
-                                        }
-                                    },
                                     {
                                         "key_code": "9",
                                         "modifiers": [
@@ -2415,12 +2193,6 @@
                                 },
                                 "to": [
                                     {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": ""
-                                        }
-                                    },
-                                    {
                                         "key_code": "0",
                                         "modifiers": [
                                             "left_shift"
@@ -2446,12 +2218,6 @@
                                     }
                                 },
                                 "to": [
-                                    {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": ""
-                                        }
-                                    },
                                     {
                                         "key_code": "semicolon",
                                         "modifiers": [
@@ -2479,12 +2245,6 @@
                                 },
                                 "to": [
                                     {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": ""
-                                        }
-                                    },
-                                    {
                                         "key_code": "backslash"
                                     }
                                 ],
@@ -2507,12 +2267,6 @@
                                     }
                                 },
                                 "to": [
-                                    {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": ""
-                                        }
-                                    },
                                     {
                                         "key_code": "5",
                                         "modifiers": [
@@ -2539,12 +2293,6 @@
                                     }
                                 },
                                 "to": [
-                                    {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": ""
-                                        }
-                                    },
                                     {
                                         "key_code": "slash",
                                         "modifiers": [
@@ -2595,12 +2343,6 @@
                                 ],
                                 "to_if_alone": [
                                     {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": "m"
-                                        }
-                                    },
-                                    {
                                         "key_code": "m"
                                     }
                                 ],
@@ -2637,12 +2379,6 @@
                                 },
                                 "to": [
                                     {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": ""
-                                        }
-                                    },
-                                    {
                                         "key_code": "6",
                                         "modifiers": [
                                             "left_shift"
@@ -2668,12 +2404,6 @@
                                     }
                                 },
                                 "to": [
-                                    {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": ""
-                                        }
-                                    },
                                     {
                                         "key_code": "8",
                                         "modifiers": [
@@ -2701,12 +2431,6 @@
                                 },
                                 "to": [
                                     {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": ""
-                                        }
-                                    },
-                                    {
                                         "key_code": "hyphen"
                                     }
                                 ],
@@ -2729,12 +2453,6 @@
                                     }
                                 },
                                 "to": [
-                                    {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": ""
-                                        }
-                                    },
                                     {
                                         "key_code": "backslash",
                                         "modifiers": [
@@ -2762,12 +2480,6 @@
                                 },
                                 "to": [
                                     {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": ""
-                                        }
-                                    },
-                                    {
                                         "key_code": "equal_sign",
                                         "modifiers": [
                                             "left_shift"
@@ -2793,12 +2505,6 @@
                                     }
                                 },
                                 "to": [
-                                    {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": ""
-                                        }
-                                    },
                                     {
                                         "key_code": "1",
                                         "modifiers": [
@@ -2826,12 +2532,6 @@
                                 },
                                 "to": [
                                     {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": ""
-                                        }
-                                    },
-                                    {
                                         "key_code": "slash"
                                     }
                                 ],
@@ -2854,12 +2554,6 @@
                                     }
                                 },
                                 "to": [
-                                    {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": ""
-                                        }
-                                    },
                                     {
                                         "key_code": "equal_sign"
                                     }
@@ -2884,12 +2578,6 @@
                                 },
                                 "to": [
                                     {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": ""
-                                        }
-                                    },
-                                    {
                                         "key_code": "grave_accent_and_tilde"
                                     }
                                 ],
@@ -2912,12 +2600,6 @@
                                     }
                                 },
                                 "to": [
-                                    {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": ""
-                                        }
-                                    },
                                     {
                                         "key_code": "comma",
                                         "modifiers": [
@@ -2945,12 +2627,6 @@
                                 },
                                 "to": [
                                     {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": ""
-                                        }
-                                    },
-                                    {
                                         "key_code": "period",
                                         "modifiers": [
                                             "left_shift"
@@ -2976,12 +2652,6 @@
                                     }
                                 },
                                 "to": [
-                                    {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": ""
-                                        }
-                                    },
                                     {
                                         "key_code": "2",
                                         "modifiers": [
@@ -3032,12 +2702,6 @@
                                 ],
                                 "to_if_alone": [
                                     {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": "p"
-                                        }
-                                    },
-                                    {
                                         "key_code": "p"
                                     }
                                 ],
@@ -3054,7 +2718,7 @@
                         ]
                     },
                     {
-                        "description": "Hold S => number layer: FOU=789, HAEI=0123, P,.=456, magic=~, '=_",
+                        "description": "Hold S => number layer: FOU=789, HAEI=0123, P,.=456, '=~",
                         "manipulators": [
                             {
                                 "conditions": [
@@ -3073,12 +2737,6 @@
                                     }
                                 },
                                 "to": [
-                                    {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": ""
-                                        }
-                                    },
                                     {
                                         "key_code": "7"
                                     }
@@ -3103,12 +2761,6 @@
                                 },
                                 "to": [
                                     {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": ""
-                                        }
-                                    },
-                                    {
                                         "key_code": "8"
                                     }
                                 ],
@@ -3132,45 +2784,7 @@
                                 },
                                 "to": [
                                     {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": ""
-                                        }
-                                    },
-                                    {
                                         "key_code": "9"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "number_layer",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "open_bracket",
-                                    "modifiers": {
-                                        "optional": [
-                                            "any"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": ""
-                                        }
-                                    },
-                                    {
-                                        "key_code": "grave_accent_and_tilde",
-                                        "modifiers": [
-                                            "left_shift"
-                                        ]
                                     }
                                 ],
                                 "type": "basic"
@@ -3192,12 +2806,6 @@
                                     }
                                 },
                                 "to": [
-                                    {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": ""
-                                        }
-                                    },
                                     {
                                         "key_code": "0"
                                     }
@@ -3222,12 +2830,6 @@
                                 },
                                 "to": [
                                     {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": ""
-                                        }
-                                    },
-                                    {
                                         "key_code": "1"
                                     }
                                 ],
@@ -3250,12 +2852,6 @@
                                     }
                                 },
                                 "to": [
-                                    {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": ""
-                                        }
-                                    },
                                     {
                                         "key_code": "2"
                                     }
@@ -3280,12 +2876,6 @@
                                 },
                                 "to": [
                                     {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": ""
-                                        }
-                                    },
-                                    {
                                         "key_code": "3"
                                     }
                                 ],
@@ -3308,12 +2898,6 @@
                                     }
                                 },
                                 "to": [
-                                    {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": ""
-                                        }
-                                    },
                                     {
                                         "key_code": "4"
                                     }
@@ -3338,12 +2922,6 @@
                                 },
                                 "to": [
                                     {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": ""
-                                        }
-                                    },
-                                    {
                                         "key_code": "5"
                                     }
                                 ],
@@ -3366,12 +2944,6 @@
                                     }
                                 },
                                 "to": [
-                                    {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": ""
-                                        }
-                                    },
                                     {
                                         "key_code": "6"
                                     }
@@ -3396,13 +2968,7 @@
                                 },
                                 "to": [
                                     {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": ""
-                                        }
-                                    },
-                                    {
-                                        "key_code": "hyphen",
+                                        "key_code": "grave_accent_and_tilde",
                                         "modifiers": [
                                             "left_shift"
                                         ]
@@ -3451,12 +3017,6 @@
                                 ],
                                 "to_if_alone": [
                                     {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": "s"
-                                        }
-                                    },
-                                    {
                                         "key_code": "s"
                                     }
                                 ],
@@ -3486,12 +3046,6 @@
                                 },
                                 "to": [
                                     {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": ""
-                                        }
-                                    },
-                                    {
                                         "key_code": "left_arrow"
                                     }
                                 ],
@@ -3514,12 +3068,6 @@
                                     }
                                 },
                                 "to": [
-                                    {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": ""
-                                        }
-                                    },
                                     {
                                         "key_code": "up_arrow"
                                     }
@@ -3544,12 +3092,6 @@
                                 },
                                 "to": [
                                     {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": ""
-                                        }
-                                    },
-                                    {
                                         "key_code": "down_arrow"
                                     }
                                 ],
@@ -3572,12 +3114,6 @@
                                     }
                                 },
                                 "to": [
-                                    {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": ""
-                                        }
-                                    },
                                     {
                                         "key_code": "right_arrow"
                                     }
@@ -3602,12 +3138,6 @@
                                 },
                                 "to": [
                                     {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": ""
-                                        }
-                                    },
-                                    {
                                         "key_code": "caps_lock"
                                     }
                                 ],
@@ -3630,12 +3160,6 @@
                                     }
                                 },
                                 "to": [
-                                    {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": ""
-                                        }
-                                    },
                                     {
                                         "key_code": "tab"
                                     }
@@ -3660,12 +3184,6 @@
                                 },
                                 "to": [
                                     {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": ""
-                                        }
-                                    },
-                                    {
                                         "key_code": "escape"
                                     }
                                 ],
@@ -3688,12 +3206,6 @@
                                     }
                                 },
                                 "to": [
-                                    {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": ""
-                                        }
-                                    },
                                     {
                                         "key_code": "return_or_enter"
                                     }
@@ -3724,12 +3236,6 @@
                                     }
                                 },
                                 "to": [
-                                    {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": ""
-                                        }
-                                    },
                                     {
                                         "hold_down_milliseconds": 30,
                                         "key_code": "left_arrow"
@@ -3770,12 +3276,6 @@
                                 },
                                 "to": [
                                     {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": ""
-                                        }
-                                    },
-                                    {
                                         "hold_down_milliseconds": 30,
                                         "key_code": "up_arrow"
                                     },
@@ -3815,12 +3315,6 @@
                                 },
                                 "to": [
                                     {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": ""
-                                        }
-                                    },
-                                    {
                                         "hold_down_milliseconds": 30,
                                         "key_code": "down_arrow"
                                     },
@@ -3859,12 +3353,6 @@
                                     }
                                 },
                                 "to": [
-                                    {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": ""
-                                        }
-                                    },
                                     {
                                         "hold_down_milliseconds": 30,
                                         "key_code": "right_arrow"
@@ -3927,12 +3415,6 @@
                                     }
                                 ],
                                 "to_if_alone": [
-                                    {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": "h"
-                                        }
-                                    },
                                     {
                                         "key_code": "h"
                                     }
@@ -4029,22 +3511,10 @@
                                 },
                                 "to": [
                                     {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": ""
-                                        }
-                                    },
-                                    {
                                         "key_code": "left_command"
                                     }
                                 ],
                                 "to_if_alone": [
-                                    {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": "t"
-                                        }
-                                    },
                                     {
                                         "key_code": "t"
                                     }
@@ -4069,22 +3539,10 @@
                                 },
                                 "to": [
                                     {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": ""
-                                        }
-                                    },
-                                    {
                                         "key_code": "left_command"
                                     }
                                 ],
                                 "to_if_alone": [
-                                    {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": "a"
-                                        }
-                                    },
                                     {
                                         "key_code": "a"
                                     }
@@ -4109,22 +3567,10 @@
                                 },
                                 "to": [
                                     {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": ""
-                                        }
-                                    },
-                                    {
                                         "key_code": "left_option"
                                     }
                                 ],
                                 "to_if_alone": [
-                                    {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": "r"
-                                        }
-                                    },
                                     {
                                         "key_code": "r"
                                     }
@@ -4149,22 +3595,10 @@
                                 },
                                 "to": [
                                     {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": ""
-                                        }
-                                    },
-                                    {
                                         "key_code": "left_option"
                                     }
                                 ],
                                 "to_if_alone": [
-                                    {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": "e"
-                                        }
-                                    },
                                     {
                                         "key_code": "e"
                                     }
@@ -4233,12 +3667,6 @@
                                 },
                                 "to": [
                                     {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": ""
-                                        }
-                                    },
-                                    {
                                         "key_code": "h",
                                         "modifiers": [
                                             "left_option"
@@ -4257,12 +3685,6 @@
                                     }
                                 },
                                 "to": [
-                                    {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": ""
-                                        }
-                                    },
                                     {
                                         "key_code": "a",
                                         "modifiers": [
@@ -4283,12 +3705,6 @@
                                 },
                                 "to": [
                                     {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": ""
-                                        }
-                                    },
-                                    {
                                         "key_code": "e",
                                         "modifiers": [
                                             "left_option"
@@ -4307,12 +3723,6 @@
                                     }
                                 },
                                 "to": [
-                                    {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": ""
-                                        }
-                                    },
                                     {
                                         "key_code": "i",
                                         "modifiers": [
@@ -4333,12 +3743,6 @@
                                 },
                                 "to": [
                                     {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": ""
-                                        }
-                                    },
-                                    {
                                         "key_code": "s",
                                         "modifiers": [
                                             "left_option"
@@ -4350,16 +3754,9 @@
                         ]
                     },
                     {
-                        "description": "Magic key: / => the letter that follows the last one typed (p=>y s=>c u=>e r=>l o=>a g=>s w=>s h=>y t=>m l=>m c=>s m=>c y=>p); space (physical Left Command) forgets, anything else does nothing",
+                        "description": "/ => _ (underscore); physical Left Command => space",
                         "manipulators": [
                             {
-                                "conditions": [
-                                    {
-                                        "name": "magic_prev",
-                                        "type": "variable_if",
-                                        "value": "p"
-                                    }
-                                ],
                                 "from": {
                                     "key_code": "slash",
                                     "modifiers": {
@@ -4370,380 +3767,10 @@
                                 },
                                 "to": [
                                     {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": "y"
-                                        }
-                                    },
-                                    {
-                                        "key_code": "y"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "magic_prev",
-                                        "type": "variable_if",
-                                        "value": "s"
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "slash",
-                                    "modifiers": {
-                                        "optional": [
-                                            "any"
+                                        "key_code": "hyphen",
+                                        "modifiers": [
+                                            "left_shift"
                                         ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": "c"
-                                        }
-                                    },
-                                    {
-                                        "key_code": "c"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "magic_prev",
-                                        "type": "variable_if",
-                                        "value": "u"
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "slash",
-                                    "modifiers": {
-                                        "optional": [
-                                            "any"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": "e"
-                                        }
-                                    },
-                                    {
-                                        "key_code": "e"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "magic_prev",
-                                        "type": "variable_if",
-                                        "value": "r"
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "slash",
-                                    "modifiers": {
-                                        "optional": [
-                                            "any"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": "l"
-                                        }
-                                    },
-                                    {
-                                        "key_code": "l"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "magic_prev",
-                                        "type": "variable_if",
-                                        "value": "o"
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "slash",
-                                    "modifiers": {
-                                        "optional": [
-                                            "any"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": "a"
-                                        }
-                                    },
-                                    {
-                                        "key_code": "a"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "magic_prev",
-                                        "type": "variable_if",
-                                        "value": "g"
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "slash",
-                                    "modifiers": {
-                                        "optional": [
-                                            "any"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": "s"
-                                        }
-                                    },
-                                    {
-                                        "key_code": "s"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "magic_prev",
-                                        "type": "variable_if",
-                                        "value": "w"
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "slash",
-                                    "modifiers": {
-                                        "optional": [
-                                            "any"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": "s"
-                                        }
-                                    },
-                                    {
-                                        "key_code": "s"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "magic_prev",
-                                        "type": "variable_if",
-                                        "value": "h"
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "slash",
-                                    "modifiers": {
-                                        "optional": [
-                                            "any"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": "y"
-                                        }
-                                    },
-                                    {
-                                        "key_code": "y"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "magic_prev",
-                                        "type": "variable_if",
-                                        "value": "t"
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "slash",
-                                    "modifiers": {
-                                        "optional": [
-                                            "any"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": "m"
-                                        }
-                                    },
-                                    {
-                                        "key_code": "m"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "magic_prev",
-                                        "type": "variable_if",
-                                        "value": "l"
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "slash",
-                                    "modifiers": {
-                                        "optional": [
-                                            "any"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": "m"
-                                        }
-                                    },
-                                    {
-                                        "key_code": "m"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "magic_prev",
-                                        "type": "variable_if",
-                                        "value": "c"
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "slash",
-                                    "modifiers": {
-                                        "optional": [
-                                            "any"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": "s"
-                                        }
-                                    },
-                                    {
-                                        "key_code": "s"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "magic_prev",
-                                        "type": "variable_if",
-                                        "value": "m"
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "slash",
-                                    "modifiers": {
-                                        "optional": [
-                                            "any"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": "c"
-                                        }
-                                    },
-                                    {
-                                        "key_code": "c"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "magic_prev",
-                                        "type": "variable_if",
-                                        "value": "y"
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "slash",
-                                    "modifiers": {
-                                        "optional": [
-                                            "any"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": "p"
-                                        }
-                                    },
-                                    {
-                                        "key_code": "p"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
-                                    "key_code": "slash",
-                                    "modifiers": {
-                                        "optional": [
-                                            "any"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": ""
-                                        }
                                     }
                                 ],
                                 "type": "basic"
@@ -4759,12 +3786,6 @@
                                 },
                                 "to": [
                                     {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": ""
-                                        }
-                                    },
-                                    {
                                         "key_code": "spacebar"
                                     }
                                 ],
@@ -4773,7 +3794,7 @@
                         ]
                     },
                     {
-                        "description": "Keyboard layout remap: BLDCV (J)JFOU.[] / NRTSG (Y)YHAEI / XQMWZ (Z)KP,✦ (right hand shifted right)",
+                        "description": "Keyboard layout remap: BLDCV (J)JFOU.[] / NRTSG (Y)YHAEI / XQMWZ (Z)KP,_ (right hand shifted right)",
                         "manipulators": [
                             {
                                 "from": {
@@ -4788,12 +3809,6 @@
                                     }
                                 },
                                 "to": [
-                                    {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": ""
-                                        }
-                                    },
                                     {
                                         "key_code": "escape"
                                     }
@@ -4814,12 +3829,6 @@
                                 },
                                 "to": [
                                     {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": ""
-                                        }
-                                    },
-                                    {
                                         "key_code": "c",
                                         "modifiers": [
                                             "left_option"
@@ -4839,12 +3848,6 @@
                                 },
                                 "to": [
                                     {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": "b"
-                                        }
-                                    },
-                                    {
                                         "key_code": "b"
                                     }
                                 ],
@@ -4860,12 +3863,6 @@
                                     }
                                 },
                                 "to": [
-                                    {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": "l"
-                                        }
-                                    },
                                     {
                                         "key_code": "l"
                                     }
@@ -4883,12 +3880,6 @@
                                 },
                                 "to": [
                                     {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": "d"
-                                        }
-                                    },
-                                    {
                                         "key_code": "d"
                                     }
                                 ],
@@ -4904,12 +3895,6 @@
                                     }
                                 },
                                 "to": [
-                                    {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": "c"
-                                        }
-                                    },
                                     {
                                         "key_code": "c"
                                     }
@@ -4927,12 +3912,6 @@
                                 },
                                 "to": [
                                     {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": "v"
-                                        }
-                                    },
-                                    {
                                         "key_code": "v"
                                     }
                                 ],
@@ -4948,12 +3927,6 @@
                                     }
                                 },
                                 "to": [
-                                    {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": "j"
-                                        }
-                                    },
                                     {
                                         "key_code": "j"
                                     }
@@ -4971,12 +3944,6 @@
                                 },
                                 "to": [
                                     {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": "f"
-                                        }
-                                    },
-                                    {
                                         "key_code": "f"
                                     }
                                 ],
@@ -4992,12 +3959,6 @@
                                     }
                                 },
                                 "to": [
-                                    {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": "o"
-                                        }
-                                    },
                                     {
                                         "key_code": "o"
                                     }
@@ -5015,12 +3976,6 @@
                                 },
                                 "to": [
                                     {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": "u"
-                                        }
-                                    },
-                                    {
                                         "key_code": "u"
                                     }
                                 ],
@@ -5036,12 +3991,6 @@
                                     }
                                 },
                                 "to": [
-                                    {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": "n"
-                                        }
-                                    },
                                     {
                                         "key_code": "n"
                                     }
@@ -5059,12 +4008,6 @@
                                 },
                                 "to": [
                                     {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": "r"
-                                        }
-                                    },
-                                    {
                                         "key_code": "r"
                                     }
                                 ],
@@ -5080,12 +4023,6 @@
                                     }
                                 },
                                 "to": [
-                                    {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": "t"
-                                        }
-                                    },
                                     {
                                         "key_code": "t"
                                     }
@@ -5103,35 +4040,7 @@
                                 },
                                 "to": [
                                     {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": "s"
-                                        }
-                                    },
-                                    {
                                         "key_code": "s"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
-                                    "key_code": "g",
-                                    "modifiers": {
-                                        "optional": [
-                                            "any"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": "g"
-                                        }
-                                    },
-                                    {
-                                        "key_code": "g"
                                     }
                                 ],
                                 "type": "basic"
@@ -5146,12 +4055,6 @@
                                     }
                                 },
                                 "to": [
-                                    {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": "y"
-                                        }
-                                    },
                                     {
                                         "key_code": "y"
                                     }
@@ -5169,12 +4072,6 @@
                                 },
                                 "to": [
                                     {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": "h"
-                                        }
-                                    },
-                                    {
                                         "key_code": "h"
                                     }
                                 ],
@@ -5190,12 +4087,6 @@
                                     }
                                 },
                                 "to": [
-                                    {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": "a"
-                                        }
-                                    },
                                     {
                                         "key_code": "a"
                                     }
@@ -5213,12 +4104,6 @@
                                 },
                                 "to": [
                                     {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": "e"
-                                        }
-                                    },
-                                    {
                                         "key_code": "e"
                                     }
                                 ],
@@ -5234,12 +4119,6 @@
                                     }
                                 },
                                 "to": [
-                                    {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": "x"
-                                        }
-                                    },
                                     {
                                         "key_code": "x"
                                     }
@@ -5257,12 +4136,6 @@
                                 },
                                 "to": [
                                     {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": "q"
-                                        }
-                                    },
-                                    {
                                         "key_code": "q"
                                     }
                                 ],
@@ -5278,12 +4151,6 @@
                                     }
                                 },
                                 "to": [
-                                    {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": "m"
-                                        }
-                                    },
                                     {
                                         "key_code": "m"
                                     }
@@ -5301,12 +4168,6 @@
                                 },
                                 "to": [
                                     {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": "w"
-                                        }
-                                    },
-                                    {
                                         "key_code": "w"
                                     }
                                 ],
@@ -5322,12 +4183,6 @@
                                     }
                                 },
                                 "to": [
-                                    {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": "k"
-                                        }
-                                    },
                                     {
                                         "key_code": "k"
                                     }
@@ -5345,12 +4200,6 @@
                                 },
                                 "to": [
                                     {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": "p"
-                                        }
-                                    },
-                                    {
                                         "key_code": "p"
                                     }
                                 ],
@@ -5366,12 +4215,6 @@
                                     }
                                 },
                                 "to": [
-                                    {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": ""
-                                        }
-                                    },
                                     {
                                         "key_code": "comma"
                                     }
@@ -5389,12 +4232,6 @@
                                 },
                                 "to": [
                                     {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": "i"
-                                        }
-                                    },
-                                    {
                                         "key_code": "i"
                                     }
                                 ],
@@ -5410,12 +4247,6 @@
                                     }
                                 },
                                 "to": [
-                                    {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": ""
-                                        }
-                                    },
                                     {
                                         "key_code": "period"
                                     }
@@ -5440,12 +4271,6 @@
                                     }
                                 },
                                 "to": [
-                                    {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": ""
-                                        }
-                                    },
                                     {
                                         "key_code": "tab",
                                         "modifiers": [
@@ -5486,12 +4311,6 @@
                                 },
                                 "to": [
                                     {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": ""
-                                        }
-                                    },
-                                    {
                                         "key_code": "escape"
                                     }
                                 ],
@@ -5515,12 +4334,6 @@
                                     }
                                 },
                                 "to": [
-                                    {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": ""
-                                        }
-                                    },
                                     {
                                         "key_code": "a",
                                         "modifiers": [
@@ -5552,12 +4365,6 @@
                                 },
                                 "to": [
                                     {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": ""
-                                        }
-                                    },
-                                    {
                                         "key_code": "c",
                                         "modifiers": [
                                             "option",
@@ -5588,12 +4395,6 @@
                                 },
                                 "to": [
                                     {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": ""
-                                        }
-                                    },
-                                    {
                                         "key_code": "spacebar",
                                         "modifiers": [
                                             "left_command",
@@ -5618,12 +4419,6 @@
                                     }
                                 },
                                 "to": [
-                                    {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": ""
-                                        }
-                                    },
                                     {
                                         "key_code": "4",
                                         "modifiers": [
@@ -5650,12 +4445,6 @@
                                     }
                                 },
                                 "to": [
-                                    {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": ""
-                                        }
-                                    },
                                     {
                                         "key_code": "a",
                                         "modifiers": [
@@ -5684,12 +4473,6 @@
                                 },
                                 "to": [
                                     {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": ""
-                                        }
-                                    },
-                                    {
                                         "key_code": "delete_or_backspace"
                                     }
                                 ],
@@ -5711,12 +4494,6 @@
                                 },
                                 "to": [
                                     {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": "z"
-                                        }
-                                    },
-                                    {
                                         "key_code": "z"
                                     }
                                 ],
@@ -5732,12 +4509,6 @@
                                     }
                                 },
                                 "to": [
-                                    {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": ""
-                                        }
-                                    },
                                     {
                                         "key_code": "quote"
                                     }
@@ -5759,12 +4530,6 @@
                                     }
                                 },
                                 "to": [
-                                    {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": ""
-                                        }
-                                    },
                                     {
                                         "key_code": "left_control"
                                     }

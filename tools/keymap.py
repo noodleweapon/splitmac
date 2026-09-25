@@ -75,7 +75,6 @@ ROW_WIDTH = 14.5
 # gate     Space / Right Command, which arm the hold layers
 # layer    a key that holds down into a layer
 # mod      modifier behaviour (tap/hold, remapped modifiers)
-# magic    the magic key: emits the letter that follows the last one typed
 # system   app launchers, screenshots, profile toggle
 # dead     untouched pass-through key
 
@@ -116,7 +115,7 @@ BASE = {
     "m": ("K", "", "alpha"),
     "comma": ("P", "# sym", "layer"),
     "period": (",", "⇧ ⌥C", "alpha"),
-    "slash": ("✦", "magic", "magic"),
+    "slash": ("_", "", "punct"),
 
     # gates
     "spacebar": ("hold = left gate", "arms left hand · tap: nothing", "gate"),
@@ -153,11 +152,10 @@ for _k in TRAINER_KEYS:
 
 NUM = {
     "i": ("7", "", "punct"), "o": ("8", "", "punct"), "p": ("9", "", "punct"),
-    "open_bracket": ("~", "", "punct"),
     "k": ("0", "", "punct"), "l": ("1", "", "punct"),
     "semicolon": ("2", "", "punct"), "quote": ("3", "", "punct"),
     "comma": ("4", "", "punct"), "period": ("5", "", "punct"),
-    "slash": ("6", "", "punct"), "right_shift": ("_", "", "punct"),
+    "slash": ("6", "", "punct"), "right_shift": ("~", "", "punct"),
     "f": ("hold", "S", "layer"),
 }
 
