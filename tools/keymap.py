@@ -82,7 +82,8 @@ ROW_WIDTH = 14.5
 TRAINER_KEYS = [
     "grave_accent_and_tilde", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0",
     "hyphen", "equal_sign", "delete_or_backspace", "tab", "close_bracket",
-    "backslash", "escape", "left_control", "y", "h", "b", "n",
+    "backslash", "escape", "left_control", "caps_lock", "return_or_enter",
+    "y", "h", "b", "n",
     "left_arrow", "right_arrow", "up_arrow", "down_arrow", "__updown",
 ]
 
@@ -118,8 +119,6 @@ BASE = {
     "slash": ("✦", "magic", "magic"),
 
     # gates
-    "caps_lock": ("no-op", "", "dead"),
-    "return_or_enter": ("no-op", "", "dead"),
     "spacebar": ("hold = left gate", "arms left hand · tap: nothing", "gate"),
     "right_command": ("right\ngate", "arms right", "gate"),
 

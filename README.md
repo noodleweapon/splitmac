@@ -2,7 +2,7 @@
 
 Split-keyboard ergonomics on a stock MacBook, in one Karabiner-Elements config.
 The right hand moves a column over, the home row becomes modifiers and four hold
-layers, and 26 keys you should stop reaching for are switched off.
+layers, and 29 keys you should stop reaching for are switched off.
 
 No firmware. No external keyboard. One `karabiner.json`.
 
@@ -127,7 +127,7 @@ Punctuation that is normally shifted moves down to the shift keys themselves:
 | Right Command | right gate: hold to arm the right hand's special keys, tap does nothing |
 | Right Option | `delete` |
 | Left Option | `control` |
-| Caps Lock / Return | nothing |
+| Caps Lock / Return | disabled (types `HERROPERS`) |
 | Shift + `[` | `esc` |
 | Shift + `.` | `⌥C` |
 
@@ -269,11 +269,11 @@ time (five key events at 30 ms each):
 
 ## The disabled keys
 
-Twenty-six keys are booby-trapped. They do not just do nothing — press one and
+Twenty-nine keys are booby-trapped. They do not just do nothing — press one and
 it types `HERROPERS`, loudly, in the middle of whatever you were writing:
 
 `` ` `` `1` `2` `3` `4` `5` `6` `7` `8` `9` `0` `-` `=` `delete` `tab` `]` `\`
-`esc` `control` `←` `→` `↑` `↓` and the `Y` / `H` / `B` / `N` positions.
+`esc` `control` `caps lock` `return` `←` `→` `↑` `↓` and the `Y` / `H` / `B` / `N` positions.
 
 Every one of them has a home-row replacement:
 
