@@ -72,7 +72,7 @@ ROW_WIDTH = 14.5
 # alpha    letters produced by the base layout
 # punct    punctuation / digits produced by a layer
 # trainer  bad-habit trainer: the key is deliberately booby-trapped
-# gate     Caps Lock / Return, which arm the hold layers
+# gate     Space / Right Command (and Caps Lock / Return), which arm the hold layers
 # layer    a key that holds down into a layer
 # mod      modifier behaviour (tap/hold, remapped modifiers)
 # magic    the magic key: emits the letter that follows the last one typed
@@ -96,9 +96,9 @@ BASE = {
     "t": ("V", "", "alpha"),
     "u": ("J", "", "alpha"),   "i": ("F", "", "alpha"),
     "o": ("O", "", "alpha"),   "p": ("U", "", "alpha"),
-    "open_bracket": ("✦", "magic", "magic"),
+    "open_bracket": (".", "⇧ esc", "alpha"),
 
-    "a": ("N", "", "alpha"),
+    "a": ("N", "⇧ shift", "mod"),
     "s": ("R", "⌥ opt", "mod"),
     "d": ("T", "⌘ cmd", "mod"),
     "f": ("S", "№ num", "layer"),
@@ -107,7 +107,7 @@ BASE = {
     "k": ("H", "→ nav", "layer"),
     "l": ("A", "⌘ cmd", "mod"),
     "semicolon": ("E", "⌥ opt", "mod"),
-    "quote": ("I", "", "alpha"),
+    "quote": ("I", "⇧ shift", "mod"),
 
     "z": ("X", "", "alpha"),   "x": ("Q", "", "alpha"),
     "c": ("M", "& sym", "layer"),
@@ -115,20 +115,20 @@ BASE = {
     "m": ("K", "", "alpha"),
     "comma": ("P", "# sym", "layer"),
     "period": (",", "⇧ ⌥C", "alpha"),
-    "slash": (".", "⇧ esc", "alpha"),
+    "slash": ("✦", "magic", "magic"),
 
     # gates
     "caps_lock": ("hold =\nlayers", "tap: nothing", "gate"),
     "return_or_enter": ("hold =\nlayers", "tap: nothing", "gate"),
+    "spacebar": ("hold = layers", "left gate · tap: nothing", "gate"),
+    "right_command": ("hold =\nlayers", "right gate", "gate"),
 
     # modifiers & thumbs
     "left_shift": ("Z", "", "alpha"),
     "right_shift": ("'", "", "punct"),
     "left_option": ("control", "", "mod"),
-    "left_command": ("⇧ shift", "tap: return", "mod"),
-    "right_command": ("⌫ delete", "", "mod"),
-    "right_option": ("⇧ shift", "tap: tab", "mod"),
-    "spacebar": ("space", "", "dead"),
+    "left_command": ("space", "", "mod"),
+    "right_option": ("repeat", "last letter", "magic"),
     "fn": ("fn", "", "dead"),
     "touch_id": ("⏻", "", "dead"),
 
@@ -183,14 +183,18 @@ SYM_LEFT = {
 }
 
 NAV = {
-    "a": ("←", "", "punct"), "s": ("↑", "", "punct"),
-    "d": ("↓", "", "punct"), "f": ("→", "", "punct"),
+    "q": ("←", "", "punct"), "w": ("↑", "", "punct"),
+    "e": ("↓", "", "punct"), "r": ("→", "", "punct"),
+    "a": ("tab", "", "punct"), "s": ("esc", "", "punct"),
+    "d": ("⌫", "", "punct"), "f": ("⏎", "", "punct"),
     "left_shift": ("←×5", "", "punct"), "z": ("↑×5", "", "punct"),
     "x": ("↓×5", "", "punct"), "c": ("→×5", "", "punct"),
     "k": ("hold", "H", "layer"),
 }
 
 MODS = {
+    "a": ("⇧", "left", "mod"),
+    "quote": ("⇧", "right", "mod"),
     "s": ("⌥", "left", "mod"),
     "d": ("⌘", "left", "mod"),
     "l": ("⌘", "left", "mod"),
@@ -201,6 +205,8 @@ MODS = {
     "comma": ("#", "sym L", "layer"),
     "caps_lock": ("hold", "arms all of it", "gate"),
     "return_or_enter": ("hold", "arms all of it", "gate"),
+    "spacebar": ("hold", "left gate", "gate"),
+    "right_command": ("hold", "right gate", "gate"),
 }
 
 def _with_disabled(keys):
@@ -221,35 +227,35 @@ LAYERS = [
     {
         "id": "mods",
         "name": "Hold gate + home-row mods",
-        "sub": "Hold caps or return to arm. Then hold a home-row key for its modifier or layer.",
+        "sub": "Hold space or right command (or caps / return) to arm. Then hold a home-row key for its modifier or layer.",
         "keys": _with_disabled(MODS),
         "full": False,
     },
     {
         "id": "number",
         "name": "Number layer",
-        "sub": "caps/return + hold S (physical F). Digits land on the right hand.",
+        "sub": "gate + hold S (physical F). Digits land on the right hand.",
         "keys": _with_disabled(NUM),
         "full": False,
     },
     {
         "id": "sym-left",
         "name": "Symbol layer — left",
-        "sub": "caps/return + hold P (physical comma). Math, brackets and shell glyphs.",
+        "sub": "gate + hold P (physical comma). Math, brackets and shell glyphs.",
         "keys": _with_disabled(SYM_LEFT),
         "full": False,
     },
     {
         "id": "sym-right",
         "name": "Symbol layer — right",
-        "sub": "caps/return + hold M (physical C). Pairs, punctuation and money.",
+        "sub": "gate + hold M (physical C). Pairs, punctuation and money.",
         "keys": _with_disabled(SYM_RIGHT),
         "full": False,
     },
     {
         "id": "nav",
         "name": "Navigation layer",
-        "sub": "caps/return + hold H (physical K). Bottom row jumps five at a time.",
+        "sub": "gate + hold H (physical K). Top row moves the caret, home row is tab / esc / delete / return, bottom row jumps five.",
         "keys": _with_disabled(NAV),
         "full": False,
     },

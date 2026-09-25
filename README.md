@@ -87,7 +87,7 @@ moves:
 
 1. **Everything worth reaching for moves onto the home row.** Numbers, symbols
    and arrows live on hold layers, not on the number row.
-2. **Caps Lock and Return become a gate.** Hold either one and the home row
+2. **Space and Right Command become gates.** Hold either one and the home row
    turns into modifiers and layer keys. Let go and it is plain letters again —
    so there are no accidental mod-taps while typing at speed.
 3. **The keys you should stop using are disabled.** The number row, `esc`,
@@ -107,9 +107,9 @@ sit **one column to the right** of where QWERTY puts them, which is what leaves
 `Y`, `H` and `B` with nothing to do:
 
 ```
-      B  L  D  C  V        J  F  O  U  ✦
+      B  L  D  C  V        J  F  O  U  .
       N  R  T  S  G        Y  H  A  E  I
-   Z  X  Q  M  W              K  P  ,  .
+   Z  X  Q  M  W              K  P  ,  ✦
 ```
 
 That leading `Z` is **Left Shift** — the bottom row is one key short of a home
@@ -122,21 +122,22 @@ Punctuation that is normally shifted moves down to the shift keys themselves:
 | --- | --- |
 | Left Shift | `Z` |
 | Right Shift | `'` |
-| Left Command | tap `return`, hold `shift` |
-| Right Option | tap `tab`, hold `shift` (left) |
-| Right Command | `delete` |
+| Left Command | `space` |
+| Space | left gate: hold to arm the layers, tap does nothing |
+| Right Command | right gate: hold to arm the layers, tap does nothing |
+| Right Option | repeat the last letter |
 | Left Option | `control` |
-| Caps Lock / Return | hold to arm the layers, tap does nothing |
-| Shift + `/` | `esc` |
+| Caps Lock / Return | also gates |
+| Shift + `[` | `esc` |
 | Shift + `.` | `⌥C` |
 
 ## The magic key
 
-The `[` key has no letter of its own. It is a **magic key**: it emits whatever
+The `/` key has no letter of its own. It is a **magic key**: it emits whatever
 should come after the letter you just typed. Thirteen of the layout's most
 awkward bigrams are folded into one key that is always in the same place.
 
-| You typed | `[` gives you | Bigram |
+| You typed | `/` gives you | Bigram |
 | --- | --- | --- |
 | `p` | `y` | `py` — copy, type, happy |
 | `s` | `c` | `sc` — scale, discuss |
@@ -152,29 +153,31 @@ awkward bigrams are folded into one key that is always in the same place.
 | `m` | `c` | `mc` |
 | `y` | `p` | `yp` — type, crypt |
 
-After anything else — a digit, a symbol, a space, a fresh document — `[` does
+After anything else — a digit, a symbol, a space, a fresh document — `/` does
 nothing at all. Holding shift while you press it capitalises the letter, the
 same way shift works on every other key here.
 
-Each press feeds its own output back in, so the key chains: `r` `[` `[` `[` `[`
+Each press feeds its own output back in, so the key chains: `r` `/` `/` `/` `/`
 types `rlmcs`. Two of the pairs point at each other — `p`/`y` and `s`/`c` — so
 repeated presses there simply alternate.
 
 It reads the letter that *came out*, not the key you hit: the memory lives in a
 Karabiner variable named `magic_prev`, and every manipulator in the config that
-types a letter sets it while everything else clears it. That is why the space
-bar and physical `G` — which otherwise pass straight through — now have
+types a letter sets it while everything else clears it. That is why physical
+Left Command (space) and physical `G` — which otherwise pass straight through — now have
 manipulators of their own, and why the magic key still works after a tapped
 home-row mod or layer key.
 
 The hyphen and underscore that used to sit on this key are gone with it. `-`
 moved to the left symbol layer; `_` and `~` moved to the number layer, on Right
-Shift and on the magic key itself.
+Shift and physical `[`.
 
 ## Hold gate and home-row mods
 
-Hold **Caps Lock** or **Return** to arm the gate (`hold_mods_enabled`). While it
-is held, four home-row keys become modifiers and four become layer keys:
+Hold **Space** (left gate) or **Right Command** (right gate) to arm the gate
+(`hold_mods_enabled`); Caps Lock and Return still work too. Tapping a gate does
+nothing. While it is held, physical `A` and `'` become Shift, four home-row keys
+become modifiers and four become layer keys:
 
 | Home-row key | Physical | Hold |
 | --- | --- | --- |
@@ -210,7 +213,7 @@ first wins and the second one silently does nothing. Nothing here uses a timer.
 
 One thing the gate cannot make order-free: it has to be held *first*. Conditions
 are evaluated when a key goes down, so a layer or modifier key pressed before
-Caps Lock sees `hold_mods_enabled` as 0 and just types its letter.
+the gate sees `hold_mods_enabled` as 0 and just types its letter.
 
 Each layer also borrows some home-row keys for its own glyphs, which shadows the
 modifier on those keys. One pair always survives:
@@ -229,12 +232,12 @@ glyphs and cannot also be modifiers.
 ## The layers
 
 **Number** — gate + hold `S`. Digits sit under the right hand, with `~` on the
-magic key and `_` on Right Shift:
+`.` key (physical `[`) and `_` on Right Shift:
 
 ```
-   7  8  9  ~     F O U ✦
+   7  8  9  ~     F O U .
    0  1  2  3     H A E I
-      4  5  6  _     K P , . '
+      4  5  6  _     K P , ✦ '
 ```
 
 **Symbol, left** — gate + hold `P`. Held by the right hand, typed with the left:
@@ -248,16 +251,18 @@ magic key and `_` on Right Shift:
 **Symbol, right** — gate + hold `M`. Held by the left hand, typed with the right:
 
 ```
-   ;  &  $  #     F O U ✦
+   ;  &  $  #     F O U .
    [  ]  (  )     H A E I
-      :  \  %  ?     P , . '
+      :  \  %  ?     P , ✦ '
 ```
 
-**Navigation** — gate + hold `H`. Home row moves the caret one step, the row
-below moves it five at a time (five key events at 30 ms each):
+**Navigation** — gate + hold `H`. The top row moves the caret one step, the home
+row is `tab` `esc` `delete` `return`, and the bottom row moves the caret five at a
+time (five key events at 30 ms each):
 
 ```
-   ←  ↑  ↓  →       N R T S
+   ←  ↑  ↓  →       B L D C
+  tab esc ⌫  ⏎      N R T S
 ←5 ↑5 ↓5 →5         Z X Q M
 ```
 
@@ -276,10 +281,10 @@ Every one of them has a home-row replacement:
 | Number row | gate + hold `S` |
 | `-` `=` `[` `]` `\` and friends | the two symbol layers |
 | Arrow keys | gate + hold `H` |
-| `delete` | Right Command |
-| `tab` | tap Right Option |
-| `esc` | Shift + `/` |
-| `return` | tap Left Command |
+| `delete` | gate + hold `H`, `T` |
+| `tab` | gate + hold `H`, `N` |
+| `esc` | Shift + `[`, or gate + hold `H`, `R` |
+| `return` | gate + hold `H`, `S` |
 
 It is a blunt instrument and it works. Delete the rule named
 `Bad-habit trainer` once the habit is gone — or keep it forever, nobody is

@@ -3327,18 +3327,11 @@
                         ]
                     },
                     {
-                        "description": "Hold H => arrow layer: N/R/T/S = arrows; Z/X/Q/M = 5x arrows",
+                        "description": "Hold H => arrow layer: physical Q/W/E/R = arrows; A/S/D/F = Tab/Esc/Backspace/Enter; LShift/Z/X/C = 5x arrows",
                         "manipulators": [
                             {
-                                "conditions": [
-                                    {
-                                        "name": "arrow_layer",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
                                 "from": {
-                                    "key_code": "a",
+                                    "key_code": "q",
                                     "modifiers": {
                                         "optional": [
                                             "any"
@@ -3356,18 +3349,18 @@
                                         "key_code": "left_arrow"
                                     }
                                 ],
-                                "type": "basic"
-                            },
-                            {
+                                "type": "basic",
                                 "conditions": [
                                     {
                                         "name": "arrow_layer",
                                         "type": "variable_if",
                                         "value": 1
                                     }
-                                ],
+                                ]
+                            },
+                            {
                                 "from": {
-                                    "key_code": "s",
+                                    "key_code": "w",
                                     "modifiers": {
                                         "optional": [
                                             "any"
@@ -3385,18 +3378,18 @@
                                         "key_code": "up_arrow"
                                     }
                                 ],
-                                "type": "basic"
-                            },
-                            {
+                                "type": "basic",
                                 "conditions": [
                                     {
                                         "name": "arrow_layer",
                                         "type": "variable_if",
                                         "value": 1
                                     }
-                                ],
+                                ]
+                            },
+                            {
                                 "from": {
-                                    "key_code": "d",
+                                    "key_code": "e",
                                     "modifiers": {
                                         "optional": [
                                             "any"
@@ -3414,18 +3407,18 @@
                                         "key_code": "down_arrow"
                                     }
                                 ],
-                                "type": "basic"
-                            },
-                            {
+                                "type": "basic",
                                 "conditions": [
                                     {
                                         "name": "arrow_layer",
                                         "type": "variable_if",
                                         "value": 1
                                     }
-                                ],
+                                ]
+                            },
+                            {
                                 "from": {
-                                    "key_code": "f",
+                                    "key_code": "r",
                                     "modifiers": {
                                         "optional": [
                                             "any"
@@ -3443,7 +3436,130 @@
                                         "key_code": "right_arrow"
                                     }
                                 ],
-                                "type": "basic"
+                                "type": "basic",
+                                "conditions": [
+                                    {
+                                        "name": "arrow_layer",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ]
+                            },
+                            {
+                                "from": {
+                                    "key_code": "a",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "set_variable": {
+                                            "name": "magic_prev",
+                                            "value": ""
+                                        }
+                                    },
+                                    {
+                                        "key_code": "tab"
+                                    }
+                                ],
+                                "type": "basic",
+                                "conditions": [
+                                    {
+                                        "name": "arrow_layer",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ]
+                            },
+                            {
+                                "from": {
+                                    "key_code": "s",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "set_variable": {
+                                            "name": "magic_prev",
+                                            "value": ""
+                                        }
+                                    },
+                                    {
+                                        "key_code": "escape"
+                                    }
+                                ],
+                                "type": "basic",
+                                "conditions": [
+                                    {
+                                        "name": "arrow_layer",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ]
+                            },
+                            {
+                                "from": {
+                                    "key_code": "d",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "set_variable": {
+                                            "name": "magic_prev",
+                                            "value": ""
+                                        }
+                                    },
+                                    {
+                                        "key_code": "delete_or_backspace"
+                                    }
+                                ],
+                                "type": "basic",
+                                "conditions": [
+                                    {
+                                        "name": "arrow_layer",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ]
+                            },
+                            {
+                                "from": {
+                                    "key_code": "f",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "set_variable": {
+                                            "name": "magic_prev",
+                                            "value": ""
+                                        }
+                                    },
+                                    {
+                                        "key_code": "return_or_enter"
+                                    }
+                                ],
+                                "type": "basic",
+                                "conditions": [
+                                    {
+                                        "name": "arrow_layer",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ]
                             },
                             {
                                 "conditions": [
@@ -3688,8 +3804,62 @@
                         ]
                     },
                     {
-                        "description": "Caps Lock / Enter: hold = enable RTSMHAEP hold layers (tap does nothing)",
+                        "description": "Gates (hold only, tap does nothing): Spacebar = left, Right Command = right (Caps Lock / Enter also) => enable RTSMHAEP hold layers; gate + physical A / ' = Shift",
                         "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "spacebar",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "set_variable": {
+                                            "name": "hold_mods_enabled",
+                                            "value": 1
+                                        }
+                                    }
+                                ],
+                                "to_after_key_up": [
+                                    {
+                                        "set_variable": {
+                                            "name": "hold_mods_enabled",
+                                            "value": 0
+                                        }
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "right_command",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "set_variable": {
+                                            "name": "hold_mods_enabled",
+                                            "value": 1
+                                        }
+                                    }
+                                ],
+                                "to_after_key_up": [
+                                    {
+                                        "set_variable": {
+                                            "name": "hold_mods_enabled",
+                                            "value": 0
+                                        }
+                                    }
+                                ],
+                                "type": "basic"
+                            },
                             {
                                 "from": {
                                     "key_code": "caps_lock",
@@ -3747,7 +3917,7 @@
                         ]
                     },
                     {
-                        "description": "Home-row mods: hold T/A = Left Command, hold R/E = Left Option (physical D/L, S/;)",
+                        "description": "Home-row mods: hold T/A = Left Command, hold R/E = Left Option (physical D/L, S/;); gate + physical A = Left Shift, physical ' = Right Shift",
                         "manipulators": [
                             {
                                 "conditions": [
@@ -3908,6 +4078,52 @@
                                     }
                                 ],
                                 "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hold_mods_enabled",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "a",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "left_shift"
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hold_mods_enabled",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "quote",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "right_shift"
+                                    }
+                                ],
+                                "type": "basic"
                             }
                         ]
                     },
@@ -4042,7 +4258,7 @@
                         ]
                     },
                     {
-                        "description": "Magic key: [ => the letter that follows the last one typed (p=>y s=>c u=>e r=>l o=>a g=>s w=>s h=>y t=>m l=>m c=>s m=>c y=>p); space forgets, anything else does nothing",
+                        "description": "Magic key: / => the letter that follows the last one typed (p=>y s=>c u=>e r=>l o=>a g=>s w=>s h=>y t=>m l=>m c=>s m=>c y=>p); space (physical Left Command) forgets, anything else does nothing",
                         "manipulators": [
                             {
                                 "conditions": [
@@ -4053,7 +4269,7 @@
                                     }
                                 ],
                                 "from": {
-                                    "key_code": "open_bracket",
+                                    "key_code": "slash",
                                     "modifiers": {
                                         "optional": [
                                             "any"
@@ -4082,7 +4298,7 @@
                                     }
                                 ],
                                 "from": {
-                                    "key_code": "open_bracket",
+                                    "key_code": "slash",
                                     "modifiers": {
                                         "optional": [
                                             "any"
@@ -4111,7 +4327,7 @@
                                     }
                                 ],
                                 "from": {
-                                    "key_code": "open_bracket",
+                                    "key_code": "slash",
                                     "modifiers": {
                                         "optional": [
                                             "any"
@@ -4140,7 +4356,7 @@
                                     }
                                 ],
                                 "from": {
-                                    "key_code": "open_bracket",
+                                    "key_code": "slash",
                                     "modifiers": {
                                         "optional": [
                                             "any"
@@ -4169,7 +4385,7 @@
                                     }
                                 ],
                                 "from": {
-                                    "key_code": "open_bracket",
+                                    "key_code": "slash",
                                     "modifiers": {
                                         "optional": [
                                             "any"
@@ -4198,7 +4414,7 @@
                                     }
                                 ],
                                 "from": {
-                                    "key_code": "open_bracket",
+                                    "key_code": "slash",
                                     "modifiers": {
                                         "optional": [
                                             "any"
@@ -4227,7 +4443,7 @@
                                     }
                                 ],
                                 "from": {
-                                    "key_code": "open_bracket",
+                                    "key_code": "slash",
                                     "modifiers": {
                                         "optional": [
                                             "any"
@@ -4256,7 +4472,7 @@
                                     }
                                 ],
                                 "from": {
-                                    "key_code": "open_bracket",
+                                    "key_code": "slash",
                                     "modifiers": {
                                         "optional": [
                                             "any"
@@ -4285,7 +4501,7 @@
                                     }
                                 ],
                                 "from": {
-                                    "key_code": "open_bracket",
+                                    "key_code": "slash",
                                     "modifiers": {
                                         "optional": [
                                             "any"
@@ -4314,7 +4530,7 @@
                                     }
                                 ],
                                 "from": {
-                                    "key_code": "open_bracket",
+                                    "key_code": "slash",
                                     "modifiers": {
                                         "optional": [
                                             "any"
@@ -4343,7 +4559,7 @@
                                     }
                                 ],
                                 "from": {
-                                    "key_code": "open_bracket",
+                                    "key_code": "slash",
                                     "modifiers": {
                                         "optional": [
                                             "any"
@@ -4372,7 +4588,7 @@
                                     }
                                 ],
                                 "from": {
-                                    "key_code": "open_bracket",
+                                    "key_code": "slash",
                                     "modifiers": {
                                         "optional": [
                                             "any"
@@ -4401,7 +4617,7 @@
                                     }
                                 ],
                                 "from": {
-                                    "key_code": "open_bracket",
+                                    "key_code": "slash",
                                     "modifiers": {
                                         "optional": [
                                             "any"
@@ -4423,7 +4639,7 @@
                             },
                             {
                                 "from": {
-                                    "key_code": "open_bracket",
+                                    "key_code": "slash",
                                     "modifiers": {
                                         "optional": [
                                             "any"
@@ -4442,7 +4658,7 @@
                             },
                             {
                                 "from": {
-                                    "key_code": "spacebar",
+                                    "key_code": "left_command",
                                     "modifiers": {
                                         "optional": [
                                             "any"
@@ -4465,11 +4681,11 @@
                         ]
                     },
                     {
-                        "description": "Keyboard layout remap: BLDCV (J)JFOU✦[] / NRTSG (Y)YHAEI / XQMWZ (Z)KP,. (right hand shifted right)",
+                        "description": "Keyboard layout remap: BLDCV (J)JFOU.[] / NRTSG (Y)YHAEI / XQMWZ (Z)KP,✦ (right hand shifted right)",
                         "manipulators": [
                             {
                                 "from": {
-                                    "key_code": "slash",
+                                    "key_code": "open_bracket",
                                     "modifiers": {
                                         "mandatory": [
                                             "shift"
@@ -5094,7 +5310,7 @@
                             },
                             {
                                 "from": {
-                                    "key_code": "slash",
+                                    "key_code": "open_bracket",
                                     "modifiers": {
                                         "optional": [
                                             "any"
@@ -5363,47 +5579,16 @@
                         ]
                     },
                     {
-                        "description": "Left Command: tap = Enter, hold = Shift",
+                        "description": "Right Option = repeat last letter typed (no hold)",
                         "manipulators": [
                             {
-                                "from": {
-                                    "key_code": "left_command",
-                                    "modifiers": {
-                                        "optional": [
-                                            "any"
-                                        ]
-                                    }
-                                },
-                                "to": [
+                                "conditions": [
                                     {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": ""
-                                        }
-                                    },
-                                    {
-                                        "key_code": "left_shift"
+                                        "name": "magic_prev",
+                                        "type": "variable_if",
+                                        "value": "a"
                                     }
                                 ],
-                                "to_if_alone": [
-                                    {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": ""
-                                        }
-                                    },
-                                    {
-                                        "key_code": "return_or_enter"
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "Right Option: tap = Tab, hold = Left Shift",
-                        "manipulators": [
-                            {
                                 "from": {
                                     "key_code": "right_option",
                                     "modifiers": {
@@ -5414,36 +5599,21 @@
                                 },
                                 "to": [
                                     {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": ""
-                                        }
-                                    },
-                                    {
-                                        "key_code": "left_shift"
-                                    }
-                                ],
-                                "to_if_alone": [
-                                    {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": ""
-                                        }
-                                    },
-                                    {
-                                        "key_code": "tab"
+                                        "key_code": "a"
                                     }
                                 ],
                                 "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "Map Right Command to Backspace",
-                        "manipulators": [
+                            },
                             {
+                                "conditions": [
+                                    {
+                                        "name": "magic_prev",
+                                        "type": "variable_if",
+                                        "value": "b"
+                                    }
+                                ],
                                 "from": {
-                                    "key_code": "right_command",
+                                    "key_code": "right_option",
                                     "modifiers": {
                                         "optional": [
                                             "any"
@@ -5452,15 +5622,573 @@
                                 },
                                 "to": [
                                     {
-                                        "set_variable": {
-                                            "name": "magic_prev",
-                                            "value": ""
-                                        }
-                                    },
-                                    {
-                                        "key_code": "delete_or_backspace"
+                                        "key_code": "b"
                                     }
                                 ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "magic_prev",
+                                        "type": "variable_if",
+                                        "value": "c"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "right_option",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "c"
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "magic_prev",
+                                        "type": "variable_if",
+                                        "value": "d"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "right_option",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "d"
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "magic_prev",
+                                        "type": "variable_if",
+                                        "value": "e"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "right_option",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "e"
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "magic_prev",
+                                        "type": "variable_if",
+                                        "value": "f"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "right_option",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "f"
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "magic_prev",
+                                        "type": "variable_if",
+                                        "value": "g"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "right_option",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "g"
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "magic_prev",
+                                        "type": "variable_if",
+                                        "value": "h"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "right_option",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "h"
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "magic_prev",
+                                        "type": "variable_if",
+                                        "value": "i"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "right_option",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "i"
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "magic_prev",
+                                        "type": "variable_if",
+                                        "value": "j"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "right_option",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "j"
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "magic_prev",
+                                        "type": "variable_if",
+                                        "value": "k"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "right_option",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "k"
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "magic_prev",
+                                        "type": "variable_if",
+                                        "value": "l"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "right_option",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "l"
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "magic_prev",
+                                        "type": "variable_if",
+                                        "value": "m"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "right_option",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "m"
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "magic_prev",
+                                        "type": "variable_if",
+                                        "value": "n"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "right_option",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "n"
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "magic_prev",
+                                        "type": "variable_if",
+                                        "value": "o"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "right_option",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "o"
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "magic_prev",
+                                        "type": "variable_if",
+                                        "value": "p"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "right_option",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "p"
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "magic_prev",
+                                        "type": "variable_if",
+                                        "value": "q"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "right_option",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "q"
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "magic_prev",
+                                        "type": "variable_if",
+                                        "value": "r"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "right_option",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "r"
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "magic_prev",
+                                        "type": "variable_if",
+                                        "value": "s"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "right_option",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "s"
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "magic_prev",
+                                        "type": "variable_if",
+                                        "value": "t"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "right_option",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "t"
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "magic_prev",
+                                        "type": "variable_if",
+                                        "value": "u"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "right_option",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "u"
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "magic_prev",
+                                        "type": "variable_if",
+                                        "value": "v"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "right_option",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "v"
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "magic_prev",
+                                        "type": "variable_if",
+                                        "value": "w"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "right_option",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "w"
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "magic_prev",
+                                        "type": "variable_if",
+                                        "value": "x"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "right_option",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "x"
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "magic_prev",
+                                        "type": "variable_if",
+                                        "value": "y"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "right_option",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "y"
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "magic_prev",
+                                        "type": "variable_if",
+                                        "value": "z"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "right_option",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "z"
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "right_option",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [],
                                 "type": "basic"
                             }
                         ]

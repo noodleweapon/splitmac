@@ -441,7 +441,7 @@ footer a { color: var(--fg-dim); }
 
   <div class="readout" id="readout">
     <span class="hint">Press keys on your own keyboard — the matching cap lights up.
-    Hold Caps Lock or Return, then hold S, P, M or H to preview a layer live.</span>
+    Hold Space or Right Command, then hold S, P, M or H to preview a layer live.</span>
   </div>
 
   <div class="legend-row" id="legend"></div>
@@ -452,7 +452,7 @@ footer a { color: var(--fg-dim); }
     <h3>Why a gate</h3>
     <p>Home-row mods misfire when you type fast — the roll from <code>t</code> to
     <code>h</code> becomes a stray Command press. Here they simply do not exist
-    until you hold Caps Lock or Return. Let go and the home row is eight plain
+    until you hold Space or Right Command. Let go and the home row is eight plain
     letters again.</p>
     <p>Only one layer can be live at a time: every layer key is conditioned on the
     other three being off, so a fumbled two-key hold does nothing rather than
@@ -475,14 +475,15 @@ footer a { color: var(--fg-dim); }
   <table>
     <thead><tr><th>Physical key</th><th>Does</th></tr></thead>
     <tbody>
-      <tr><td>Left Shift</td><td>types <code>'</code></td></tr>
-      <tr><td>Right Shift</td><td>types <code>;</code></td></tr>
-      <tr><td>Left Command</td><td>tap = Return, hold = Shift</td></tr>
-      <tr><td>Right Option</td><td>tap = Tab, hold = Shift</td></tr>
-      <tr><td>Right Command</td><td>Delete</td></tr>
+      <tr><td>Left Shift</td><td>types <code>z</code></td></tr>
+      <tr><td>Right Shift</td><td>types <code>'</code></td></tr>
+      <tr><td>Space / Right Command</td><td>left / right gate: hold arms the layers; tap does nothing</td></tr>
+      <tr><td>Caps Lock / Return</td><td>also gates</td></tr>
+      <tr><td>Left Command</td><td>Space</td></tr>
+      <tr><td>Right Option</td><td>repeats the last letter</td></tr>
       <tr><td>Left Option</td><td>Control</td></tr>
-      <tr><td>Caps Lock / Return</td><td>hold arms the layers; tap does nothing</td></tr>
-      <tr><td>Shift + <code>/</code></td><td>Escape</td></tr>
+      <tr><td>gate + <code>A</code> / <code>'</code></td><td>Shift</td></tr>
+      <tr><td>Shift + <code>[</code></td><td>Escape</td></tr>
       <tr><td>F6</td><td>toggles the entire keymap off and on</td></tr>
     </tbody>
   </table>
@@ -652,7 +653,7 @@ addEventListener("keydown", ev => {
   ev.preventDefault();
   held.add(id);
   cells.get(id)?.classList.add("down");
-  if (id === "caps_lock" || id === "return_or_enter") gate = true;
+  if (["caps_lock", "return_or_enter", "spacebar", "right_command"].includes(id)) gate = true;
   paint(resolve());
   report(id);
 });
@@ -662,7 +663,7 @@ addEventListener("keyup", ev => {
   if (!id) return;
   held.delete(id);
   cells.get(id)?.classList.remove("down");
-  if (id === "caps_lock" || id === "return_or_enter") gate = false;
+  if (["caps_lock", "return_or_enter", "spacebar", "right_command"].includes(id)) gate = false;
   paint(resolve());
 });
 
