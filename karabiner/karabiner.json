@@ -7,7 +7,7 @@
                 },
                 "rules": [
                     {
-                        "description": "Bad-habit trainer: numbers ` ⌫ - = ⇥ ] \\ arrows ⌃ ⎋ Y H B N caps ⏎ => type HERROPERS",
+                        "description": "Bad-habit trainer: numbers ` ⌫ - = ⇥ ] \\ arrows ⌃ ⌥ ⎋ Y H B N caps ⏎ => type HERROPERS",
                         "manipulators": [
                             {
                                 "from": {
@@ -1951,6 +1951,73 @@
                                     }
                                 ],
                                 "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "left_option",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "h",
+                                        "modifiers": [
+                                            "left_shift"
+                                        ]
+                                    },
+                                    {
+                                        "key_code": "e",
+                                        "modifiers": [
+                                            "left_shift"
+                                        ]
+                                    },
+                                    {
+                                        "key_code": "r",
+                                        "modifiers": [
+                                            "left_shift"
+                                        ]
+                                    },
+                                    {
+                                        "key_code": "r",
+                                        "modifiers": [
+                                            "left_shift"
+                                        ]
+                                    },
+                                    {
+                                        "key_code": "o",
+                                        "modifiers": [
+                                            "left_shift"
+                                        ]
+                                    },
+                                    {
+                                        "key_code": "p",
+                                        "modifiers": [
+                                            "left_shift"
+                                        ]
+                                    },
+                                    {
+                                        "key_code": "e",
+                                        "modifiers": [
+                                            "left_shift"
+                                        ]
+                                    },
+                                    {
+                                        "key_code": "r",
+                                        "modifiers": [
+                                            "left_shift"
+                                        ]
+                                    },
+                                    {
+                                        "key_code": "s",
+                                        "modifiers": [
+                                            "left_shift"
+                                        ]
+                                    }
+                                ],
+                                "type": "basic"
                             }
                         ]
                     },
@@ -3491,7 +3558,7 @@
                         ]
                     },
                     {
-                        "description": "Home-row mods: hold T/A = Left Command, hold R/E = Left Option (physical D/L, S/;); gate + physical A = Left Shift, physical ' = Right Shift",
+                        "description": "Home-row mods: hold T/A = Left Command, hold R/E = Left Option (physical D/L, S/;); gate + physical A = Left Shift, physical ' = Right Shift; gate + physical G/J = Left Control",
                         "manipulators": [
                             {
                                 "conditions": [
@@ -3647,6 +3714,62 @@
                                 "to": [
                                     {
                                         "key_code": "right_shift"
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "left_gate",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "g",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "left_control"
+                                    }
+                                ],
+                                "to_if_alone": [
+                                    {
+                                        "key_code": "g"
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "right_gate",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "j",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "left_control"
+                                    }
+                                ],
+                                "to_if_alone": [
+                                    {
+                                        "key_code": "y"
                                     }
                                 ],
                                 "type": "basic"
@@ -4511,27 +4634,6 @@
                                 "to": [
                                     {
                                         "key_code": "quote"
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "Left Option => Left Control",
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "left_option",
-                                    "modifiers": {
-                                        "optional": [
-                                            "any"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "left_control"
                                     }
                                 ],
                                 "type": "basic"

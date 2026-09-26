@@ -417,7 +417,7 @@ footer a { color: var(--fg-dim); }
   <h1>splitmac</h1>
   <p class="standfirst">Split-keyboard ergonomics on a stock MacBook: the right
   hand moves a column over, the home row becomes modifiers and four layers, and
-  twenty-nine keys you should stop reaching for are switched off.</p>
+  thirty keys you should stop reaching for are switched off.</p>
   <div class="meta">
     <span>No firmware</span>
     <span>No external board</span>
@@ -460,7 +460,7 @@ footer a { color: var(--fg-dim); }
 
   <section class="prose">
     <h3>The trainer</h3>
-    <p>The number row, <code>esc</code>, <code>tab</code>, <code>delete</code>, caps lock, return, the
+    <p>The number row, <code>esc</code>, <code>tab</code>, <code>delete</code>, caps lock, return, left option, the
     arrow cluster and the <code>Y</code>/<code>H</code>/<code>B</code> positions all
     type <code>HERROPERS</code>. It is deliberately embarrassing. Every trapped key
     has a home-row replacement, and after about a week you stop reaching.</p>
@@ -480,7 +480,8 @@ footer a { color: var(--fg-dim); }
       <tr><td>Caps Lock / Return</td><td>disabled (types HERROPERS)</td></tr>
       <tr><td>Left Command</td><td>Space</td></tr>
       <tr><td>Right Option</td><td>Delete</td></tr>
-      <tr><td>Left Option</td><td>Control</td></tr>
+      <tr><td>Left Option</td><td>disabled (types HERROPERS)</td></tr>
+      <tr><td>left gate + <code>G</code> / right gate + <code>J</code></td><td>Control</td></tr>
       <tr><td>left gate + <code>A</code> / right gate + <code>'</code></td><td>Shift</td></tr>
       <tr><td>Shift + <code>[</code></td><td>Escape</td></tr>
       <tr><td>F6</td><td>toggles the entire keymap off and on</td></tr>

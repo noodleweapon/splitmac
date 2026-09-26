@@ -2,7 +2,7 @@
 
 Split-keyboard ergonomics on a stock MacBook, in one Karabiner-Elements config.
 The right hand moves a column over, the home row becomes modifiers and four hold
-layers, and 29 keys you should stop reaching for are switched off.
+layers, and 30 keys you should stop reaching for are switched off.
 
 No firmware. No external keyboard. One `karabiner.json`.
 
@@ -31,43 +31,43 @@ it. The big legend is what the key actually does.
 ### Base
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="img/base-dark.svg?v=3">
-  <img alt="Base layer" src="img/base-light.svg?v=3">
+  <source media="(prefers-color-scheme: dark)" srcset="img/base-dark.svg?v=4">
+  <img alt="Base layer" src="img/base-light.svg?v=4">
 </picture>
 
 ### Hold gate and home-row mods
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="img/mods-dark.svg?v=3">
-  <img alt="Hold gate and home-row mods" src="img/mods-light.svg?v=3">
+  <source media="(prefers-color-scheme: dark)" srcset="img/mods-dark.svg?v=4">
+  <img alt="Hold gate and home-row mods" src="img/mods-light.svg?v=4">
 </picture>
 
 ### Number layer
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="img/number-dark.svg?v=3">
-  <img alt="Number layer" src="img/number-light.svg?v=3">
+  <source media="(prefers-color-scheme: dark)" srcset="img/number-dark.svg?v=4">
+  <img alt="Number layer" src="img/number-light.svg?v=4">
 </picture>
 
 ### Symbol layer — left
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="img/sym-left-dark.svg?v=3">
-  <img alt="Left symbol layer" src="img/sym-left-light.svg?v=3">
+  <source media="(prefers-color-scheme: dark)" srcset="img/sym-left-dark.svg?v=4">
+  <img alt="Left symbol layer" src="img/sym-left-light.svg?v=4">
 </picture>
 
 ### Symbol layer — right
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="img/sym-right-dark.svg?v=3">
-  <img alt="Right symbol layer" src="img/sym-right-light.svg?v=3">
+  <source media="(prefers-color-scheme: dark)" srcset="img/sym-right-dark.svg?v=4">
+  <img alt="Right symbol layer" src="img/sym-right-light.svg?v=4">
 </picture>
 
 ### Navigation layer
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="img/nav-dark.svg?v=3">
-  <img alt="Navigation layer" src="img/nav-light.svg?v=3">
+  <source media="(prefers-color-scheme: dark)" srcset="img/nav-dark.svg?v=4">
+  <img alt="Navigation layer" src="img/nav-light.svg?v=4">
 </picture>
 
 There is also an [interactive version](keymap.html) — open it and press keys on
@@ -127,8 +127,7 @@ Punctuation that is normally shifted moves down to the shift keys themselves:
 | Space | left gate: hold to arm the left hand's special keys, tap does nothing |
 | Right Command | right gate: hold to arm the right hand's special keys, tap does nothing |
 | Right Option | `delete` |
-| Left Option | `control` |
-| Caps Lock / Return | disabled (types `HERROPERS`) |
+| Caps Lock / Return / Left Option | disabled (types `HERROPERS`) |
 | Shift + `[` | `esc` |
 | Shift + `.` | `⌥C` |
 
@@ -151,6 +150,8 @@ Tapping a gate does nothing.
 | `A` | `L` | right | Left Command |
 | `E` | `;` | right | Left Option |
 | `I` | `'` | right | Right Shift |
+| `G` | `G` | left | Left Control |
+| `Y` | `J` | right | Left Control |
 | `P` | `,` | right | Symbol layer, left |
 
 Command and Option are always the **left-hand** modifier, whichever side of the
@@ -160,8 +161,8 @@ The gate is the whole trick. Home-row mods normally misfire during fast typing;
 here they simply do not exist until you ask for them, and only one layer can be
 active at a time — each layer key is conditioned on the other three being off.
 
-**Every hold latches on key-down, so order never matters.** All eight of them —
-four layers, two Commands, two Options — are written the same way: `to` sets the
+**Every hold latches on key-down, so order never matters.** All ten of them —
+four layers, two Commands, two Options, two Controls — are written the same way: `to` sets the
 modifier or the layer variable the instant the key goes down, `to_if_alone`
 emits the letter if you tap it and press nothing else, `to_after_key_up` clears
 it on release. Hold the layer first or the modifier first; the result is
@@ -229,11 +230,11 @@ time (five key events at 30 ms each):
 
 ## The disabled keys
 
-Twenty-nine keys are booby-trapped. They do not just do nothing — press one and
+Thirty keys are booby-trapped. They do not just do nothing — press one and
 it types `HERROPERS`, loudly, in the middle of whatever you were writing:
 
 `` ` `` `1` `2` `3` `4` `5` `6` `7` `8` `9` `0` `-` `=` `delete` `tab` `]` `\`
-`esc` `control` `caps lock` `return` `←` `→` `↑` `↓` and the `Y` / `H` / `B` / `N` positions.
+`esc` `control` `option` `caps lock` `return` `←` `→` `↑` `↓` and the `Y` / `H` / `B` / `N` positions.
 
 Every one of them has a home-row replacement:
 
@@ -246,6 +247,7 @@ Every one of them has a home-row replacement:
 | `tab` | right gate + hold `H`, `R` |
 | `esc` | Shift + `[`, or right gate + hold `H`, `T` |
 | `return` | right gate + hold `H`, `S` |
+| `control` / `option` | left gate + hold `G` or right gate + hold `J` for control; home-row `S` / `;` for option |
 
 It is a blunt instrument and it works. Delete the rule named
 `Bad-habit trainer` once the habit is gone — or keep it forever, nobody is
@@ -299,8 +301,7 @@ you do not want it.
 
 Rule order in `karabiner.json` matters. Karabiner chains manipulators, so each
 rule sees the output of the ones above it — the disabled-key rule runs first so
-it wins on `Y`/`H`/`B`/`N`, and `Left Option => Left Control` runs last so the
-`⌥`+letter shortcuts above it still match.
+it wins on `Y`/`H`/`B`/`N`.
 
 ## Regenerating the diagrams
 

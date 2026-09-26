@@ -81,7 +81,7 @@ ROW_WIDTH = 14.5
 TRAINER_KEYS = [
     "grave_accent_and_tilde", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0",
     "hyphen", "equal_sign", "delete_or_backspace", "tab", "close_bracket",
-    "backslash", "escape", "left_control", "caps_lock", "return_or_enter",
+    "backslash", "escape", "left_control", "left_option", "caps_lock", "return_or_enter",
     "y", "h", "b", "n",
     "left_arrow", "right_arrow", "up_arrow", "down_arrow", "__updown",
 ]
@@ -102,8 +102,8 @@ BASE = {
     "s": ("R", "⌥ opt", "mod"),
     "d": ("T", "⌘ cmd", "mod"),
     "f": ("S", "№ num", "layer"),
-    "g": ("G", "", "alpha"),
-    "j": ("Y", "", "alpha"),
+    "g": ("G", "⌃ ctrl", "mod"),
+    "j": ("Y", "⌃ ctrl", "mod"),
     "k": ("H", "→ nav", "layer"),
     "l": ("A", "⌘ cmd", "mod"),
     "semicolon": ("E", "⌥ opt", "mod"),
@@ -124,7 +124,6 @@ BASE = {
     # modifiers & thumbs
     "left_shift": ("Z", "", "alpha"),
     "right_shift": ("'", "", "punct"),
-    "left_option": ("control", "", "mod"),
     "left_command": ("space", "", "mod"),
     "right_option": ("⌫ delete", "", "mod"),
     "fn": ("fn", "", "dead"),
@@ -196,6 +195,8 @@ MODS = {
     "d": ("⌘", "left", "mod"),
     "l": ("⌘", "left", "mod"),
     "semicolon": ("⌥", "left", "mod"),
+    "g": ("⌃", "left", "mod"),
+    "j": ("⌃", "left", "mod"),
     "f": ("№", "numbers", "layer"),
     "k": ("→", "nav", "layer"),
     "c": ("&", "sym R", "layer"),
