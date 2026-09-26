@@ -1,0 +1,52 @@
+img/nav-light.svg
+  s_7bc9ef8d325e79::t_bc72a08bbcc660 184,186
+img/nav-dark.svg
+  s_7bc9ef8d325e79::t_bc72a08bbcc660 184,186
+img/sym-left-light.svg
+  s_7bc9ef8d325e79::t_bc72a08bbcc660 184,186
+img/base-dark.svg
+  s_7bc9ef8d325e79::t_bc72a08bbcc660 156,158-159,163,165-166,231,233
+img/mods-dark.svg
+  s_7bc9ef8d325e79::t_bc72a08bbcc660 129,131-132,136,138-139,194,196
+keymap.html
+  s_7bc9ef8d325e79::t_bc72a08bbcc660 367,410,430-431,449
+README.md
+  s_7bc9ef8d325e79::t_bc72a08bbcc660 34-35,41-42,48-49,55-56,62-63,69-70,250,304
+  s_7bc9ef8d325e79::t_a154437023808d 5,130,153-154,164-165,233,237
+tools/build_html.py
+  s_7bc9ef8d325e79::t_a154437023808d 420,463,483-484
+img/number-light.svg
+  s_7bc9ef8d325e79::t_bc72a08bbcc660 183,185
+img/mods-light.svg
+  s_7bc9ef8d325e79::t_bc72a08bbcc660 129,131-132,136,138-139,194,196
+img/sym-right-light.svg
+  s_7bc9ef8d325e79::t_bc72a08bbcc660 184,186
+tools/keymap.py
+  s_7bc9ef8d325e79::t_cac63bcd9961df 84,105-106,198-199
+img/number-dark.svg
+  s_7bc9ef8d325e79::t_bc72a08bbcc660 183,185
+img/base-light.svg
+  s_7bc9ef8d325e79::t_bc72a08bbcc660 156,158-159,163,165-166,231,233
+karabiner/karabiner.json
+  s_7bc9ef8d325e79::t_c78e99e52b101e 10,1954-2020,3561,3720-3775
+img/sym-left-dark.svg
+  s_7bc9ef8d325e79::t_bc72a08bbcc660 184,186
+img/sym-right-dark.svg
+  s_7bc9ef8d325e79::t_bc72a08bbcc660 184,186
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "9dd7e2e37d0e37cc493c4935a4f4f1487c6b1e49",
+  "prompts": {},
+  "sessions": {
+    "s_7bc9ef8d325e79": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "6d7ce5f9-a045-4423-adb2-82517202e7f7",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Jason Yeon <seojoony9000@gmail.com>"
+    }
+  }
+}
