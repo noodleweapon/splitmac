@@ -4,7 +4,14 @@ Split-keyboard ergonomics on a stock MacBook, in one Karabiner-Elements config.
 The right hand moves a column over, the home row becomes modifiers and four hold
 layers, and 30 keys you should stop reaching for are switched off.
 
-No firmware. No external keyboard. One `karabiner.json`.
+The same keymap ships in two forms, and they are kept identical:
+
+| | Where it runs | What it is |
+| --- | --- | --- |
+| [`karabiner/`](karabiner) | the MacBook's built-in keyboard | one `karabiner.json`, no firmware |
+| [`qmk/`](qmk) | a [ZSA Voyager](https://www.zsa.io/voyager) | QMK firmware, so the layout travels with the board |
+
+Learn it once on the laptop, plug in the split, same fingers do the same things.
 
 <table>
   <tr>
@@ -66,13 +73,16 @@ it. The big legend is what the key actually does.
 ### Navigation layer
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="img/nav-dark.svg?v=4">
-  <img alt="Navigation layer" src="img/nav-light.svg?v=4">
+  <source media="(prefers-color-scheme: dark)" srcset="img/nav-dark.svg?v=5">
+  <img alt="Navigation layer" src="img/nav-light.svg?v=5">
 </picture>
 
 There is also an [interactive version](keymap.html) — open it and press keys on
 your own keyboard to light up the matching cap, or hold Space and a layer
 key to preview a layer live.
+
+The Voyager diagrams are further down, under [The Voyager
+version](#the-voyager-version).
 
 Inspired by [@getreuer's QMK keymap](https://github.com/getreuer/qmk-keymap),
 which is the reference for what a well-documented personal keymap looks like.
@@ -219,14 +229,17 @@ Shift:
 ```
 
 **Navigation** — right gate + hold `H`. The top row moves the caret one step, the home
-row is `caps lock` `tab` `esc` `return`, and the bottom row moves the caret five at a
+row is `left click` `tab` `esc` `return`, and the bottom row moves the caret five at a
 time (five key events at 30 ms each):
 
 ```
-   ←  ↑  ↓  →       B L D C
-  caps tab esc ⏎    N R T S
-←5 ↑5 ↓5 →5         Z X Q M
+   ←  ↑  ↓  →        B L D C
+ click tab esc ⏎     N R T S
+←5 ↑5 ↓5 →5          Z X Q M
 ```
+
+The click is a real mouse button, so pointing with the trackpad and clicking
+from the home row works.
 
 ## The disabled keys
 
@@ -268,12 +281,104 @@ judging.
 | `⌥` + `F` | AeroSpace shrink window (`⌥` + `s` — `resize smart -50`) |
 | `⌘⌃⌥⇧` + `D` | Mouseless free-click (`⌘⌃⌥⇧` + `tab`) |
 
+The `⌥` rows and the `⌘⌃⌥⇧` + `D` row are in the config but sit below the
+alpha-remap rule, which already claims those keys with any modifier held, so in
+practice they do not fire. Move them above the remap rule (and point them at the
+physical keys) if you want them.
+
 `F6` runs [`toggle_profile.sh`](karabiner/toggle_profile.sh), which flips
 Karabiner between the `Default profile` and a `Disabled` profile that contains
 nothing but the toggle itself. Handy when someone else needs to use your laptop,
 or when you need to type a password into a field that fights you.
 
+## The Voyager version
+
+The ZSA Voyager has the thumb cluster and the column stagger the laptop was
+pretending to have, so the firmware is the same keymap with the pretending
+removed:
+
+* **The two offsets go away.** On the laptop the right hand sits one column
+  right of QWERTY home and the left bottom row one column left of it. On the
+  Voyager every hand sits in its own columns; the small grey legend on each cap
+  shows which laptop key it stands for.
+* **The thumbs are what the laptop's thumb keys did.** Left thumb: outer is
+  `space` (physical Left Command), inner is the **left gate** (physical Space).
+  Right thumb: inner is the **right gate** (physical Right Command), outer is
+  `delete` (physical Right Option).
+* **Everything else is the same.** Same alphas, same gated home-row mods, same
+  four layers, same disabled keys (the number row and the outer columns type
+  `HERROPERS`), same Shift + `.` → `esc` and Shift + `,` → `⌥C`.
+* **F6 becomes a chord.** Press both top-corner keys together to toggle a plain
+  QWERTY layer; the board lights dim white while it is on. F3 and F4 stay on the
+  laptop's function row.
+
+How the Karabiner rules were translated — gates, `to_if_alone` timing, rule
+precedence, and which rules were left out — is written up in
+[`qmk/keyboards/zsa/voyager/keymaps/splitmac/README.md`](qmk/keyboards/zsa/voyager/keymaps/splitmac/README.md).
+
+### Base
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="img/voyager-base-dark.svg?v=1">
+  <img alt="Voyager base layer" src="img/voyager-base-light.svg?v=1">
+</picture>
+
+### Hold gate and home-row mods
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="img/voyager-mods-dark.svg?v=1">
+  <img alt="Voyager hold gate and home-row mods" src="img/voyager-mods-light.svg?v=1">
+</picture>
+
+### Number layer
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="img/voyager-number-dark.svg?v=1">
+  <img alt="Voyager number layer" src="img/voyager-number-light.svg?v=1">
+</picture>
+
+### Symbol layer — left
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="img/voyager-sym-left-dark.svg?v=1">
+  <img alt="Voyager left symbol layer" src="img/voyager-sym-left-light.svg?v=1">
+</picture>
+
+### Symbol layer — right
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="img/voyager-sym-right-dark.svg?v=1">
+  <img alt="Voyager right symbol layer" src="img/voyager-sym-right-light.svg?v=1">
+</picture>
+
+### Navigation layer
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="img/voyager-nav-dark.svg?v=1">
+  <img alt="Voyager navigation layer" src="img/voyager-nav-light.svg?v=1">
+</picture>
+
+### Plain QWERTY
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="img/voyager-plain-dark.svg?v=1">
+  <img alt="Voyager plain QWERTY layer" src="img/voyager-plain-light.svg?v=1">
+</picture>
+
+## Repository layout
+
+```
+karabiner/   karabiner.json and the F6 profile-toggle script  (laptop version)
+qmk/         QMK external userspace with keyboards/zsa/voyager/keymaps/splitmac  (Voyager version)
+tools/       keymap.py + voyager.py hold the layout data; the render_*.py and
+             build_html.py scripts generate everything in img/ and keymap.html
+img/         generated layer diagrams, light and dark
+keymap.html  generated interactive page for the laptop version
+```
+
 ## Install
+
+### Laptop (Karabiner)
 
 Requires [Karabiner-Elements](https://karabiner-elements.pqrs.org/).
 
@@ -299,19 +404,43 @@ you do not want it.
 > means you cannot touch-type on the machine until you learn it. Keep the backup
 > and remember that `F6` turns everything off.
 
-Rule order in `karabiner.json` matters. Karabiner chains manipulators, so each
-rule sees the output of the ones above it — the disabled-key rule runs first so
-it wins on `Y`/`H`/`B`/`N`.
+Rule order in `karabiner.json` matters. Karabiner applies the first manipulator
+that matches a key and stops there, so the disabled-key rule sits at the top and
+wins on `Y`/`H`/`B`/`N`, and the alpha remap sits above the `⌥`-shortcut rules.
+
+The shipped config also lists the ZSA Voyager under `devices` with
+`"ignore": true`, so plugging in the split does not get it remapped twice.
+
+### Voyager (QMK)
+
+Requires a [QMK setup](https://docs.qmk.fm/newbs) with the `zsa/voyager`
+keyboard (upstream QMK ≥ 0.30) and `dfu-util` for flashing.
+
+```sh
+qmk config user.overlay_dir="$(realpath qmk)"   # once, from the repo root
+cd qmk
+qmk compile -kb zsa/voyager -km splitmac         # writes zsa_voyager_splitmac.bin
+qmk flash   -kb zsa/voyager -km splitmac         # press the Voyager's reset button when asked
+```
+
+The `.bin` can also be flashed from ZSA's Keymapp. If you run Karabiner with a
+config other than the one in this repo, untick "Modify events" for the Voyager
+in Karabiner-Elements → Devices first.
 
 ## Regenerating the diagrams
 
-The layout data lives in [`tools/keymap.py`](tools/keymap.py) and everything
-else is generated from it:
+The layout data lives in [`tools/keymap.py`](tools/keymap.py) (laptop) and
+[`tools/voyager.py`](tools/voyager.py) (Voyager) and everything else is
+generated from it:
 
 ```sh
-python3 tools/render_svg.py     # writes img/*.svg
-python3 tools/build_html.py     # writes keymap.html
+python3 tools/render_svg.py       # writes img/*.svg          (laptop layers)
+python3 tools/render_voyager.py   # writes img/voyager-*.svg  (Voyager layers)
+python3 tools/build_html.py       # writes keymap.html
 ```
+
+The firmware in `qmk/` is hand-written C, so a layout change is made twice:
+once in `keymap.c`, once in `voyager.py` for the diagram.
 
 No dependencies beyond the standard library.
 
@@ -345,8 +474,10 @@ If you use them, say hello from `splitmac`.
 
 - [PCBWay](https://www.pcbway.com/) for sponsoring the project
 - [Karabiner-Elements](https://karabiner-elements.pqrs.org/) by Takayama Fumihiko
+- [QMK](https://qmk.fm/) and [ZSA](https://www.zsa.io/) for the firmware and
+  the Voyager
 - [@getreuer's QMK keymap](https://github.com/getreuer/qmk-keymap) for the
-  documentation format
+  documentation format and the split-layout macro idea
 - [Gallium](https://github.com/GalileoBlues/Gallium) by GalileoBlues — the
   alpha layout. This config uses v2, the row-staggered version
 

@@ -181,7 +181,7 @@ SYM_LEFT = {
 NAV = {
     "q": ("←", "", "punct"), "w": ("↑", "", "punct"),
     "e": ("↓", "", "punct"), "r": ("→", "", "punct"),
-    "a": ("caps", "", "punct"), "s": ("tab", "", "punct"),
+    "a": ("click", "", "punct"), "s": ("tab", "", "punct"),
     "d": ("esc", "", "punct"), "f": ("⏎", "", "punct"),
     "left_shift": ("←×5", "", "punct"), "z": ("↑×5", "", "punct"),
     "x": ("↓×5", "", "punct"), "c": ("→×5", "", "punct"),
@@ -251,7 +251,7 @@ LAYERS = [
     {
         "id": "nav",
         "name": "Navigation layer",
-        "sub": "right cmd + hold H (physical K). Top row moves the caret, home row is caps / tab / esc / return, bottom row jumps five.",
+        "sub": "right cmd + hold H (physical K). Top row moves the caret, home row is click / tab / esc / return, bottom row jumps five.",
         "keys": _with_disabled(NAV),
         "full": False,
     },

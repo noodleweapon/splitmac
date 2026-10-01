@@ -2400,6 +2400,14 @@
                                         ]
                                     }
                                 },
+                                "to": [
+                                    {
+                                        "set_variable": {
+                                            "name": "right_symbol_layer",
+                                            "value": 1
+                                        }
+                                    }
+                                ],
                                 "to_after_key_up": [
                                     {
                                         "set_variable": {
@@ -2413,15 +2421,7 @@
                                         "key_code": "m"
                                     }
                                 ],
-                                "type": "basic",
-                                "to": [
-                                    {
-                                        "set_variable": {
-                                            "name": "right_symbol_layer",
-                                            "value": 1
-                                        }
-                                    }
-                                ]
+                                "type": "basic"
                             }
                         ]
                     },
@@ -2759,6 +2759,14 @@
                                         ]
                                     }
                                 },
+                                "to": [
+                                    {
+                                        "set_variable": {
+                                            "name": "left_symbol_layer",
+                                            "value": 1
+                                        }
+                                    }
+                                ],
                                 "to_after_key_up": [
                                     {
                                         "set_variable": {
@@ -2772,15 +2780,7 @@
                                         "key_code": "p"
                                     }
                                 ],
-                                "type": "basic",
-                                "to": [
-                                    {
-                                        "set_variable": {
-                                            "name": "left_symbol_layer",
-                                            "value": 1
-                                        }
-                                    }
-                                ]
+                                "type": "basic"
                             }
                         ]
                     },
@@ -3074,6 +3074,14 @@
                                         ]
                                     }
                                 },
+                                "to": [
+                                    {
+                                        "set_variable": {
+                                            "name": "number_layer",
+                                            "value": 1
+                                        }
+                                    }
+                                ],
                                 "to_after_key_up": [
                                     {
                                         "set_variable": {
@@ -3087,22 +3095,21 @@
                                         "key_code": "s"
                                     }
                                 ],
-                                "type": "basic",
-                                "to": [
-                                    {
-                                        "set_variable": {
-                                            "name": "number_layer",
-                                            "value": 1
-                                        }
-                                    }
-                                ]
+                                "type": "basic"
                             }
                         ]
                     },
                     {
-                        "description": "Hold H => arrow layer: physical Q/W/E/R = arrows; A/S/D/F = Caps Lock/Tab/Esc/Enter; LShift/Z/X/C = 5x arrows",
+                        "description": "Hold H => arrow layer: physical Q/W/E/R = arrows; A/S/D/F = Click/Tab/Esc/Enter; LShift/Z/X/C = 5x arrows",
                         "manipulators": [
                             {
+                                "conditions": [
+                                    {
+                                        "name": "arrow_layer",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
                                 "from": {
                                     "key_code": "q",
                                     "modifiers": {
@@ -3116,16 +3123,16 @@
                                         "key_code": "left_arrow"
                                     }
                                 ],
-                                "type": "basic",
+                                "type": "basic"
+                            },
+                            {
                                 "conditions": [
                                     {
                                         "name": "arrow_layer",
                                         "type": "variable_if",
                                         "value": 1
                                     }
-                                ]
-                            },
-                            {
+                                ],
                                 "from": {
                                     "key_code": "w",
                                     "modifiers": {
@@ -3139,16 +3146,16 @@
                                         "key_code": "up_arrow"
                                     }
                                 ],
-                                "type": "basic",
+                                "type": "basic"
+                            },
+                            {
                                 "conditions": [
                                     {
                                         "name": "arrow_layer",
                                         "type": "variable_if",
                                         "value": 1
                                     }
-                                ]
-                            },
-                            {
+                                ],
                                 "from": {
                                     "key_code": "e",
                                     "modifiers": {
@@ -3162,16 +3169,16 @@
                                         "key_code": "down_arrow"
                                     }
                                 ],
-                                "type": "basic",
+                                "type": "basic"
+                            },
+                            {
                                 "conditions": [
                                     {
                                         "name": "arrow_layer",
                                         "type": "variable_if",
                                         "value": 1
                                     }
-                                ]
-                            },
-                            {
+                                ],
                                 "from": {
                                     "key_code": "r",
                                     "modifiers": {
@@ -3185,16 +3192,16 @@
                                         "key_code": "right_arrow"
                                     }
                                 ],
-                                "type": "basic",
+                                "type": "basic"
+                            },
+                            {
                                 "conditions": [
                                     {
                                         "name": "arrow_layer",
                                         "type": "variable_if",
                                         "value": 1
                                     }
-                                ]
-                            },
-                            {
+                                ],
                                 "from": {
                                     "key_code": "a",
                                     "modifiers": {
@@ -3205,19 +3212,19 @@
                                 },
                                 "to": [
                                     {
-                                        "key_code": "caps_lock"
+                                        "pointing_button": "button1"
                                     }
                                 ],
-                                "type": "basic",
+                                "type": "basic"
+                            },
+                            {
                                 "conditions": [
                                     {
                                         "name": "arrow_layer",
                                         "type": "variable_if",
                                         "value": 1
                                     }
-                                ]
-                            },
-                            {
+                                ],
                                 "from": {
                                     "key_code": "s",
                                     "modifiers": {
@@ -3231,16 +3238,16 @@
                                         "key_code": "tab"
                                     }
                                 ],
-                                "type": "basic",
+                                "type": "basic"
+                            },
+                            {
                                 "conditions": [
                                     {
                                         "name": "arrow_layer",
                                         "type": "variable_if",
                                         "value": 1
                                     }
-                                ]
-                            },
-                            {
+                                ],
                                 "from": {
                                     "key_code": "d",
                                     "modifiers": {
@@ -3254,16 +3261,16 @@
                                         "key_code": "escape"
                                     }
                                 ],
-                                "type": "basic",
+                                "type": "basic"
+                            },
+                            {
                                 "conditions": [
                                     {
                                         "name": "arrow_layer",
                                         "type": "variable_if",
                                         "value": 1
                                     }
-                                ]
-                            },
-                            {
+                                ],
                                 "from": {
                                     "key_code": "f",
                                     "modifiers": {
@@ -3277,14 +3284,7 @@
                                         "key_code": "return_or_enter"
                                     }
                                 ],
-                                "type": "basic",
-                                "conditions": [
-                                    {
-                                        "name": "arrow_layer",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ]
+                                "type": "basic"
                             },
                             {
                                 "conditions": [
@@ -3473,6 +3473,14 @@
                                         ]
                                     }
                                 },
+                                "to": [
+                                    {
+                                        "set_variable": {
+                                            "name": "arrow_layer",
+                                            "value": 1
+                                        }
+                                    }
+                                ],
                                 "to_after_key_up": [
                                     {
                                         "set_variable": {
@@ -3486,15 +3494,7 @@
                                         "key_code": "h"
                                     }
                                 ],
-                                "type": "basic",
-                                "to": [
-                                    {
-                                        "set_variable": {
-                                            "name": "arrow_layer",
-                                            "value": 1
-                                        }
-                                    }
-                                ]
+                                "type": "basic"
                             }
                         ]
                     },
@@ -3777,11 +3777,11 @@
                         ]
                     },
                     {
-                        "description": "AeroSpace: alt+J/K/L/; -> alt+h/a/e/i (focus), alt+F -> alt+s (resize -50)",
+                        "description": "AeroSpace: alt+K/L/;/' -> alt+h/a/e/i (focus), alt+F -> alt+s (resize -50)",
                         "manipulators": [
                             {
                                 "from": {
-                                    "key_code": "j",
+                                    "key_code": "k",
                                     "modifiers": {
                                         "mandatory": [
                                             "left_option"
@@ -3800,7 +3800,7 @@
                             },
                             {
                                 "from": {
-                                    "key_code": "k",
+                                    "key_code": "l",
                                     "modifiers": {
                                         "mandatory": [
                                             "left_option"
@@ -3819,7 +3819,7 @@
                             },
                             {
                                 "from": {
-                                    "key_code": "l",
+                                    "key_code": "semicolon",
                                     "modifiers": {
                                         "mandatory": [
                                             "left_option"
@@ -3838,7 +3838,7 @@
                             },
                             {
                                 "from": {
-                                    "key_code": "semicolon",
+                                    "key_code": "quote",
                                     "modifiers": {
                                         "mandatory": [
                                             "left_option"
@@ -4679,7 +4679,25 @@
             "selected": true,
             "virtual_hid_keyboard": {
                 "keyboard_type_v2": "ansi"
-            }
+            },
+            "devices": [
+                {
+                    "identifiers": {
+                        "is_keyboard": true,
+                        "product_id": 6519,
+                        "vendor_id": 12951
+                    },
+                    "ignore": true
+                },
+                {
+                    "identifiers": {
+                        "is_pointing_device": true,
+                        "product_id": 6519,
+                        "vendor_id": 12951
+                    },
+                    "ignore": true
+                }
+            ]
         },
         {
             "complex_modifications": {
@@ -4722,7 +4740,25 @@
             "name": "Disabled",
             "virtual_hid_keyboard": {
                 "keyboard_type_v2": "ansi"
-            }
+            },
+            "devices": [
+                {
+                    "identifiers": {
+                        "is_keyboard": true,
+                        "product_id": 6519,
+                        "vendor_id": 12951
+                    },
+                    "ignore": true
+                },
+                {
+                    "identifiers": {
+                        "is_pointing_device": true,
+                        "product_id": 6519,
+                        "vendor_id": 12951
+                    },
+                    "ignore": true
+                }
+            ]
         }
     ]
 }
