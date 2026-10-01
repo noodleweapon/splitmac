@@ -30,8 +30,9 @@ Learn it once on the laptop, plug in the split, same fingers do the same things.
   </tr>
 </table>
 
-The small grey legend in the corner of each cap is what is physically printed on
-it. The big legend is what the key actually does.
+Each layer is drawn twice: the MacBook deck first, then the Voyager. The small
+grey legend in the corner of each cap is what is printed on the laptop key it
+stands for; the big legend is what the key actually does.
 
 ---
 
@@ -42,11 +43,21 @@ it. The big legend is what the key actually does.
   <img alt="Base layer" src="img/base-light.svg?v=4">
 </picture>
 
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="img/voyager-base-dark.svg?v=1">
+  <img alt="Voyager base layer" src="img/voyager-base-light.svg?v=1">
+</picture>
+
 ### Hold gate and home-row mods
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="img/mods-dark.svg?v=4">
   <img alt="Hold gate and home-row mods" src="img/mods-light.svg?v=4">
+</picture>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="img/voyager-mods-dark.svg?v=1">
+  <img alt="Voyager hold gate and home-row mods" src="img/voyager-mods-light.svg?v=1">
 </picture>
 
 ### Number layer
@@ -56,11 +67,21 @@ it. The big legend is what the key actually does.
   <img alt="Number layer" src="img/number-light.svg?v=4">
 </picture>
 
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="img/voyager-number-dark.svg?v=1">
+  <img alt="Voyager number layer" src="img/voyager-number-light.svg?v=1">
+</picture>
+
 ### Symbol layer — left
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="img/sym-left-dark.svg?v=4">
   <img alt="Left symbol layer" src="img/sym-left-light.svg?v=4">
+</picture>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="img/voyager-sym-left-dark.svg?v=1">
+  <img alt="Voyager left symbol layer" src="img/voyager-sym-left-light.svg?v=1">
 </picture>
 
 ### Symbol layer — right
@@ -70,6 +91,11 @@ it. The big legend is what the key actually does.
   <img alt="Right symbol layer" src="img/sym-right-light.svg?v=4">
 </picture>
 
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="img/voyager-sym-right-dark.svg?v=1">
+  <img alt="Voyager right symbol layer" src="img/voyager-sym-right-light.svg?v=1">
+</picture>
+
 ### Navigation layer
 
 <picture>
@@ -77,12 +103,21 @@ it. The big legend is what the key actually does.
   <img alt="Navigation layer" src="img/nav-light.svg?v=5">
 </picture>
 
-There is also an [interactive version](keymap.html) — open it and press keys on
-your own keyboard to light up the matching cap, or hold Space and a layer
-key to preview a layer live.
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="img/voyager-nav-dark.svg?v=1">
+  <img alt="Voyager navigation layer" src="img/voyager-nav-light.svg?v=1">
+</picture>
 
-The Voyager diagrams are further down, under [The Voyager
-version](#the-voyager-version).
+### Plain QWERTY (Voyager only)
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="img/voyager-plain-dark.svg?v=1">
+  <img alt="Voyager plain QWERTY layer" src="img/voyager-plain-light.svg?v=1">
+</picture>
+
+There is also an [interactive version](keymap.html) of the laptop diagrams —
+open it and press keys on your own keyboard to light up the matching cap, or
+hold Space and a layer key to preview a layer live.
 
 Inspired by [@getreuer's QMK keymap](https://github.com/getreuer/qmk-keymap),
 which is the reference for what a well-documented personal keymap looks like.
@@ -97,12 +132,16 @@ moves:
 
 1. **Everything worth reaching for moves onto the home row.** Numbers, symbols
    and arrows live on hold layers, not on the number row.
-2. **Space and Right Command become gates.** Hold either one and the home row
-   turns into modifiers and layer keys. Let go and it is plain letters again —
-   so there are no accidental mod-taps while typing at speed.
+2. **Space and Right Command become gates.** Hold either one and that hand's
+   home row turns into modifiers and layer keys. Let go and it is plain letters
+   again — so there are no accidental mod-taps while typing at speed.
 3. **The keys you should stop using are disabled.** The number row, `esc`,
-   `tab`, `delete`, the arrow cluster and the three worst reaches on the alpha
-   block do not do their job any more.
+   `tab`, `delete`, `caps lock`, `return`, Left Control, Left Option, the arrow
+   cluster and the four alpha keys between the hands do not do their job any
+   more.
+
+The Voyager has real thumb keys, so it does not need any of the workarounds —
+but it runs them anyway, so both boards feel identical.
 
 ## Base layer
 
@@ -112,21 +151,34 @@ laptop keyboard is a row-staggered keyboard. Gallium v2 exists precisely for
 boards like this one, rather than the column-staggered splits most alt layouts
 are tuned for.
 
-Fitting a 3×10 layout onto a MacBook means the top two rows of the right hand
-sit **one column to the right** of where QWERTY puts them, which is what leaves
-`Y`, `H` and `B` with nothing to do:
+As a 3×10 grid, one column per finger (this is also exactly how it sits on the
+Voyager):
 
 ```
-      B  L  D  C  V        J  F  O  U  .
-      N  R  T  S  G        Y  H  A  E  I
-   Z  X  Q  M  W              K  P  ,  _
+ B  L  D  C  V      J  F  O  U  .
+ N  R  T  S  G      Y  H  A  E  I
+ Z  X  Q  M  W      K  P  ,  _  '
 ```
 
-That leading `Z` is **Left Shift** — the bottom row is one key short of a home
-for it, so it moves onto the shift key and the old `Z` position (physical `N`)
-is disabled too.
+On the laptop, those thirty letters land on these physical keys:
 
-Punctuation that is normally shifted moves down to the shift keys themselves:
+```
+ Q  W  E  R  T      U  I  O  P  [
+ A  S  D  F  G      J  K  L  ;  '
+ ⇧  Z  X  C  V      M  ,  .  /  ⇧
+```
+
+Two things move to make the grid fit a MacBook:
+
+* **The right hand sits one column to the right** of QWERTY home, so its index
+  finger rests on `J` instead of `H`.
+* **The left bottom row sits one column to the left**, so the `Z` column lands
+  on Left Shift and the `'` column on Right Shift.
+
+That leaves physical `Y`, `H`, `B` and `N` in the gap between the hands with
+nothing to do, so they are disabled.
+
+The rest of the base layer:
 
 | Physical key | Types |
 | --- | --- |
@@ -137,46 +189,56 @@ Punctuation that is normally shifted moves down to the shift keys themselves:
 | Space | left gate: hold to arm the left hand's special keys, tap does nothing |
 | Right Command | right gate: hold to arm the right hand's special keys, tap does nothing |
 | Right Option | `delete` |
-| Caps Lock / Return / Left Option | disabled (types `HERROPERS`) |
-| Shift + `[` | `esc` |
-| Shift + `.` | `⌥C` |
+| Caps Lock / Return / Left Control / Left Option | disabled (types `HERROPERS`) |
+| Shift + `[` (the `.` key) | `esc` |
+| Shift + `.` (the `,` key) | `⌥C` |
+| ⌘ + `C` (the `M` key) | nothing |
+| ⌥ + `C` (the `M` key) | `⌃C` |
 
 ## Hold gate and home-row mods
 
 There are two gates, one per side. Hold **Space** (left gate, `left_gate`) to arm
 the left hand's special keys, or **Right Command** (right gate, `right_gate`) to
-arm the right hand's. Each gate only arms its own side: while the left gate is
-held, the right hand's special keys are plain letters, and the other way round.
-Tapping a gate does nothing.
+arm the right hand's. On the Voyager the gates are the two inner thumb keys.
+Each gate only arms its own side: while the left gate is held, the right hand's
+special keys are plain letters, and the other way round. Tapping a gate does
+nothing.
 
-| Home-row key | Physical | Gate | Hold |
-| --- | --- | --- | --- |
-| `N` | `A` | left | Left Shift |
-| `R` | `S` | left | Left Option |
-| `T` | `D` | left | Left Command |
-| `S` | `F` | left | Number layer |
-| `M` | `C` | left | Symbol layer, right |
-| `H` | `K` | right | Navigation layer |
-| `A` | `L` | right | Left Command |
-| `E` | `;` | right | Left Option |
-| `I` | `'` | right | Right Shift |
-| `G` | `G` | left | Left Control |
-| `Y` | `J` | right | Left Control |
-| `P` | `,` | right | Symbol layer, left |
+```
+ ·  ·  ·  ·  ·      ·  ·  ·  ·  ·
+ ⇧  ⌥  ⌘  №  ⌃      ⌃  →  ⌘  ⌥  ⇧
+ ·  ·  ·  &  ·      ·  #  ·  ·  ·
+   left gate          right gate
+```
 
-Command and Option are always the **left-hand** modifier, whichever side of the
-board you hold them on.
+| Key | Physical | Gate | Hold | Tap |
+| --- | --- | --- | --- | --- |
+| `N` | `A` | left | Left Shift | nothing |
+| `R` | `S` | left | Left Option | `r` |
+| `T` | `D` | left | Left Command | `t` |
+| `S` | `F` | left | Number layer | `s` |
+| `G` | `G` | left | Left Control | `g` |
+| `M` | `C` | left | Symbol layer, right | `m` |
+| `Y` | `J` | right | Left Control | `y` |
+| `H` | `K` | right | Navigation layer | `h` |
+| `A` | `L` | right | Left Command | `a` |
+| `E` | `;` | right | Left Option | `e` |
+| `I` | `'` | right | Right Shift | nothing |
+| `P` | `,` | right | Symbol layer, left | `p` |
+
+Command, Option and Control are always the **left-hand** modifier, whichever
+side of the board you hold them on.
 
 The gate is the whole trick. Home-row mods normally misfire during fast typing;
 here they simply do not exist until you ask for them, and only one layer can be
 active at a time — each layer key is conditioned on the other three being off.
 
-**Every hold latches on key-down, so order never matters.** All ten of them —
-four layers, two Commands, two Options, two Controls — are written the same way: `to` sets the
-modifier or the layer variable the instant the key goes down, `to_if_alone`
-emits the letter if you tap it and press nothing else, `to_after_key_up` clears
-it on release. Hold the layer first or the modifier first; the result is
-identical.
+**Every hold latches on key-down, so order never matters.** All twelve of them —
+four layers and eight modifiers — fire from `to` the instant the key goes down.
+The modifiers are held for as long as the key is; the layer keys set a variable
+that `to_after_key_up` clears on release. `to_if_alone` types the letter if you
+tap the key and press nothing else (the two Shifts have no tap). Hold the layer
+first or the modifier first; the result is identical.
 
 This is worth stating because the obvious way to write a layer key — a
 `to_if_held_down` timer, optionally with a `to_delayed_action` — does not
@@ -187,55 +249,61 @@ One thing the gate cannot make order-free: it has to be held *first*. Conditions
 are evaluated when a key goes down, so a layer or modifier key pressed before
 its gate sees the gate variable as 0 and just types its letter.
 
-Each layer also borrows some home-row keys for its own glyphs, which shadows the
-modifier on those keys. One pair always survives:
+Every layer is held with one hand and typed with the other, so the holding
+hand's modifiers stay live while the layer is up:
 
 | Layer (held with) | Modifiers still reachable |
 | --- | --- |
-| Number — physical `F` | Left Command `D`, Left Option `S` |
-| Symbol right — physical `C` | Left Command `D`, Left Option `S` |
-| Symbol left — physical `,` | Left Command `L`, Left Option `;` |
-| Navigation — physical `K` | Left Command `L`, Left Option `;` |
+| Number — left gate + `S` | `N` ⇧, `R` ⌥, `T` ⌘, `G` ⌃ |
+| Symbol right — left gate + `M` | `N` ⇧, `R` ⌥, `T` ⌘, `G` ⌃ |
+| Symbol left — right gate + `P` | `Y` ⌃, `A` ⌘, `E` ⌥, `I` ⇧ |
+| Navigation — right gate + `H` | `Y` ⌃, `A` ⌘, `E` ⌥, `I` ⇧ |
 
-In every case the surviving pair is on the same hand that holds the layer, which
-takes some getting used to. The other hand's Command and Option are typing layer
-glyphs and cannot also be modifiers.
+The other hand's modifiers are typing layer glyphs and cannot also be
+modifiers. So ⇧ + arrow is right gate + `H` + `I`, then the arrow, and ⌘ + digit
+is left gate + `S` + `T`, then the digit.
 
 ## The layers
 
-**Number** — left gate + hold `S`. Digits sit under the right hand, with `~` on Right
-Shift:
+The grids use the same 3×10 layout as the base layer. `·` keeps its base-layer
+meaning and `[X]` is the key you hold.
+
+**Number** — left gate + hold `S`. Digits sit under the right hand, with `~` on
+the `'` key (Right Shift on the laptop):
 
 ```
-   7  8  9        F O U .
-   0  1  2  3     H A E I
-      4  5  6  ~     K P , _ '
+ ·  ·  ·  ·  ·      ·  7  8  9  ·
+ ·  ·  · [S] ·      ·  0  1  2  3
+ ·  ·  ·  ·  ·      ·  4  5  6  ~
 ```
 
-**Symbol, left** — right gate + hold `P`. Held by the right hand, typed with the left:
+**Symbol, left** — right gate + hold `P`. Held by the right hand, typed with the
+left:
 
 ```
-   ^  *  -  |     B L D C
-   +  !  /  =     N R T S
-`  <  >  @        Z X Q M
+ ^  *  -  |  ·      ·  ·  ·  ·  ·
+ +  !  /  =  ·      ·  ·  ·  ·  ·
+ `  <  >  @  ·      · [P] ·  ·  ·
 ```
 
-**Symbol, right** — left gate + hold `M`. Held by the left hand, typed with the right:
+**Symbol, right** — left gate + hold `M`. Held by the left hand, typed with the
+right:
 
 ```
-   ;  &  $  #     F O U .
-   [  ]  (  )     H A E I
-      :  \  %  ?     P , _ '
+ ·  ·  ·  ·  ·      ·  ;  &  $  #
+ ·  ·  ·  ·  ·      ·  [  ]  (  )
+ ·  ·  · [M] ·      ·  :  \  %  ?
 ```
 
-**Navigation** — right gate + hold `H`. The top row moves the caret one step, the home
-row is `left click` `tab` `esc` `return`, and the bottom row moves the caret five at a
-time (five key events at 30 ms each):
+**Navigation** — right gate + hold `H`. The top row moves the caret one step, the
+home row is `left click` `tab` `esc` `return`, and the bottom row moves the
+caret five at a time (five key events, 30 ms apart on the laptop, 15 ms on the
+Voyager):
 
 ```
-   ←  ↑  ↓  →        B L D C
- click tab esc ⏎     N R T S
-←5 ↑5 ↓5 →5          Z X Q M
+  ←     ↑     ↓     →     ·        ·  ·  ·  ·  ·
+click  tab   esc    ⏎     ·        · [H] ·  ·  ·
+  ←5    ↑5    ↓5    →5    ·        ·  ·  ·  ·  ·
 ```
 
 The click is a real mouse button, so pointing with the trackpad and clicking
@@ -249,6 +317,9 @@ it types `HERROPERS`, loudly, in the middle of whatever you were writing:
 `` ` `` `1` `2` `3` `4` `5` `6` `7` `8` `9` `0` `-` `=` `delete` `tab` `]` `\`
 `esc` `control` `option` `caps lock` `return` `←` `→` `↑` `↓` and the `Y` / `H` / `B` / `N` positions.
 
+On the Voyager the same trap covers the number row and the outer column on
+each side.
+
 Every one of them has a home-row replacement:
 
 | Reach | Do this instead |
@@ -256,11 +327,12 @@ Every one of them has a home-row replacement:
 | Number row | left gate + hold `S` |
 | `-` `=` `[` `]` `\` and friends | the two symbol layers |
 | Arrow keys | right gate + hold `H` |
-| `delete` | Right Option |
-| `tab` | right gate + hold `H`, `R` |
-| `esc` | Shift + `[`, or right gate + hold `H`, `T` |
-| `return` | right gate + hold `H`, `S` |
-| `control` / `option` | left gate + hold `G` or right gate + hold `J` for control; home-row `S` / `;` for option |
+| `delete` | Right Option (outer right thumb on the Voyager) |
+| `tab` | right gate + hold `H`, then `R` |
+| `esc` | Shift + `.`, or right gate + hold `H`, then `T` |
+| `return` | right gate + hold `H`, then `S` |
+| `control` | left gate + hold `G`, or right gate + hold `Y` |
+| `option` | left gate + hold `R`, or right gate + hold `E` |
 
 It is a blunt instrument and it works. Delete the rule named
 `Bad-habit trainer` once the habit is gone — or keep it forever, nobody is
@@ -273,18 +345,21 @@ judging.
 | `F3` | `⌘⇧⌃4` — screenshot a region to the clipboard |
 | `F4` | Raycast (`⌥⌃⌘⇧` + `a`) |
 | `F6` | Toggle the whole keymap on and off |
-| `⌥` + `A` | Raycast |
-| `⌥` + `S` | Mouseless |
-| `⌥` + `E` | Homerow |
-| `⌥` + `T` | `esc` |
-| `⌥` + `J/K/L/;` | AeroSpace window focus (`⌥` + `h/a/e/i`) |
-| `⌥` + `F` | AeroSpace shrink window (`⌥` + `s` — `resize smart -50`) |
-| `⌘⌃⌥⇧` + `D` | Mouseless free-click (`⌘⌃⌥⇧` + `tab`) |
+| `⌥` + `H/A/E/I` (physical `K/L/;/'`) | AeroSpace window focus (`⌥` + `h/a/e/i`) |
+| `⌥` + `S` (physical `F`) | AeroSpace shrink window (`⌥` + `s` — `resize smart -50`) |
+| `⌥` + physical `A` | Raycast |
+| `⌥` + physical `S` | Mouseless |
+| `⌥` + physical `E` | Homerow |
+| `⌥` + physical `T` | `esc` |
+| `⌘⌃⌥⇧` + physical `D` | Mouseless free-click (`⌘⌃⌥⇧` + `tab`) |
 
-The `⌥` rows and the `⌘⌃⌥⇧` + `D` row are in the config but sit below the
-alpha-remap rule, which already claims those keys with any modifier held, so in
-practice they do not fire. Move them above the remap rule (and point them at the
-physical keys) if you want them.
+There is no Option key of its own any more, so `⌥` here means a gated home-row
+Option (`R` or `E`).
+
+The AeroSpace rule sits above the alpha remap and works. The last five rows are
+in the config but sit below the alpha-remap rule, which already claims those
+keys with any modifier held, so in practice they do not fire. Move them above
+the remap rule if you want them.
 
 `F6` runs [`toggle_profile.sh`](karabiner/toggle_profile.sh), which flips
 Karabiner between the `Default profile` and a `Disabled` profile that contains
@@ -316,54 +391,7 @@ How the Karabiner rules were translated — gates, `to_if_alone` timing, rule
 precedence, and which rules were left out — is written up in
 [`qmk/keyboards/zsa/voyager/keymaps/splitmac/README.md`](qmk/keyboards/zsa/voyager/keymaps/splitmac/README.md).
 
-### Base
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="img/voyager-base-dark.svg?v=1">
-  <img alt="Voyager base layer" src="img/voyager-base-light.svg?v=1">
-</picture>
-
-### Hold gate and home-row mods
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="img/voyager-mods-dark.svg?v=1">
-  <img alt="Voyager hold gate and home-row mods" src="img/voyager-mods-light.svg?v=1">
-</picture>
-
-### Number layer
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="img/voyager-number-dark.svg?v=1">
-  <img alt="Voyager number layer" src="img/voyager-number-light.svg?v=1">
-</picture>
-
-### Symbol layer — left
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="img/voyager-sym-left-dark.svg?v=1">
-  <img alt="Voyager left symbol layer" src="img/voyager-sym-left-light.svg?v=1">
-</picture>
-
-### Symbol layer — right
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="img/voyager-sym-right-dark.svg?v=1">
-  <img alt="Voyager right symbol layer" src="img/voyager-sym-right-light.svg?v=1">
-</picture>
-
-### Navigation layer
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="img/voyager-nav-dark.svg?v=1">
-  <img alt="Voyager navigation layer" src="img/voyager-nav-light.svg?v=1">
-</picture>
-
-### Plain QWERTY
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="img/voyager-plain-dark.svg?v=1">
-  <img alt="Voyager plain QWERTY layer" src="img/voyager-plain-light.svg?v=1">
-</picture>
+The Voyager diagrams are [at the top](#base), under each laptop diagram.
 
 ## Repository layout
 
