@@ -48,18 +48,6 @@ stands for; the big legend is what the key actually does.
   <img alt="Voyager base layer" src="img/voyager-base-light.svg?v=2">
 </picture>
 
-### Hold gate and home-row mods
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="img/mods-dark.svg?v=6">
-  <img alt="Hold gate and home-row mods" src="img/mods-light.svg?v=6">
-</picture>
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="img/voyager-mods-dark.svg?v=2">
-  <img alt="Voyager hold gate and home-row mods" src="img/voyager-mods-light.svg?v=2">
-</picture>
-
 ### Number layer
 
 <picture>
