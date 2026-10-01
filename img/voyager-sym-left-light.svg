@@ -2,8 +2,8 @@
 <rect width="1058" height="593" fill="#f4f4f2"/>
 <text x="38.0" y="46.0" fill="#17171a" font-size="30" font-weight="700" text-anchor="start" opacity="1.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">Voyager · Symbol layer — left</text>
 <text x="38.0" y="72.0" fill="#5f5f6a" font-size="15" font-weight="400" text-anchor="start" opacity="1.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">right gate + hold P. Math, brackets and shell glyphs.</text>
-<rect x="20.0" y="112.0" width="474.0" height="460.8" rx="18" fill="#d8d8d5" stroke="#bdbdb9" stroke-width="1.5"/>
-<rect x="34.0" y="126.0" width="446.0" height="432.8" rx="10" fill="#1b1b1f"/>
+<rect x="20.0" y="112.0" width="1018.0" height="460.8" rx="18" fill="#d8d8d5" stroke="#bdbdb9" stroke-width="1.5"/>
+<rect x="34.0" y="126.0" width="990.0" height="432.8" rx="10" fill="#1b1b1f"/>
 <rect x="62.0" y="187.0" width="60.0" height="60.0" rx="8" fill="#000000" stroke="#3d3d44" stroke-width="1"/>
 <text x="116.0" y="201.0" fill="#55555e" font-size="10" font-weight="500" text-anchor="end" opacity="0.85" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">`</text>
 <text x="92.0" y="222.0" fill="#63636b" font-size="11" font-weight="600" text-anchor="middle" opacity="1.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">Disabled</text>
@@ -76,8 +76,6 @@
 <text x="380.0" y="468.3" fill="#55555e" font-size="10" font-weight="500" text-anchor="end" opacity="0.85" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">cmd</text>
 <rect x="396.0" y="470.8" width="74.0" height="60.0" rx="8" fill="#232327" stroke="#3d3d44" stroke-width="1"/>
 <text x="464.0" y="484.8" fill="#55555e" font-size="10" font-weight="500" text-anchor="end" opacity="0.85" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">space</text>
-<rect x="564.0" y="112.0" width="474.0" height="460.8" rx="18" fill="#d8d8d5" stroke="#bdbdb9" stroke-width="1.5"/>
-<rect x="578.0" y="126.0" width="446.0" height="432.8" rx="10" fill="#1b1b1f"/>
 <rect x="606.0" y="187.0" width="60.0" height="60.0" rx="8" fill="#000000" stroke="#3d3d44" stroke-width="1"/>
 <text x="660.0" y="201.0" fill="#55555e" font-size="10" font-weight="500" text-anchor="end" opacity="0.85" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">6</text>
 <text x="636.0" y="222.0" fill="#63636b" font-size="11" font-weight="600" text-anchor="middle" opacity="1.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif">Disabled</text>

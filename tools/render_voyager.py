@@ -89,12 +89,14 @@ def render(layer, theme_name):
     keys = layer["keys"]
     dim = not layer["full"]
 
+    # One case around both halves, one deck inside it.
+    cy = HEADER + 20
+    out.append(rounded(20, cy, W - 40, hh + 2 * DECK_PAD, 18,
+                       t["chassis"], t["chassis_edge"], 1.5))
+    out.append(rounded(20 + DECK_PAD, cy + DECK_PAD, W - 40 - 2 * DECK_PAD, hh, 10,
+                       t["deck"]))
     for i, side in enumerate(("L", "R")):
         cx = 20 + i * (hw + 2 * DECK_PAD + HALF_GAP)
-        cy = HEADER + 20
-        out.append(rounded(cx, cy, hw + 2 * DECK_PAD, hh + 2 * DECK_PAD, 18,
-                           t["chassis"], t["chassis_edge"], 1.5))
-        out.append(rounded(cx + DECK_PAD, cy + DECK_PAD, hw, hh, 10, t["deck"]))
         for kid, x, y, w, h in half_keys(side):
             entry = keys.get(kid)
             if entry is None and not dim:

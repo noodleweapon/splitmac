@@ -101,7 +101,7 @@ def render(layer, theme_name):
     out.append(f'<rect width="{W:.0f}" height="{H:.0f}" fill="{t["page"]}"/>')
 
     # title block
-    out.append(text(20 + DECK_PAD + 4, 46, layer["name"], t["title"], 30, 700, "start"))
+    out.append(text(20 + DECK_PAD + 4, 46, f'MacBook · {layer["name"]}', t["title"], 30, 700, "start"))
     out.append(text(20 + DECK_PAD + 4, 72, layer["sub"], t["subtitle"], 15, 400, "start"))
 
     # laptop chassis + recessed deck
