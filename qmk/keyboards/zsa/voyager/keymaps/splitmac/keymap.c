@@ -47,13 +47,10 @@ enum layers {
   LSYM,   // Hold physical , (types p) with right gate: left-hand symbols.
   NUM,    // Hold physical F (types s) with left gate: right-hand numbers.
   ARROW,  // Hold physical K (types h) with right gate: left-hand arrows.
-  PLAIN,  // Plain QWERTY, toggled with both top-corner keys (was F6).
 };
 
 enum custom_keycodes {
   TRAIN = SAFE_RANGE,  // Bad-habit trainer: types HERROPERS.
-  TRN_L,               // Same as TRAIN, but distinct so it can be in a combo.
-  TRN_R,               // Same as TRAIN, but distinct so it can be in a combo.
   LGATE,               // Left gate (physical spacebar). Hold only.
   RGATE,               // Right gate (physical right ⌘). Hold only.
   // Gated home-row mods: hold with gate = modifier, otherwise = letter.
@@ -83,13 +80,13 @@ enum custom_keycodes {
 // clang-format off
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [BASE] = LAYOUT_LR(
-    TRN_L  , TRAIN  , TRAIN  , TRAIN  , TRAIN  , TRAIN  ,
+    TRAIN  , TRAIN  , TRAIN  , TRAIN  , TRAIN  , TRAIN  ,
     TRAIN  , KC_B   , KC_L   , KC_D   , KC_C   , KC_V   ,
     TRAIN  , GM_A   , GM_S   , GM_D   , GL_F   , GM_G   ,
     TRAIN  , KC_Z   , KC_X   , KC_Q   , GL_C   , KC_W   ,
                                                  KC_SPC , LGATE  ,
 
-                      TRAIN  , TRAIN  , TRAIN  , TRAIN  , TRAIN  , TRN_R  ,
+                      TRAIN  , TRAIN  , TRAIN  , TRAIN  , TRAIN  , TRAIN  ,
                       KC_J   , KC_F   , KC_O   , KC_U   , DOT_ESC, TRAIN  ,
                       GM_J   , GL_K   , GM_L   , GM_SCLN, GM_QUOT, TRAIN  ,
                       KC_K   , GL_COMM, COMM_AC, KC_UNDS, KC_QUOT, TRAIN  ,
@@ -150,29 +147,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                       _______, _______, _______, _______, _______, _______,
                       _______, _______, _______, _______, _______, _______,
              _______, _______
-  ),
-
-  [PLAIN] = LAYOUT_LR(  // Plain QWERTY (Karabiner "Disabled" profile).
-    KC_ESC , KC_1   , KC_2   , KC_3   , KC_4   , KC_5   ,
-    KC_TAB , KC_Q   , KC_W   , KC_E   , KC_R   , KC_T   ,
-    KC_LCTL, KC_A   , KC_S   , KC_D   , KC_F   , KC_G   ,
-    KC_LSFT, KC_Z   , KC_X   , KC_C   , KC_V   , KC_B   ,
-                                                 KC_LGUI, KC_SPC ,
-
-                      KC_6   , KC_7   , KC_8   , KC_9   , KC_0   , KC_MINS,
-                      KC_Y   , KC_U   , KC_I   , KC_O   , KC_P   , KC_BSLS,
-                      KC_H   , KC_J   , KC_K   , KC_L   , KC_SCLN, KC_QUOT,
-                      KC_N   , KC_M   , KC_COMM, KC_DOT , KC_SLSH, KC_RSFT,
-             KC_ENT , KC_BSPC
-  ),
+  )
 };
 // clang-format on
-
-// Both top-corner keys together toggle plain QWERTY (replaces Karabiner's F6).
-const uint16_t PROGMEM plain_combo[] = {TRN_L, TRN_R, COMBO_END};
-combo_t key_combos[] = {
-    COMBO(plain_combo, TG(PLAIN)),
-};
 
 ///////////////////////////////////////////////////////////////////////////////
 // Gates and gated keys.
@@ -354,8 +331,6 @@ bool process_record_user(uint16_t keycode, keyrecord_t* record) {
       return false;
 
     case TRAIN:
-    case TRN_L:
-    case TRN_R:
       if (record->event.pressed) {
         SEND_STRING("HERROPERS");
       }
@@ -382,17 +357,3 @@ bool process_record_user(uint16_t keycode, keyrecord_t* record) {
   return true;
 }
 
-///////////////////////////////////////////////////////////////////////////////
-// RGB: show which mode the board is in.
-///////////////////////////////////////////////////////////////////////////////
-
-#ifdef RGB_MATRIX_ENABLE
-bool rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max) {
-  if (layer_state_is(PLAIN)) {
-    for (uint8_t i = led_min; i < led_max; ++i) {
-      rgb_matrix_set_color(i, 40, 40, 40);  // Dim white = plain QWERTY.
-    }
-  }
-  return false;
-}
-#endif  // RGB_MATRIX_ENABLE

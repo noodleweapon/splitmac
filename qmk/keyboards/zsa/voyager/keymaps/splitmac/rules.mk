@@ -1,6 +1,5 @@
 # splitmac for the ZSA Voyager.
 
-COMBO_ENABLE = yes
 LTO_ENABLE = yes
 
 # Not needed by this keymap; keeps the firmware small and simple.

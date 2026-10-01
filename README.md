@@ -96,13 +96,6 @@ stands for; the big legend is what the key actually does.
   <img alt="Voyager navigation layer" src="img/voyager-nav-light.svg?v=2">
 </picture>
 
-### Plain QWERTY (Voyager only)
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="img/voyager-plain-dark.svg?v=2">
-  <img alt="Voyager plain QWERTY layer" src="img/voyager-plain-light.svg?v=2">
-</picture>
-
 There is also an [interactive version](keymap.html) of the laptop diagrams —
 open it and press keys on your own keyboard to light up the matching cap, or
 hold Space and a layer key to preview a layer live.

@@ -146,31 +146,6 @@ MODS = {
     "RT0": ("hold", "right gate", "gate"),
 }
 
-PLAIN = {
-    "L00": ("esc", "", "system"),
-    "L01": ("1", "", "punct"), "L02": ("2", "", "punct"), "L03": ("3", "", "punct"),
-    "L04": ("4", "", "punct"), "L05": ("5", "", "punct"),
-    "L10": ("tab", "", "mod"),
-    "L11": ("Q", "", "alpha"), "L12": ("W", "", "alpha"), "L13": ("E", "", "alpha"),
-    "L14": ("R", "", "alpha"), "L15": ("T", "", "alpha"),
-    "L20": ("⌃", "", "mod"),
-    "L21": ("A", "", "alpha"), "L22": ("S", "", "alpha"), "L23": ("D", "", "alpha"),
-    "L24": ("F", "", "alpha"), "L25": ("G", "", "alpha"),
-    "L30": ("⇧", "", "mod"),
-    "L31": ("Z", "", "alpha"), "L32": ("X", "", "alpha"), "L33": ("C", "", "alpha"),
-    "L34": ("V", "", "alpha"), "L35": ("B", "", "alpha"),
-    "LT0": ("⌘", "", "mod"), "LT1": ("space", "", "mod"),
-    "R00": ("6", "", "punct"), "R01": ("7", "", "punct"), "R02": ("8", "", "punct"),
-    "R03": ("9", "", "punct"), "R04": ("0", "", "punct"), "R05": ("-", "", "punct"),
-    "R10": ("Y", "", "alpha"), "R11": ("U", "", "alpha"), "R12": ("I", "", "alpha"),
-    "R13": ("O", "", "alpha"), "R14": ("P", "", "alpha"), "R15": ("\\", "", "punct"),
-    "R20": ("H", "", "alpha"), "R21": ("J", "", "alpha"), "R22": ("K", "", "alpha"),
-    "R23": ("L", "", "alpha"), "R24": (";", "", "punct"), "R25": ("'", "", "punct"),
-    "R30": ("N", "", "alpha"), "R31": ("M", "", "alpha"), "R32": (",", "", "punct"),
-    "R33": (".", "", "punct"), "R34": ("/", "", "punct"), "R35": ("⇧", "", "mod"),
-    "RT0": ("⏎", "", "mod"), "RT1": ("⌫", "", "mod"),
-}
-
 
 def _with_disabled(keys):
     merged = {k: ("Disabled", "", "trainer") for k in TRAINER}
@@ -220,12 +195,5 @@ LAYERS = [
         "sub": "right gate + hold H. Top row moves the caret, home row is click / tab / esc / return, bottom row jumps five.",
         "keys": _with_disabled(NAV),
         "full": False,
-    },
-    {
-        "id": "voyager-plain",
-        "name": "Voyager · Plain QWERTY",
-        "sub": "Toggle with both top-corner keys together. Replaces the laptop's F6 profile switch.",
-        "keys": PLAIN,
-        "full": True,
     },
 ]

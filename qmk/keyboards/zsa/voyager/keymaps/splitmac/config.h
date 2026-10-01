@@ -10,7 +10,3 @@
 // hold_down_milliseconds = 30 between them).
 #define ARROW5_DELAY_MS 15
 
-// The PLAIN-QWERTY toggle combo (both top-corner keys) is resolved against
-// layer 0 so that it also works for toggling back from the PLAIN layer.
-#define COMBO_ONLY_FROM_LAYER 0
-#define COMBO_TERM 60

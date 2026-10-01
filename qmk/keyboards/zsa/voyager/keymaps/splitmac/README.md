@@ -34,9 +34,9 @@ the Voyager (vendor `12951`, product `6519`) under `devices` with
 
 | File | What it is |
 | --- | --- |
-| `keymap.c` | Layers, gates, gated mod/layer keys, shift overrides, the trainer macro, the plain-QWERTY combo |
-| `config.h` | `ALONE_TIMEOUT_MS` (Karabiner's 200 ms `to_if_alone`), combo settings, macro delays |
-| `rules.mk` | Combos on, LTO on, unused QMK features off |
+| `keymap.c` | Layers, gates, gated mod/layer keys, shift overrides, the trainer macro |
+| `config.h` | `ALONE_TIMEOUT_MS` (Karabiner's 200 ms `to_if_alone`), macro delays |
+| `rules.mk` | LTO on, unused QMK features off |
 
 ## How the Karabiner rules became firmware
 
@@ -55,10 +55,7 @@ the Voyager (vendor `12951`, product `6519`) under `devices` with
   modifier state first. Shift + `.`-key → Escape and Shift + `,`-key → ⌥C are
   handled the same way Karabiner handles a mandatory modifier: Shift is removed
   from the report, the replacement is tapped, Shift is restored.
-* **Trainer.** `TRAIN` keys send `HERROPERS` on press. The two top-corner keys
-  (`TRN_L`, `TRN_R`) are the same thing, but distinct keycodes so a combo can
-  pair them: pressed together they toggle the `PLAIN` QWERTY layer, which is
-  what F6 did on the laptop. The board lights dim white while `PLAIN` is on.
+* **Trainer.** `TRAIN` keys send `HERROPERS` on press.
 * **Nav layer ×5 keys.** Five `tap_code_delay` calls, 15 ms apart.
 * **Position offsets.** Karabiner rules name laptop keys, where the right hand
   sits one column right of QWERTY home and the left bottom row one column left.
@@ -70,7 +67,8 @@ the Voyager (vendor `12951`, product `6519`) under `devices` with
 
 * **F3** (region screenshot), **F4** (Raycast) — the Voyager has no function
   row; they stay on the laptop's own keys.
-* **F6** — replaced by the top-corner combo.
+* **F6** (toggle the keymap off) — there is no plain-QWERTY layer on the
+  Voyager.
 * **⌥ + T / A / S / E shortcuts, MOUSELESS FREE** — these Karabiner rules sit
   below the "Keyboard layout remap" rule, which already matches those keys with
   any modifier, so they are not reachable on the laptop either. If you want
