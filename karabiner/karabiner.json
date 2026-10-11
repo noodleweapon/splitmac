@@ -3558,7 +3558,7 @@
                         ]
                     },
                     {
-                        "description": "Home-row mods: hold T/A = Left Command, hold R/E = Left Option (physical D/L, S/;); gate + physical A = Left Shift, physical ' = Right Shift; gate + physical G/J = Left Control",
+                        "description": "Home-row mods: hold T/A = Left Command, hold R/E = Left Option (physical D/L, S/;); gate + physical A = Left Shift, physical ' = Right Shift; gate + physical Left/Right Shift = Left Control (tap: z / ')",
                         "manipulators": [
                             {
                                 "conditions": [
@@ -3727,7 +3727,7 @@
                                     }
                                 ],
                                 "from": {
-                                    "key_code": "g",
+                                    "key_code": "left_shift",
                                     "modifiers": {
                                         "optional": [
                                             "any"
@@ -3741,7 +3741,7 @@
                                 ],
                                 "to_if_alone": [
                                     {
-                                        "key_code": "g"
+                                        "key_code": "z"
                                     }
                                 ],
                                 "type": "basic"
@@ -3755,7 +3755,7 @@
                                     }
                                 ],
                                 "from": {
-                                    "key_code": "j",
+                                    "key_code": "right_shift",
                                     "modifiers": {
                                         "optional": [
                                             "any"
@@ -3769,7 +3769,7 @@
                                 ],
                                 "to_if_alone": [
                                     {
-                                        "key_code": "y"
+                                        "key_code": "quote"
                                     }
                                 ],
                                 "type": "basic"

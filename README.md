@@ -39,61 +39,61 @@ stands for; the big legend is what the key actually does.
 ### Base
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="img/base-dark.svg?v=6">
-  <img alt="Base layer" src="img/base-light.svg?v=6">
+  <source media="(prefers-color-scheme: dark)" srcset="img/base-dark.svg?v=7">
+  <img alt="Base layer" src="img/base-light.svg?v=7">
 </picture>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="img/voyager-base-dark.svg?v=2">
-  <img alt="Voyager base layer" src="img/voyager-base-light.svg?v=2">
+  <source media="(prefers-color-scheme: dark)" srcset="img/voyager-base-dark.svg?v=3">
+  <img alt="Voyager base layer" src="img/voyager-base-light.svg?v=3">
 </picture>
 
 ### Number layer
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="img/number-dark.svg?v=6">
-  <img alt="Number layer" src="img/number-light.svg?v=6">
+  <source media="(prefers-color-scheme: dark)" srcset="img/number-dark.svg?v=7">
+  <img alt="Number layer" src="img/number-light.svg?v=7">
 </picture>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="img/voyager-number-dark.svg?v=2">
-  <img alt="Voyager number layer" src="img/voyager-number-light.svg?v=2">
+  <source media="(prefers-color-scheme: dark)" srcset="img/voyager-number-dark.svg?v=3">
+  <img alt="Voyager number layer" src="img/voyager-number-light.svg?v=3">
 </picture>
 
 ### Symbol layer — left
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="img/sym-left-dark.svg?v=6">
-  <img alt="Left symbol layer" src="img/sym-left-light.svg?v=6">
+  <source media="(prefers-color-scheme: dark)" srcset="img/sym-left-dark.svg?v=7">
+  <img alt="Left symbol layer" src="img/sym-left-light.svg?v=7">
 </picture>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="img/voyager-sym-left-dark.svg?v=2">
-  <img alt="Voyager left symbol layer" src="img/voyager-sym-left-light.svg?v=2">
+  <source media="(prefers-color-scheme: dark)" srcset="img/voyager-sym-left-dark.svg?v=3">
+  <img alt="Voyager left symbol layer" src="img/voyager-sym-left-light.svg?v=3">
 </picture>
 
 ### Symbol layer — right
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="img/sym-right-dark.svg?v=6">
-  <img alt="Right symbol layer" src="img/sym-right-light.svg?v=6">
+  <source media="(prefers-color-scheme: dark)" srcset="img/sym-right-dark.svg?v=7">
+  <img alt="Right symbol layer" src="img/sym-right-light.svg?v=7">
 </picture>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="img/voyager-sym-right-dark.svg?v=2">
-  <img alt="Voyager right symbol layer" src="img/voyager-sym-right-light.svg?v=2">
+  <source media="(prefers-color-scheme: dark)" srcset="img/voyager-sym-right-dark.svg?v=3">
+  <img alt="Voyager right symbol layer" src="img/voyager-sym-right-light.svg?v=3">
 </picture>
 
 ### Navigation layer
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="img/nav-dark.svg?v=6">
-  <img alt="Navigation layer" src="img/nav-light.svg?v=6">
+  <source media="(prefers-color-scheme: dark)" srcset="img/nav-dark.svg?v=7">
+  <img alt="Navigation layer" src="img/nav-light.svg?v=7">
 </picture>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="img/voyager-nav-dark.svg?v=2">
-  <img alt="Voyager navigation layer" src="img/voyager-nav-light.svg?v=2">
+  <source media="(prefers-color-scheme: dark)" srcset="img/voyager-nav-dark.svg?v=3">
+  <img alt="Voyager navigation layer" src="img/voyager-nav-light.svg?v=3">
 </picture>
 
 There is also an [interactive version](keymap.html) of the laptop diagrams —

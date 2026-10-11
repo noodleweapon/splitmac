@@ -57,8 +57,8 @@ enum custom_keycodes {
   GM_A,     // n   | left gate: Left Shift (no tap)
   GM_S,     // r   | left gate: Left Option, tap r
   GM_D,     // t   | left gate: Left Command, tap t
-  GM_G,     // g   | left gate: Left Control, tap g
-  GM_J,     // y   | right gate: Left Control, tap y
+  GM_LSFT,  // z   | left gate: Left Control, tap z   (physical Left Shift)
+  GM_RSFT,  // '   | right gate: Left Control, tap '  (physical Right Shift)
   GM_L,     // a   | right gate: Left Command, tap a
   GM_SCLN,  // e   | right gate: Left Option, tap e
   GM_QUOT,  // i   | right gate: Right Shift (no tap)
@@ -82,14 +82,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [BASE] = LAYOUT_LR(
     TRAIN  , TRAIN  , TRAIN  , TRAIN  , TRAIN  , TRAIN  ,
     TRAIN  , KC_B   , KC_L   , KC_D   , KC_C   , KC_V   ,
-    TRAIN  , GM_A   , GM_S   , GM_D   , GL_F   , GM_G   ,
-    TRAIN  , KC_Z   , KC_X   , KC_Q   , GL_C   , KC_W   ,
+    TRAIN  , GM_A   , GM_S   , GM_D   , GL_F   , KC_G   ,
+    TRAIN  , GM_LSFT, KC_X   , KC_Q   , GL_C   , KC_W   ,
                                                  KC_SPC , LGATE  ,
 
                       TRAIN  , TRAIN  , TRAIN  , TRAIN  , TRAIN  , TRAIN  ,
                       KC_J   , KC_F   , KC_O   , KC_U   , DOT_ESC, TRAIN  ,
-                      GM_J   , GL_K   , GM_L   , GM_SCLN, GM_QUOT, TRAIN  ,
-                      KC_K   , GL_COMM, COMM_AC, KC_UNDS, KC_QUOT, TRAIN  ,
+                      KC_Y   , GL_K   , GM_L   , GM_SCLN, GM_QUOT, TRAIN  ,
+                      KC_K   , GL_COMM, COMM_AC, KC_UNDS, GM_RSFT, TRAIN  ,
              RGATE  , KC_BSPC
   ),
 
@@ -175,10 +175,10 @@ static const gated_key_t gated_keys[] = {
     {GM_S, KC_R, KC_R, GATE_L, KC_LALT, NO_LAYER},
     {GM_D, KC_T, KC_T, GATE_L, KC_LGUI, NO_LAYER},
     {GL_F, KC_S, KC_S, GATE_L, KC_NO, NUM},
-    {GM_G, KC_G, KC_G, GATE_L, KC_LCTL, NO_LAYER},
+    {GM_LSFT, KC_Z, KC_Z, GATE_L, KC_LCTL, NO_LAYER},
     {GL_C, KC_M, KC_M, GATE_L, KC_NO, RSYM},
     // Right hand, armed by the right gate (physical right ⌘).
-    {GM_J, KC_Y, KC_Y, GATE_R, KC_LCTL, NO_LAYER},
+    {GM_RSFT, KC_QUOT, KC_QUOT, GATE_R, KC_LCTL, NO_LAYER},
     {GL_K, KC_H, KC_H, GATE_R, KC_NO, ARROW},
     {GM_L, KC_A, KC_A, GATE_R, KC_LGUI, NO_LAYER},
     {GM_SCLN, KC_E, KC_E, GATE_R, KC_LALT, NO_LAYER},

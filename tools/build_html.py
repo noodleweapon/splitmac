@@ -481,7 +481,7 @@ footer a { color: var(--fg-dim); }
       <tr><td>Left Command</td><td>Space</td></tr>
       <tr><td>Right Option</td><td>Delete</td></tr>
       <tr><td>Left Option</td><td>disabled (types HERROPERS)</td></tr>
-      <tr><td>left gate + <code>G</code> / right gate + <code>J</code></td><td>Control</td></tr>
+      <tr><td>left gate + <code>Z</code> (Left Shift) / right gate + <code>'</code> (Right Shift)</td><td>Control</td></tr>
       <tr><td>left gate + <code>A</code> / right gate + <code>'</code></td><td>Shift</td></tr>
       <tr><td>Shift + <code>[</code></td><td>Escape</td></tr>
       <tr><td>F6</td><td>toggles the entire keymap off and on</td></tr>
