@@ -23,8 +23,8 @@ Learn it once on the laptop, plug in the split, same fingers do the same things.
     <td>
       This project is sponsored by <a href="https://www.pcbway.com/">PCBWay</a>,
       a one-stop shop for PCB prototyping, assembly, CNC machining and 3D
-      printing. If you want to turn a keymap like this one into a real split
-      board, they are a good place to have it made — see
+      printing. For the project background, ordering walkthrough and planned
+      hardware coverage, see
       <a href="#sponsor">Sponsor</a> below for what they offer.
     </td>
   </tr>
@@ -130,22 +130,18 @@ but it runs them anyway, so both boards feel identical.
   <img alt="PCBWay" src="img/pcbway.png" width="320">
 </a>
 
-[PCBWay](https://www.pcbway.com/) sponsors this project. They are a one-stop
-shop for turning a hardware idea into a physical thing: PCB prototyping and
-small-batch fabrication, PCB assembly, CNC machining, sheet metal, injection
-moulding and 3D printing (resin, nylon, and metal), all ordered from one
-account with an instant online quote.
+[PCBWay](https://www.pcbway.com/) sponsors this project. They offer PCB
+prototyping and assembly alongside CNC machining, sheet metal fabrication,
+injection moulding and 3D printing. For keyboard builders, those services
+provide options for custom electronics, plates, enclosures and mounts.
 
-Why they are a good fit for a keyboard project:
+Splitmac currently provides software for a MacBook and the commercial ZSA
+Voyager. This repository does not yet document a PCBWay-manufactured part.
 
-- **Cheap, fast prototypes.** A handful of 2-layer boards costs a few dollars
-  and ships in days, so a keymap idea can become a real split board without a
-  big commitment.
-- **One order, every part.** Plates, cases and the PCB itself can all come from
-  the same order — CNC-cut aluminium or 3D-printed cases alongside the boards.
-- **Assembly included.** Hand-soldering a hundred hot-swap sockets is optional;
-  PCBWay can populate the boards for you.
-- **Real humans in support.** Every order is checked by an engineer before it
-  goes to fabrication, and the DFM feedback comes back quickly.
+The [PCBWay project write-up](docs/pcbway.md) covers the project background,
+an ordering walkthrough, the planned unboxing and measurement coverage, the
+final application, and the benefits of PCBWay's services. Actual order
+screenshots, part photographs and inspection results are pending; the
+write-up identifies what is still needed.
 
 If you use them, say hello from `splitmac`.
